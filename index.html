@@ -125,11 +125,27 @@
   }
   #loading{color:var(--muted);font-style:italic;font-size:13.5px;padding-block:20px}
   #load-error{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted)}
+
+  header.top{position:relative}
+  #theme-toggle{
+    position:absolute;top:22px;right:0;
+    width:34px;height:34px;border-radius:999px;
+    border:1px solid var(--border);background:var(--chip-bg);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
+  }
+  #theme-toggle svg{width:17px;height:17px}
+  #theme-toggle .icon-moon{display:none}
+  :root[data-theme="dark"] #theme-toggle .icon-sun{display:none}
+  :root[data-theme="dark"] #theme-toggle .icon-moon{display:block}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
+    <button id="theme-toggle" type="button" aria-label="Changer d'apparence (clair / sombre)" aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+    </button>
     <div class="eyebrow">Psycho-éducation · CO Valais</div>
     <h1>Veille Neurodev'</h1>
     <p class="tagline">Recherche internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.</p>
@@ -240,6 +256,29 @@
   }
 
   var state = { flashs: [], revues: [], activeFilter: "tous" };
+
+  // theme toggle: explicit choice overrides the OS preference and is remembered per device
+  function initThemeToggle(){
+    var root = document.documentElement;
+    var btn = document.getElementById("theme-toggle");
+    var stored = null;
+    try{ stored = localStorage.getItem("neurodev-theme"); }catch(e){ stored = null; }
+    if(stored === "light" || stored === "dark") root.setAttribute("data-theme", stored);
+
+    function isDark(){
+      if(root.getAttribute("data-theme") === "dark") return true;
+      if(root.getAttribute("data-theme") === "light") return false;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    btn.setAttribute("aria-pressed", String(isDark()));
+
+    btn.addEventListener("click", function(){
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      btn.setAttribute("aria-pressed", String(next === "dark"));
+      try{ localStorage.setItem("neurodev-theme", next); }catch(e){}
+    });
+  }
 
   function renderToday(){
     var section = document.getElementById("today");
@@ -389,6 +428,7 @@
   }
 
   async function start(){
+    initThemeToggle();
     try{
       var base = new URL(".", window.location.href);
       var bust = "?v=" + Date.now();
