@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veille Neurodev'</title>
+<meta name="description" content="Veille scientifique internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.">
+<meta name="theme-color" content="#35606B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Neurodev'">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<style>
+  /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
+     each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
+     consistent color, used on tags, item borders and filter chips so a recurring category reads at a glance. */
+  :root{
+    --bg:#F5F6F3; --fg:#1D2422; --muted:#5B6764;
+    --accent:#35606B; --accent-2:#B5652A;
+    --border:#D9DCD4; --card:#FFFFFF; --chip-bg:#EDEFE9;
+    --c-tsa:#35606B; --c-tdah:#B5652A; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#2F7A5C; --c-transversal:#8A7350;
+    --c-hpi:#A88422; --c-di-tsaf:#A85C56; --c-attachement:#4A5B8C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
+      --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
+      --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
+      --c-hpi:#D9B85A; --c-di-tsaf:#D08F89; --c-attachement:#8B9BD9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
+    --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
+    --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
+    --c-hpi:#D9B85A; --c-di-tsaf:#D08F89; --c-attachement:#8B9BD9;
+  }
+
+  *{box-sizing:border-box}
+  html,body{background:var(--bg)}
+  body{
+    color:var(--fg);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:15px; line-height:1.55; margin:0;
+    padding-inline:16px; padding-block:0;
+  }
+  .wrap{max-width:720px;margin:0 auto}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
+  a{color:var(--accent)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+
+  header.top{padding-top:22px;padding-bottom:14px}
+  header.top .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:4px;
+  }
+  header.top h1{font-size:26px}
+  header.top p.tagline{color:var(--muted);font-size:13.5px;margin:6px 0 0}
+
+  main{padding-block:6px 60px;display:flex;flex-direction:column;gap:34px}
+  section > h2{font-size:19px;margin-bottom:2px}
+  section > .section-sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+
+  /* today: the first thing on the page, never hidden by a theme filter */
+  #today .card{border-left:3px solid var(--accent)}
+  #today .flash-date{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.03em}
+  .theme-tag{
+    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.04em;text-transform:uppercase;
+    border:1px solid currentColor;border-radius:5px;padding:1px 6px;margin:0 5px 4px 0;
+  }
+  #today h3{font-size:17px;margin:8px 0 6px}
+  #today .flash-source{font-size:12.5px;color:var(--muted);margin-top:8px}
+  #today-empty{color:var(--muted);font-style:italic;font-size:13.5px}
+
+  /* essentiel of the latest weekly review: also unfiltered, a standing summary */
+  .essentiel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+  .essentiel-grid .card{padding:14px 16px}
+  .essentiel-num{font-family:"IBM Plex Mono",monospace;color:var(--accent-2);font-size:12px;margin-bottom:6px}
+  .essentiel-grid p{margin:0;font-size:13.5px}
+
+  /* theme browser: everything past, organized by category */
+  #browse .chips{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;margin-bottom:6px;z-index:5;border-bottom:1px solid var(--border)}
+  .chip{
+    --chip-color: var(--accent);
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:5px 10px;border-radius:999px;
+    border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
+  }
+  .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
+
+  .theme-bucket{margin-top:22px}
+  .theme-bucket h3{font-size:15.5px;color:var(--accent);margin-bottom:10px}
+  .theme-bucket-list{display:flex;flex-direction:column;gap:8px}
+  .theme-bucket[hidden]{display:none}
+
+  .item{border:1px solid var(--border);border-left:3px solid var(--item-color, var(--border));border-radius:9px;background:var(--card);overflow:hidden}
+  .item[hidden]{display:none}
+  .item > summary{cursor:pointer;list-style:none;padding:11px 15px;display:flex;flex-direction:column;gap:3px}
+  .item > summary::-webkit-details-marker{display:none}
+  .item .item-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .item .item-period{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);white-space:nowrap}
+  .item .item-title{font-weight:600;font-size:14px;display:flex;align-items:center;gap:6px}
+  .item .item-title::before{content:"▸";display:inline-block;color:var(--item-color, var(--muted));transition:transform .15s;font-size:11px}
+  .item[open] .item-title::before{transform:rotate(90deg)}
+  .item .item-teaser{font-size:12.8px;color:var(--muted);margin-top:1px}
+  .item .item-tags{margin-top:4px}
+  .item .item-body{font-size:13.3px;padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
+  .item .item-body p{margin:8px 0 0}
+  .item .item-body strong{color:var(--fg)}
+  .item .item-body em{color:var(--muted)}
+
+  #empty-filter{display:none;color:var(--muted);font-style:italic;font-size:13.5px;padding-top:8px}
+
+  footer{
+    padding-block:20px calc(24px + env(safe-area-inset-bottom,0px));
+    border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center;
+  }
+  #loading{color:var(--muted);font-style:italic;font-size:13.5px;padding-block:20px}
+  #load-error{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Psycho-éducation · CO Valais</div>
+    <h1>Veille Neurodev'</h1>
+    <p class="tagline">Recherche internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.</p>
+  </header>
+
+  <main>
+    <div id="loading">Chargement…</div>
+    <p id="load-error">Le contenu n'a pas pu être chargé. Vérifie ta connexion et recharge la page.</p>
+
+    <section id="today" hidden>
+      <h2>Aujourd'hui</h2>
+      <div class="section-sub">Le flash du jour</div>
+      <div id="today-content"></div>
+    </section>
+
+    <section id="essentiel-section" hidden>
+      <h2>L'essentiel de la semaine</h2>
+      <div class="section-sub" id="essentiel-sub"></div>
+      <div class="essentiel-grid" id="essentiel-content"></div>
+    </section>
+
+    <section id="browse" hidden>
+      <h2>Explorer par thème</h2>
+      <div class="section-sub">Tout ce qui est déjà paru — flashs précédents et revues hebdomadaires — organisé par catégorie. Chaque carte se déplie au clic.</div>
+      <div class="chips" id="theme-chips">
+        <button class="chip" data-theme-filter="tous" aria-pressed="true">Tous</button>
+        <button class="chip" data-theme-filter="tsa" aria-pressed="false" style="--chip-color:var(--c-tsa)">TSA</button>
+        <button class="chip" data-theme-filter="tdah" aria-pressed="false" style="--chip-color:var(--c-tdah)">TDA/H</button>
+        <button class="chip" data-theme-filter="dys-tsle" aria-pressed="false" style="--chip-color:var(--c-dys-tsle)">DYS / TSLE</button>
+        <button class="chip" data-theme-filter="tdl-tdc" aria-pressed="false" style="--chip-color:var(--c-tdl-tdc)">TDL / TDC</button>
+        <button class="chip" data-theme-filter="hpi" aria-pressed="false" style="--chip-color:var(--c-hpi)">HPI</button>
+        <button class="chip" data-theme-filter="di-tsaf" aria-pressed="false" style="--chip-color:var(--c-di-tsaf)">DI / TSAF</button>
+        <button class="chip" data-theme-filter="attachement" aria-pressed="false" style="--chip-color:var(--c-attachement)">Attachement & trauma</button>
+        <button class="chip" data-theme-filter="transversal" aria-pressed="false" style="--chip-color:var(--c-transversal)">Transversal & Suisse</button>
+      </div>
+      <div id="buckets"></div>
+      <p id="empty-filter">Rien pour ce thème dans ce qui est déjà paru.</p>
+    </section>
+  </main>
+
+  <footer>
+    Veille personnelle de Pauline Lentes — alimentée automatiquement, à lire avec l'esprit critique qu'appelle toute synthèse rapide.
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var THEME_LABELS = {
+    "tsa": "TSA", "tdah": "TDA/H", "dys-tsle": "DYS / TSLE",
+    "tdl-tdc": "TDL / TDC", "hpi": "HPI", "di-tsaf": "DI / TSAF",
+    "attachement": "Attachement & trauma", "transversal": "Transversal"
+  };
+  var THEME_COLOR_VAR = {
+    "tsa": "var(--c-tsa)", "tdah": "var(--c-tdah)", "dys-tsle": "var(--c-dys-tsle)",
+    "tdl-tdc": "var(--c-tdl-tdc)", "hpi": "var(--c-hpi)", "di-tsaf": "var(--c-di-tsaf)",
+    "attachement": "var(--c-attachement)", "transversal": "var(--c-transversal)"
+  };
+
+  var SECTION_ORDER = ["flash","etude","divergence","zone_floue","implication_co","contexte_suisse","a_surveiller"];
+  var SECTION_LABELS = {
+    "flash": "Flashs précédents",
+    "etude": "Études marquantes",
+    "divergence": "Divergences & controverses",
+    "zone_floue": "Zones floues / à prendre avec prudence",
+    "implication_co": "Implications pour la pratique au CO",
+    "contexte_suisse": "Contexte suisse & francophone",
+    "a_surveiller": "À surveiller"
+  };
+
+  function escapeHtml(s){
+    return (s||"").replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  function fmtDate(iso){
+    if(!iso) return "";
+    var parts = iso.split("-");
+    if(parts.length !== 3) return iso;
+    var d = new Date(Date.UTC(+parts[0], +parts[1]-1, +parts[2]));
+    var months = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+    return d.getUTCDate() + " " + months[d.getUTCMonth()] + " " + d.getUTCFullYear();
+  }
+
+  function themeTags(themes){
+    if(!themes || !themes.length) return "";
+    return themes.map(function(t){
+      var color = THEME_COLOR_VAR[t] || "var(--muted)";
+      return '<span class="theme-tag" style="color:' + color + '">' + escapeHtml(THEME_LABELS[t] || t) + '</span>';
+    }).join("");
+  }
+
+  // plain-text teaser: strips markdown emphasis markers, collapses whitespace, cuts to length
+  function teaser(md, maxLen){
+    var s = (md || "")
+      .replace(/\*\*(.*?)\*\*/g, "$1")
+      .replace(/\*(.*?)\*/g, "$1")
+      .replace(/\n+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if(s.length <= maxLen) return s;
+    var cut = s.slice(0, maxLen);
+    var lastSpace = cut.lastIndexOf(" ");
+    if(lastSpace > maxLen * 0.6) cut = cut.slice(0, lastSpace);
+    return cut + "…";
+  }
+
+  var state = { flashs: [], revues: [], activeFilter: "tous" };
+
+  function renderToday(){
+    var section = document.getElementById("today");
+    var content = document.getElementById("today-content");
+    section.hidden = false;
+
+    if(!state.flashs.length){
+      content.innerHTML = '<p id="today-empty">Aucun flash pour le moment. Le premier arrivera au prochain passage de la veille quotidienne.</p>';
+      return;
+    }
+    var sorted = state.flashs.slice().sort(function(a,b){ return (b.date||"").localeCompare(a.date||""); });
+    var latest = sorted[0];
+    content.innerHTML =
+      '<div class="card">' +
+        '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
+        themeTags(latest.themes) +
+        '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
+        '<div>' + marked.parse(latest.resume || "") + '</div>' +
+        (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
+      '</div>';
+  }
+
+  function renderEssentiel(){
+    var sorted = state.revues.slice().sort(function(a,b){ return (b.date_fin||"").localeCompare(a.date_fin||""); });
+    var section = document.getElementById("essentiel-section");
+    var sub = document.getElementById("essentiel-sub");
+    var content = document.getElementById("essentiel-content");
+    if(!sorted.length || !sorted[0].essentiel || !sorted[0].essentiel.length){
+      section.hidden = true;
+      return;
+    }
+    var latest = sorted[0];
+    section.hidden = false;
+    sub.textContent = "Semaine du " + fmtDate(latest.date_debut) + " au " + fmtDate(latest.date_fin);
+    content.innerHTML = latest.essentiel.map(function(pt, i){
+      return '<div class="card"><div class="essentiel-num">' + (i+1) + '</div><p>' + escapeHtml(pt) + '</p></div>';
+    }).join("");
+  }
+
+  function periodLabel(revue){
+    if(revue.titre) return revue.titre;
+    return "Semaine du " + fmtDate(revue.date_debut) + " au " + fmtDate(revue.date_fin);
+  }
+
+  function buildBuckets(){
+    var buckets = {};
+    SECTION_ORDER.forEach(function(s){ buckets[s] = []; });
+
+    var latestFlashDate = state.flashs.reduce(function(m,f){ return (f.date||"") > m ? f.date : m; }, "");
+    state.flashs.forEach(function(f){
+      if(f.date === latestFlashDate) return; // today's flash lives in its own section, not in the archive
+      buckets.flash.push({
+        themes: f.themes || [], titre: f.titre || "", texte: f.resume || "",
+        period: fmtDate(f.date), sortKey: f.date || ""
+      });
+    });
+
+    state.revues.forEach(function(r){
+      (r.items || []).forEach(function(it){
+        if(!buckets[it.section]) return;
+        buckets[it.section].push({
+          themes: it.themes || [], titre: it.titre || "", texte: it.texte || "",
+          period: periodLabel(r), sortKey: r.date_fin || r.date_debut || ""
+        });
+      });
+    });
+
+    Object.keys(buckets).forEach(function(k){
+      buckets[k].sort(function(a,b){ return (b.sortKey||"").localeCompare(a.sortKey||""); });
+    });
+    return buckets;
+  }
+
+  function renderBrowse(){
+    var section = document.getElementById("browse");
+    var container = document.getElementById("buckets");
+    var buckets = buildBuckets();
+    var hasAny = SECTION_ORDER.some(function(k){ return buckets[k].length; });
+
+    if(!hasAny){
+      section.hidden = false;
+      container.innerHTML = '<p style="color:var(--muted);font-style:italic;font-size:13.5px">Rien à explorer pour l\'instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
+      return;
+    }
+    section.hidden = false;
+
+    container.innerHTML = SECTION_ORDER.map(function(key){
+      var items = buckets[key];
+      if(!items.length) return "";
+      return '<div class="theme-bucket" data-bucket="' + key + '">' +
+        '<h3>' + escapeHtml(SECTION_LABELS[key]) + '</h3>' +
+        '<div class="theme-bucket-list">' +
+          items.map(function(it){
+            var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
+            return '<details class="item filterable" style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '">' +
+              '<summary>' +
+                '<div class="item-head">' +
+                  '<span class="item-title">' + escapeHtml(it.titre || SECTION_LABELS[key]) + '</span>' +
+                  '<span class="item-period mono">' + escapeHtml(it.period) + '</span>' +
+                '</div>' +
+                '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 120)) + '</div>' +
+                '<div class="item-tags">' + themeTags(it.themes) + '</div>' +
+              '</summary>' +
+              '<div class="item-body">' + marked.parse(it.texte || "") + '</div>' +
+            '</details>';
+          }).join("") +
+        '</div>' +
+      '</div>';
+    }).join("");
+
+    applyFilter();
+  }
+
+  function applyFilter(){
+    var f = state.activeFilter;
+    var anyVisible = false;
+    document.querySelectorAll(".theme-bucket").forEach(function(bucket){
+      var bucketVisible = false;
+      bucket.querySelectorAll(".filterable").forEach(function(el){
+        var themes = (el.getAttribute("data-item-themes") || "").split(",");
+        var show = (f === "tous" || themes.indexOf(f) !== -1);
+        el.hidden = !show;
+        if(show) bucketVisible = true;
+      });
+      bucket.hidden = !bucketVisible;
+      if(bucketVisible) anyVisible = true;
+    });
+    document.getElementById("empty-filter").style.display = anyVisible ? "none" : "block";
+  }
+
+  function boot(data){
+    state.flashs = data.flashs || [];
+    state.revues = data.revues || [];
+    document.getElementById("loading").hidden = true;
+    renderToday();
+    renderEssentiel();
+    renderBrowse();
+
+    document.querySelectorAll("#theme-chips .chip").forEach(function(chip){
+      chip.addEventListener("click", function(){
+        document.querySelectorAll("#theme-chips .chip").forEach(function(c){ c.setAttribute("aria-pressed","false"); });
+        chip.setAttribute("aria-pressed","true");
+        state.activeFilter = chip.getAttribute("data-theme-filter");
+        applyFilter();
+      });
+    });
+  }
+
+  async function start(){
+    try{
+      var base = new URL(".", window.location.href);
+      var bust = "?v=" + Date.now();
+      var flashsRes = await fetch(new URL("data/flashs.json" + bust, base));
+      var revuesRes = await fetch(new URL("data/revues.json" + bust, base));
+      if(!flashsRes.ok || !revuesRes.ok) throw new Error("fetch failed");
+      var flashs = await flashsRes.json();
+      var revues = await revuesRes.json();
+      boot({ flashs: flashs, revues: revues });
+    }catch(e){
+      document.getElementById("loading").hidden = true;
+      document.getElementById("load-error").style.display = "block";
+    }
+  }
+
+  start();
+})();
+</script>
+</body>
+</html>

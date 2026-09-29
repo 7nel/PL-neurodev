@@ -1,0 +1,182 @@
+[
+  {
+    "date_debut": "2026-09-22",
+    "date_fin": "2026-09-28",
+    "titre": "Semaine du 22 au 28 septembre 2026",
+    "essentiel": [
+      "La hausse des diagnostics TSA/TDA/H reflète surtout un élargissement de l'identification, pas une hausse réelle de l'occurrence : trois études convergent (registres danois, cohortes coréennes dépistées activement, scores polygéniques danois).",
+      "Espérance de vie estimée à 64,9 ans chez les personnes autistes bénéficiaires de Medicaid (États-Unis) — 5,6 ans de moins que les autres bénéficiaires Medicaid, écart plus marqué chez les femmes (−8,2 ans). Causes de surmortalité en grande partie évitables (accidents, noyade, pneumopathie d'aspiration).",
+      "Deux « mythes » perdent encore du terrain : le paracétamol prénatal n'est plus associé au TSA/TDA/H dans les méta-analyses de bonne qualité, et les polices « dyslexie » (OpenDyslexic, Dyslexie) n'ont aucun effet démontré sur la vitesse ou la précision de lecture."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": ["tsa", "tdah", "transversal"],
+        "titre": "Évolution du profil des personnes diagnostiquées TDA/H et TSA",
+        "texte": "**Tarp et al. (2026), *JAMA Psychiatry*.** Registres nationaux danois (population entière), ~2,1 millions d'enfants et d'adolescent·es, >71 000 diagnostiqués comparés à >713 000 pairs, 2012–2022.\n\n**Résultats :** les associations avec les facteurs de risque classiques (prématurité, faible poids de naissance, niveau socio-économique et psychiatrique parental) se sont nettement affaiblies en dix ans.\n\n**Limites :** ne permet pas de dire quel mécanisme pèse le plus (sensibilisation, accès, abaissement du seuil, dépistage scolaire) ; un seul pays ; TSA et TDA/H en partie regroupés.\n\n**Ce que ça change :** renforce l'hypothèse d'un élargissement du spectre des personnes diagnostiquées, sans permettre de trancher sur un éventuel surdiagnostic.\n\nTarp, M. E., et al. (2026). Changes in characteristics associated with ADHD and ASD diagnoses over time. *JAMA Psychiatry*. https://doi.org/10.1001/jamapsychiatry.2026.2722"
+      },
+      {
+        "section": "etude",
+        "themes": ["tsa"],
+        "titre": "Incidence cumulée et prévalence du TSA sur 12 cohortes de naissance",
+        "texte": "**Kim et al. (2026), *JAMA Pediatrics*.** Dépistage populationnel actif des élèves entrant en 1re primaire à Goyang (Corée du Sud), 2005–2017, >62 000 enfants dépistés, 447 diagnostics de TSA.\n\n**Résultats :** incidence cumulée (1,9–3,2 %) et prévalence à 7 ans (2,0–3,4 %) stables d'une cohorte à l'autre.\n\n**Limites :** moins de la moitié des enfants positifs au dépistage évalués ; une seule ville ; transposition à l'Europe incertaine.\n\n**Ce que ça change :** argument empirique fort contre la thèse d'une « épidémie » d'autisme ; un dépistage actif fait apparaître des taux proches de 2–3 %.\n\nKim, Y. S., et al. (2026). Cumulative incidence and prevalence of autism spectrum disorder. *JAMA Pediatrics*."
+      },
+      {
+        "section": "etude",
+        "themes": ["tsa"],
+        "titre": "Autisme et espérance de vie chez les bénéficiaires de Medicaid",
+        "texte": "**Li et al. (2026), *JAMA Network Open*.** Analyse transversale de mortalité, données Medicaid/CHIP 2000–2020, 2 048 046 bénéficiaires autistes, 18 268 décès.\n\n**Résultats :** espérance de vie de 64,9 ans (−5,6 ans vs autres bénéficiaires Medicaid, −13,8 ans vs population générale US) ; excès de mortalité par grippe, malnutrition, pneumopathie d'aspiration, accidents hors transport ; écart plus grand chez les femmes.\n\n**Limites :** population Medicaid défavorisée, non transposable telle quelle ; comparaison à la population générale confond autisme et statut socio-économique ; cohorte américaine.\n\n**Ce que ça change :** les causes identifiées sont en grande partie évitables (infections respiratoires, dysphagie, accidents, noyade).\n\nLi, G., DiGuiseppi, C. G., Blanchard, A., Russell, M. T., & Ing, C. (2026). Autism spectrum disorder and life expectancy among Medicaid beneficiaries. *JAMA Network Open*. https://doi.org/10.1001/jamanetworkopen.2026.33251"
+      },
+      {
+        "section": "etude",
+        "themes": ["tsa", "tdah"],
+        "titre": "Paracétamol prénatal et TSA/TDA/H",
+        "texte": "**Tayebi-Hillali et al. (2026), *Developmental Medicine & Child Neurology*.** Umbrella review de 7 méta-analyses (>3 millions de participant·es), qualité évaluée par AMSTAR.\n\n**Résultats :** association proche de zéro une fois restreint aux données de haute qualité (designs contrôlant les facteurs familiaux, comparaisons de fratries).\n\n**Limites :** article complet non consulté ; risque de double comptage entre méta-analyses recoupant les mêmes cohortes.\n\n**Ce que ça change :** confirme la position des sociétés savantes, à l'opposé de la mise en garde HHS/FDA de septembre 2025.\n\nTayebi-Hillali, H., et al. (2026). Prenatal exposure to paracetamol and the risk of autism and attention-deficit/hyperactivity disorder: An umbrella review and meta-meta-analysis. *Developmental Medicine & Child Neurology*. https://doi.org/10.1111/dmcn.70512"
+      },
+      {
+        "section": "etude",
+        "themes": ["dys-tsle"],
+        "titre": "Polices « dyslexie » et performance en lecture",
+        "texte": "**Azzarello et al. (2026), *Annals of Dyslexia*.** Méta-analyse de 15 études, 91 tailles d'effet, 688 participant·es.\n\n**Résultats :** effet global nul (g = −0,04, IC 95 % [−0,15 ; 0,07]) sur vitesse et précision de lecture.\n\n**Limites :** N total faible ; population surtout composée d'enfants ; effets immédiats seulement ; espacement des lettres/lignes non couvert.\n\n**Ce que ça change :** adopter ces polices n'est pas une adaptation fondée sur les preuves.\n\nAzzarello, C., Paek, S., Hodge, C., Jameson, M., & Lewis, J. (2026). Does font improve reading in dyslexic children? *Annals of Dyslexia*. https://doi.org/10.1007/s11881-026-00389-8"
+      },
+      {
+        "section": "divergence",
+        "themes": ["tsa", "tdah", "transversal"],
+        "titre": "Surdiagnostic ou meilleure détection ?",
+        "texte": "Les études sur le Danemark et la Corée vont dans le sens d'un rattrapage de sous-détection. D'autres clinicien·nes soulignent que diagnostiquer des profils moins altérés peut conduire à des diagnostics sans bénéfice net. Les deux positions ne sont pas incompatibles ; aucune étude de la semaine ne mesure le bénéfice du diagnostic chez les nouveaux profils."
+      },
+      {
+        "section": "divergence",
+        "themes": ["tsa", "tdah"],
+        "titre": "Paracétamol et autisme",
+        "texte": "Consensus scientifique de haute qualité (méta-analyses restreintes aux données de bonne qualité) contre une position politique américaine (mise en garde HHS/FDA) maintenue."
+      },
+      {
+        "section": "divergence",
+        "themes": ["tsa"],
+        "titre": "Hétérogénéité du TSA",
+        "texte": "Sous-types discrets (cadre « A3D », qui distingue handicap et différence) vs profils individualisés non catégoriels — recoupe l'opposition neurodiversité / modèle médical."
+      },
+      {
+        "section": "divergence",
+        "themes": ["tdah"],
+        "titre": "Nouvelle molécule : centanafadine (Simtriyo)",
+        "texte": "Approuvée par la FDA le 24 juillet 2026 dès 6 ans (inhibiteur de recapture noradrénaline/dopamine/sérotonine). Tailles d'effet modestes chez l'adulte (d ≈ 0,24–0,40), non comparée directement aux stimulants. Statut Swissmedic inconnu — non vérifié."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["tsa"],
+        "texte": "« 14 ans d'espérance de vie en moins » (titres de presse) : chiffre exact mais comparaison inadéquate — l'écart attribuable à l'autisme dans une population socio-économiquement comparable est de 5,6 ans."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["tsa", "tdah", "transversal"],
+        "texte": "« Pas de surdiagnostic » (étude danoise) : affirmation plus forte que ce que permet le design de l'étude."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["tsa"],
+        "texte": "Corée : moins de 50 % des positifs au dépistage évalués, intervalles de prévalence reposant sur une pondération."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["tsa", "tdah"],
+        "texte": "Umbrella review paracétamol : texte intégral non consulté, risque de double comptage entre méta-analyses."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["dys-tsle"],
+        "texte": "Méta-analyse des polices dyslexie : N total faible (688), conclusion à ne pas généraliser à tous les paramètres typographiques (espacement, interligne)."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["transversal"],
+        "texte": "Étude valaisanne du CSPS sur l'école inclusive : seulement une synthèse secondaire consultée (Diaconie Suisse), rapport primaire non localisé — ne pas citer de chiffres avant lecture."
+      },
+      {
+        "section": "zone_floue",
+        "themes": ["tdah"],
+        "texte": "« Trois biotypes cérébraux du TDA/H » (JAMA Psychiatry, mars 2026) : clustering IRM non répliqué, sans utilité diagnostique individuelle, encore largement repris dans les médias."
+      },
+      {
+        "section": "implication_co",
+        "themes": ["transversal"],
+        "titre": "Lire le fonctionnement plutôt que le label",
+        "texte": "Les élèves diagnostiqué·es récemment sont plus hétérogènes ; un diagnostic informe peu à lui seul sur les besoins. Privilégier une évaluation fonctionnelle en classe. Des élèves sans diagnostic peuvent avoir des besoins comparables, notamment allophones ou en rupture."
+      },
+      {
+        "section": "implication_co",
+        "themes": ["dys-tsle"],
+        "titre": "Adaptations de lecture (TSLE/dyslexie)",
+        "texte": "Ne pas investir dans les polices dyslexie. Privilégier l'enseignement explicite, la synthèse vocale, la réduction de la densité visuelle, le temps supplémentaire aux évaluations."
+      },
+      {
+        "section": "implication_co",
+        "themes": ["tsa"],
+        "titre": "Groupe socio-émotionnel, filles autistes",
+        "texte": "Rester attentif aux troubles internalisés (anxiété, dépression), souvent peu visibles chez les adolescentes autistes qui « compensent ». Vigilance et orientation, pas dépistage par l'enseignant·e."
+      },
+      {
+        "section": "implication_co",
+        "themes": ["tsa"],
+        "titre": "Sécurité et santé",
+        "texte": "Intégrer des objectifs d'autonomie et de sécurité (sorties, piscine, déplacements) au PPI ou au projet de classe — en écho aux causes de surmortalité évitables identifiées chez les personnes autistes."
+      },
+      {
+        "section": "implication_co",
+        "themes": ["transversal", "tsa", "tdah"],
+        "titre": "Communication avec les familles",
+        "texte": "Références solides disponibles en cas de culpabilisation autour du paracétamol ou d'inquiétude face au discours d'« épidémie »."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": ["transversal"],
+        "titre": "Valais — école inclusive (CSPS, fin août 2026)",
+        "texte": "Analyse commandée par le Département de l'économie et de la formation. Synthèse rapportée : le modèle inclusif valaisan « fonctionne bien » sur les plans pédagogique et économique, avec besoin d'évaluation régulière, de financement adéquat et de renforcement des compétences des équipes. Source secondaire uniquement, rapport intégral à obtenir."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": ["transversal"],
+        "titre": "Rapport sur l'éducation en Suisse 2026 (CSRE)",
+        "texte": "Hausse de la part d'élèves avec mesures renforcées intégrés dans la plupart des cantons ; discussion des initiatives anti-inclusion de Zurich et Bâle-Ville."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": ["transversal"],
+        "titre": "France — rentrée 2026 et stratégie TND",
+        "texte": "70 nouveaux dispositifs dont 24 équipes d'autorégulation au secondaire (734 dispositifs TND au total) ; stratégie nationale TND 2027–2032 annoncée le 4 septembre (repérage précoce, adolescents et adultes, situations complexes)."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": ["transversal"],
+        "titre": "Angleterre — réforme SEND",
+        "texte": "Schools White Paper (février 2026) : soutien à paliers et plans individuels numériques ; mise en œuvre au plus tôt en 2029–2030."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": ["transversal"],
+        "texte": "Réponse du gouvernement britannique aux consultations SEND et calendrier de l'*Education for All Bill*."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": ["transversal"],
+        "texte": "Suite parlementaire valaisanne du postulat sur l'école inclusive et publication intégrale du rapport CSPS."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": ["transversal"],
+        "texte": "Composition des groupes de travail de la stratégie TND française 2027–2032."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": ["tsa", "tdah"],
+        "texte": "Réplication de l'étude danoise dans d'autres pays, études mesurant le bénéfice du diagnostic chez les profils peu altérés."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": ["tdah"],
+        "texte": "Statut réglementaire de la centanafadine en Europe et en Suisse."
+      }
+    ]
+  }
+]
