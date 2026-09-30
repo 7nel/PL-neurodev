@@ -1,9 +1,22 @@
 [
   {
     "date": "2026-09-29",
-    "themes": ["tsa", "tdah"],
+    "themes": [
+      "tsa",
+      "tdah"
+    ],
     "titre": "Régulation émotionnelle face aux frustrations scolaires (TSA/TDA/H)",
     "resume": "Lukito et al. (2026) proposent et testent le questionnaire MERSI pour évaluer la détresse intériorisée et extériorisée d'adolescent·es TSA/TDA/H face aux frustrations scolaires (N = 732).",
     "source": "Lukito et al. (2026). European Child & Adolescent Psychiatry. DOI: 10.1007/s00787-026-03073-9"
+  },
+  {
+    "date": "2026-09-30",
+    "themes": [
+      "tdah",
+      "transversal"
+    ],
+    "titre": "Rappel : interventions scolaires dans le TDA/H, méta-analyse d'ECR",
+    "resume": "Rappel (pas de publication récente solide trouvée sur 24–72 h). Méta-analyse de 26 ECR en milieu scolaire (22 poolés, 1980–2024, N≈1 962) : effets petits à modestes sur les symptômes TDA/H combinés (d = −0,28), l'inattention (d = −0,33), la performance scolaire (d = 0,37) et les habiletés sociales (d = 0,28). Limites : hétérogénéité des interventions et des évaluateurs (enseignant, parent, observateur), effets modestes, biais de détection probable (évaluateurs non aveugles), majorité d'essais en primaire ; l'effet moyennant l'âge (secondaire 12–17 ans) a été testé en méta-régression, mais je n'ai pas pu accéder au texte intégral pour en vérifier le résultat. Pour le CO : privilégier des mesures scolaires structurées (routines, feedback, objectifs) en se méfiant de la généralisation depuis le primaire.",
+    "source": "Yegencik, B., Bell, B. T., & Deniz, E. (2025). School-based randomized controlled trials for ADHD and accompanying impairments: A systematic review and meta-analysis. Frontiers in Psychology. https://doi.org/10.3389/fpsyg.2025.1611145 (chiffres tirés du résumé/extraits web ; texte intégral non consulté)"
   }
 ]
