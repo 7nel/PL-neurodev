@@ -280,6 +280,14 @@
     });
   }
 
+  /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
+  function flashText(f){
+    var t = f.resume || "";
+    if(f.limites) t += "\n\n**Limites :** " + f.limites;
+    if(f.pratique) t += "\n\n**Pour ta pratique au CO :** " + f.pratique;
+    return t;
+  }
+
   function renderToday(){
     var section = document.getElementById("today");
     var content = document.getElementById("today-content");
@@ -296,7 +304,7 @@
         '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
         themeTags(latest.themes) +
         '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-        '<div>' + marked.parse(latest.resume || "") + '</div>' +
+        '<div>' + marked.parse(flashText(latest)) + '</div>' +
         (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
       '</div>';
   }
@@ -331,7 +339,7 @@
     state.flashs.forEach(function(f){
       if(f.date === latestFlashDate) return; // today's flash lives in its own section, not in the archive
       buckets.flash.push({
-        themes: f.themes || [], titre: f.titre || "", texte: f.resume || "",
+        themes: f.themes || [], titre: f.titre || "", texte: flashText(f),
         period: fmtDate(f.date), sortKey: f.date || ""
       });
     });

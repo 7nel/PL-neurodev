@@ -7,7 +7,7 @@ Site statique, pas de connexion requise : https://7nel.github.io/PL-neurodev/
 ## Structure
 
 - `index.html` — la page (design, logique de filtrage, rendu markdown), lit les données via `fetch()`
-- `data/flashs.json` — flashs quotidiens (tableau, un objet par jour : `date`, `themes`, `titre`, `resume`, `source`)
+- `data/flashs.json` — flashs quotidiens (tableau, un objet par jour : `date`, `themes`, `titre`, `resume` (1–2 phrases : ce qui est dit), `limites` (niveau de preuve et limites, optionnel), `pratique` (pour la pratique au CO, optionnel), `source`)
 - `data/revues.json` — revues hebdomadaires (tableau, un objet par semaine : `date_debut`, `date_fin`, `titre`, `essentiel` (3 points), `items` (tableau `{section, themes, titre?, texte}`))
 - `icon-*.png`, `manifest.json` — icône et métadonnées pour l'écran d'accueil
 
