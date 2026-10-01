@@ -78,6 +78,7 @@
     border:1px solid currentColor;border-radius:5px;padding:1px 6px;margin:0 5px 4px 0;
   }
   #today h3{font-size:17px;margin:8px 0 6px}
+  #today .flash-more{font-size:13px;margin-top:8px}
   #today .flash-source{font-size:12.5px;color:var(--muted);margin-top:8px}
   #today-empty{color:var(--muted);font-style:italic;font-size:13.5px}
 
@@ -304,7 +305,8 @@
         '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
         themeTags(latest.themes) +
         '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-        '<div>' + marked.parse(flashText(latest)) + '</div>' +
+        '<div>' + marked.parse(latest.resume || "") + '</div>' +
+        ((latest.limites || latest.pratique) ? '<p class="flash-more"><a href="#browse">Texte complet (limites, pratique) ↓ dans « Flashs précédents »</a></p>' : '') +
         (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
       '</div>';
   }
@@ -335,9 +337,8 @@
     var buckets = {};
     SECTION_ORDER.forEach(function(s){ buckets[s] = []; });
 
-    var latestFlashDate = state.flashs.reduce(function(m,f){ return (f.date||"") > m ? f.date : m; }, "");
+    // today's flash is also kept here in full, so the top card can stay a short preview
     state.flashs.forEach(function(f){
-      if(f.date === latestFlashDate) return; // today's flash lives in its own section, not in the archive
       buckets.flash.push({
         themes: f.themes || [], titre: f.titre || "", texte: flashText(f),
         period: fmtDate(f.date), sortKey: f.date || ""
