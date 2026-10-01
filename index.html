@@ -48,14 +48,14 @@
     color:var(--fg);
     font-family:"IBM Plex Sans",system-ui,sans-serif;
     font-size:15px; line-height:1.55; margin:0;
-    padding-inline:16px; padding-block:0;
+    padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
   }
   .wrap{max-width:720px;margin:0 auto}
   h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
   a{color:var(--accent)}
   .mono{font-family:"IBM Plex Mono",monospace}
 
-  header.top{padding-top:22px;padding-bottom:14px}
+  header.top{padding-top:calc(22px + env(safe-area-inset-top,0px));padding-bottom:14px}
   header.top .eyebrow{
     font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
     text-transform:uppercase;color:var(--accent);margin-bottom:4px;
@@ -78,7 +78,14 @@
     border:1px solid currentColor;border-radius:5px;padding:1px 6px;margin:0 5px 4px 0;
   }
   #today h3{font-size:17px;margin:8px 0 6px}
+  #today .preuve{display:inline-block;font-size:12.5px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:5px;padding:1px 8px;margin:0 0 4px}
+  #today .flash-limites{font-size:13.5px;margin:10px 0 0;color:var(--fg)}
+  #today .flash-limites strong{color:var(--accent-2)}
+  #today .flash-pratique{margin-top:10px;font-size:13.5px}
+  #today .flash-pratique > summary{cursor:pointer;font-weight:600;color:var(--accent);padding-block:6px;min-height:44px;display:flex;align-items:center}
+  #today .flash-pratique > div{padding-bottom:4px}
   #today .flash-more{font-size:13px;margin-top:8px}
+  #today a:focus-visible,#today summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
   #today .flash-source{font-size:12.5px;color:var(--muted);margin-top:8px}
   #today-empty{color:var(--muted);font-style:italic;font-size:13.5px}
 
@@ -89,12 +96,22 @@
   .essentiel-grid p{margin:0;font-size:13.5px}
 
   /* theme browser: everything past, organized by category */
-  #browse .chips{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;margin-bottom:6px;z-index:5;border-bottom:1px solid var(--border)}
+  /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky */
+  #browse .chips{
+    display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;
+    scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);
+    padding:10px 0;margin-bottom:6px;z-index:5;border-bottom:1px solid var(--border);
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);
+            mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);
+  }
+  #browse .chips::-webkit-scrollbar{display:none}
   .chip{
     --chip-color: var(--accent);
-    font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:5px 10px;border-radius:999px;
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:0 14px;min-height:44px;border-radius:999px;
     border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
+    flex:none;scroll-snap-align:start;
   }
+  .chip:focus-visible,#theme-toggle:focus-visible,.item > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
 
   .theme-bucket{margin-top:22px}
@@ -129,8 +146,8 @@
 
   header.top{position:relative}
   #theme-toggle{
-    position:absolute;top:22px;right:0;
-    width:34px;height:34px;border-radius:999px;
+    position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:0;
+    width:44px;height:44px;border-radius:999px;
     border:1px solid var(--border);background:var(--chip-bg);color:var(--accent);
     display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
   }
@@ -217,6 +234,9 @@
     "contexte_suisse": "Contexte suisse & francophone",
     "a_surveiller": "À surveiller"
   };
+
+  // optional "preuve" field on a flash: how solid the evidence is (shown as a badge when present)
+  var PREUVE_LABELS = { "solide": "Preuve solide", "nuance": "Preuve nuancée", "floue": "Zone floue" };
 
   function escapeHtml(s){
     return (s||"").replace(/[&<>"']/g, function(c){
@@ -305,8 +325,11 @@
         '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
         themeTags(latest.themes) +
         '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
+        (PREUVE_LABELS[latest.preuve] ? '<div><span class="preuve">' + PREUVE_LABELS[latest.preuve] + '</span></div>' : '') +
         '<div>' + marked.parse(latest.resume || "") + '</div>' +
-        ((latest.limites || latest.pratique) ? '<p class="flash-more"><a href="#browse">Texte complet (limites, pratique) ↓ dans « Flashs précédents »</a></p>' : '') +
+        (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
+        (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
+        '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l\'archive ↓</a></p>' +
         (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
       '</div>';
   }
@@ -341,7 +364,7 @@
     state.flashs.forEach(function(f){
       buckets.flash.push({
         themes: f.themes || [], titre: f.titre || "", texte: flashText(f),
-        period: fmtDate(f.date), sortKey: f.date || ""
+        period: fmtDate(f.date), sortKey: f.date || "", flashDate: f.date || ""
       });
     });
 
@@ -382,7 +405,7 @@
         '<div class="theme-bucket-list">' +
           items.map(function(it){
             var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
-            return '<details class="item filterable" style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '">' +
+            return '<details class="item filterable"' + (it.flashDate ? ' id="flash-' + escapeHtml(it.flashDate) + '"' : '') + ' style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '">' +
               '<summary>' +
                 '<div class="item-head">' +
                   '<span class="item-title">' + escapeHtml(it.titre || SECTION_LABELS[key]) + '</span>' +
@@ -400,6 +423,22 @@
 
     applyFilter();
   }
+
+  // "Retrouver dans l'archive": clear the theme filter, open the matching card, scroll to it
+  document.addEventListener("click", function(e){
+    var link = e.target.closest && e.target.closest("[data-open-flash]");
+    if(!link) return;
+    var el = document.getElementById("flash-" + link.getAttribute("data-open-flash"));
+    if(!el) return;
+    e.preventDefault();
+    state.activeFilter = "tous";
+    document.querySelectorAll("#theme-chips .chip").forEach(function(c){
+      c.setAttribute("aria-pressed", c.getAttribute("data-theme-filter") === "tous" ? "true" : "false");
+    });
+    applyFilter();
+    el.open = true;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
 
   function applyFilter(){
     var f = state.activeFilter;
