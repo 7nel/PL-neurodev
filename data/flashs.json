@@ -31,5 +31,17 @@
     "limites": "Observationnel ; « à risque de TDL » = repérage en cohorte, pas diagnostic clinique ; tâches de laboratoire, validité écologique incertaine ; interprétation « retard vs déficit » à nuancer. Abstract seul consulté (via résumé des moteurs de recherche, PubMed bloqué), pas le texte intégral ; non répliqué.",
     "pratique": "Pour des élèves avec TDL au CO, prévoir un étayage explicite des situations de choix et de prise de risque (anticipation des conséquences, verbalisation des options), sans en faire une généralité individuelle.",
     "source": "Chan, L. F. J., & St Clair, M. C. (2026). The development of risky decision making in adolescents at risk of developmental language disorder. *Journal of Autism and Developmental Disorders*. https://doi.org/10.1007/s10803-026-07275-7"
+  },
+  {
+    "date": "2026-10-02",
+    "themes": [
+      "hpi",
+      "dys-tsle"
+    ],
+    "titre": "Double exceptionnalité HPI + dyslexie : profils de lecture-écriture à l'adolescence",
+    "resume": "Étude quantitative transversale sur des élèves du secondaire espagnols comparant trois groupes : HPI+dyslexie, HPI seul, dyslexie seule. Les HPI+dyslexiques montrent un profil hétérogène : faiblesses lexicales et syntaxiques, sémantique relativement préservée ; ils sont au-dessus du groupe dyslexique et en dessous du groupe HPI sur l'indice global de lecture et la compréhension.",
+    "limites": "Design transversal, comparaison de groupes, échantillon espagnol, effectifs non vérifiés ; critères d'identification HPI/dyslexie à examiner ; non répliqué. Seuls le résumé et les extraits indexés ont été consultés (PubMed, PMC et MDPI bloqués), pas le texte intégral. Les travaux antérieurs divergent sur le « masquage » mutuel des deux profils.",
+    "pratique": "Chez un élève HPI en difficulté d'écrit, ne pas écarter une dyslexie sur la base de bons résultats en compréhension : évaluer séparément décodage, orthographe et syntaxe, et s'appuyer sur la compréhension comme levier compensatoire.",
+    "source": "Alonso Benito, S., Pérez Sánchez, L. F., & Bueno Villaverde, Á. (2026). Reading and writing profiles in twice-exceptional adolescents with intellectual giftedness and dyslexia. *Journal of Intelligence, 14*(6), 108. https://doi.org/10.3390/jintelligence14060108"
   }
 ]
