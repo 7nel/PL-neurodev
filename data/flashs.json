@@ -54,5 +54,16 @@
     "limites": "Revue méthodologique : elle évalue la qualité des études de prévalence, pas l'efficacité d'interventions, et ne livre pas de taux de prévalence fiable. Les non-participations sont souvent sous-déclarées, d'où un biais de sélection probable. Zone floue : pas de cadre diagnostique harmonisé. Seul un résumé de seconde main a été consulté (Wiley et PubMed inaccessibles) : initiales des auteur·es et détails non vérifiés.",
     "pratique": "Face aux chiffres de prévalence cités sur le TSAF, les relire avec prudence ; chez un élève au profil dysexécutif ou de DI légère, documenter l'exposition prénatale (anamnèse) et l'évoquer à l'équipe pluridisciplinaire plutôt que de conclure sur la seule présentation scolaire.",
     "source": "McCarthy, et al. (2026). Fetal alcohol spectrum disorder prevalence studies in school settings: A global systematic review of methods, measures, strengths and limitations. *Drug and Alcohol Review*. https://doi.org/10.1111/dar.70233 (liste complète des auteur·es et pagination non vérifiées)"
+  },
+  {
+    "date": "2026-10-04",
+    "themes": [
+      "di-tsaf"
+    ],
+    "titre": "Dépression et DI légère à modérée : adaptation de l'activation comportementale (Beat-D)",
+    "resume": "Étude de développement d'intervention (adaptation en trois phases, avec revue du manuel adulte Beat-It par l'équipe puis consultation de parents et de professionnels) : le manuel Beat-D, version adolescente de l'activation comportementale pour dépression avec DI légère à modérée, est décrit selon TIDieR.",
+    "limites": "Aucune donnée d'efficacité : c'est une description d'adaptation, pas un essai ; les auteurs notent qu'aucune intervention psychologique n'a de preuve établie pour la dépression chez les adolescents avec DI. Lecture limitée au résumé et à des extraits (texte intégral non accessible) : N des consultés et rôle éventuel des adolescents non vérifiés.",
+    "pratique": "Face à un élève avec DI légère montrant retrait, anhédonie ou irritabilité durable, penser à la dépression (et pas seulement au « comportement ») et orienter vers le réseau de soins ; l'activation par des activités plaisantes planifiées reste une piste à discuter avec les thérapeutes, sans prétendre à une efficacité démontrée.",
+    "source": "Cameron, Melvin, Hastings, Paris, Jahoda, Meade, & Gray (2026). Adaptation of behavioural activation for adolescents with mild to moderate intellectual disabilities and depression. *Frontiers in Psychiatry*. https://doi.org/10.3389/fpsyt.2026.1771276 (initiales et pagination non vérifiées)"
   }
 ]
