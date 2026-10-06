@@ -17,32 +17,33 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <script id="marked-js" defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
 <style>
   /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
      each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
-     consistent color, used on tags, item borders and filter chips so a recurring category reads at a glance. */
+     consistent color, used on tags, chevrons and filter chips so a recurring category reads at a glance.
+     type scale: 16px body, 14px meta, headings 17-24px. */
   :root{
     --bg:#F5F6F3; --fg:#1D2422; --muted:#5B6764;
     --accent:#35606B; --accent-2:#9A531F;
     --border:#D9DCD4; --card:#FFFFFF; --chip-bg:#EDEFE9;
     --c-tsa:#35606B; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#2A6F54; --c-transversal:#6F5C3A;
-    --c-hpi:#7F6212; --c-di-tsaf:#924B45; --c-attachement:#4A5B8C;
+    --c-hpi:#7F6212; --c-di-tsaf:#A0366B; --c-attachement:#4A5B8C;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
       --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
       --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
-      --c-hpi:#D9B85A; --c-di-tsaf:#D08F89; --c-attachement:#8B9BD9;
+      --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
     }
   }
   :root[data-theme="dark"]{
     --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
     --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
     --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
-    --c-hpi:#D9B85A; --c-di-tsaf:#D08F89; --c-attachement:#8B9BD9;
+    --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
   }
 
   @media (prefers-reduced-motion: reduce){ .item .item-title::before{transition:none} }
@@ -56,103 +57,113 @@
     padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
   }
   .wrap{max-width:720px;margin:0 auto}
-  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
+  h1,h2,h3,h4{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
   a{color:var(--accent)}
-  .mono{font-family:"IBM Plex Mono",monospace}
+  .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-  header.top{padding-top:calc(22px + env(safe-area-inset-top,0px));padding-bottom:14px}
-  header.top .eyebrow{
-    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--accent);margin-bottom:4px;
-  }
-  header.top h1{font-size:26px}
-  header.top p.tagline{color:var(--muted);font-size:14.5px;margin:6px 0 0}
+  header.top{position:relative;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:6px;min-height:calc(58px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;gap:12px}
+  header.top h1{font-size:24px}
 
-  main{padding-block:6px 60px;display:flex;flex-direction:column;gap:34px}
-  section > h2{font-size:19px;margin-bottom:2px}
-  section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:14px}
+  main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
+  section > h2{font-size:20px;margin-bottom:2px}
+  section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:12px}
 
   .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
 
-  /* today: the first thing on the page, never hidden by a theme filter */
-  #today .card{border-left:3px solid var(--accent)}
-  #today .flash-date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);letter-spacing:.03em}
+  /* evidence level: the product's differentiator, shown as a glyph (full / half / empty) plus its label, never color alone */
+  .preuve{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:6px;padding:1px 9px 1px 7px;margin:0 5px 4px 0}
+  .preuve-ico{flex:none}
   .theme-tag{
-    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12px;
-    letter-spacing:.04em;text-transform:uppercase;
-    border:1px solid currentColor;border-radius:5px;padding:1px 6px;margin:0 5px 4px 0;
+    display:inline-block;font-size:14px;font-weight:500;
+    border:1px solid currentColor;border-radius:6px;padding:1px 8px;margin:0 5px 4px 0;
   }
-  #today h3{font-size:18px;margin:8px 0 6px}
-  #today .preuve{display:inline-block;font-size:13.5px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:5px;padding:1px 8px;margin:0 0 4px}
-  #today .flash-limites{font-size:15px;margin:10px 0 0;color:var(--fg)}
+  .meta-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px}
+
+  /* today: the first thing on the page, never hidden by a theme filter */
+  #today .flash-date{font-size:14px;color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
+  #today h3{font-size:20px;margin:6px 0 8px}
+  #today .flash-limites{margin:10px 0 0;color:var(--fg)}
   #today .flash-limites strong{color:var(--accent-2)}
-  #today .flash-pratique{margin-top:10px;font-size:15px}
+  #today .flash-pratique{margin-top:10px}
   #today .flash-pratique > summary{cursor:pointer;font-weight:600;color:var(--accent);padding-block:6px;min-height:44px;display:flex;align-items:center}
   #today .flash-pratique > div{padding-bottom:4px}
-  #today .flash-more{font-size:14.5px;margin-top:8px}
+  #today .flash-more{margin:4px 0 0;font-size:14px}
+  #today .flash-more a{display:inline-flex;align-items:center;min-height:44px}
   #today a:focus-visible,#today summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  #today .flash-source{font-size:13.5px;color:var(--muted);margin-top:8px}
-  #today-empty{color:var(--muted);font-style:italic;font-size:15px}
+  #today .flash-source{font-size:14px;color:var(--muted);margin-top:4px}
+  #today-empty{color:var(--muted);font-style:italic}
 
   /* essentiel of the latest weekly review: also unfiltered, a standing summary */
-  .essentiel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-  .essentiel-grid .card{padding:14px 16px}
-  .essentiel-num{font-family:"IBM Plex Mono",monospace;color:var(--accent-2);font-size:13px;margin-bottom:6px}
-  .essentiel-grid p{margin:0;font-size:15px}
+  .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .essentiel-list li{position:relative;padding-left:18px}
+  .essentiel-list li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
 
-  /* theme browser: everything past, organized by category */
-  /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky */
+  /* archive: everything past, searchable, then filtered by theme */
+  .search{display:block;width:100%;min-height:44px;font:inherit;padding:0 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--fg)}
+  .search::placeholder{color:var(--muted)}
+  .search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky.
+     the last chip is cut by the edge on purpose: it shows the row scrolls. */
   #browse .chips{
     display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;
     scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);
-    padding:10px 0;margin-bottom:6px;z-index:5;border-bottom:1px solid var(--border);
-    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);
-            mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);
+    padding:10px 16px 10px 0;margin-top:4px;z-index:5;border-bottom:1px solid var(--border);
   }
   #browse .chips::-webkit-scrollbar{display:none}
   .chip{
     --chip-color: var(--accent);
-    font-family:"IBM Plex Mono",monospace;font-size:13.5px;padding:0 14px;min-height:44px;border-radius:999px;
+    font:inherit;font-size:14.5px;padding:0 14px;min-height:44px;border-radius:999px;
     border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
     flex:none;scroll-snap-align:start;
   }
-  .chip:focus-visible,#theme-toggle:focus-visible,.item > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .chip:focus-visible,#theme-toggle:focus-visible,.item > summary:focus-visible,.bucket > summary:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
+  .result-count{margin:10px 0 0;font-size:14px;color:var(--muted)}
 
-  .theme-bucket{margin-top:22px}
-  .theme-bucket h3{font-size:17px;color:var(--accent);margin-bottom:10px}
-  .theme-bucket-list{display:flex;flex-direction:column;gap:8px}
-  .theme-bucket[hidden]{display:none}
+  /* sections: collapsed by default with their count; opened automatically while searching or filtering */
+  .bucket{margin-top:14px;border-top:1px solid var(--border)}
+  .bucket[hidden]{display:none}
+  .bucket > summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:6px}
+  .bucket > summary::-webkit-details-marker{display:none}
+  .bucket > summary h3{font-size:17px;color:var(--accent)}
+  .bucket-count{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bucket-count::after{content:"";display:inline-block;width:7px;height:7px;margin-left:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
+  .bucket[open] .bucket-count::after{transform:translateY(1px) rotate(-135deg)}
+  .month{margin-top:10px}
+  .month[hidden]{display:none}
+  .month h4{font-size:14px;font-weight:600;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--muted);margin-bottom:6px;text-transform:capitalize}
+  .theme-bucket-list{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
 
-  .item{border:1px solid var(--border);border-left:3px solid var(--item-color, var(--border));border-radius:9px;background:var(--card);overflow:hidden}
+  .item{border:1px solid var(--border);border-radius:9px;background:var(--card);overflow:hidden}
   .item[hidden]{display:none}
   .item > summary{cursor:pointer;list-style:none;padding:11px 15px;display:flex;flex-direction:column;gap:3px}
   .item > summary::-webkit-details-marker{display:none}
   .item .item-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
-  .item .item-period{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);white-space:nowrap}
-  .item .item-title{font-weight:600;font-size:15.5px;display:flex;align-items:center;gap:6px}
-  .item .item-title::before{content:"▸";display:inline-block;color:var(--item-color, var(--muted));transition:transform .15s;font-size:11px}
-  .item[open] .item-title::before{transform:rotate(90deg)}
-  .item .item-teaser{font-size:14px;color:var(--muted);margin-top:1px}
-  .item .item-tags{margin-top:4px}
-  .item .item-body{font-size:15px;padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
+  .item .item-period{font-size:14px;color:var(--muted);white-space:nowrap}
+  .item .item-title{font-weight:600;font-size:17px;display:flex;align-items:baseline;gap:9px;line-height:1.35}
+  .item .item-title::before{content:"";flex:none;width:7px;height:7px;border-right:2px solid var(--item-color, var(--muted));border-bottom:2px solid var(--item-color, var(--muted));transform:translateY(-2px) rotate(-45deg);transition:transform .15s}
+  .item[open] .item-title::before{transform:translateY(-4px) rotate(45deg)}
+  .item .item-teaser{color:var(--muted);margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .item .item-tags{margin-top:6px}
+  .item .item-body{padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
   .item .item-body p{margin:8px 0 0}
   .item .item-body strong{color:var(--fg)}
   .item .item-body em{color:var(--muted)}
 
-  #empty-filter{display:none;color:var(--muted);font-style:italic;font-size:15px;padding-top:8px}
+  #empty-filter{display:none;color:var(--muted);padding-top:12px}
+  #empty-filter p{margin:0 0 8px;font-style:italic}
+  .btn{font:inherit;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--accent);background:var(--chip-bg);color:var(--accent);cursor:pointer;font-weight:600}
 
   footer{
     padding-block:20px calc(24px + env(safe-area-inset-bottom,0px));
-    border-top:1px solid var(--border);color:var(--muted);font-size:13.5px;text-align:center;
+    border-top:1px solid var(--border);color:var(--muted);font-size:14px;text-align:center;
   }
-  #loading{color:var(--muted);font-style:italic;font-size:15px;padding-block:20px}
-  #load-error{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--muted)}
+  footer p{margin:0 0 6px}
+  #loading{color:var(--muted);font-style:italic;padding-block:20px}
+  #load-error,#no-js{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--muted)}
 
-  header.top{position:relative}
   #theme-toggle{
-    position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:0;
-    width:44px;height:44px;border-radius:999px;
+    flex:none;width:44px;height:44px;border-radius:999px;
     border:1px solid var(--border);background:var(--chip-bg);color:var(--accent);
     display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
   }
@@ -165,35 +176,36 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <button id="theme-toggle" type="button" aria-label="Changer d'apparence (clair / sombre)" aria-pressed="false">
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-    </button>
-    <div class="eyebrow">Psycho-éducation · CO Valais</div>
     <h1>PL-neurodev’</h1>
-    <p class="tagline">Recherche internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.</p>
+    <button id="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+    </button>
   </header>
 
   <main>
     <div id="loading" role="status">Chargement…</div>
     <p id="load-error" role="alert">Le contenu n’a pas pu être chargé. Vérifie ta connexion et recharge la page.</p>
+    <noscript><p id="no-js" style="display:block">Cette page a besoin de JavaScript pour afficher la veille.</p></noscript>
 
     <section id="today" hidden>
-      <h2>Aujourd’hui</h2>
-      <div class="section-sub">Le flash du jour</div>
+      <h2 id="today-title">Aujourd’hui</h2>
+      <div class="section-sub" id="today-sub" hidden></div>
       <div id="today-content"></div>
     </section>
 
     <section id="essentiel-section" hidden>
       <h2>L’essentiel de la semaine</h2>
       <div class="section-sub" id="essentiel-sub"></div>
-      <div class="essentiel-grid" id="essentiel-content"></div>
+      <div class="card"><ul class="essentiel-list" id="essentiel-content"></ul></div>
     </section>
 
     <section id="browse" hidden>
-      <h2>Explorer par thème</h2>
-      <div class="section-sub">Tout ce qui est déjà paru — flashs précédents et revues hebdomadaires — organisé par catégorie. Chaque carte se déplie au clic.</div>
-      <div class="chips" id="theme-chips">
+      <h2>Archive</h2>
+      <div class="section-sub">Flashs et revues déjà parus. Cherche un mot, ou filtre par thème.</div>
+      <label class="sr-only" for="search">Rechercher dans l’archive</label>
+      <input class="search" id="search" type="search" placeholder="Rechercher (ex. mémoire de travail)" autocomplete="off" enterkeyhint="search">
+      <div class="chips" id="theme-chips" role="group" aria-label="Filtrer par thème">
         <button class="chip" data-theme-filter="tous" aria-pressed="true">Tous</button>
         <button class="chip" data-theme-filter="tsa" aria-pressed="false" style="--chip-color:var(--c-tsa)">TSA</button>
         <button class="chip" data-theme-filter="tdah" aria-pressed="false" style="--chip-color:var(--c-tdah)">TDA/H</button>
@@ -204,13 +216,18 @@
         <button class="chip" data-theme-filter="attachement" aria-pressed="false" style="--chip-color:var(--c-attachement)">Attachement & trauma</button>
         <button class="chip" data-theme-filter="transversal" aria-pressed="false" style="--chip-color:var(--c-transversal)">Transversal & Suisse</button>
       </div>
+      <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
       <div id="buckets"></div>
-      <p id="empty-filter">Rien pour ce thème dans ce qui est déjà paru.</p>
+      <div id="empty-filter">
+        <p>Rien ne correspond à cette recherche.</p>
+        <button class="btn" id="reset-filters" type="button">Effacer la recherche et le thème</button>
+      </div>
     </section>
   </main>
 
   <footer>
-    Veille personnelle de Pauline Lentes — alimentée automatiquement, à lire avec l'esprit critique qu'appelle toute synthèse rapide.
+    <p>Recherche internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma. Psycho-éducation, CO Valais.</p>
+    <p>Veille personnelle de Pauline Lentes — alimentée automatiquement, à lire avec l’esprit critique qu’appelle toute synthèse rapide.</p>
   </footer>
 </div>
 
@@ -221,7 +238,7 @@
   var THEME_LABELS = {
     "tsa": "TSA", "tdah": "TDA/H", "dys-tsle": "DYS / TSLE",
     "tdl-tdc": "TDL / TDC", "hpi": "HPI", "di-tsaf": "DI / TSAF",
-    "attachement": "Attachement & trauma", "transversal": "Transversal"
+    "attachement": "Attachement & trauma", "transversal": "Transversal & Suisse"
   };
   var THEME_COLOR_VAR = {
     "tsa": "var(--c-tsa)", "tdah": "var(--c-tdah)", "dys-tsle": "var(--c-dys-tsle)",
@@ -229,9 +246,10 @@
     "attachement": "var(--c-attachement)", "transversal": "var(--c-transversal)"
   };
 
-  var SECTION_ORDER = ["flash","etude","divergence","zone_floue","implication_co","contexte_suisse","a_surveiller"];
+  // display order: what Pauline looks for most (cautions, practice) comes first
+  var SECTION_ORDER = ["zone_floue","implication_co","etude","flash","divergence","contexte_suisse","a_surveiller"];
   var SECTION_LABELS = {
-    "flash": "Flashs précédents",
+    "flash": "Tous les flashs",
     "etude": "Études marquantes",
     "divergence": "Divergences & controverses",
     "zone_floue": "Zones floues / à prendre avec prudence",
@@ -239,14 +257,20 @@
     "contexte_suisse": "Contexte suisse & francophone",
     "a_surveiller": "À surveiller"
   };
+  var MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 
-  // optional "preuve" field on a flash: how solid the evidence is (shown as a badge when present)
-  var PREUVE_LABELS = { "solide": "Preuve solide", "nuance": "Preuve nuancée", "floue": "Zone floue" };
+  // "preuve" on a flash or a review item: how solid the evidence is. when missing on a review item,
+  // it is read from the first word of its "Niveau de preuve" line (élevé → solide, modéré → nuancée, faible → floue)
+  var PREUVE_LABELS = { "solide": "Preuve solide", "nuance": "Preuve nuancée", "floue": "Preuve fragile" };
 
   function escapeHtml(s){
     return (s||"").replace(/[&<>"']/g, function(c){
       return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
     });
+  }
+
+  function norm(s){
+    return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
 
   function fmtDate(iso){
@@ -258,12 +282,42 @@
     return d.getUTCDate() + " " + months[d.getUTCMonth()] + " " + d.getUTCFullYear();
   }
 
+  function monthLabel(iso){
+    var m = /^(\d{4})-(\d{2})/.exec(iso || "");
+    return m ? MONTHS[+m[2]-1] + " " + m[1] : "Sans date";
+  }
+
+  function todayISO(){
+    var d = new Date();
+    function p(n){ return (n < 10 ? "0" : "") + n; }
+    return d.getFullYear() + "-" + p(d.getMonth()+1) + "-" + p(d.getDate());
+  }
+
   function themeTags(themes){
     if(!themes || !themes.length) return "";
     return themes.map(function(t){
       var color = THEME_COLOR_VAR[t] || "var(--muted)";
       return '<span class="theme-tag" style="color:' + color + '">' + escapeHtml(THEME_LABELS[t] || t) + '</span>';
     }).join("");
+  }
+
+  function derivePreuve(texte){
+    var m = /niveau de preuve\s*:?\s*\**\s*:?\s*([^\s,;.—(]+)/i.exec(texte || "");
+    if(!m) return null;
+    var w = m[1].toLowerCase();
+    if(w.indexOf("faible") === 0) return "floue";
+    if(w.indexOf("mod") === 0) return "nuance";
+    if(w.indexOf("élev") === 0 || w.indexOf("elev") === 0 || w.indexOf("solide") === 0 || w.indexOf("fort") === 0) return "solide";
+    return null;
+  }
+
+  function preuveBadge(level){
+    if(!PREUVE_LABELS[level]) return "";
+    var fill = level === "solide" ? '<circle cx="8" cy="8" r="6.25" fill="currentColor"/>'
+             : level === "nuance" ? '<path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/>' : "";
+    return '<span class="preuve"><svg class="preuve-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">' +
+      '<circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/>' + fill + '</svg>' +
+      PREUVE_LABELS[level] + '</span>';
   }
 
   // plain-text teaser: strips markdown emphasis markers, collapses whitespace, cuts to length
@@ -281,7 +335,7 @@
     return cut + "…";
   }
 
-  var state = { flashs: [], revues: [], activeFilter: "tous" };
+  var state = { flashs: [], revues: [], activeFilter: "tous", query: "" };
 
   // theme toggle: explicit choice overrides the OS preference and is remembered per device
   function initThemeToggle(){
@@ -309,14 +363,26 @@
   /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
   function flashText(f){
     var t = f.resume || "";
-    if(f.limites) t += "\n\n**Limites\u202f:** " + f.limites;
-    if(f.pratique) t += "\n\n**Pour ta pratique au CO\u202f:** " + f.pratique;
+    if(f.limites) t += "\n\n**Limites :** " + f.limites;
+    if(f.pratique) t += "\n\n**Pour ta pratique au CO :** " + f.pratique;
     return t;
+  }
+
+  // sources are plain text: turn a DOI into a link so the article opens in one tap
+  function sourceHtml(src){
+    var linked = src.replace(/10\.\d{4,9}\/[^\s]*[^\s.,;)]/g, function(doi, at, all){
+      // already part of a URL: marked links it by itself
+      if(at > 0 && /[\/\[(]/.test(all.charAt(at - 1))) return doi;
+      return "[" + doi + "](https://doi.org/" + doi + ")";
+    });
+    return marked.parseInline(linked);
   }
 
   function renderToday(){
     var section = document.getElementById("today");
     var content = document.getElementById("today-content");
+    var title = document.getElementById("today-title");
+    var sub = document.getElementById("today-sub");
     section.hidden = false;
 
     if(!state.flashs.length){
@@ -325,17 +391,27 @@
     }
     var sorted = state.flashs.slice().sort(function(a,b){ return (b.date||"").localeCompare(a.date||""); });
     var latest = sorted[0];
+
+    // never call yesterday's flash "today"
+    if((latest.date || "") < todayISO()){
+      title.textContent = "Dernier flash";
+      sub.textContent = "Pas de nouveau flash aujourd’hui : le dernier date du " + fmtDate(latest.date) + ".";
+      sub.hidden = false;
+    }else{
+      title.textContent = "Aujourd’hui";
+      sub.hidden = true;
+    }
+
     content.innerHTML =
       '<div class="card">' +
-        '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
-        themeTags(latest.themes) +
+        '<div class="meta-row"><span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
+          preuveBadge(latest.preuve) + themeTags(latest.themes) + '</div>' +
         '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-        (PREUVE_LABELS[latest.preuve] ? '<div><span class="preuve">' + PREUVE_LABELS[latest.preuve] + '</span></div>' : '') +
         '<div>' + marked.parse(latest.resume || "") + '</div>' +
         (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
         (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
         '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p>' +
-        (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
+        (latest.source ? '<div class="flash-source">' + sourceHtml(latest.source) + '</div>' : '') +
       '</div>';
   }
 
@@ -351,8 +427,8 @@
     var latest = sorted[0];
     section.hidden = false;
     sub.textContent = "Semaine du " + fmtDate(latest.date_debut) + " au " + fmtDate(latest.date_fin);
-    content.innerHTML = latest.essentiel.map(function(pt, i){
-      return '<div class="card"><div class="essentiel-num">' + (i+1) + '</div><p>' + escapeHtml(pt) + '</p></div>';
+    content.innerHTML = latest.essentiel.map(function(pt){
+      return '<li>' + escapeHtml(pt) + '</li>';
     }).join("");
   }
 
@@ -368,7 +444,7 @@
     // today's flash is also kept here in full, so the top card can stay a short preview
     state.flashs.forEach(function(f){
       buckets.flash.push({
-        themes: f.themes || [], titre: f.titre || "", texte: flashText(f),
+        themes: f.themes || [], titre: f.titre || "", texte: flashText(f), preuve: f.preuve || derivePreuve(f.limites),
         period: fmtDate(f.date), sortKey: f.date || "", flashDate: f.date || ""
       });
     });
@@ -377,7 +453,7 @@
       (r.items || []).forEach(function(it){
         if(!buckets[it.section]) return;
         buckets[it.section].push({
-          themes: it.themes || [], titre: it.titre || "", texte: it.texte || "",
+          themes: it.themes || [], titre: it.titre || "", texte: it.texte || "", preuve: it.preuve || derivePreuve(it.texte),
           period: periodLabel(r), sortKey: r.date_fin || r.date_debut || ""
         });
       });
@@ -389,58 +465,77 @@
     return buckets;
   }
 
+  function itemHtml(it, key){
+    var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
+    var haystack = norm([it.titre, it.texte, (it.themes||[]).map(function(t){ return THEME_LABELS[t] || t; }).join(" ")].join(" "));
+    return '<details class="item filterable"' + (it.flashDate ? ' id="flash-' + escapeHtml(it.flashDate) + '"' : '') +
+      ' style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '" data-search="' + escapeHtml(haystack) + '">' +
+      '<summary>' +
+        '<div class="item-head">' +
+          '<span class="item-title">' + escapeHtml(it.titre || SECTION_LABELS[key]) + '</span>' +
+          '<span class="item-period">' + escapeHtml(it.period) + '</span>' +
+        '</div>' +
+        '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
+        '<div class="item-tags meta-row">' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
+      '</summary>' +
+      '<div class="item-body">' + marked.parse(it.texte || "") + '</div>' +
+    '</details>';
+  }
+
   function renderBrowse(){
     var section = document.getElementById("browse");
     var container = document.getElementById("buckets");
     var buckets = buildBuckets();
     var hasAny = SECTION_ORDER.some(function(k){ return buckets[k].length; });
 
+    section.hidden = false;
     if(!hasAny){
-      section.hidden = false;
-      container.innerHTML = '<p style="color:var(--muted);font-style:italic;font-size:15px">Rien à explorer pour l’instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
+      container.innerHTML = '<p style="color:var(--muted);font-style:italic">Rien à explorer pour l’instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
       return;
     }
-    section.hidden = false;
 
     container.innerHTML = SECTION_ORDER.map(function(key){
       var items = buckets[key];
       if(!items.length) return "";
-      return '<div class="theme-bucket" data-bucket="' + key + '">' +
-        '<h3>' + escapeHtml(SECTION_LABELS[key]) + '</h3>' +
-        '<div class="theme-bucket-list">' +
-          items.map(function(it){
-            var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
-            return '<details class="item filterable"' + (it.flashDate ? ' id="flash-' + escapeHtml(it.flashDate) + '"' : '') + ' style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '">' +
-              '<summary>' +
-                '<div class="item-head">' +
-                  '<span class="item-title">' + escapeHtml(it.titre || SECTION_LABELS[key]) + '</span>' +
-                  '<span class="item-period mono">' + escapeHtml(it.period) + '</span>' +
-                '</div>' +
-                '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 120)) + '</div>' +
-                '<div class="item-tags">' + themeTags(it.themes) + '</div>' +
-              '</summary>' +
-              '<div class="item-body">' + marked.parse(it.texte || "") + '</div>' +
-            '</details>';
-          }).join("") +
-        '</div>' +
-      '</div>';
+      // items are already sorted newest first: group them by month
+      var groups = [], last = null;
+      items.forEach(function(it){
+        var label = monthLabel(it.sortKey);
+        if(!last || last.label !== label){ last = { label: label, items: [] }; groups.push(last); }
+        last.items.push(it);
+      });
+      return '<details class="bucket" data-bucket="' + key + '">' +
+        '<summary><h3>' + escapeHtml(SECTION_LABELS[key]) + '</h3><span class="bucket-count"></span></summary>' +
+        groups.map(function(g){
+          return '<div class="month"><h4>' + escapeHtml(g.label) + '</h4><div class="theme-bucket-list">' +
+            g.items.map(function(it){ return itemHtml(it, key); }).join("") + '</div></div>';
+        }).join("") +
+      '</details>';
     }).join("");
 
     applyFilter();
   }
 
-  // "Retrouver dans l'archive": clear the theme filter, open the matching card, scroll to it
+  function resetFilters(){
+    state.activeFilter = "tous";
+    state.query = "";
+    document.getElementById("search").value = "";
+    document.querySelectorAll("#theme-chips .chip").forEach(function(c){
+      c.setAttribute("aria-pressed", c.getAttribute("data-theme-filter") === "tous" ? "true" : "false");
+    });
+    applyFilter();
+  }
+
+  // "Retrouver dans l'archive": clear the filters, open the matching section and card, scroll to it
   document.addEventListener("click", function(e){
     var link = e.target.closest && e.target.closest("[data-open-flash]");
     if(!link) return;
     var el = document.getElementById("flash-" + link.getAttribute("data-open-flash"));
     if(!el) return;
     e.preventDefault();
-    state.activeFilter = "tous";
-    document.querySelectorAll("#theme-chips .chip").forEach(function(c){
-      c.setAttribute("aria-pressed", c.getAttribute("data-theme-filter") === "tous" ? "true" : "false");
-    });
-    applyFilter();
+    resetFilters();
+    var bucket = el.closest("details.bucket");
+    if(bucket) bucket.open = true;
     el.open = true;
     var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     el.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
@@ -448,19 +543,36 @@
 
   function applyFilter(){
     var f = state.activeFilter;
-    var anyVisible = false;
-    document.querySelectorAll(".theme-bucket").forEach(function(bucket){
-      var bucketVisible = false;
-      bucket.querySelectorAll(".filterable").forEach(function(el){
-        var themes = (el.getAttribute("data-item-themes") || "").split(",");
-        var show = (f === "tous" || themes.indexOf(f) !== -1);
-        el.hidden = !show;
-        if(show) bucketVisible = true;
+    var tokens = norm(state.query).split(/\s+/).filter(Boolean);
+    var filtering = f !== "tous" || tokens.length > 0;
+    var total = 0;
+
+    document.querySelectorAll("#buckets .bucket").forEach(function(bucket){
+      var shown = 0;
+      bucket.querySelectorAll(".month").forEach(function(month){
+        var monthShown = 0;
+        month.querySelectorAll(".filterable").forEach(function(el){
+          var themes = (el.getAttribute("data-item-themes") || "").split(",");
+          var hay = el.getAttribute("data-search") || "";
+          var show = (f === "tous" || themes.indexOf(f) !== -1) && tokens.every(function(t){ return hay.indexOf(t) !== -1; });
+          el.hidden = !show;
+          if(show) monthShown++;
+        });
+        month.hidden = !monthShown;
+        shown += monthShown;
       });
-      bucket.hidden = !bucketVisible;
-      if(bucketVisible) anyVisible = true;
+      bucket.hidden = !shown;
+      bucket.querySelector(".bucket-count").textContent = shown;
+      // open the sections that match while filtering; fold everything back otherwise
+      bucket.open = filtering && shown > 0;
+      total += shown;
     });
-    document.getElementById("empty-filter").style.display = anyVisible ? "none" : "block";
+
+    var count = document.getElementById("result-count");
+    count.textContent = filtering
+      ? (total === 0 ? "Aucun résultat" : total + (total > 1 ? " résultats" : " résultat"))
+      : total + " éléments dans l’archive";
+    document.getElementById("empty-filter").style.display = total ? "none" : "block";
   }
 
   function boot(data){
@@ -479,6 +591,11 @@
         applyFilter();
       });
     });
+    document.getElementById("search").addEventListener("input", function(e){
+      state.query = e.target.value;
+      applyFilter();
+    });
+    document.getElementById("reset-filters").addEventListener("click", resetFilters);
   }
 
   // marked is loaded with defer from a CDN: wait for it, with a specific error if it never arrives
