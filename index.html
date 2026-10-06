@@ -3,29 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Veille Neurodev'</title>
+<title>PL-neurodev’</title>
 <meta name="description" content="Veille scientifique internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.">
-<meta name="theme-color" content="#35606B">
+<meta name="theme-color" content="#F5F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121817" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Neurodev'">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="PL-neurodev’">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script id="marked-js" defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
 <style>
   /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
      each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
      consistent color, used on tags, item borders and filter chips so a recurring category reads at a glance. */
   :root{
     --bg:#F5F6F3; --fg:#1D2422; --muted:#5B6764;
-    --accent:#35606B; --accent-2:#B5652A;
+    --accent:#35606B; --accent-2:#9A531F;
     --border:#D9DCD4; --card:#FFFFFF; --chip-bg:#EDEFE9;
-    --c-tsa:#35606B; --c-tdah:#B5652A; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#2F7A5C; --c-transversal:#8A7350;
-    --c-hpi:#A88422; --c-di-tsaf:#A85C56; --c-attachement:#4A5B8C;
+    --c-tsa:#35606B; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#2A6F54; --c-transversal:#6F5C3A;
+    --c-hpi:#7F6212; --c-di-tsaf:#924B45; --c-attachement:#4A5B8C;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -42,12 +45,14 @@
     --c-hpi:#D9B85A; --c-di-tsaf:#D08F89; --c-attachement:#8B9BD9;
   }
 
+  @media (prefers-reduced-motion: reduce){ .item .item-title::before{transition:none} }
+
   *{box-sizing:border-box}
   html,body{background:var(--bg)}
   body{
     color:var(--fg);
     font-family:"IBM Plex Sans",system-ui,sans-serif;
-    font-size:15px; line-height:1.55; margin:0;
+    font-size:16px; line-height:1.6; margin:0;
     padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
   }
   .wrap{max-width:720px;margin:0 auto}
@@ -57,43 +62,43 @@
 
   header.top{padding-top:calc(22px + env(safe-area-inset-top,0px));padding-bottom:14px}
   header.top .eyebrow{
-    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;
     text-transform:uppercase;color:var(--accent);margin-bottom:4px;
   }
   header.top h1{font-size:26px}
-  header.top p.tagline{color:var(--muted);font-size:13.5px;margin:6px 0 0}
+  header.top p.tagline{color:var(--muted);font-size:14.5px;margin:6px 0 0}
 
   main{padding-block:6px 60px;display:flex;flex-direction:column;gap:34px}
   section > h2{font-size:19px;margin-bottom:2px}
-  section > .section-sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+  section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:14px}
 
   .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
 
   /* today: the first thing on the page, never hidden by a theme filter */
   #today .card{border-left:3px solid var(--accent)}
-  #today .flash-date{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.03em}
+  #today .flash-date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);letter-spacing:.03em}
   .theme-tag{
-    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12px;
     letter-spacing:.04em;text-transform:uppercase;
     border:1px solid currentColor;border-radius:5px;padding:1px 6px;margin:0 5px 4px 0;
   }
-  #today h3{font-size:17px;margin:8px 0 6px}
-  #today .preuve{display:inline-block;font-size:12.5px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:5px;padding:1px 8px;margin:0 0 4px}
-  #today .flash-limites{font-size:13.5px;margin:10px 0 0;color:var(--fg)}
+  #today h3{font-size:18px;margin:8px 0 6px}
+  #today .preuve{display:inline-block;font-size:13.5px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:5px;padding:1px 8px;margin:0 0 4px}
+  #today .flash-limites{font-size:15px;margin:10px 0 0;color:var(--fg)}
   #today .flash-limites strong{color:var(--accent-2)}
-  #today .flash-pratique{margin-top:10px;font-size:13.5px}
+  #today .flash-pratique{margin-top:10px;font-size:15px}
   #today .flash-pratique > summary{cursor:pointer;font-weight:600;color:var(--accent);padding-block:6px;min-height:44px;display:flex;align-items:center}
   #today .flash-pratique > div{padding-bottom:4px}
-  #today .flash-more{font-size:13px;margin-top:8px}
+  #today .flash-more{font-size:14.5px;margin-top:8px}
   #today a:focus-visible,#today summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  #today .flash-source{font-size:12.5px;color:var(--muted);margin-top:8px}
-  #today-empty{color:var(--muted);font-style:italic;font-size:13.5px}
+  #today .flash-source{font-size:13.5px;color:var(--muted);margin-top:8px}
+  #today-empty{color:var(--muted);font-style:italic;font-size:15px}
 
   /* essentiel of the latest weekly review: also unfiltered, a standing summary */
   .essentiel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
   .essentiel-grid .card{padding:14px 16px}
-  .essentiel-num{font-family:"IBM Plex Mono",monospace;color:var(--accent-2);font-size:12px;margin-bottom:6px}
-  .essentiel-grid p{margin:0;font-size:13.5px}
+  .essentiel-num{font-family:"IBM Plex Mono",monospace;color:var(--accent-2);font-size:13px;margin-bottom:6px}
+  .essentiel-grid p{margin:0;font-size:15px}
 
   /* theme browser: everything past, organized by category */
   /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky */
@@ -107,7 +112,7 @@
   #browse .chips::-webkit-scrollbar{display:none}
   .chip{
     --chip-color: var(--accent);
-    font-family:"IBM Plex Mono",monospace;font-size:12.5px;padding:0 14px;min-height:44px;border-radius:999px;
+    font-family:"IBM Plex Mono",monospace;font-size:13.5px;padding:0 14px;min-height:44px;border-radius:999px;
     border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
     flex:none;scroll-snap-align:start;
   }
@@ -115,7 +120,7 @@
   .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
 
   .theme-bucket{margin-top:22px}
-  .theme-bucket h3{font-size:15.5px;color:var(--accent);margin-bottom:10px}
+  .theme-bucket h3{font-size:17px;color:var(--accent);margin-bottom:10px}
   .theme-bucket-list{display:flex;flex-direction:column;gap:8px}
   .theme-bucket[hidden]{display:none}
 
@@ -124,25 +129,25 @@
   .item > summary{cursor:pointer;list-style:none;padding:11px 15px;display:flex;flex-direction:column;gap:3px}
   .item > summary::-webkit-details-marker{display:none}
   .item .item-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
-  .item .item-period{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--muted);white-space:nowrap}
-  .item .item-title{font-weight:600;font-size:14px;display:flex;align-items:center;gap:6px}
+  .item .item-period{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+  .item .item-title{font-weight:600;font-size:15.5px;display:flex;align-items:center;gap:6px}
   .item .item-title::before{content:"▸";display:inline-block;color:var(--item-color, var(--muted));transition:transform .15s;font-size:11px}
   .item[open] .item-title::before{transform:rotate(90deg)}
-  .item .item-teaser{font-size:12.8px;color:var(--muted);margin-top:1px}
+  .item .item-teaser{font-size:14px;color:var(--muted);margin-top:1px}
   .item .item-tags{margin-top:4px}
-  .item .item-body{font-size:13.3px;padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
+  .item .item-body{font-size:15px;padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
   .item .item-body p{margin:8px 0 0}
   .item .item-body strong{color:var(--fg)}
   .item .item-body em{color:var(--muted)}
 
-  #empty-filter{display:none;color:var(--muted);font-style:italic;font-size:13.5px;padding-top:8px}
+  #empty-filter{display:none;color:var(--muted);font-style:italic;font-size:15px;padding-top:8px}
 
   footer{
     padding-block:20px calc(24px + env(safe-area-inset-bottom,0px));
-    border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center;
+    border-top:1px solid var(--border);color:var(--muted);font-size:13.5px;text-align:center;
   }
-  #loading{color:var(--muted);font-style:italic;font-size:13.5px;padding-block:20px}
-  #load-error{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted)}
+  #loading{color:var(--muted);font-style:italic;font-size:15px;padding-block:20px}
+  #load-error{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;color:var(--muted)}
 
   header.top{position:relative}
   #theme-toggle{
@@ -165,22 +170,22 @@
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
     </button>
     <div class="eyebrow">Psycho-éducation · CO Valais</div>
-    <h1>Veille Neurodev'</h1>
+    <h1>PL-neurodev’</h1>
     <p class="tagline">Recherche internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.</p>
   </header>
 
   <main>
-    <div id="loading">Chargement…</div>
-    <p id="load-error">Le contenu n'a pas pu être chargé. Vérifie ta connexion et recharge la page.</p>
+    <div id="loading" role="status">Chargement…</div>
+    <p id="load-error" role="alert">Le contenu n’a pas pu être chargé. Vérifie ta connexion et recharge la page.</p>
 
     <section id="today" hidden>
-      <h2>Aujourd'hui</h2>
+      <h2>Aujourd’hui</h2>
       <div class="section-sub">Le flash du jour</div>
       <div id="today-content"></div>
     </section>
 
     <section id="essentiel-section" hidden>
-      <h2>L'essentiel de la semaine</h2>
+      <h2>L’essentiel de la semaine</h2>
       <div class="section-sub" id="essentiel-sub"></div>
       <div class="essentiel-grid" id="essentiel-content"></div>
     </section>
@@ -304,8 +309,8 @@
   /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
   function flashText(f){
     var t = f.resume || "";
-    if(f.limites) t += "\n\n**Limites :** " + f.limites;
-    if(f.pratique) t += "\n\n**Pour ta pratique au CO :** " + f.pratique;
+    if(f.limites) t += "\n\n**Limites\u202f:** " + f.limites;
+    if(f.pratique) t += "\n\n**Pour ta pratique au CO\u202f:** " + f.pratique;
     return t;
   }
 
@@ -329,7 +334,7 @@
         '<div>' + marked.parse(latest.resume || "") + '</div>' +
         (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
         (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
-        '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l\'archive ↓</a></p>' +
+        '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p>' +
         (latest.source ? '<div class="flash-source">' + escapeHtml(latest.source) + '</div>' : '') +
       '</div>';
   }
@@ -392,7 +397,7 @@
 
     if(!hasAny){
       section.hidden = false;
-      container.innerHTML = '<p style="color:var(--muted);font-style:italic;font-size:13.5px">Rien à explorer pour l\'instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
+      container.innerHTML = '<p style="color:var(--muted);font-style:italic;font-size:15px">Rien à explorer pour l’instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
       return;
     }
     section.hidden = false;
@@ -437,7 +442,8 @@
     });
     applyFilter();
     el.open = true;
-    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
   });
 
   function applyFilter(){
@@ -475,20 +481,34 @@
     });
   }
 
+  // marked is loaded with defer from a CDN: wait for it, with a specific error if it never arrives
+  function whenMarked(){
+    return new Promise(function(resolve, reject){
+      if(window.marked) return resolve();
+      var tag = document.getElementById("marked-js");
+      tag.addEventListener("load", resolve);
+      tag.addEventListener("error", function(){ reject(new Error("marked")); });
+    });
+  }
+
   async function start(){
     initThemeToggle();
     try{
       var base = new URL(".", window.location.href);
       var bust = "?v=" + Date.now();
-      var flashsRes = await fetch(new URL("data/flashs.json" + bust, base));
-      var revuesRes = await fetch(new URL("data/revues.json" + bust, base));
-      if(!flashsRes.ok || !revuesRes.ok) throw new Error("fetch failed");
-      var flashs = await flashsRes.json();
-      var revues = await revuesRes.json();
-      boot({ flashs: flashs, revues: revues });
+      var res = await Promise.all([
+        fetch(new URL("data/flashs.json" + bust, base)),
+        fetch(new URL("data/revues.json" + bust, base)),
+        whenMarked()
+      ]);
+      if(!res[0].ok || !res[1].ok) throw new Error("fetch failed");
+      var data = await Promise.all([res[0].json(), res[1].json()]);
+      boot({ flashs: data[0], revues: data[1] });
     }catch(e){
       document.getElementById("loading").hidden = true;
-      document.getElementById("load-error").style.display = "block";
+      var err = document.getElementById("load-error");
+      if(e && e.message === "marked") err.textContent = "Le lecteur de texte n’a pas pu être chargé (service externe indisponible). Recharge la page dans un instant.";
+      err.style.display = "block";
     }
   }
 

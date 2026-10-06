@@ -1,9 +1,9 @@
 {
-  "name": "Veille Neurodev'",
-  "short_name": "Neurodev'",
+  "name": "PL-neurodev’",
+  "short_name": "PL-neurodev’",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#35606B",
+  "background_color": "#F5F6F3",
   "theme_color": "#35606B",
   "icons": [
     { "src": "icon-32.png", "sizes": "32x32", "type": "image/png" },
