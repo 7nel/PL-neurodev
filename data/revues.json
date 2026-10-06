@@ -11,171 +11,483 @@
     "items": [
       {
         "section": "etude",
-        "themes": ["tsa", "tdah", "transversal"],
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
         "titre": "Évolution du profil des personnes diagnostiquées TDA/H et TSA",
         "texte": "**Tarp et al. (2026), *JAMA Psychiatry*.** Registres nationaux danois (population entière), ~2,1 millions d'enfants et d'adolescent·es, >71 000 diagnostiqués comparés à >713 000 pairs, 2012–2022.\n\n**Résultats :** les associations avec les facteurs de risque classiques (prématurité, faible poids de naissance, niveau socio-économique et psychiatrique parental) se sont nettement affaiblies en dix ans.\n\n**Limites :** ne permet pas de dire quel mécanisme pèse le plus (sensibilisation, accès, abaissement du seuil, dépistage scolaire) ; un seul pays ; TSA et TDA/H en partie regroupés.\n\n**Ce que ça change :** renforce l'hypothèse d'un élargissement du spectre des personnes diagnostiquées, sans permettre de trancher sur un éventuel surdiagnostic.\n\nTarp, M. E., et al. (2026). Changes in characteristics associated with ADHD and ASD diagnoses over time. *JAMA Psychiatry*. https://doi.org/10.1001/jamapsychiatry.2026.2722"
       },
       {
         "section": "etude",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "titre": "Incidence cumulée et prévalence du TSA sur 12 cohortes de naissance",
         "texte": "**Kim et al. (2026), *JAMA Pediatrics*.** Dépistage populationnel actif des élèves entrant en 1re primaire à Goyang (Corée du Sud), 2005–2017, >62 000 enfants dépistés, 447 diagnostics de TSA.\n\n**Résultats :** incidence cumulée (1,9–3,2 %) et prévalence à 7 ans (2,0–3,4 %) stables d'une cohorte à l'autre.\n\n**Limites :** moins de la moitié des enfants positifs au dépistage évalués ; une seule ville ; transposition à l'Europe incertaine.\n\n**Ce que ça change :** argument empirique fort contre la thèse d'une « épidémie » d'autisme ; un dépistage actif fait apparaître des taux proches de 2–3 %.\n\nKim, Y. S., et al. (2026). Cumulative incidence and prevalence of autism spectrum disorder. *JAMA Pediatrics*."
       },
       {
         "section": "etude",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "titre": "Autisme et espérance de vie chez les bénéficiaires de Medicaid",
         "texte": "**Li et al. (2026), *JAMA Network Open*.** Analyse transversale de mortalité, données Medicaid/CHIP 2000–2020, 2 048 046 bénéficiaires autistes, 18 268 décès.\n\n**Résultats :** espérance de vie de 64,9 ans (−5,6 ans vs autres bénéficiaires Medicaid, −13,8 ans vs population générale US) ; excès de mortalité par grippe, malnutrition, pneumopathie d'aspiration, accidents hors transport ; écart plus grand chez les femmes.\n\n**Limites :** population Medicaid défavorisée, non transposable telle quelle ; comparaison à la population générale confond autisme et statut socio-économique ; cohorte américaine.\n\n**Ce que ça change :** les causes identifiées sont en grande partie évitables (infections respiratoires, dysphagie, accidents, noyade).\n\nLi, G., DiGuiseppi, C. G., Blanchard, A., Russell, M. T., & Ing, C. (2026). Autism spectrum disorder and life expectancy among Medicaid beneficiaries. *JAMA Network Open*. https://doi.org/10.1001/jamanetworkopen.2026.33251"
       },
       {
         "section": "etude",
-        "themes": ["tsa", "tdah"],
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
         "titre": "Paracétamol prénatal et TSA/TDA/H",
         "texte": "**Tayebi-Hillali et al. (2026), *Developmental Medicine & Child Neurology*.** Umbrella review de 7 méta-analyses (>3 millions de participant·es), qualité évaluée par AMSTAR.\n\n**Résultats :** association proche de zéro une fois restreint aux données de haute qualité (designs contrôlant les facteurs familiaux, comparaisons de fratries).\n\n**Limites :** article complet non consulté ; risque de double comptage entre méta-analyses recoupant les mêmes cohortes.\n\n**Ce que ça change :** confirme la position des sociétés savantes, à l'opposé de la mise en garde HHS/FDA de septembre 2025.\n\nTayebi-Hillali, H., et al. (2026). Prenatal exposure to paracetamol and the risk of autism and attention-deficit/hyperactivity disorder: An umbrella review and meta-meta-analysis. *Developmental Medicine & Child Neurology*. https://doi.org/10.1111/dmcn.70512"
       },
       {
         "section": "etude",
-        "themes": ["dys-tsle"],
+        "themes": [
+          "dys-tsle"
+        ],
         "titre": "Polices « dyslexie » et performance en lecture",
         "texte": "**Azzarello et al. (2026), *Annals of Dyslexia*.** Méta-analyse de 15 études, 91 tailles d'effet, 688 participant·es.\n\n**Résultats :** effet global nul (g = −0,04, IC 95 % [−0,15 ; 0,07]) sur vitesse et précision de lecture.\n\n**Limites :** N total faible ; population surtout composée d'enfants ; effets immédiats seulement ; espacement des lettres/lignes non couvert.\n\n**Ce que ça change :** adopter ces polices n'est pas une adaptation fondée sur les preuves.\n\nAzzarello, C., Paek, S., Hodge, C., Jameson, M., & Lewis, J. (2026). Does font improve reading in dyslexic children? *Annals of Dyslexia*. https://doi.org/10.1007/s11881-026-00389-8"
       },
       {
         "section": "divergence",
-        "themes": ["tsa", "tdah", "transversal"],
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
         "titre": "Surdiagnostic ou meilleure détection ?",
         "texte": "Les études sur le Danemark et la Corée vont dans le sens d'un rattrapage de sous-détection. D'autres clinicien·nes soulignent que diagnostiquer des profils moins altérés peut conduire à des diagnostics sans bénéfice net. Les deux positions ne sont pas incompatibles ; aucune étude de la semaine ne mesure le bénéfice du diagnostic chez les nouveaux profils."
       },
       {
         "section": "divergence",
-        "themes": ["tsa", "tdah"],
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
         "titre": "Paracétamol et autisme",
         "texte": "Consensus scientifique de haute qualité (méta-analyses restreintes aux données de bonne qualité) contre une position politique américaine (mise en garde HHS/FDA) maintenue."
       },
       {
         "section": "divergence",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "titre": "Hétérogénéité du TSA",
         "texte": "Sous-types discrets (cadre « A3D », qui distingue handicap et différence) vs profils individualisés non catégoriels — recoupe l'opposition neurodiversité / modèle médical."
       },
       {
         "section": "divergence",
-        "themes": ["tdah"],
+        "themes": [
+          "tdah"
+        ],
         "titre": "Nouvelle molécule : centanafadine (Simtriyo)",
         "texte": "Approuvée par la FDA le 24 juillet 2026 dès 6 ans (inhibiteur de recapture noradrénaline/dopamine/sérotonine). Tailles d'effet modestes chez l'adulte (d ≈ 0,24–0,40), non comparée directement aux stimulants. Statut Swissmedic inconnu — non vérifié."
       },
       {
         "section": "zone_floue",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "texte": "« 14 ans d'espérance de vie en moins » (titres de presse) : chiffre exact mais comparaison inadéquate — l'écart attribuable à l'autisme dans une population socio-économiquement comparable est de 5,6 ans."
       },
       {
         "section": "zone_floue",
-        "themes": ["tsa", "tdah", "transversal"],
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
         "texte": "« Pas de surdiagnostic » (étude danoise) : affirmation plus forte que ce que permet le design de l'étude."
       },
       {
         "section": "zone_floue",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "texte": "Corée : moins de 50 % des positifs au dépistage évalués, intervalles de prévalence reposant sur une pondération."
       },
       {
         "section": "zone_floue",
-        "themes": ["tsa", "tdah"],
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
         "texte": "Umbrella review paracétamol : texte intégral non consulté, risque de double comptage entre méta-analyses."
       },
       {
         "section": "zone_floue",
-        "themes": ["dys-tsle"],
+        "themes": [
+          "dys-tsle"
+        ],
         "texte": "Méta-analyse des polices dyslexie : N total faible (688), conclusion à ne pas généraliser à tous les paramètres typographiques (espacement, interligne)."
       },
       {
         "section": "zone_floue",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "texte": "Étude valaisanne du CSPS sur l'école inclusive : seulement une synthèse secondaire consultée (Diaconie Suisse), rapport primaire non localisé — ne pas citer de chiffres avant lecture."
       },
       {
         "section": "zone_floue",
-        "themes": ["tdah"],
+        "themes": [
+          "tdah"
+        ],
         "texte": "« Trois biotypes cérébraux du TDA/H » (JAMA Psychiatry, mars 2026) : clustering IRM non répliqué, sans utilité diagnostique individuelle, encore largement repris dans les médias."
       },
       {
         "section": "implication_co",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "titre": "Lire le fonctionnement plutôt que le label",
         "texte": "Les élèves diagnostiqué·es récemment sont plus hétérogènes ; un diagnostic informe peu à lui seul sur les besoins. Privilégier une évaluation fonctionnelle en classe. Des élèves sans diagnostic peuvent avoir des besoins comparables, notamment allophones ou en rupture."
       },
       {
         "section": "implication_co",
-        "themes": ["dys-tsle"],
+        "themes": [
+          "dys-tsle"
+        ],
         "titre": "Adaptations de lecture (TSLE/dyslexie)",
         "texte": "Ne pas investir dans les polices dyslexie. Privilégier l'enseignement explicite, la synthèse vocale, la réduction de la densité visuelle, le temps supplémentaire aux évaluations."
       },
       {
         "section": "implication_co",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "titre": "Groupe socio-émotionnel, filles autistes",
         "texte": "Rester attentif aux troubles internalisés (anxiété, dépression), souvent peu visibles chez les adolescentes autistes qui « compensent ». Vigilance et orientation, pas dépistage par l'enseignant·e."
       },
       {
         "section": "implication_co",
-        "themes": ["tsa"],
+        "themes": [
+          "tsa"
+        ],
         "titre": "Sécurité et santé",
         "texte": "Intégrer des objectifs d'autonomie et de sécurité (sorties, piscine, déplacements) au PPI ou au projet de classe — en écho aux causes de surmortalité évitables identifiées chez les personnes autistes."
       },
       {
         "section": "implication_co",
-        "themes": ["transversal", "tsa", "tdah"],
+        "themes": [
+          "transversal",
+          "tsa",
+          "tdah"
+        ],
         "titre": "Communication avec les familles",
         "texte": "Références solides disponibles en cas de culpabilisation autour du paracétamol ou d'inquiétude face au discours d'« épidémie »."
       },
       {
         "section": "contexte_suisse",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "titre": "Valais — école inclusive (CSPS, fin août 2026)",
         "texte": "Analyse commandée par le Département de l'économie et de la formation. Synthèse rapportée : le modèle inclusif valaisan « fonctionne bien » sur les plans pédagogique et économique, avec besoin d'évaluation régulière, de financement adéquat et de renforcement des compétences des équipes. Source secondaire uniquement, rapport intégral à obtenir."
       },
       {
         "section": "contexte_suisse",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "titre": "Rapport sur l'éducation en Suisse 2026 (CSRE)",
         "texte": "Hausse de la part d'élèves avec mesures renforcées intégrés dans la plupart des cantons ; discussion des initiatives anti-inclusion de Zurich et Bâle-Ville."
       },
       {
         "section": "contexte_suisse",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "titre": "France — rentrée 2026 et stratégie TND",
         "texte": "70 nouveaux dispositifs dont 24 équipes d'autorégulation au secondaire (734 dispositifs TND au total) ; stratégie nationale TND 2027–2032 annoncée le 4 septembre (repérage précoce, adolescents et adultes, situations complexes)."
       },
       {
         "section": "contexte_suisse",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "titre": "Angleterre — réforme SEND",
         "texte": "Schools White Paper (février 2026) : soutien à paliers et plans individuels numériques ; mise en œuvre au plus tôt en 2029–2030."
       },
       {
         "section": "a_surveiller",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "texte": "Réponse du gouvernement britannique aux consultations SEND et calendrier de l'*Education for All Bill*."
       },
       {
         "section": "a_surveiller",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "texte": "Suite parlementaire valaisanne du postulat sur l'école inclusive et publication intégrale du rapport CSPS."
       },
       {
         "section": "a_surveiller",
-        "themes": ["transversal"],
+        "themes": [
+          "transversal"
+        ],
         "texte": "Composition des groupes de travail de la stratégie TND française 2027–2032."
       },
       {
         "section": "a_surveiller",
-        "themes": ["tsa", "tdah"],
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
         "texte": "Réplication de l'étude danoise dans d'autres pays, études mesurant le bénéfice du diagnostic chez les profils peu altérés."
       },
       {
         "section": "a_surveiller",
-        "themes": ["tdah"],
+        "themes": [
+          "tdah"
+        ],
         "texte": "Statut réglementaire de la centanafadine en Europe et en Suisse."
+      }
+    ]
+  },
+  {
+    "date_debut": "2026-09-29",
+    "date_fin": "2026-10-05",
+    "titre": "Semaine du 29 septembre au 5 octobre 2026",
+    "essentiel": [
+      "Semaine pauvre en études directement scolaires : aucune étude d'intervention en milieu scolaire sur les TND chez l'adolescent n'a été repérée dans la fenêtre ; les publications marquantes portent sur l'étiologie (santé placentaire et TDA/H, infections congénitales TORCH et DI/TSA) et sur les trajectoires associées au risque génétique — avec des données que nous n'avons lues qu'en résumé de presse ou extraits, donc à confirmer.",
+      "Trauma : un essai randomisé sud-africain (N = 63 adolescent·es avec TSPT) rapporte un maintien des bénéfices à 5 ans pour l'exposition prolongée comme pour le counselling de soutien, tous deux délivrés par des non-spécialistes formés et supervisés ; l'avantage de l'exposition prolongée s'estompe à 60 mois.",
+      "En Suisse, le Conseil national a adopté le 21 septembre le contre-projet indirect à l'Initiative pour l'inclusion (loi sur l'inclusion, 108 voix contre 80) ; l'école, de compétence cantonale, n'y semble pas directement concernée, et en Valais la 2e lecture des lois scolaires est attendue cet automne."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Facteur de croissance placentaire (PlGF) en fin de grossesse et TDA/H de l'enfant",
+        "texte": "**Gumusoglu et al. (2026), *JAMA Psychiatry*** (communiqué relayé le 30 septembre 2026).\n\n**Question :** la trajectoire du PlGF, marqueur de la santé placentaire, au cours de la grossesse est-elle associée à un diagnostic ultérieur de TDA/H chez l'enfant ?\n\n**Design et population :** cohorte rétrospective sur biobanque (Perinatal Family Tissue Bank, University of Iowa), sang maternel prélevé aux trois trimestres, 176 grossesses.\n\n**Résultats (selon la presse) :** absence de la hausse habituelle du PlGF au 3e trimestre chez les mères d'enfants ultérieurement diagnostiqués TDA/H ; chaque baisse d'un écart-type est associée à un OR d'environ 2,6 ; association maintenue après ajustement sur prééclampsie, retard de croissance intra-utérin et grande prématurité.\n\n**Niveau de preuve :** faible à modéré — observationnel, monocentrique, petit N, OR probablement imprécis.\n\n**Limites :** mode d'établissement du diagnostic de TDA/H non connu ; facteurs de confusion familiaux et génétiques non contrôlés (pas de comparaison de fratries) ; aucune réplication. Seuls des communiqués et articles de presse ont été consultés.\n\n**Ce que ça change :** rien pour la pratique scolaire. Hypothèse étiologique (contribution placentaire au neurodéveloppement) à suivre ; ne fonde aucun discours de responsabilisation maternelle.\n\nGumusoglu, S. B., et al. (2026). Placental growth factor trajectories during pregnancy and child ADHD. *JAMA Psychiatry*. https://doi.org/10.1001/jamapsychiatry.2026.2336 (titre, liste d'auteur·es et DOI tirés d'extraits de recherche, non vérifiés)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah",
+          "tsa",
+          "transversal"
+        ],
+        "titre": "Risque génétique (scores polygéniques) et devenir social de l'enfance au début de l'âge adulte",
+        "texte": "**Fury, Dennison, Riglin et al. (2026), *Molecular Psychiatry*** (relayé le 5 octobre 2026 ; date de mise en ligne non vérifiée).\n\n**Question :** les scores polygéniques du TDA/H, du TSA, de la dépression, de l'anxiété, de la schizophrénie et du trouble bipolaire sont-ils associés aux difficultés avec les pairs, au niveau scolaire, au statut NEET et à la suicidalité, et ces associations varient-elles avec l'âge ?\n\n**Design et population :** cohorte de naissance ALSPAC (Royaume-Uni), mesures à 10–13 ans, 16 ans et 24–25 ans ; N non lu.\n\n**Résultats (presse et résumé du preprint) :** dans l'enfance, +1 écart-type de score TDA/H ≈ +13 % de risque de difficultés avec les pairs et ≈ +40 % de risque de niveau scolaire plus faible ; scores TDA/H et TSA associés à la suicidalité. À l'adolescence, le score de dépression devient plus prédictif (≈ +28 % suicidalité, ≈ +39 % niveau scolaire plus faible). Le score TSA est associé à un *meilleur* niveau scolaire.\n\n**Niveau de preuve :** modéré pour l'existence d'associations populationnelles ; nul pour la prédiction individuelle.\n\n**Limites :** effets individuels faibles ; échantillon d'ascendance européenne ; attrition différentielle propre à ALSPAC (les jeunes les plus vulnérables quittent davantage la cohorte) ; corrélation gène–environnement non dissociée (les scores captent aussi l'environnement familial).\n\n**Ce que ça change :** appuie l'idée que la composante « risque » change de nature à l'adolescence (vers l'internalisé). Aucune utilité de dépistage individuel.\n\nFury, B., Dennison, C., Riglin, L., et al. (2026). Investigating the associations between neurodevelopmental and psychiatric genetic liability and adverse social and functional outcomes across childhood, adolescence and young-adulthood. *Molecular Psychiatry*. https://doi.org/10.1038/s41380-026-03903-x (prénoms, liste d'auteur·es et chiffres non vérifiés à la source)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "attachement"
+        ],
+        "titre": "TSPT de l'adolescent : exposition prolongée vs counselling de soutien, suivi à 5 ans",
+        "texte": "**Rossouw, Yadin, Alexander et Seedat (2026), *European Journal of Psychotraumatology*.**\n\n**Question :** les effets de l'exposition prolongée (PE) et du counselling de soutien, délivrés par des non-spécialistes (*task-shifting*), se maintiennent-ils à 5 ans chez des adolescent·es avec TSPT ?\n\n**Design et population :** suivi à 60 mois d'un essai randomisé contrôlé, Afrique du Sud, 63 adolescent·es avec TSPT.\n\n**Résultats (extraits) :** baisse significative des symptômes maintenue dans les deux groupes jusqu'à 60 mois ; la PE est supérieure sur la CPSS à tous les temps de suivi sauf à 60 mois.\n\n**Niveau de preuve :** modéré (ECR), affaibli par la taille de l'échantillon et l'attrition probable à 5 ans (taux non vérifié).\n\n**Limites :** petit N, contexte sud-africain ; population TSPT, pas trauma complexe ni troubles de l'attachement au sens strict ; hors milieu scolaire ; date de publication incertaine (septembre ou décembre 2026 selon les extraits).\n\n**Ce que ça change :** argument en faveur de thérapies centrées sur le trauma délivrées par des intervenant·es formés et supervisés. Le counselling de soutien rattrape la PE à long terme, ce qui nuance la supériorité de la PE.\n\nRossouw, J., Yadin, E., Alexander, D., & Seedat, S. (2026). Five-year outcomes in a randomised controlled trial of prolonged exposure therapy and supportive counselling for post-traumatic stress disorder in adolescents: A task-shifted intervention. *European Journal of Psychotraumatology, 17*(1). https://doi.org/10.1080/20008066.2026.2721926 (PMID 42734593 ; non vérifié à la source)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "di-tsaf",
+          "tsa"
+        ],
+        "titre": "Infections congénitales TORCH et issues neurodéveloppementales",
+        "texte": "**Sjöqvist et al. (2026), *JAMA Pediatrics*** (mis en ligne le 21 septembre 2026, juste avant la fenêtre ; retenu car non couvert la semaine passée).\n\n**Question :** les infections congénitales TORCH (toxoplasmose, rubéole, CMV, herpès, etc.) sont-elles associées à la DI, au TSA et au TDA/H ?\n\n**Design et population :** cohorte de registres suédois, 3,7 millions de naissances (1987–2021), dont 975 enfants avec infection TORCH congénitale ; analyses en population entière et en comparaison de fratries.\n\n**Résultats (résumé et presse) :** DI : HR 7,22 (fratries : 11,28) ; TSA : HR 3,10 (fratries : 3,19) ; pas d'association claire avec le TDA/H. Fraction attribuable : ≈ 0,034 % des cas d'autisme.\n\n**Niveau de preuve :** modéré-élevé pour l'association (taille, contrôle familial) ; exposition rare.\n\n**Limites :** repose sur le codage des registres (sous-détection probable des infections asymptomatiques, notamment CMV) ; nombre de cas exposés faible, intervalles larges en analyse de fratries.\n\n**Ce que ça change :** confirme une cause rare mais identifiable de DI et de TSA ; n'explique quasiment pas la prévalence globale de l'autisme.\n\nSjöqvist, H., Dalman, C., Mataix-Cols, D., Gardner, R. M., & Karlsson, H. (2026). Congenital TORCH infections and neurodevelopmental outcomes. *JAMA Pediatrics*. https://doi.org/10.1001/jamapediatrics.2026.4229 (chiffres tirés d'extraits du résumé et de la presse)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "dys-tsle",
+          "tdl-tdc"
+        ],
+        "titre": "TDL et dyslexie : vers un cadre dimensionnel langage–littératie",
+        "texte": "**Katsarou et al. (2026), *Psychiatry International*** (MDPI, 2 octobre 2026).\n\n**Question :** les frontières catégorielles entre TDL et dyslexie développementale sont-elles tenables ?\n\n**Design :** revue narrative critique, sans protocole systématique (épidémiologie, études longitudinales, données cognitivo-linguistiques, génétiques et cliniques).\n\n**Résultats :** fragilités partagées (phonologie, mémoire verbale, efficience de traitement, langage oral), mais traits cliniques propres justifiant de garder deux diagnostics ; les auteur·es plaident pour une approche dimensionnelle en évaluation et en intervention.\n\n**Niveau de preuve :** faible (revue narrative, pas de nouvelles données, revue hors du noyau disciplinaire).\n\n**Limites :** sélection des études non transparente ; aucun chiffre lu ; résumé consulté via extraits seulement.\n\n**Ce que ça change :** pas de nouveauté empirique ; rappelle qu'un élève dyslexique peut avoir des difficultés de langage oral non repérées (et inversement), ce qui justifie une évaluation logopédique large.\n\nKatsarou, D. V., Mantsos, E., Sofologi, M., Efthymiou, E., Argyriadis, A., Vasileiou, I., Kougioumtzis, G. A., Theodoratou, M., & Megari, K. (2026). Developmental language disorder and developmental dyslexia: Rethinking categorical boundaries through a dimensional language–literacy framework. *Psychiatry International, 7*(5), 220. https://doi.org/10.3390/psychiatryint7050220"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "di-tsaf",
+          "transversal"
+        ],
+        "titre": "Classes à effectif réduit vs inclusion en classe ordinaire",
+        "texte": "Une étude corrélationnelle chinoise (*Journal of Intellectual Disability Research*, numéro d'octobre 2026, mise en ligne probablement antérieure) rapporte, chez 153 élèves du secondaire II avec DI ou autre handicap, davantage d'intégration sociale, de soutien perçu de l'enseignant·e et d'auto-efficacité en classes de ≤ 8 élèves (n = 47) qu'en classe ordinaire avec salle de ressources (n = 106). Ce résultat peut être mobilisé par les partisan·es des *Förderklassen* (Zurich, Argovie, Bâle-Ville), à l'opposé des orientations inclusives (CDPH, modèle valaisan). Prudence : pas de randomisation, biais de sélection (les élèves orientés en petite classe diffèrent), contexte culturel et scolaire éloigné, proportion de DI légère inconnue.\n\nShang, et al. (2026). Belonging in reduced-size classrooms: Student outcomes among Chinese upper secondary students with intellectual and other documented disabilities. *Journal of Intellectual Disability Research*. https://doi.org/10.1111/jir.70142 (initiales et date de mise en ligne non vérifiées)"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "dys-tsle",
+          "tdl-tdc"
+        ],
+        "titre": "Diagnostics catégoriels ou dimensions langagières ?",
+        "texte": "La revue de Katsarou et al. maintient deux catégories tout en plaidant pour une évaluation dimensionnelle ; d'autres travaux (approches multifactorielles de la dyslexie, CATALISE) vont plus loin vers des profils continus. En pratique romande, l'accès aux mesures (logopédie, aménagements) reste conditionné à des catégories, d'où une tension entre modèle scientifique et cadre administratif."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "titre": "Désinformation paracétamol–autisme : réponse institutionnelle insuffisante",
+        "texte": "Un audit présenté au congrès de l'American Academy of Pediatrics (octobre 2026, non publié) rapporte que seules 14 institutions de santé américaines sur 65 (21,5 %) ont répondu sur Instagram à la désinformation de septembre 2025 sur le paracétamol, avec un niveau de lecture élevé (≈ 11e année US) et sans contenu multilingue. Le consensus scientifique (cf. revue précédente) circule mal auprès des familles, notamment allophones. Source : presse uniquement (Medical Xpress, 2026). https://medicalxpress.com/news/2026-10-health-acetaminophen-autism-misinformation-instagram.html"
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Cette semaine, aucune source n'a pu être lue sur le site de l'éditeur ni sur PubMed (accès bloqué) : toutes les données chiffrées proviennent d'extraits de moteurs de recherche, de communiqués ou de presse. Les DOI n'ont pas été résolus. Ne citer aucun chiffre de cette revue dans un travail académique sans vérification préalable."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "PlGF et TDA/H : OR ≈ 2,6 sur 176 grossesses, rapporté par la presse. Un OR élevé sur un petit échantillon est typiquement surestimé (*winner's curse*) ; titres de presse du type « la santé du placenta prédit le TDA/H » à relativiser fortement."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah",
+          "tsa"
+        ],
+        "texte": "Diabète de type 2 précoce et neurodivergence (congrès EASD, Milan, fin septembre 2026) : prévalence du TDA/H de 14,4 % vs 6,9 % chez les moins de 20 ans diabétiques (base TriNetX). Résumé de congrès non publié, données de dossiers médicaux, transversal, confusion possible (traitements, sédentarité, statut socio-économique) — ne pas relayer comme lien établi."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "dys-tsle"
+        ],
+        "texte": "Dyscalculie et stratégies de résolution (Lasnick, Park, Mistry & Menon, *Journal of Neuroscience*, DOI annoncé 10.1523/JNEUROSCI.2200-25.2026) : médiatisé fin septembre mais probablement déjà diffusé en février 2026 ; 68 enfants de 8 à 10 ans, modélisation bayésienne et IRMf. Moindre flexibilité stratégique et sensibilité réduite à la difficulté des problèmes chez les enfants dyscalculiques. Date, effectifs par groupe et tailles d'effet non vérifiés ; pas d'adolescents."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdl-tdc"
+        ],
+        "texte": "Mesures narratives pour repérer un TDL chez l'enfant bilingue (Van den Eynde et al., *JSLHR*, 2026, https://doi.org/10.1044/2026_JSLHR-25-00489 ; probablement printemps 2026, hors fenêtre) : 50 bilingues avec TDL vs 50 bilingues typiques (5–9 ans, néerlandais L2), exactitude de 80–85 % — bonne discrimination de groupe mais insuffisante au niveau individuel selon les auteur·es. Sensibilité/spécificité non lues ; transposition au français et à l'adolescence non établie."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdl-tdc",
+          "transversal"
+        ],
+        "titre": "Élèves allophones : TDL ou acquisition de la L2 ?",
+        "texte": "Les données disponibles (dont Van den Eynde et al., hors fenêtre) confirment qu'aucune mesure isolée ne tranche au niveau individuel. Avant d'évoquer un TDL chez un·e élève allophone, documenter le développement dans la L1 (anamnèse, interprète, entretien avec la famille), la durée et la qualité d'exposition au français, et la progression dans le temps ; une progression lente malgré une exposition riche, et des difficultés présentes aussi en L1, orientent vers le trouble plutôt que vers l'acquisition."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "attachement"
+        ],
+        "titre": "Élèves exposés à des traumatismes",
+        "texte": "Le maintien à 5 ans des effets d'interventions délivrées par des non-spécialistes *formés et supervisés* ne fait pas de l'enseignant·e un·e thérapeute. Rôle au CO : repérage des signes (évitement, hypervigilance, troubles de la concentration), stabilité et prévisibilité du cadre, orientation vers une prise en charge centrée sur le trauma (pédopsychiatrie, CDTEA/OEI selon le réseau valaisan). La concentration et la fatigue apparaissent comme symptômes dépressifs centraux chez des adolescent·es exposés à de la maltraitance (analyse de réseau transversale, An et al., *BMC Psychology*, 2026, https://doi.org/10.1186/s40359-026-05603-1) : une baisse d'attention n'est pas forcément un TDA/H."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "dys-tsle",
+          "tdl-tdc"
+        ],
+        "titre": "Écrit et oral : évaluer large",
+        "texte": "Chez un·e élève avec dyslexie-dysorthographie, vérifier aussi la compréhension et l'expression orales (vocabulaire, syntaxe, récit) : la co-occurrence avec un TDL est fréquente et souvent méconnue au secondaire. Concrètement : consignes reformulées, vocabulaire disciplinaire enseigné explicitement, appui sur des supports visuels."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "dys-tsle"
+        ],
+        "titre": "Dyscalculie : travailler la flexibilité stratégique",
+        "texte": "À titre d'hypothèse (données chez l'enfant, non vérifiées) : en mathématiques, expliciter plusieurs stratégies pour un même problème, faire verbaliser le choix de stratégie et le relier à la difficulté de la tâche, plutôt que de multiplier les exercices répétitifs."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah",
+          "tsa",
+          "transversal"
+        ],
+        "titre": "Facteurs étiologiques dans le dialogue avec les familles",
+        "texte": "Les études de la semaine (placenta, infections congénitales, génétique) ne justifient aucune lecture culpabilisante. Utile en entretien : rappeler qu'un TND résulte de facteurs multiples, en majorité non modifiables, et que la pertinence scolaire tient au fonctionnement actuel de l'élève, pas à l'étiologie."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Conseil national — loi sur l'inclusion (21 septembre 2026)",
+        "texte": "Adoption du contre-projet indirect à l'Initiative pour l'inclusion par 108 voix contre 80, avec recommandation de rejeter l'initiative. Ajouts rapportés : meilleur financement des prestations de tiers, logement autodéterminé, monitoring indépendant de la CDPH, droit au job coaching dans la LAI. Critiques d'associations (pas d'obligation d'information sans barrières). Le texte passe au Conseil des États. Aucun volet scolaire identifié (compétence cantonale) — non vérifié. Sources : Procap (https://www.procap.ch/fr/actualites/article/nationalrat-sagt-ja-zum-indirekten-gegenvorschlag-zur-inklusions-initiative/) ; CHSS (https://sozialesicherheit.ch/de/herbstsession-2026-nationalrat-sagt-ja-zu-inklusionsgesetz/). Extraits seulement."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Votations cantonales du 27 septembre 2026 (Berne, Zurich)",
+        "texte": "Berne : « Berner Bildungsinitiative » (qualité de la formation et moyens dans la Constitution) rejetée à 59,9 %. Zurich : révision du Lehrpersonalgesetz (davantage de temps crédité aux enseignant·es, coût ≈ 83 millions CHF/an) rejetée à 59,2 %. Pas de votation sur les *Förderklassen* zurichoises (cadre légal adopté par le Kantonsrat, 118 voix contre 54, au printemps). Signal politique : réticence à financer des ressources supplémentaires pour l'école. Sources : SRF ; Tages-Anzeiger (extraits)."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais — lois scolaires en 2e lecture",
+        "texte": "Les trois lois scolaires, dont la Loi sur l'école valaisanne, ont été acceptées en 1re lecture en mai 2026 (103 voix contre 25, 1 abstention, 222 amendements) ; la 2e lecture est annoncée pour l'automne 2026, date de session non vérifiée. Rien de nouveau trouvé sur le postulat « école inclusive » ni sur la publication intégrale du rapport CSPS. Source : Blick (https://www.blick.ch/fr/suisse/romande/plus-en-phase-avec-la-societe-il-faudra-une-seconde-lecture-pour-depoussierer-la-loi-sur-lecole-valaisanne-id21927373.html)."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Classes de soutien en Suisse alémanique",
+        "texte": "Argovie : « Förderklassen plus » ouvertes à la rentrée 2026/27 (19 communes, 21 classes, ≈ 130 élèves, surtout au cycle 1 ; objectif initial 15 classes). Bâle-Ville : introduction dès 2026/27, réservée aux troubles de l'apprentissage. Information de contexte (articles de l'été), utile pour suivre la tension inclusion/séparation au niveau national."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "France — pôles d'appui à la scolarité (PAS)",
+        "texte": "Selon le ministère cité par la presse, près de 1 500 PAS couvrent 56 % du territoire à la rentrée 2026 (479 en 2025). Aucun décompte officiel des élèves notifiés sans AESH ; une estimation de presse (> 50 000) n'a pas de source identifiée. Stratégie TND 2027–2032 : aucun document publié depuis l'annonce du 4 septembre."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Examen de la loi sur l'inclusion par le Conseil des États et éventuel retrait de l'initiative."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Date et contenu de la 2e lecture de la Loi sur l'école valaisanne (dispositions sur l'enseignement spécialisé et les mesures renforcées)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Publication et réplication de l'étude PlGF–TDA/H dans une cohorte plus large avec contrôle familial."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "*Autism Research* (≈ 30 septembre 2026) : prévalence des troubles co-occurrents (retards moteur et langagier, TDA/H) et âge au diagnostic de l'autisme dans les données Medicaid de Caroline du Nord — auteur·es, DOI et résultats non obtenus."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "di-tsaf",
+          "attachement"
+        ],
+        "texte": "Aucune étude empirique sur le TSAF ou l'attachement n'a été repérée dans la fenêtre ; à rechercher en priorité la semaine prochaine, avec un accès complet aux bases de données."
       }
     ]
   }
