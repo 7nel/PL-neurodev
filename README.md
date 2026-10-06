@@ -25,4 +25,12 @@ Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `n
 
 ## Archive
 
-L'archive est repliée par section (avec le nombre d'éléments), classée par mois, avec une recherche plein texte (accents ignorés) et un filtre par thème. Les sections qui correspondent s'ouvrent pendant une recherche.
+L'archive est une liste unique, classée par mois (le mois le plus récent est ouvert, les autres repliés). Chaque carte porte une étiquette de type (Flash, Étude, Zone floue, Pratique au CO…), son thème et son badge de preuve. La recherche plein texte (accents ignorés) et le filtre par thème ouvrent les mois qui correspondent.
+
+## Consigne pour la veille automatique
+
+Pour chaque flash et chaque item de revue, renseigner `preuve` avec l'une de ces trois valeurs, d'après le niveau de preuve déjà écrit dans le texte :
+- `solide` : essai contrôlé randomisé ou méta-analyse de qualité, effectif suffisant, résultat répliqué ;
+- `nuance` : preuve modérée, ou solide mais limitée (échantillon, un seul pays, observationnel) ;
+- `floue` : preuve faible (étude préliminaire, narrative, petit effectif, communiqué de presse, texte intégral non lu).
+Si le niveau ne peut pas être évalué, omettre le champ plutôt que d'en deviner un.

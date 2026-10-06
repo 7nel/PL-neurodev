@@ -66,6 +66,7 @@
 
   main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
   section > h2{font-size:20px;margin-bottom:2px}
+  #today > h2{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
   section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:12px}
 
   .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
@@ -81,7 +82,8 @@
 
   /* today: the first thing on the page, never hidden by a theme filter */
   #today .flash-date{font-size:14px;color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
-  #today h3{font-size:20px;margin:6px 0 8px}
+  #today h3{font-size:26px;line-height:1.25;margin:0 0 10px}
+  #today .meta-row{margin-bottom:10px}
   #today .flash-limites{margin:10px 0 0;color:var(--fg)}
   #today .flash-limites strong{color:var(--accent-2)}
   #today .flash-pratique{margin-top:10px}
@@ -125,13 +127,11 @@
   .bucket[hidden]{display:none}
   .bucket > summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:6px}
   .bucket > summary::-webkit-details-marker{display:none}
-  .bucket > summary h3{font-size:17px;color:var(--accent)}
+  .bucket > summary h3{font-size:17px;color:var(--accent);text-transform:capitalize}
+  .type-tag{display:inline-block;font-size:14px;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;margin:0 5px 4px 0}
   .bucket-count{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
   .bucket-count::after{content:"";display:inline-block;width:7px;height:7px;margin-left:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
   .bucket[open] .bucket-count::after{transform:translateY(1px) rotate(-135deg)}
-  .month{margin-top:10px}
-  .month[hidden]{display:none}
-  .month h4{font-size:14px;font-weight:600;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--muted);margin-bottom:6px;text-transform:capitalize}
   .theme-bucket-list{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
 
   .item{border:1px solid var(--border);border-radius:9px;background:var(--card);overflow:hidden}
@@ -248,14 +248,9 @@
 
   // display order: what Pauline looks for most (cautions, practice) comes first
   var SECTION_ORDER = ["zone_floue","implication_co","etude","flash","divergence","contexte_suisse","a_surveiller"];
-  var SECTION_LABELS = {
-    "flash": "Tous les flashs",
-    "etude": "Études marquantes",
-    "divergence": "Divergences & controverses",
-    "zone_floue": "Zones floues / à prendre avec prudence",
-    "implication_co": "Implications pour la pratique au CO",
-    "contexte_suisse": "Contexte suisse & francophone",
-    "a_surveiller": "À surveiller"
+  var TYPE_LABELS = {
+    "flash": "Flash", "etude": "Étude", "divergence": "Divergence", "zone_floue": "Zone floue",
+    "implication_co": "Pratique au CO", "contexte_suisse": "Contexte suisse", "a_surveiller": "À surveiller"
   };
   var MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 
@@ -404,9 +399,9 @@
 
     content.innerHTML =
       '<div class="card">' +
+        '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
         '<div class="meta-row"><span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
           preuveBadge(latest.preuve) + themeTags(latest.themes) + '</div>' +
-        '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
         '<div>' + marked.parse(latest.resume || "") + '</div>' +
         (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
         (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
@@ -444,7 +439,7 @@
     // today's flash is also kept here in full, so the top card can stay a short preview
     state.flashs.forEach(function(f){
       buckets.flash.push({
-        themes: f.themes || [], titre: f.titre || "", texte: flashText(f), preuve: f.preuve || derivePreuve(f.limites),
+        type: "flash", themes: f.themes || [], titre: f.titre || "", texte: flashText(f), preuve: f.preuve || derivePreuve(f.limites),
         period: fmtDate(f.date), sortKey: f.date || "", flashDate: f.date || ""
       });
     });
@@ -453,30 +448,33 @@
       (r.items || []).forEach(function(it){
         if(!buckets[it.section]) return;
         buckets[it.section].push({
-          themes: it.themes || [], titre: it.titre || "", texte: it.texte || "", preuve: it.preuve || derivePreuve(it.texte),
+          type: it.section, themes: it.themes || [], titre: it.titre || "", texte: it.texte || "", preuve: it.preuve || derivePreuve(it.texte),
           period: periodLabel(r), sortKey: r.date_fin || r.date_debut || ""
         });
       });
     });
 
-    Object.keys(buckets).forEach(function(k){
-      buckets[k].sort(function(a,b){ return (b.sortKey||"").localeCompare(a.sortKey||""); });
+    // one list for everything, newest first; within the same date, sections keep their display order
+    var all = [];
+    SECTION_ORDER.forEach(function(k){ all = all.concat(buckets[k]); });
+    all.sort(function(a,b){
+      return (b.sortKey||"").localeCompare(a.sortKey||"") || SECTION_ORDER.indexOf(a.type) - SECTION_ORDER.indexOf(b.type);
     });
-    return buckets;
+    return all;
   }
 
-  function itemHtml(it, key){
+  function itemHtml(it){
     var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
-    var haystack = norm([it.titre, it.texte, (it.themes||[]).map(function(t){ return THEME_LABELS[t] || t; }).join(" ")].join(" "));
+    var haystack = norm([it.titre, it.texte, TYPE_LABELS[it.type], (it.themes||[]).map(function(t){ return THEME_LABELS[t] || t; }).join(" ")].join(" "));
     return '<details class="item filterable"' + (it.flashDate ? ' id="flash-' + escapeHtml(it.flashDate) + '"' : '') +
       ' style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '" data-search="' + escapeHtml(haystack) + '">' +
       '<summary>' +
         '<div class="item-head">' +
-          '<span class="item-title">' + escapeHtml(it.titre || SECTION_LABELS[key]) + '</span>' +
+          '<span class="item-title">' + escapeHtml(it.titre || TYPE_LABELS[it.type] || "") + '</span>' +
           '<span class="item-period">' + escapeHtml(it.period) + '</span>' +
         '</div>' +
         '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
-        '<div class="item-tags meta-row">' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
+        '<div class="item-tags meta-row"><span class="type-tag">' + escapeHtml(TYPE_LABELS[it.type] || "") + '</span>' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
       '</summary>' +
       '<div class="item-body">' + marked.parse(it.texte || "") + '</div>' +
     '</details>';
@@ -485,31 +483,25 @@
   function renderBrowse(){
     var section = document.getElementById("browse");
     var container = document.getElementById("buckets");
-    var buckets = buildBuckets();
-    var hasAny = SECTION_ORDER.some(function(k){ return buckets[k].length; });
+    var all = buildBuckets();
 
     section.hidden = false;
-    if(!hasAny){
+    if(!all.length){
       container.innerHTML = '<p style="color:var(--muted);font-style:italic">Rien à explorer pour l’instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
       return;
     }
 
-    container.innerHTML = SECTION_ORDER.map(function(key){
-      var items = buckets[key];
-      if(!items.length) return "";
-      // items are already sorted newest first: group them by month
-      var groups = [], last = null;
-      items.forEach(function(it){
-        var label = monthLabel(it.sortKey);
-        if(!last || last.label !== label){ last = { label: label, items: [] }; groups.push(last); }
-        last.items.push(it);
-      });
-      return '<details class="bucket" data-bucket="' + key + '">' +
-        '<summary><h3>' + escapeHtml(SECTION_LABELS[key]) + '</h3><span class="bucket-count"></span></summary>' +
-        groups.map(function(g){
-          return '<div class="month"><h4>' + escapeHtml(g.label) + '</h4><div class="theme-bucket-list">' +
-            g.items.map(function(it){ return itemHtml(it, key); }).join("") + '</div></div>';
-        }).join("") +
+    // group by month: the latest month is open, the others are folded
+    var groups = [], last = null;
+    all.forEach(function(it){
+      var label = monthLabel(it.sortKey);
+      if(!last || last.label !== label){ last = { label: label, items: [] }; groups.push(last); }
+      last.items.push(it);
+    });
+    container.innerHTML = groups.map(function(g, i){
+      return '<details class="bucket"' + (i === 0 ? ' data-first="1"' : '') + '>' +
+        '<summary><h3>' + escapeHtml(g.label) + '</h3><span class="bucket-count"></span></summary>' +
+        '<div class="theme-bucket-list">' + g.items.map(itemHtml).join("") + '</div>' +
       '</details>';
     }).join("");
 
@@ -549,22 +541,17 @@
 
     document.querySelectorAll("#buckets .bucket").forEach(function(bucket){
       var shown = 0;
-      bucket.querySelectorAll(".month").forEach(function(month){
-        var monthShown = 0;
-        month.querySelectorAll(".filterable").forEach(function(el){
-          var themes = (el.getAttribute("data-item-themes") || "").split(",");
-          var hay = el.getAttribute("data-search") || "";
-          var show = (f === "tous" || themes.indexOf(f) !== -1) && tokens.every(function(t){ return hay.indexOf(t) !== -1; });
-          el.hidden = !show;
-          if(show) monthShown++;
-        });
-        month.hidden = !monthShown;
-        shown += monthShown;
+      bucket.querySelectorAll(".filterable").forEach(function(el){
+        var themes = (el.getAttribute("data-item-themes") || "").split(",");
+        var hay = el.getAttribute("data-search") || "";
+        var show = (f === "tous" || themes.indexOf(f) !== -1) && tokens.every(function(t){ return hay.indexOf(t) !== -1; });
+        el.hidden = !show;
+        if(show) shown++;
       });
       bucket.hidden = !shown;
       bucket.querySelector(".bucket-count").textContent = shown;
-      // open the sections that match while filtering; fold everything back otherwise
-      bucket.open = filtering && shown > 0;
+      // open the months that match while filtering; otherwise only the latest month is open
+      bucket.open = filtering ? shown > 0 : bucket.hasAttribute("data-first");
       total += shown;
     });
 
