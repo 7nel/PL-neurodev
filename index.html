@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PL-neurodev’</title>
 <meta name="description" content="Veille scientifique internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.">
-<meta name="theme-color" content="#F5F6F3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121817" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eff2f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#182422" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="PL-neurodev’">
@@ -15,34 +15,35 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<script id="marked-js" defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
+<script id="marked-js" defer src="vendor/marked.min.js"></script>
 <style>
   /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
      each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
      consistent color, used on tags, chevrons and filter chips so a recurring category reads at a glance.
      type scale: 16px body, 14px meta, headings 17-24px. */
+  @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-400.woff2) format("woff2")}
+  @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-700.woff2) format("woff2")}
+  @font-face{font-family:"Atkinson Hyperlegible";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/atkinson-400-i.woff2) format("woff2")}
+  @font-face{font-family:"Lexend";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/lexend.woff2) format("woff2")}
   :root{
-    --bg:#F5F6F3; --fg:#1D2422; --muted:#5B6764;
-    --accent:#35606B; --accent-2:#9A531F;
-    --border:#D9DCD4; --card:#FFFFFF; --chip-bg:#EDEFE9;
-    --c-tsa:#35606B; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#2A6F54; --c-transversal:#6F5C3A;
+    --bg:#EFF2F0; --fg:#253433; --muted:#5B6C6A;
+    --accent:#2F6F63; --accent-2:#9A531F;
+    --border:#D7DDDA; --card:#FFFFFF; --chip-bg:#E4E9E6;
+    --c-tsa:#2D6A9F; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#44691F; --c-transversal:#6F5C3A;
     --c-hpi:#7F6212; --c-di-tsaf:#A0366B; --c-attachement:#4A5B8C;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
-      --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
-      --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
+      --bg:#182422; --fg:#EAF1EE; --muted:#9FB0AC; --accent:#6FBFAE; --accent-2:#E0975A;
+      --border:#33443F; --card:#202F2C; --chip-bg:#24322F; color-scheme:dark;
+      --c-tsa:#7FB2E0; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#A4C86B; --c-transversal:#C7AE87;
       --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#121817; --fg:#E7ECE9; --muted:#98A6A1; --accent:#7BB0BA; --accent-2:#E0975A;
-    --border:#2B3634; --card:#171F1E; --chip-bg:#1D2725; color-scheme:dark;
-    --c-tsa:#7BB0BA; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#6FBF9B; --c-transversal:#C7AE87;
+    --bg:#182422; --fg:#EAF1EE; --muted:#9FB0AC; --accent:#6FBFAE; --accent-2:#E0975A;
+    --border:#33443F; --card:#202F2C; --chip-bg:#24322F; color-scheme:dark;
+    --c-tsa:#7FB2E0; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#A4C86B; --c-transversal:#C7AE87;
     --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
   }
 
@@ -52,21 +53,30 @@
   html,body{background:var(--bg)}
   body{
     color:var(--fg);
-    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-family:"Atkinson Hyperlegible",system-ui,sans-serif;
     font-size:16px; line-height:1.6; margin:0;
     padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
   }
   .wrap{max-width:720px;margin:0 auto}
-  h1,h2,h3,h4{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
+  h1,h2,h3,h4{font-family:"Lexend","Atkinson Hyperlegible",system-ui,sans-serif;font-weight:600;text-wrap:balance;margin:0}
   a{color:var(--accent)}
   .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   header.top{position:relative;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:6px;min-height:calc(58px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;gap:12px}
-  header.top h1{font-size:24px}
+  header.top{gap:8px 14px}
+  .pl-id{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;min-width:0}
+  .pl-name{display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;line-height:1.2;font-weight:700}
+  .pl-mark{width:1.45em;height:1.45em;flex:none}
+  .pl-mark circle{fill:var(--accent)}
+  .pl-mark g{stroke:var(--bg)}
+  .pl-back{position:relative;color:var(--muted);font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap}
+  .pl-back::after{content:"";position:absolute;inset:-12px -8px}
+  .pl-back:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+  .pl-back:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 
   main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
   section > h2{font-size:20px;margin-bottom:2px}
-  #today > h2{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
+  #today > h2{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
   section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:12px}
 
   .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
@@ -176,7 +186,7 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <h1>PL-neurodev’</h1>
+    <div class="pl-id"><h1 class="pl-name"><svg class="pl-mark" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="76"/><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M56,114 C55,100 58,86 56,70 C55,58 57,50 56,48 C64,46 78,45 80,58 C82,70 70,76 56,76"/><path d="M100,48 C99,64 101,86 100,100 C99,108 101,112 100,112 L128,111"/></g></svg>PL-neurodev’</h1><a class="pl-back" href="https://7nel.github.io/PL/" aria-label="Retour à PL, tous les outils"><span aria-hidden="true">←</span> PL</a></div>
     <button id="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
@@ -585,7 +595,7 @@
     document.getElementById("reset-filters").addEventListener("click", resetFilters);
   }
 
-  // marked is loaded with defer from a CDN: wait for it, with a specific error if it never arrives
+  // marked is loaded with defer from vendor/ (self-hosted): wait for it, with a specific error if it never arrives
   function whenMarked(){
     return new Promise(function(resolve, reject){
       if(window.marked) return resolve();

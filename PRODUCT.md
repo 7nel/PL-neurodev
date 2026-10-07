@@ -27,7 +27,7 @@ Contenu ajouté chaque jour par une veille automatique (commits sur `data/flashs
 - Lisible sur téléphone en priorité.
 
 ## Brand Commitments
-Nom : PL-neurodev. Langue : français. Icônes existantes (`icon-*.png`) et couleur de thème `#35606B`.
+Nom : PL-neurodev. Langue : français. Icônes existantes (`icon-*.png`) et couleur de thème `#2f6f63` (famille PL : vert, Atkinson Hyperlegible et Lexend, polices et `marked` autohébergés).
 
 ## Evidence on Hand
 Contenu réel dans `data/`. Aucune donnée de fréquentation, aucun témoignage : ne rien inventer.
