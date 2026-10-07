@@ -87,5 +87,16 @@
     "limites": "Seulement 8 études, probablement hétérogènes et surtout corrélationnelles : pas de causalité établie ; validité du TAR à l'adolescence débattue et chevauchement avec TDA/H, TSA et trauma complexe non tranché. Détails (outils, qualité des études) non vérifiés : je n'ai eu accès qu'à un résumé via moteur de recherche (sites source bloqués), ni abstract complet ni texte intégral.",
     "pratique": "Face à un élève présentant impulsivité, retrait ou conflits avec les pairs, garder l'hypothèse d'une histoire adverse dans le diagnostic différentiel et la partager avec le réseau (PPLS, psychologue) plutôt que d'étiqueter « TAR » en classe.",
     "source": "Talmón-Knuser, F., Flores-Cantos, L., Espuig, A., González-Sala, F., & Lacomba-Trejo, L. (2026). Childhood adversity and reactive attachment disorder in adolescents: A systematic review. *Journal of Child & Adolescent Trauma, 19*(1), 45–57. https://doi.org/10.1007/s40653-026-00830-5"
+  },
+  {
+    "date": "2026-10-07",
+    "themes": [
+      "dys-tsle"
+    ],
+    "titre": "Dyscalculie développementale : méta-analyse des interventions (6–12 ans)",
+    "resume": "Revue systématique et méta-analyse (33 études, 1 792 enfants de 6 à 12 ans avec dyscalculie développementale) : effet poolé large sur les compétences numériques (g de Hedges = 0,93 ; IC 95 % [0,38 ; 3,09]). Aucun modérateur significatif identifié.",
+    "limites": "Biais de publication détecté (test d'Egger) ; hétérogénéité apparemment élevée (IC très large et asymétrique, à vérifier dans le texte), critères diagnostiques probablement disparates d'une étude à l'autre ; aucune donnée sur les adolescents. Seul le résumé a été consulté (texte intégral inaccessible), via extraits indexés : chiffres non revérifiés dans l'article.",
+    "pratique": "Extrapoler prudemment au CO : l'effet 0,93 est probablement surestimé et peu transférable à des 12–16 ans ; privilégier un entraînement numérique explicite, ciblé et mesuré (pré/post) plutôt que de présumer une efficacité générale.",
+    "source": "Mehari, A., & Zeleke, S. (2025). Effectiveness of interventions for school children with developmental dyscalculia: A systematic review and meta-analysis. *Romanian Journal of Applied Psychology, 27*(1), 73–83. https://doi.org/10.2478/rjap-2025-0008"
   }
 ]
