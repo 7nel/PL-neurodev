@@ -66,13 +66,16 @@
   header.top{gap:8px 14px}
   .pl-id{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;min-width:0}
   .pl-name{display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;line-height:1.2;font-weight:700}
+  .pl-logo{position:relative;display:inline-flex;flex:none;border-radius:50%;line-height:0}
+  .pl-logo::after{content:"";position:absolute;inset:-8px}
+  .pl-logo:hover .pl-mark{transform:scale(1.08)}
+  .pl-mark{transition:transform .15s ease}
+  .pl-title{color:inherit;text-decoration:none}
+  .pl-title:hover{text-decoration:underline;text-underline-offset:4px}
+  .pl-logo:focus-visible,.pl-title:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
   .pl-mark{width:1.45em;height:1.45em;flex:none}
   .pl-mark circle{fill:var(--accent)}
   .pl-mark g{stroke:var(--bg)}
-  .pl-back{position:relative;color:var(--muted);font-weight:700;font-size:.95rem;text-decoration:none;white-space:nowrap}
-  .pl-back::after{content:"";position:absolute;inset:-12px -8px}
-  .pl-back:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-  .pl-back:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 
   main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
   section > h2{font-size:20px;margin-bottom:2px}
@@ -186,7 +189,7 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="pl-id"><h1 class="pl-name"><svg class="pl-mark" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="76"/><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M56,114 C55,100 58,86 56,70 C55,58 57,50 56,48 C64,46 78,45 80,58 C82,70 70,76 56,76"/><path d="M100,48 C99,64 101,86 100,100 C99,108 101,112 100,112 L128,111"/></g></svg>PL-neurodev’</h1><a class="pl-back" href="https://7nel.github.io/PL/" aria-label="Retour à PL, tous les outils"><span aria-hidden="true">←</span> PL</a></div>
+    <div class="pl-id"><a class="pl-logo" href="https://7nel.github.io/PL/" aria-label="Retour à PL, tous les outils" title="Retour à PL"><svg class="pl-mark" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="76"/><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M56,114 C55,100 58,86 56,70 C55,58 57,50 56,48 C64,46 78,45 80,58 C82,70 70,76 56,76"/><path d="M100,48 C99,64 101,86 100,100 C99,108 101,112 100,112 L128,111"/></g></svg></a><h1 class="pl-name"><a class="pl-title" href="./">PL-neurodev’</a></h1></div>
     <button id="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
