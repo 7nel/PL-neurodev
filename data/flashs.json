@@ -98,5 +98,16 @@
     "limites": "Biais de publication détecté (test d'Egger) ; hétérogénéité apparemment élevée (IC très large et asymétrique, à vérifier dans le texte), critères diagnostiques probablement disparates d'une étude à l'autre ; aucune donnée sur les adolescents. Seul le résumé a été consulté (texte intégral inaccessible), via extraits indexés : chiffres non revérifiés dans l'article.",
     "pratique": "Extrapoler prudemment au CO : l'effet 0,93 est probablement surestimé et peu transférable à des 12–16 ans ; privilégier un entraînement numérique explicite, ciblé et mesuré (pré/post) plutôt que de présumer une efficacité générale.",
     "source": "Mehari, A., & Zeleke, S. (2025). Effectiveness of interventions for school children with developmental dyscalculia: A systematic review and meta-analysis. *Romanian Journal of Applied Psychology, 27*(1), 73–83. https://doi.org/10.2478/rjap-2025-0008"
+  },
+  {
+    "date": "2026-10-08",
+    "themes": [
+      "tdl-tdc"
+    ],
+    "titre": "TDL : interventions langagières en classe entière (Tier 1), revue systématique",
+    "resume": "Revue systématique (8 bases de données, synthèse narrative) : 11 études évaluées par les pairs sur des interventions de langage oral en classe entière pour élèves avec TDL, avec gains en vocabulaire, grammaire et compréhension d'idiomes. 32 sources web analysées : beaucoup de stratégies recommandées en ligne ne sont pas testées à ce niveau.",
+    "limites": "Base de preuves petite et émergente, synthèse narrative sans méta-analyse rapportée ; tranche d'âge des études non vérifiée (probablement surtout primaire, transfert au CO incertain) ; je n'ai lu que le résumé, pas le texte intégral. Le soutien le mieux appuyé est l'enseignement explicite du vocabulaire.",
+    "pratique": "Au CO, privilégier l'enseignement explicite du vocabulaire disciplinaire en classe entière plutôt que des stratégies glanées en ligne, sans confondre TDL et acquisition d'une langue seconde chez les allophones.",
+    "source": "Armstrong, R., Schimke, E., Ziegenfusz, S., Faragher, R., & Scarinci, N. (2026). Effective whole class oral language interventions and strategies for students with developmental language disorder: A systematic review. *Autism & Developmental Language Impairments*. https://doi.org/10.1177/23969415261457433"
   }
 ]
