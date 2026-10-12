@@ -145,5 +145,17 @@
     "limites": "Base empirique mince selon les auteurs (peu d'études, échantillons petits, profils très hétérogènes) ; synthèse narrative/intégrative, pas de méta-analyse. Je n'ai accédé qu'à des extraits de résumé via un moteur de recherche (texte intégral inaccessible) : le nombre exact d'études et les résultats par domaine n'ont pas été vérifiés. Zone floue : les critères d'identification du 2e varient fortement d'une étude à l'autre.",
     "pratique": "Lors d'une observation d'un élève HPI avec difficultés (attention, langage écrit, social), documenter séparément forces et difficultés plutôt que de laisser l'un masquer l'autre, et croiser avec le bilan psychologique avant toute conclusion.",
     "source": "Rizzo, A., Pinnelli, S., & Minnaert, A. (2025). Twice-exceptional students: A systematic review to outline the distinctive characteristics through a multidimensional lens. *Frontiers in Education*. https://doi.org/10.3389/feduc.2025.1696805"
+  },
+  {
+    "date": "2026-10-12",
+    "themes": [
+      "dys-tsle",
+      "tdl-tdc"
+    ],
+    "titre": "Dyslexie avec ou sans TDL : deux profils cognitifs à distinguer",
+    "resume": "Analyse de profils (Annals of Dyslexia, 2026) s'appuyant sur une cohorte longitudinale d'enfants à risque familial de dyslexie suivis dès 3;6 ans. À 8 ans, la dyslexie « seule » s'accompagne de faiblesses langagières sous-cliniques et phonologiques ; la dyslexie + TDL montre des déficits bien plus sévères (> 2 É.-T.) et, seule, des difficultés de compréhension en lecture.",
+    "limites": "Article de synthèse/analyse de profils fondée sur une cohorte à risque familial (généralisation à une population clinique ou scolaire incertaine) ; effectifs non vérifiés. Je n'ai accédé qu'à des extraits du résumé et de descriptions (texte intégral en libre accès non lu) ; données sur l'adolescence non confirmées.",
+    "pratique": "Face à un élève dyslexique avec compréhension écrite faible, envisager un bilan langagier (TDL associé) avant de conclure à un simple déficit de décodage, et adapter l'aide à l'oral/au vocabulaire, pas seulement à la phonologie.",
+    "source": "Snowling, M. J., Hayiou-Thomas, M. E., & Hulme, C. (2026). Dyslexia with and without developmental language disorder: Profile analysis. *Annals of Dyslexia, 76*(2), 267–278. https://doi.org/10.1007/s11881-025-00358-7"
   }
 ]
