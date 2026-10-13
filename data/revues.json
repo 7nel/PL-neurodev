@@ -490,5 +490,228 @@
         "texte": "Aucune étude empirique sur le TSAF ou l'attachement n'a été repérée dans la fenêtre ; à rechercher en priorité la semaine prochaine, avec un accès complet aux bases de données."
       }
     ]
+  },
+  {
+    "date_debut": "2026-10-06",
+    "date_fin": "2026-10-12",
+    "titre": "Semaine du 6 au 12 octobre 2026",
+    "essentiel": [
+      "La semaine est pauvre en études utiles à l'école. L'étude la plus pertinente pour la pratique est un essai randomisé publié dans *Pediatrics* (Gabriels et al., 2026), mené chez des jeunes autistes présentant un trouble psychiatrique associé. L'équitation thérapeutique y réduit davantage l'hyperactivité que des activités avec les chevaux sans contact direct ou que la liste d'attente. Le N, la durée et l'évaluation en aveugle n'ont pas pu être vérifiés : seul le communiqué a été lu.",
+      "Le numéro d'octobre de JAACAP publie une méta-analyse de 62 études (N = 13 105). Les parents d'enfants et d'adolescent·es avec TDA/H y montrent moins de parentalité positive (g = −0,37) et davantage de parentalité négative (g = 0,47) que les parents du groupe contrôle. L'hétérogénéité est très élevée (I² ≥ 90 %) et les données sont essentiellement transversales. La direction causale n'est donc pas établie : ces chiffres ne justifient pas une lecture culpabilisante des familles.",
+      "Deux résultats ont été très médiatisés sans portée pratique. Le premier : des variants régulateurs du gène MECP2, situé sur le chromosome X, pourraient expliquer une petite partie de la surreprésentation masculine dans l'autisme. Le second : une étude pilote rapporte des « toxiques dans les dents de lait » d'enfants autistes (22 vs 16 enfants). En Suisse, aucune décision nouvelle n'a été vérifiée : la loi sur l'inclusion attend l'examen du Conseil des États, et la date de la 2e lecture de la Loi sur l'école valaisanne reste non confirmée."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "titre": "Équitation thérapeutique chez des jeunes autistes avec comorbidité psychiatrique : essai randomisé à trois bras",
+        "texte": "**Gabriels et al. (2026), *Pediatrics*** (communiqué de CU Anschutz relayé le 10 octobre 2026).\n\n**Question :** chez des enfants et adolescent·es autistes présentant un trouble psychiatrique associé, l'équitation thérapeutique a-t-elle un effet spécifique, au-delà du contact avec l'environnement équestre ?\n\n**Design et population :** essai randomisé à trois bras : équitation thérapeutique ; activités à l'écurie sans contact avec le cheval (contrôle actif) ; liste d'attente. Le N, la tranche d'âge, la durée et la mesure principale n'ont pas été obtenus. L'essai correspond probablement à l'enregistrement NCT04606966 (« Physiological Mechanisms of Therapeutic Horseback Riding Intervention Effects in a Psychiatric Population of ASD Youth »), sans confirmation.\n\n**Résultats (selon le communiqué) :** l'équitation réduit davantage l'**hyperactivité** que les deux autres conditions. Les **deux** conditions équestres améliorent l'irritabilité, la régulation émotionnelle et le fonctionnement social par rapport à la liste d'attente. Le seul effet propre au contact avec le cheval porte donc sur l'hyperactivité.\n\n**Niveau de preuve :** modéré a priori (ECR avec contrôle actif, équipe ayant déjà publié un ECR en 2015 sur 116 participant·es analysé·es, *JAACAP*). Ce niveau est à réévaluer après lecture du texte intégral.\n\n**Limites :** même équipe que l'essai de 2015 (absence de réplication indépendante) ; évaluation en aveugle des évaluateurs inconnue ; mesures probablement fondées sur des questionnaires remplis par les parents, non informés à l'aveugle (risque de biais d'attente). La population recrutée en psychiatrie n'est pas représentative des élèves autistes scolarisés. Coût et accessibilité élevés.\n\n**Ce que ça change :** pour l'école, rien directement. Pour les familles qui demandent conseil : complément possible, pas un substitut aux interventions dont l'efficacité est mieux établie (approches comportementales, traitement du TDA/H associé). L'effet commun aux deux bras équestres suggère qu'une partie du bénéfice tient à une activité structurée, valorisante et en petit groupe, ce qui est transposable à d'autres contextes.\n\nGabriels, R. L., et al. (2026). Therapeutic horseback riding for youth with autism and psychiatric comorbidities: A randomized trial. *Pediatrics*. https://doi.org/10.1542/peds.2026-077263 (liste d'auteur·es, volume et résultats chiffrés non vérifiés ; source : communiqué relayé par MedicalXpress)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Parentalité et TDA/H : méta-analyse comparant familles d'enfants avec et sans TDA/H",
+        "texte": "**Văidean et al., *JAACAP*, 65(10), octobre 2026** (*Editor's Choice* ; mis en ligne le 30 décembre 2025, retenu car paru dans le numéro du mois et non couvert précédemment).\n\n**Question :** les pratiques parentales diffèrent-elles entre les familles d'enfants et d'adolescent·es avec TDA/H et celles du groupe contrôle ?\n\n**Design :** revue systématique et méta-analyse (recherche jusqu'au 12 août 2025).\n\n**N/population :** 62 études, 19 pays, N = 13 105 (6 543 avec TDA/H, 6 562 témoins).\n\n**Résultats (résumé) :** moins de parentalité positive (g = −0,37) et plus de parentalité négative (g = 0,47) dans le groupe TDA/H. Les écarts les plus nets portent sur la parentalité « autoritative » (g = −0,56), la chaleur (g = −0,45) et la **maltraitance** (g = 0,60), puis sur le conflit familial et l'hostilité. Aucun modérateur systématique ni effet des petites études n'a été détecté.\n\n**Niveau de preuve :** modéré pour l'existence d'une différence moyenne ; faible pour toute interprétation causale.\n\n**Limites :** hétérogénéité très élevée (I² ≥ 90 %), qui rend l'estimation moyenne peu informative pour une famille donnée. Les études primaires sont majoritairement transversales et utilisent souvent des mesures auto-rapportées. L'analyse ne permet pas de distinguer trois mécanismes : effets évocatifs (le comportement de l'enfant façonne la parentalité), facteurs génétiques partagés (TDA/H parental fréquent) et effets de la parentalité sur l'enfant. Le résultat sur la maltraitance recoupe la question du diagnostic différentiel avec le trauma.\n\n**Ce que ça change :** confirme que les familles d'élèves avec TDA/H vivent des interactions plus tendues et plus à risque. Cela plaide pour l'accès à la guidance parentale et pour une communication école–famille qui ne transmette pas uniquement des signalements négatifs. Rappelle aussi, chez un·e élève agité·e et inattentif·ve, de garder en tête l'hypothèse d'une exposition à la maltraitance, sans l'assimiler à un TDA/H.\n\nVăidean, T., et al. (2026). Meta-analysis: Parenting children and adolescents with attention-deficit/hyperactivity disorder compared to healthy controls. *Journal of the American Academy of Child & Adolescent Psychiatry, 65*(10). https://doi.org/10.1016/j.jaac.2025.12.016 (liste complète des auteur·es et pagination non vérifiées)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Variants régulateurs de MECP2 et surreprésentation masculine dans l'autisme",
+        "texte": "**Laboratoire Zoghbi (Baylor College of Medicine), *American Journal of Human Genetics*** (début octobre 2026).\n\n**Question :** des variations *légères* de la régulation de MECP2 (gène du chromosome X) contribuent-elles à la surreprésentation masculine dans l'autisme ? L'hypothèse est qu'une seconde copie de l'X amortirait l'effet de ces variants chez les filles.\n\n**Design :** étude expérimentale. Un test rapporteur massivement parallèle (*massively parallel reporter assay*) mesure l'activité de variants des éléments régulateurs de MECP2, puis un variant est validé dans des neurones humains dérivés de cellules souches.\n\n**Résultats (communiqué et résumé PMC) :** plusieurs variants candidats modifient l'activité du gène. Un variant du promoteur, identifié chez un garçon avec autisme non syndromique et TDA/H, réduit l'expression de MECP2 d'environ 30 %.\n\n**Niveau de preuve :** faible pour l'explication du sex-ratio (mécanisme plausible, démontré in vitro, contribution populationnelle non quantifiée).\n\n**Limites :** aucune estimation de la part du sex-ratio expliquée. Le cas index est unique. Le sex-ratio observé dépend aussi fortement des biais de repérage chez les filles (camouflage, critères construits sur des échantillons masculins), que cette étude n'aborde pas.\n\n**Ce que ça change :** rien pour la pratique. Ce résultat ne doit pas être lu comme « l'autisme est biologiquement rare chez les filles » : le sous-diagnostic féminin reste documenté.\n\nZoghbi, H. Y., et al. (2026). A massively parallel reporter assay of MECP2 cis-regulatory elements reveals genetic candidates for male-biased autism. *American Journal of Human Genetics*. https://doi.org/10.1016/j.ajhg.2026.09.011 (premier·ère auteur·e et liste complète non identifiés ; H. Y. Zoghbi est l'autrice correspondante — l'ordre des auteur·es est donc à corriger avant toute citation)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "di-tsaf"
+        ],
+        "titre": "Participation scolaire des élèves autistes (7 et 15 ans) : rôle de la communication sociale et des obstacles environnementaux",
+        "texte": "**Lacroix et al. (2026), *Autism*, 30(5)** (mis en ligne le 27 mars 2026 ; **hors fenêtre**, retenu car directement scolaire, sur des adolescent·es et en contexte francophone).\n\n**Question :** quels facteurs propres à l'élève (fonctions exécutives, communication sociale, comorbidités) et quels facteurs environnementaux sont associés à la participation scolaire des élèves autistes ?\n\n**Design :** étude transversale par questionnaires parentaux, réalisée dans une cohorte française (équipe grenobloise). 871 familles sollicitées, 600 accords, 241 questionnaires complets ; élèves de 7 ou 15 ans.\n\n**Résultats (résumé) :** seules les **habiletés de communication sociale** sont associées à la participation scolaire. Ce n'est le cas ni des fonctions exécutives ni des comorbidités. Les parents identifient les exigences scolaires et l'environnement sensoriel comme obstacles. Les attitudes des enseignant·es et les relations avec les pairs peuvent être des obstacles ou des facilitateurs. Entre 36 et 58 % des parents souhaitent davantage de participation à au moins une activité scolaire. Selon une synthèse secondaire non vérifiée, les filles et les élèves avec DI rencontreraient davantage d'obstacles (règles plus strictes, moqueries).\n\n**Niveau de preuve :** faible à modéré (transversal, informateur unique).\n\n**Limites :** taux de réponse de 28 % des familles sollicitées (biais de sélection probable) ; seuls les parents ont répondu, sans point de vue de l'élève ni de l'enseignant·e ; corrélationnel.\n\n**Ce que ça change :** soutient l'idée de cibler à la fois les compétences de communication sociale et les obstacles environnementaux (bruit, densité des exigences), plutôt que les seules fonctions exécutives. C'est un argument direct pour le travail en groupe socio-émotionnel.\n\nLacroix, A., Burnel, M., Baciu, M., Occelli, P., Perrone-Bertolotti, M., David, M., & Ego, A. (2026). School participation in autistic girls and boys: The role of social-communication abilities and extrinsic barriers. *Autism, 30*(5). https://doi.org/10.1177/13623613261428668 (pagination non vérifiée)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Évaluation du TDA/H fondée sur les preuves : mise à jour des qualités psychométriques de 43 outils",
+        "texte": "**Bunford, Koppány, Ágrez, Hámori et Evans (2026), *Journal of Clinical Child & Adolescent Psychology*** (mis en ligne le 21 avril 2026, **hors fenêtre** ; retenu pour l'évaluation et le diagnostic).\n\n**Question :** quelles sont les qualités psychométriques des outils d'évaluation du TDA/H chez l'enfant et l'adolescent·e ?\n\n**Design :** revue « evidence-based assessment » selon les grilles de De Los Reyes et Langer et de Youngstrom et al. Elle porte sur 43 mesures : 22 de symptômes, 18 de retentissement fonctionnel et 9 neuropsychologiques.\n\n**Résultats (résumé) :** le **CPT de Conners** (test informatisé d'attention soutenue) a une validité discriminante insuffisante. L'entretien structuré DISC a une fidélité interne insuffisante (une étude) mais une bonne validité de construit. Parmi les échelles de **retentissement**, l'*Impairment Rating Scale* (IRS) a le profil le plus complet. L'AAPC, la COSS et l'IRS sont très sensibles aux effets du traitement.\n\n**Niveau de preuve :** synthèse structurée, mais l'évaluation repose souvent sur une ou deux études par propriété.\n\n**Limites :** peu de données sur la fidélité inter-juges et test-retest, sur la validité de contenu et sur la généralisation. Origine ethnique, niveau socio-économique et médication sont mal rapportés. Aucune donnée sur des versions francophones ou des élèves allophones.\n\n**Ce que ça change :** un score de test informatisé d'attention ne suffit pas à confirmer ou à exclure un TDA/H. Les observations de l'enseignant·e sur le **retentissement** en classe (et pas seulement sur les symptômes) sont une pièce importante et documentée de l'évaluation.\n\nBunford, N., Koppány, D., Ágrez, K., Hámori, G., & Evans, S. W. (2026). Update on the evidence-based assessment of attention-deficit/hyperactivity disorder in youth. *Journal of Clinical Child & Adolescent Psychology, 55*(5), 773–799. https://doi.org/10.1080/15374416.2026.2660295"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tdah",
+          "attachement"
+        ],
+        "titre": "Parentalité et TDA/H : cause, conséquence ou facteur commun ?",
+        "texte": "La méta-analyse de Văidean et al. sera probablement lue de deux façons opposées. Une première lecture, environnementale, y voit des pratiques parentales dures qui entretiennent ou aggravent les symptômes. Une seconde lecture, évocative et génétique, y voit des comportements de l'enfant qui épuisent les parents, une héritabilité élevée du TDA/H (environ 70–80 % selon les études de jumeaux) et des parents eux-mêmes plus souvent concernés. Le design ne permet pas de trancher. Les deux mécanismes coexistent probablement. Point de tension supplémentaire : l'association avec la **maltraitance** (g = 0,60) recoupe le débat sur le chevauchement des tableaux d'inattention et d'agitation entre TDA/H et trauma complexe. Le risque d'erreur existe dans les deux sens : traiter comme TDA/H un tableau post-traumatique, ou ignorer un TDA/H chez un·e enfant maltraité·e."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Sex-ratio de l'autisme : biologie ou biais de repérage ?",
+        "texte": "L'étude MECP2 relance l'explication génétique du sex-ratio (effet protecteur féminin, vulnérabilité liée à l'X). D'autres travaux insistent sur la sous-identification des filles : camouflage, profils moins stéréotypés, outils et critères construits sur des échantillons majoritairement masculins. Les diagnostics féminins augmentent plus vite et sont posés plus tard, ce qui va dans ce sens (étude de Saint Louis University relayée le 2 septembre 2026, non vérifiée à la source). Ces positions ne s'excluent pas : le sex-ratio observé (environ 3–4:1) est probablement plus élevé que le sex-ratio « réel ». Aucune donnée actuelle ne permet d'en attribuer une part précise à chaque facteur."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "transversal"
+        ],
+        "titre": "Interventions assistées par l'animal : effet spécifique ou effet de contexte ?",
+        "texte": "Le design à trois bras de Gabriels et al. permet de séparer ce qui tient au cheval de ce qui tient au contexte. L'effet spécifique se limite à l'hyperactivité ; les gains sur l'irritabilité, la régulation émotionnelle et le fonctionnement social sont partagés avec le bras « écurie sans contact ». Les promoteurs de l'équithérapie y verront une validation. Une lecture sceptique y verra surtout l'effet d'une activité nouvelle, structurée et valorisante, avec des parents non aveugles. Les revues antérieures sur les interventions assistées par l'animal dans l'autisme jugent généralement la qualité des preuves faible, ce qui est cohérent avec la prudence de mise ici."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Comme la semaine précédente, PubMed, Crossref, Europe PMC et les sites des éditeurs étaient inaccessibles depuis l'environnement de veille. Toutes les données proviennent d'extraits de moteurs de recherche, de résumés ou de communiqués. Aucun DOI n'a été résolu. Ne reprendre aucun chiffre de cette revue dans un travail académique sans vérification à la source."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "« Des toxiques dans les dents de lait des enfants autistes » (UT Health San Antonio, relayé le 5–6 octobre 2026) : étude pilote cas-témoins, 22 enfants autistes vs 16 enfants au développement typique, 19 composés significativement plus élevés. Revue et auteur·es non identifiés. Très petit échantillon, multiplicité des comparaisons (risque élevé de faux positifs) et causalité inverse ou confusion possibles (alimentation, environnement, médicaments). Les auteur·es indiquent eux-mêmes que cela ne démontre aucune causalité. À ne pas relayer aux familles comme un facteur de risque."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "Équitation thérapeutique : les résultats n'ont été lus que dans le communiqué. Le N, la durée, l'outil de mesure de l'hyperactivité, le recours à des évaluateurs en aveugle et les tailles d'effet sont inconnus. Le lien avec l'enregistrement NCT04606966 est une hypothèse."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Une méta-analyse attribuée à *Frontiers in Pediatrics* (2026) circule avec un OR poolé de 1,56 entre « temps d'écran excessif » et TDA/H, et un OR de 1,16 chez les enfants d'âge scolaire et les adolescent·es. L'article n'a pas pu être localisé ni vérifié ; il n'est donc pas retenu. Rappel général : ces associations reposent sur des études observationnelles, et la causalité inverse (les enfants avec TDA/H s'orientent davantage vers les écrans) n'est pas exclue."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "*JAACAP Open* (numéro d'octobre 2026) publie une étude sur les profils de traitement et l'évolution clinique de jeunes de 3 à 18 ans avec TDA/H, avec ou sans autisme associé (dossiers médicaux). Les auteur·es, le DOI et les résultats n'ont pas été obtenus : signalée pour mémoire, non analysée."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah",
+          "attachement"
+        ],
+        "titre": "Familles d'élèves avec TDA/H : partenariat sans culpabilisation",
+        "texte": "Les tensions familiales autour d'un·e élève avec TDA/H sont fréquentes et en partie *réactives* au comportement de l'enfant. En entretien, éviter les formulations qui attribuent les difficultés au « cadre familial ». Concrètement : instaurer un canal de communication qui transmet aussi les réussites (par exemple une fiche quotidienne avec 2–3 objectifs comportementaux, formulés positivement et définis avec l'élève) et informer sur la guidance parentale disponible (pédopsychiatrie, CDTEA, associations comme l'ASPEDAH). Rester attentif·ve aux signes de maltraitance, sans les déduire du seul diagnostic : en cas de doute, appliquer la procédure de signalement de l'établissement."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Participation scolaire des élèves autistes : agir sur l'environnement",
+        "texte": "Les données de Lacroix et al. (2026) suggèrent deux leviers. Le premier est la communication sociale, travaillée explicitement en groupe : scripts de demande d'aide, lecture des intentions, gestion des interactions en récréation. Le second est l'allègement des obstacles environnementaux : bruit, densité des consignes, transitions, activités hors classe peu préparées. Pour les sorties, camps et activités collectives (souvent celles où la participation souhaitée est la plus faible), anticiper (supports visuels, rôle défini, lieu de retrait). Une vigilance particulière s'impose pour les filles autistes et les élèves avec DI, plus exposé·es aux moqueries selon une synthèse secondaire non vérifiée."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Contribuer à l'évaluation : documenter le retentissement",
+        "texte": "Dans une démarche d'évaluation du TDA/H (PES, demande de bilan), l'apport le plus utile de l'enseignant·e est une description standardisée du **retentissement** : tâches non terminées, conflits, temps de mise au travail, besoins d'étayage, avec fréquence et contexte. Un simple « il est inattentif » apporte peu. Un score à un test informatisé d'attention ne tranche pas le diagnostic (validité discriminante insuffisante du CPT de Conners selon Bunford et al., 2026). Chez un·e élève allophone, préciser la langue de la tâche et la durée d'exposition au français : une inattention apparente peut refléter une surcharge de traitement linguistique en L2 plutôt qu'un trouble attentionnel."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "titre": "Activités structurées et agitation",
+        "texte": "L'essai sur l'équitation suggère, avec prudence, qu'une activité physique structurée, en petit groupe et valorisante améliore la régulation chez des jeunes autistes avec comorbidité. Sans équithérapie, l'école peut proposer des créneaux d'activité motrice planifiés, des responsabilités concrètes, des rituels prévisibles. C'est une hypothèse d'application, pas un résultat démontré en contexte scolaire."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi fédérale sur l'inclusion : en attente du Conseil des États",
+        "texte": "Après l'adoption du contre-projet indirect par le Conseil national (21 septembre 2026, 108 voix contre 80), le dossier passe à la commission compétente du Conseil des États ; aucune date de séance n'a été trouvée. Inclusion Handicap et la Fédération suisse des aveugles et malvoyants maintiennent leurs critiques : le texte ne crée pas de droits justiciables. Le comité d'initiative indique que le Conseil des États examinera l'initiative et le contre-projet « dans les mois à venir »."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais — lois scolaires : 2e lecture toujours sans date confirmée",
+        "texte": "Le canton annonce une 2e lecture à l'automne 2026 pour trois lois : la Loi sur l'école valaisanne (qui remplacerait la loi de 1962), la loi sur l'enseignement du degré secondaire II et la loi sur l'enseignement privé, cette dernière n'ayant pas atteint la majorité des deux tiers en 1re lecture. Une commission de 2e lecture doit siéger. Points saillants rapportés par la presse : cantonalisation des directions, introduction de la notion de harcèlement scolaire. Aucune information nouvelle sur les dispositions relatives à l'enseignement spécialisé ni sur la suite du rapport CSPS sur l'école inclusive. Pour mémoire, les vacances d'automne débutent le 14 ou le 15 octobre selon les communes."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Suisse romande — formations et intervention précoce",
+        "texte": "Autisme suisse romande : formation sur les besoins de soutien des personnes autistes non verbales le 7 novembre 2026 à Lausanne, inscriptions jusqu'au 17 octobre. Conférence de G. Vivanti sur l'intervention précoce le 30 novembre 2026 au CHUV. Fondation Pôle Autisme : séminaire sur le nouveau cadre légal de l'intervention précoce intensive (IPI) le 29 octobre 2026, complet. Le Conseil fédéral avait mis en consultation une modification garantissant la participation de l'AI à l'IPI après 2026 ; l'état actuel de la procédure n'a pas été vérifié. Ces informations sont tirées des pages des organisateurs, dont les dates de mise à jour sont incertaines."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "International — Angleterre et France",
+        "texte": "Angleterre : le gouvernement n'a toujours pas publié sa réponse à la consultation sur le Schools White Paper (close en mai). Huit collectivités locales doivent resoumettre leurs plans locaux de réforme SEND en novembre ; au moins six collectivités, cumulant environ 195 millions de livres de déficit, doivent les revoir en échange d'un renflouement (Schools Week, début octobre 2026). France : aucun document publié sur la stratégie TND 2027–2032 depuis l'annonce de septembre. Le bilan 2025–2026 de la stratégie 2023–2027 (mai 2026) fait état de 664 dispositifs et de plus de 5 600 élèves avec TND accompagnés ; ces chiffres ne concordent pas avec les 734 dispositifs annoncés à la rentrée 2026 (périmètres probablement différents, non vérifié)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "Texte intégral de Gabriels et al. (*Pediatrics*) : N, durée, mesure principale, évaluation en aveugle, tailles d'effet et suivi à distance."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Date de la séance de la commission du Conseil des États sur la loi sur l'inclusion, et date de la 2e lecture valaisanne (session de novembre ?)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Zurich : référendum éventuel contre la mise en œuvre de l'initiative sur les *Förderklassen* (votation possible d'ici janvier 2027 selon la presse de mai 2026 ; statut actuel non vérifié)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "*JAACAP Open*, octobre 2026 : profils de traitement des jeunes avec TDA/H et autisme associé. À analyser si le texte devient accessible."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "di-tsaf",
+          "attachement"
+        ],
+        "texte": "TSAF et attachement : pour la deuxième semaine consécutive, aucune étude empirique nouvelle n'a été repérée dans la fenêtre. Seules une revue mécanistique sur les voies épigénétiques de l'exposition prénatale à l'alcool (*Neuroscience & Biobehavioral Reviews*, vol. 189, octobre 2026, non lue) et un document de discussion sur le repérage du TSAF en protection de l'enfance ont été trouvés. La recherche reste prioritaire, mais elle exige un accès aux bases bibliographiques."
+      }
+    ]
   }
 ]
