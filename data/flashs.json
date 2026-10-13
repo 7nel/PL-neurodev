@@ -157,5 +157,17 @@
     "limites": "Article de synthèse/analyse de profils fondée sur une cohorte à risque familial (généralisation à une population clinique ou scolaire incertaine) ; effectifs non vérifiés. Je n'ai accédé qu'à des extraits du résumé et de descriptions (texte intégral en libre accès non lu) ; données sur l'adolescence non confirmées.",
     "pratique": "Face à un élève dyslexique avec compréhension écrite faible, envisager un bilan langagier (TDL associé) avant de conclure à un simple déficit de décodage, et adapter l'aide à l'oral/au vocabulaire, pas seulement à la phonologie.",
     "source": "Snowling, M. J., Hayiou-Thomas, M. E., & Hulme, C. (2026). Dyslexia with and without developmental language disorder: Profile analysis. *Annals of Dyslexia, 76*(2), 267–278. https://doi.org/10.1007/s11881-025-00358-7"
+  },
+  {
+    "date": "2026-10-13",
+    "themes": [
+      "tsa",
+      "transversal"
+    ],
+    "titre": "Rappel : TCC de l'anxiété délivrée par le personnel scolaire (TSA), essai en grappes",
+    "resume": "Rappel : essai randomisé en grappes (25 écoles primaires/secondaires inférieures, 77 professionnels formés en « train-the-trainer », 81 élèves de 8–14 ans avec TSA ou TSA suspecté et anxiété). Le programme *Facing Your Fears* (12 semaines) réduit davantage l'anxiété que l'usage habituel, selon parents et enfants.",
+    "limites": "Essai en grappes, mais élèves de 8–14 ans seulement (peu d'adolescents du CO), N modeste, mesures surtout rapportées (parents/enfant), pas d'aveugle possible pour l'intervention. Je n'ai accédé qu'à des résumés secondaires, pas à l'abstract PubMed ni au texte intégral : tailles d'effet et suivi non vérifiés ; DOI non confirmé (PMID 37208894). Aucune publication récente plus solide trouvée sur 24–72 h.",
+    "pratique": "Prudemment, des éléments de TCC (identification des signaux corporels, exposition graduée) peuvent s'intégrer au groupe socio-émotionnel, en concertation avec le réseau de soins, sans s'y substituer.",
+    "source": "Reaven, J., Pickard, K., Meyer, A. T., et al. (2024). Implementing school-based cognitive behavior therapy for anxiety in students with autism or suspected autism via a train-the-trainer approach: Results from a clustered randomized trial. *Autism, 28*(2), 484–497. PMID : 37208894 (DOI non vérifié)."
   }
 ]
