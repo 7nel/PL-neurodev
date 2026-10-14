@@ -169,5 +169,17 @@
     "limites": "Essai en grappes, mais élèves de 8–14 ans seulement (peu d'adolescents du CO), N modeste, mesures surtout rapportées (parents/enfant), pas d'aveugle possible pour l'intervention. Je n'ai accédé qu'à des résumés secondaires, pas à l'abstract PubMed ni au texte intégral : tailles d'effet et suivi non vérifiés ; DOI non confirmé (PMID 37208894). Aucune publication récente plus solide trouvée sur 24–72 h.",
     "pratique": "Prudemment, des éléments de TCC (identification des signaux corporels, exposition graduée) peuvent s'intégrer au groupe socio-émotionnel, en concertation avec le réseau de soins, sans s'y substituer.",
     "source": "Reaven, J., Pickard, K., Meyer, A. T., et al. (2024). Implementing school-based cognitive behavior therapy for anxiety in students with autism or suspected autism via a train-the-trainer approach: Results from a clustered randomized trial. *Autism, 28*(2), 484–497. PMID : 37208894 (DOI non vérifié)."
+  },
+  {
+    "date": "2026-10-14",
+    "themes": [
+      "dys-tsle",
+      "tdah"
+    ],
+    "titre": "Dyslexie + TDA/H : une intervention phonique fonctionne-t-elle aussi en cas de comorbidité ?",
+    "resume": "Rappel : *short report* (*Dyslexia*, 2026), intervention phonique sur la lecture-écriture chez 16 enfants avec TDA/H + dyslexie, comparés à 16 enfants dyslexiques seuls. Gains de fluence de lecture comparables entre groupes ; gains en orthographe plus marqués dans le groupe comorbide.",
+    "limites": "Très petit échantillon (N = 32), format *short report*, enfants (pas adolescents), pas d'essai randomisé confirmé à ma connaissance ; effet orthographe non répliqué. **Seuls des extraits de l'abstract ont pu être consultés (texte intégral inaccessible) : design exact, mesures, suivi et co-auteurs non vérifiés.** Rien de solide et récent n'est ressorti sur 24–72 h, d'où le rappel.",
+    "pratique": "Prudemment : un TDA/H associé n'impose pas d'abandonner un entraînement phonique/orthographique structuré en appui ; à vérifier chez tes élèves de 9e–11e, l'étude ne portant pas sur l'adolescence.",
+    "source": "Verwimp, et al. (2026). Short report: Intervention of reading and spelling problems in children with co-occurring attention-deficit hyperactivity disorder and dyslexia. *Dyslexia*. https://doi.org/10.1002/dys.70032 (PubMed 41920745) — initiales et co-auteurs non vérifiés."
   }
 ]
