@@ -9,11 +9,12 @@ Site statique, pas de connexion requise : https://7nel.github.io/PL-neurodev/
 - `index.html` — la page (design, logique de filtrage, rendu markdown), lit les données via `fetch()`
 - `data/flashs.json` — flashs quotidiens (tableau, un objet par jour : `date`, `themes`, `titre`, `resume` (1–2 phrases : ce qui est dit), `limites` (niveau de preuve et limites, optionnel), `pratique` (pour la pratique au CO, optionnel), `preuve` (optionnel : `solide`, `nuance` ou `floue`), `source`)
 - `data/revues.json` — revues hebdomadaires (tableau, un objet par semaine : `date_debut`, `date_fin`, `titre`, `essentiel` (3 points), `items` (tableau `{section, themes, titre?, preuve?, texte}`))
+- `sw.js` — copie hors ligne : la page, les polices et les dernières données restent lisibles sans réseau (réseau d'abord pour la page et les JSON)
 - `icon-*.png`, `manifest.json` — icône et métadonnées pour l'écran d'accueil
 
 ## Mettre à jour le contenu
 
-Pas besoin de toucher `index.html` pour ajouter du contenu : il suffit d'ajouter un objet aux tableaux JSON dans `data/` et de pousser le commit. Le site se recharge tout seul (fetch avec cache-busting).
+Pas besoin de toucher `index.html` pour ajouter du contenu : il suffit d'ajouter un objet aux tableaux JSON dans `data/` et de pousser le commit. Le site se recharge tout seul (fetch avec revalidation `no-cache`). Pour publier de nouvelles polices ou icônes, change le numéro de `CACHE` dans `sw.js`.
 
 `themes` valides : `tsa`, `tdah`, `dys-tsle`, `tdl-tdc`, `hpi`, `di-tsaf`, `attachement`, `transversal`.
 
@@ -21,11 +22,11 @@ Pas besoin de toucher `index.html` pour ajouter du contenu : il suffit d'ajouter
 
 ## Niveau de preuve
 
-Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Un flash sans champ `preuve` n'affiche pas de badge.
+Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Sans niveau, la carte du flash du jour affiche « Preuve non évaluée » ; dans l'archive, ce message figure en tête du texte déployé. Une légende des niveaux est dépliable sous la carte du jour.
 
 ## Archive
 
-L'archive est une liste unique, classée par mois (le mois le plus récent est ouvert, les autres repliés). Chaque carte porte une étiquette de type (Flash, Étude, Zone floue, Pratique au CO…), son thème et son badge de preuve. La recherche plein texte (accents ignorés) et le filtre par thème ouvrent les mois qui correspondent.
+L'archive est classée par semaine : chaque revue hebdomadaire forme un groupe, avec les flashs de la même période (les flashs plus récents que la dernière revue sont regroupés sous « Depuis la dernière revue »). La semaine la plus récente est ouverte, les autres repliées. Un second classement, « Type », regroupe par Zone floue, Pratique au CO, Étude, etc. Chaque carte porte son type, son thème et son badge de preuve. La recherche plein texte (accents ignorés) et le filtre par thème ouvrent les groupes qui correspondent.
 
 ## Consigne pour la veille automatique
 

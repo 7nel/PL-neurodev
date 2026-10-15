@@ -20,7 +20,7 @@
   /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
      each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
      consistent color, used on tags, chevrons and filter chips so a recurring category reads at a glance.
-     type scale: 16px body, 14px meta, headings 17-24px. */
+     type scale: 18px body, 16px meta and controls, headings 18-26px (charte PL). */
   @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-400.woff2) format("woff2")}
   @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-700.woff2) format("woff2")}
   @font-face{font-family:"Atkinson Hyperlegible";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/atkinson-400-i.woff2) format("woff2")}
@@ -31,6 +31,7 @@
     --border:#DCD6C8; --line-ctl:#7a8077; --card:#fffdf9; --chip-bg:#E9E4D9;
     --c-tsa:#2D6A9F; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#44691F; --c-transversal:#6F5C3A;
     --c-hpi:#7F6212; --c-di-tsaf:#A0366B; --c-attachement:#4A5B8C;
+    --accent-soft:color-mix(in srgb,var(--accent) 16%,var(--card));
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -47,17 +48,24 @@
     --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
   }
 
-  @media (prefers-reduced-motion: reduce){ .item .item-title::before{transition:none} }
+  @media (prefers-reduced-motion: reduce){
+    .item .item-title::before,.bucket-count::after,.pl-mark{transition:none}
+    .pl-logo:hover .pl-mark{transform:none}
+  }
 
   *{box-sizing:border-box}
   html,body{background:var(--bg)}
   body{
     color:var(--fg);
     font-family:"Atkinson Hyperlegible",system-ui,sans-serif;
-    font-size:16px; line-height:1.6; margin:0;
+    font-size:18px; line-height:1.6; margin:0;
     padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
   }
-  .wrap{max-width:720px;margin:0 auto}
+  .wrap{max-width:680px;margin:0 auto}
+  p{text-wrap:pretty}
+  ::selection{background:color-mix(in srgb,var(--accent) 28%,transparent)}
+  html{scrollbar-color:var(--line-ctl) var(--bg)}
+  input,button{accent-color:var(--accent);caret-color:var(--accent)}
   h1,h2,h3,h4{font-family:"Lexend","Atkinson Hyperlegible",system-ui,sans-serif;font-weight:600;text-wrap:balance;margin:0}
   a{color:var(--accent)}
   .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
@@ -79,86 +87,103 @@
 
   main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
   section > h2{font-size:20px;margin-bottom:2px}
-  #today > h2{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
-  section > .section-sub{color:var(--muted);font-size:14px;margin-bottom:12px}
+  section > .section-sub{color:var(--muted);margin-bottom:12px}
 
   .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
 
-  /* evidence level: the product's differentiator, shown as a glyph (full / half / empty) plus its label, never color alone */
-  .preuve{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:6px;padding:1px 9px 1px 7px;margin:0 5px 4px 0}
-  .preuve-ico{flex:none}
+  /* evidence level: the product's differentiator, shown as a glyph (full / half / empty / dashed = not assessed)
+     plus its label, never color alone. large = the badge of the day's flash; small = archive cards. */
+  .preuve{display:inline-flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:6px;padding:1px 9px 1px 7px;margin:0 5px 4px 0}
+  .preuve-ico{flex:none;color:var(--accent)}
+  .preuve--lg{gap:8px;font-weight:700;padding:6px 14px 6px 10px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:999px;margin-bottom:0}
+  .preuve--lg .preuve-ico{width:18px;height:18px}
+  .preuve--none,.preuve--lg.preuve--none{border:1px dashed var(--line-ctl);background:transparent;color:var(--muted);font-weight:500}
+  .preuve--none .preuve-ico{color:var(--muted)}
   .theme-tag{
-    display:inline-block;font-size:14px;font-weight:500;
+    display:inline-block;font-size:16px;font-weight:500;
     border:1px solid currentColor;border-radius:6px;padding:1px 8px;margin:0 5px 4px 0;
   }
   .meta-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px}
 
   /* today: the first thing on the page, never hidden by a theme filter */
-  #today .flash-date{font-size:14px;color:var(--muted);margin-right:8px;font-variant-numeric:tabular-nums}
-  #today h3{font-size:26px;line-height:1.25;margin:0 0 10px}
-  #today .meta-row{margin-bottom:10px}
+  #today .flash-date{color:var(--muted);margin:0 0 4px 4px;font-variant-numeric:tabular-nums}
+  #today h3{font-size:26px;line-height:1.25;margin:0 0 12px}
+  #today .meta-row{margin-bottom:12px;align-items:center}
   #today .flash-limites{margin:10px 0 0;color:var(--fg)}
-  #today .flash-limites strong{color:var(--accent-2)}
   #today .flash-pratique{margin-top:10px}
   #today .flash-pratique > summary{cursor:pointer;font-weight:600;color:var(--accent);padding-block:6px;min-height:44px;display:flex;align-items:center}
   #today .flash-pratique > div{padding-bottom:4px}
-  #today .flash-more{margin:4px 0 0;font-size:14px}
+  #today .flash-more{margin:4px 0 0}
   #today .flash-more a{display:inline-flex;align-items:center;min-height:44px}
-  #today a:focus-visible,#today summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  #today .flash-source{font-size:14px;color:var(--muted);margin-top:4px}
+  #today a:focus-visible,#today summary:focus-visible,.legend > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  #today .flash-source{color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
   #today-empty{color:var(--muted);font-style:italic}
+
+  /* legend of the evidence levels, one tap under the day's card */
+  .legend{margin-top:6px}
+  .legend > summary{cursor:pointer;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
+  .legend-list{display:flex;flex-direction:column;gap:12px;padding:4px 0 8px}
+  .legend-row p{margin:2px 0 0;color:var(--muted)}
 
   /* essentiel of the latest weekly review: also unfiltered, a standing summary */
   .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
   .essentiel-list li{position:relative;padding-left:18px}
-  .essentiel-list li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+  .essentiel-list li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 
   /* archive: everything past, searchable, then filtered by theme */
   .search{display:block;width:100%;min-height:44px;font:inherit;padding:0 14px;border:1px solid var(--line-ctl);border-radius:10px;background:var(--card);color:var(--fg)}
   .search::placeholder{color:var(--muted)}
   .search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .view-switch{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:12px}
+  .view-switch > span{color:var(--muted)}
+  .seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line-ctl);border-radius:999px}
+  .seg button{font:inherit;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:600}
+  .seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky.
      the last chip is cut by the edge on purpose: it shows the row scrolls. */
   #browse .chips{
     display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;
     scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);
-    padding:10px 16px 10px 0;margin-top:4px;z-index:5;border-bottom:1px solid var(--border);
+    padding:8px 16px 8px 0;margin-top:8px;z-index:5;border-bottom:1px solid var(--border);
   }
   #browse .chips::-webkit-scrollbar{display:none}
   .chip{
     --chip-color: var(--accent);
-    font:inherit;font-size:14.5px;padding:0 14px;min-height:44px;border-radius:999px;
+    font:inherit;font-size:16px;padding:0 14px;min-height:44px;border-radius:999px;
     border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
     flex:none;scroll-snap-align:start;
   }
   .chip:focus-visible,#theme-toggle:focus-visible,.item > summary:focus-visible,.bucket > summary:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
-  .result-count{margin:10px 0 0;font-size:14px;color:var(--muted)}
+  .result-count{margin:10px 0 0;color:var(--muted)}
 
-  /* sections: collapsed by default with their count; opened automatically while searching or filtering */
+  /* groups: one per weekly review (or per type); only the latest week is open, the others folded with their count.
+     all open automatically while searching or filtering */
   .bucket{margin-top:14px;border-top:1px solid var(--border)}
   .bucket[hidden]{display:none}
   .bucket > summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:6px}
   .bucket > summary::-webkit-details-marker{display:none}
-  .bucket > summary h3{font-size:17px;color:var(--accent);text-transform:capitalize}
-  .type-tag{display:inline-block;font-size:14px;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;margin:0 5px 4px 0}
-  .bucket-count{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bucket > summary h3{font-size:18px;color:var(--accent)}
+  .type-tag{display:inline-block;font-size:16px;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;margin:0 5px 4px 0}
+  .bucket-count{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
   .bucket-count::after{content:"";display:inline-block;width:7px;height:7px;margin-left:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
   .bucket[open] .bucket-count::after{transform:translateY(1px) rotate(-135deg)}
   .theme-bucket-list{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
 
   .item{border:1px solid var(--border);border-radius:9px;background:var(--card);overflow:hidden}
   .item[hidden]{display:none}
-  .item > summary{cursor:pointer;list-style:none;padding:11px 15px;display:flex;flex-direction:column;gap:3px}
+  .item > summary{cursor:pointer;list-style:none;padding:12px 15px;display:flex;flex-direction:column;gap:4px}
   .item > summary::-webkit-details-marker{display:none}
-  .item .item-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
-  .item .item-period{font-size:14px;color:var(--muted);white-space:nowrap}
-  .item .item-title{font-weight:600;font-size:17px;display:flex;align-items:baseline;gap:9px;line-height:1.35}
+  .item .item-head{display:flex;justify-content:space-between;gap:2px 10px;align-items:baseline;flex-wrap:wrap}
+  .item .item-period{color:var(--muted);white-space:nowrap}
+  .item .item-title{font-size:18px;display:flex;align-items:baseline;gap:9px;line-height:1.35;overflow-wrap:anywhere}
   .item .item-title::before{content:"";flex:none;width:7px;height:7px;border-right:2px solid var(--item-color, var(--muted));border-bottom:2px solid var(--item-color, var(--muted));transform:translateY(-2px) rotate(-45deg);transition:transform .15s}
   .item[open] .item-title::before{transform:translateY(-4px) rotate(45deg)}
-  .item .item-teaser{color:var(--muted);margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .item .item-teaser{color:var(--muted);margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
   .item .item-tags{margin-top:6px}
-  .item .item-body{padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px}
+  .item .item-body{padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px;overflow-wrap:anywhere}
+  .item .item-body > .meta-row{padding-top:12px}
   .item .item-body p{margin:8px 0 0}
   .item .item-body strong{color:var(--fg)}
   .item .item-body em{color:var(--muted)}
@@ -169,11 +194,13 @@
 
   footer{
     padding-block:20px calc(24px + env(safe-area-inset-bottom,0px));
-    border-top:1px solid var(--border);color:var(--muted);font-size:14px;text-align:center;
+    border-top:1px solid var(--border);color:var(--muted);text-align:center;
   }
   footer p{margin:0 0 6px}
   #loading{color:var(--muted);font-style:italic;padding-block:20px}
-  #load-error,#no-js{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--muted)}
+  #load-error,#load-notice{display:none;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--fg)}
+  #load-error p,#load-notice p{margin:0;flex:1 1 15rem}
+  #no-js{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--muted)}
 
   #theme-toggle{
     flex:none;width:44px;height:44px;border-radius:999px;
@@ -198,13 +225,15 @@
 
   <main>
     <div id="loading" role="status">Chargement…</div>
-    <p id="load-error" role="alert">Le contenu n’a pas pu être chargé. Vérifie ta connexion et recharge la page.</p>
+    <div id="load-error" role="alert"><p id="load-error-text"></p><button class="btn" type="button" data-retry>Réessayer</button></div>
+    <div id="load-notice" role="status"><p id="load-notice-text"></p><button class="btn" type="button" data-retry>Réessayer</button></div>
     <noscript><p id="no-js" style="display:block">Cette page a besoin de JavaScript pour afficher la veille.</p></noscript>
 
     <section id="today" hidden>
       <h2 id="today-title">Aujourd’hui</h2>
       <div class="section-sub" id="today-sub" hidden></div>
       <div id="today-content"></div>
+      <details class="legend" id="legend"><summary>Que signifient les niveaux de preuve ?</summary><div class="legend-list" id="legend-content"></div></details>
     </section>
 
     <section id="essentiel-section" hidden>
@@ -218,6 +247,7 @@
       <div class="section-sub">Flashs et revues déjà parus. Cherche un mot, ou filtre par thème.</div>
       <label class="sr-only" for="search">Rechercher dans l’archive</label>
       <input class="search" id="search" type="search" placeholder="Rechercher (ex. mémoire de travail)" autocomplete="off" enterkeyhint="search">
+      <div class="view-switch" role="group" aria-label="Classement de l’archive"><span>Classer par</span><div class="seg"><button type="button" data-view="semaine" aria-pressed="true">Semaine</button><button type="button" data-view="type" aria-pressed="false">Type</button></div></div>
       <div class="chips" id="theme-chips" role="group" aria-label="Filtrer par thème">
         <button class="chip" data-theme-filter="tous" aria-pressed="true">Tous</button>
         <button class="chip" data-theme-filter="tsa" aria-pressed="false" style="--chip-color:var(--c-tsa)">TSA</button>
@@ -270,6 +300,13 @@
   // "preuve" on a flash or a review item: how solid the evidence is. when missing on a review item,
   // it is read from the first word of its "Niveau de preuve" line (élevé → solide, modéré → nuancée, faible → floue)
   var PREUVE_LABELS = { "solide": "Preuve solide", "nuance": "Preuve nuancée", "floue": "Preuve fragile" };
+  var PREUVE_LEGEND = [
+    ["solide", "Essai contrôlé randomisé ou méta-analyse de qualité, effectif suffisant, résultat répliqué."],
+    ["nuance", "Preuve modérée, ou solide mais limitée (échantillon, un seul pays, étude observationnelle)."],
+    ["floue", "Preuve faible : étude préliminaire, narrative, petit effectif, communiqué de presse, texte intégral non lu."],
+    [null, "Le niveau n’a pas été établi pour cet élément. Lis les limites avant de t’y fier."]
+  ];
+  var MONTHS_SHORT = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
 
   function escapeHtml(s){
     return (s||"").replace(/[&<>"']/g, function(c){
@@ -286,8 +323,12 @@
     var parts = iso.split("-");
     if(parts.length !== 3) return iso;
     var d = new Date(Date.UTC(+parts[0], +parts[1]-1, +parts[2]));
-    var months = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
-    return d.getUTCDate() + " " + months[d.getUTCMonth()] + " " + d.getUTCFullYear();
+    return d.getUTCDate() + " " + MONTHS_SHORT[d.getUTCMonth()] + " " + d.getUTCFullYear();
+  }
+
+  function dayMonth(iso){
+    var p = (iso || "").split("-");
+    return p.length === 3 ? (+p[2]) + " " + MONTHS_SHORT[+p[1]-1] : "";
   }
 
   function monthLabel(iso){
@@ -319,13 +360,25 @@
     return null;
   }
 
-  function preuveBadge(level){
-    if(!PREUVE_LABELS[level]) return "";
+  // known level: full / half / empty circle + label. opts.always: a missing level shows "Preuve non évaluée" (dashed circle)
+  // instead of nothing; opts.large: the badge of the day's flash.
+  function preuveBadge(level, opts){
+    opts = opts || {};
+    var known = !!PREUVE_LABELS[level];
+    if(!known && !opts.always) return "";
     var fill = level === "solide" ? '<circle cx="8" cy="8" r="6.25" fill="currentColor"/>'
              : level === "nuance" ? '<path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/>' : "";
-    return '<span class="preuve"><svg class="preuve-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">' +
-      '<circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/>' + fill + '</svg>' +
-      PREUVE_LABELS[level] + '</span>';
+    var ring = known ? '<circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/>'
+                     : '<circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.6 2.4"/>';
+    return '<span class="preuve' + (opts.large ? ' preuve--lg' : '') + (known ? '' : ' preuve--none') + '">' +
+      '<svg class="preuve-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">' + ring + fill + '</svg>' +
+      (known ? PREUVE_LABELS[level] : "Preuve non évaluée") + '</span>';
+  }
+
+  function renderLegend(){
+    document.getElementById("legend-content").innerHTML = PREUVE_LEGEND.map(function(row){
+      return '<div class="legend-row">' + preuveBadge(row[0], { always: true }) + '<p>' + escapeHtml(row[1]) + '</p></div>';
+    }).join("");
   }
 
   // plain-text teaser: strips markdown emphasis markers, collapses whitespace, cuts to length
@@ -343,7 +396,7 @@
     return cut + "…";
   }
 
-  var state = { flashs: [], revues: [], activeFilter: "tous", query: "" };
+  var state = { flashs: [], revues: [], activeFilter: "tous", query: "", view: "semaine" };
 
   // theme toggle: explicit choice overrides the OS preference and is remembered per device
   function initThemeToggle(){
@@ -371,8 +424,8 @@
   /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
   function flashText(f){
     var t = f.resume || "";
-    if(f.limites) t += "\n\n**Limites :** " + f.limites;
-    if(f.pratique) t += "\n\n**Pour ta pratique au CO :** " + f.pratique;
+    if(f.limites) t += "\n\n**Limites\u202f:** " + f.limites;
+    if(f.pratique) t += "\n\n**Pour ta pratique au CO\u202f:** " + f.pratique;
     return t;
   }
 
@@ -392,6 +445,7 @@
     var title = document.getElementById("today-title");
     var sub = document.getElementById("today-sub");
     section.hidden = false;
+    renderLegend();
 
     if(!state.flashs.length){
       content.innerHTML = '<p id="today-empty">Aucun flash pour le moment. Le premier arrivera au prochain passage de la veille quotidienne.</p>';
@@ -413,8 +467,8 @@
     content.innerHTML =
       '<div class="card">' +
         '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-        '<div class="meta-row"><span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span>' +
-          preuveBadge(latest.preuve) + themeTags(latest.themes) + '</div>' +
+        '<div class="meta-row">' + preuveBadge(latest.preuve || derivePreuve(latest.limites), { large: true, always: true }) +
+          themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div>' +
         '<div>' + marked.parse(latest.resume || "") + '</div>' +
         (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
         (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
@@ -445,51 +499,83 @@
     return "Semaine du " + fmtDate(revue.date_debut) + " au " + fmtDate(revue.date_fin);
   }
 
+  // week of a flash: the weekly review whose dates contain it; later flashs wait for the next review
+  function weekOf(iso){
+    var rs = state.revues.slice().sort(function(a,b){ return (b.date_fin||"").localeCompare(a.date_fin||""); });
+    for(var i = 0; i < rs.length; i++){
+      if(iso >= (rs[i].date_debut || "") && iso <= (rs[i].date_fin || "")) return { key: rs[i].date_fin, label: periodLabel(rs[i]) };
+    }
+    if(!rs.length) return { key: "9999", label: "Flashs" };
+    if(iso > (rs[0].date_fin || "")) return { key: "9999", label: "Depuis la dernière revue" };
+    return { key: "0000", label: "Avant la première revue" };
+  }
+
   function buildBuckets(){
-    var buckets = {};
-    SECTION_ORDER.forEach(function(s){ buckets[s] = []; });
+    var all = [];
 
     // today's flash is also kept here in full, so the top card can stay a short preview
     state.flashs.forEach(function(f){
-      buckets.flash.push({
+      var w = weekOf(f.date || "");
+      all.push({
         type: "flash", themes: f.themes || [], titre: f.titre || "", texte: flashText(f), preuve: f.preuve || derivePreuve(f.limites),
-        period: fmtDate(f.date), sortKey: f.date || "", flashDate: f.date || ""
+        period: fmtDate(f.date), sortKey: f.date || "", flashDate: f.date || "", weekKey: w.key, weekLabel: w.label
       });
     });
 
     state.revues.forEach(function(r){
       (r.items || []).forEach(function(it){
-        if(!buckets[it.section]) return;
-        buckets[it.section].push({
+        if(SECTION_ORDER.indexOf(it.section) === -1) return;
+        all.push({
           type: it.section, themes: it.themes || [], titre: it.titre || "", texte: it.texte || "", preuve: it.preuve || derivePreuve(it.texte),
-          period: periodLabel(r), sortKey: r.date_fin || r.date_debut || ""
+          period: "Revue du " + dayMonth(r.date_debut) + " au " + dayMonth(r.date_fin), sortKey: r.date_fin || r.date_debut || "",
+          weekKey: r.date_fin || "", weekLabel: periodLabel(r)
         });
       });
-    });
-
-    // one list for everything, newest first; within the same date, sections keep their display order
-    var all = [];
-    SECTION_ORDER.forEach(function(k){ all = all.concat(buckets[k]); });
-    all.sort(function(a,b){
-      return (b.sortKey||"").localeCompare(a.sortKey||"") || SECTION_ORDER.indexOf(a.type) - SECTION_ORDER.indexOf(b.type);
     });
     return all;
   }
 
-  function itemHtml(it){
+  function byDateDesc(a, b){ return (b.sortKey||"").localeCompare(a.sortKey||""); }
+
+  // by week: newest week first, cautions and practice first inside it. by type: the sections in display order, newest first.
+  function buildGroups(all){
+    var groups = [];
+    if(state.view === "type"){
+      SECTION_ORDER.forEach(function(t){
+        var items = all.filter(function(it){ return it.type === t; }).sort(byDateDesc);
+        if(items.length) groups.push({ label: TYPE_LABELS[t], items: items, showPeriod: true });
+      });
+      return groups;
+    }
+    var map = {};
+    all.forEach(function(it){
+      if(!map[it.weekKey]) map[it.weekKey] = { key: it.weekKey, label: it.weekLabel, items: [], showPeriod: false };
+      map[it.weekKey].items.push(it);
+    });
+    Object.keys(map).sort().reverse().forEach(function(k){
+      map[k].items.sort(function(a,b){
+        return SECTION_ORDER.indexOf(a.type) - SECTION_ORDER.indexOf(b.type) || byDateDesc(a, b);
+      });
+      groups.push(map[k]);
+    });
+    return groups;
+  }
+
+  function itemHtml(it, showPeriod){
     var primary = (it.themes && it.themes[0]) ? THEME_COLOR_VAR[it.themes[0]] : "var(--border)";
     var haystack = norm([it.titre, it.texte, TYPE_LABELS[it.type], (it.themes||[]).map(function(t){ return THEME_LABELS[t] || t; }).join(" ")].join(" "));
+    // a flash always shows its date; a review item shows its review only when grouped by type
+    var period = (showPeriod || it.type === "flash") ? '<span class="item-period">' + escapeHtml(it.period) + '</span>' : '';
     return '<details class="item filterable"' + (it.flashDate ? ' id="flash-' + escapeHtml(it.flashDate) + '"' : '') +
       ' style="--item-color:' + primary + '" data-item-themes="' + escapeHtml((it.themes||[]).join(",")) + '" data-search="' + escapeHtml(haystack) + '">' +
       '<summary>' +
         '<div class="item-head">' +
-          '<span class="item-title">' + escapeHtml(it.titre || TYPE_LABELS[it.type] || "") + '</span>' +
-          '<span class="item-period">' + escapeHtml(it.period) + '</span>' +
+          '<h4 class="item-title">' + escapeHtml(it.titre || TYPE_LABELS[it.type] || "") + '</h4>' + period +
         '</div>' +
         '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
         '<div class="item-tags meta-row"><span class="type-tag">' + escapeHtml(TYPE_LABELS[it.type] || "") + '</span>' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
       '</summary>' +
-      '<div class="item-body">' + marked.parse(it.texte || "") + '</div>' +
+      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + marked.parse(it.texte || "") + '</div>' +
     '</details>';
   }
 
@@ -501,20 +587,16 @@
     section.hidden = false;
     if(!all.length){
       container.innerHTML = '<p style="color:var(--muted);font-style:italic">Rien à explorer pour l’instant — reviens après quelques flashs et une première revue hebdomadaire.</p>';
+      document.getElementById("result-count").textContent = "";
       return;
     }
 
-    // group by month: the latest month is open, the others are folded
-    var groups = [], last = null;
-    all.forEach(function(it){
-      var label = monthLabel(it.sortKey);
-      if(!last || last.label !== label){ last = { label: label, items: [] }; groups.push(last); }
-      last.items.push(it);
-    });
+    // the latest week is open, the others are folded; the by-type view starts folded
+    var groups = buildGroups(all);
     container.innerHTML = groups.map(function(g, i){
-      return '<details class="bucket"' + (i === 0 ? ' data-first="1"' : '') + '>' +
+      return '<details class="bucket"' + (i === 0 && state.view === "semaine" ? ' data-first="1"' : '') + '>' +
         '<summary><h3>' + escapeHtml(g.label) + '</h3><span class="bucket-count"></span></summary>' +
-        '<div class="theme-bucket-list">' + g.items.map(itemHtml).join("") + '</div>' +
+        '<div class="theme-bucket-list">' + g.items.map(function(it){ return itemHtml(it, g.showPeriod); }).join("") + '</div>' +
       '</details>';
     }).join("");
 
@@ -575,14 +657,7 @@
     document.getElementById("empty-filter").style.display = total ? "none" : "block";
   }
 
-  function boot(data){
-    state.flashs = data.flashs || [];
-    state.revues = data.revues || [];
-    document.getElementById("loading").hidden = true;
-    renderToday();
-    renderEssentiel();
-    renderBrowse();
-
+  function bindControls(){
     document.querySelectorAll("#theme-chips .chip").forEach(function(chip){
       chip.addEventListener("click", function(){
         document.querySelectorAll("#theme-chips .chip").forEach(function(c){ c.setAttribute("aria-pressed","false"); });
@@ -591,11 +666,34 @@
         applyFilter();
       });
     });
+    document.querySelectorAll(".view-switch [data-view]").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        state.view = btn.getAttribute("data-view");
+        document.querySelectorAll(".view-switch [data-view]").forEach(function(b){
+          b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+        });
+        renderBrowse();
+      });
+    });
     document.getElementById("search").addEventListener("input", function(e){
       state.query = e.target.value;
       applyFilter();
     });
     document.getElementById("reset-filters").addEventListener("click", resetFilters);
+    document.querySelectorAll("[data-retry]").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        // a text reader that never arrived cannot be retried in place
+        if(needsReload) window.location.reload(); else load();
+      });
+    });
+  }
+
+  function boot(data){
+    state.flashs = data.flashs || [];
+    state.revues = data.revues || [];
+    if(data.flashsOk) renderToday(); else document.getElementById("today").hidden = true;
+    renderEssentiel();
+    renderBrowse();
   }
 
   // marked is loaded with defer from vendor/ (self-hosted): wait for it, with a specific error if it never arrives
@@ -608,24 +706,50 @@
     });
   }
 
-  async function start(){
+  var needsReload = false;
+
+  function fetchJson(name){
+    return fetch(new URL("data/" + name, new URL(".", window.location.href)), { cache: "no-cache" }).then(function(res){
+      if(!res.ok) throw new Error(name);
+      return res.json();
+    });
+  }
+
+  function showBlock(id, text){
+    document.getElementById(id + "-text").textContent = text;
+    document.getElementById(id).style.display = "flex";
+  }
+
+  // flashs and reviews load independently: one failing never hides the other
+  async function load(){
+    document.getElementById("loading").hidden = false;
+    document.getElementById("load-error").style.display = "none";
+    document.getElementById("load-notice").style.display = "none";
+    var out = await Promise.allSettled([fetchJson("flashs.json"), fetchJson("revues.json"), whenMarked()]);
+    document.getElementById("loading").hidden = true;
+
+    if(out[2].status === "rejected"){
+      needsReload = true;
+      showBlock("load-error", "Le lecteur de texte n’a pas pu être chargé. Recharge la page.");
+      return;
+    }
+    var flashsOk = out[0].status === "fulfilled", revuesOk = out[1].status === "fulfilled";
+    if(!flashsOk && !revuesOk){
+      showBlock("load-error", "Le contenu n’a pas pu être chargé. Vérifie ta connexion, puis réessaie.");
+      return;
+    }
+    boot({ flashs: flashsOk ? out[0].value : [], revues: revuesOk ? out[1].value : [], flashsOk: flashsOk });
+    if(!flashsOk) showBlock("load-notice", "Les flashs n’ont pas pu être chargés ; les revues sont affichées.");
+    else if(!revuesOk) showBlock("load-notice", "Les revues n’ont pas pu être chargées ; les flashs sont affichés.");
+  }
+
+  function start(){
     initThemeToggle();
-    try{
-      var base = new URL(".", window.location.href);
-      var bust = "?v=" + Date.now();
-      var res = await Promise.all([
-        fetch(new URL("data/flashs.json" + bust, base)),
-        fetch(new URL("data/revues.json" + bust, base)),
-        whenMarked()
-      ]);
-      if(!res[0].ok || !res[1].ok) throw new Error("fetch failed");
-      var data = await Promise.all([res[0].json(), res[1].json()]);
-      boot({ flashs: data[0], revues: data[1] });
-    }catch(e){
-      document.getElementById("loading").hidden = true;
-      var err = document.getElementById("load-error");
-      if(e && e.message === "marked") err.textContent = "Le lecteur de texte n’a pas pu être chargé (service externe indisponible). Recharge la page dans un instant.";
-      err.style.display = "block";
+    bindControls();
+    load();
+    // offline copy: the last flashs and reviews stay readable without network
+    if("serviceWorker" in navigator){
+      window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
     }
   }
 
