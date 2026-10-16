@@ -192,5 +192,16 @@
     "limites": "Design transversal, auto-questionnaires, contexte néerlandais (filière académique exigeante) : peu transférable à des élèves HPI en difficulté ou en classe ressource, population probablement non clinique. Comparaison avec des pairs de haute capacité, non avec la population générale ; les travaux sur les profils doublement exceptionnels divergent. Seul le résumé indexé (via moteur de recherche) a été consulté, pas le texte intégral ; DOI non vérifié.",
     "pratique": "Ne pas présumer une fragilité émotionnelle du seul fait du HPI : chercher les causes d'une détresse (comorbidité TND, inadéquation scolaire, harcèlement) plutôt que de l'attribuer au haut potentiel.",
     "source": "Frumau-van Pinxten, M., Peeters, W., de Gucht, V., Hoogeveen, L., & Bakx, A. (2026). Emotional and social well-being of gifted adolescents. *Journal of Research in Special Educational Needs* (revue présumée d'après l'identifiant 1471-3802-70089 de la liste NYU IFP ; non confirmée). https://ifp.nyu.edu/2026/journal-article-abstracts/1471-3802-70089/"
+  },
+  {
+    "date": "2026-10-16",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "Interventions scolaires pour le TDA/H : méta-analyse d'essais randomisés",
+    "resume": "Rappel : faute de publication récente solide (24–72 h), retour sur une méta-analyse de 22 essais randomisés scolaires (N = 1 962, 4–18 ans, TDA/H). Effets petits à modérés sur les symptômes combinés (d = −0,28), l'inattention (−0,33), les résultats scolaires (0,37), les habiletés sociales (0,28) et l'externalisation (−0,32) ; aucun effet significatif sur l'hyperactivité/impulsivité (d = −0,09).",
+    "limites": "Hétérogénéité élevée et biais possible des évaluateurs (mesures rapportées par des adultes non aveugles) ; tranche 4–18 ans sans résultat spécifique à l'adolescence vu dans l'extrait ; les méta-analyses antérieures divergent. Je n'ai pas pu ouvrir le texte intégral : références et chiffres issus du résumé/extraits de recherche, à vérifier.",
+    "pratique": "Privilégier des objectifs ciblés (attention, organisation, comportement en classe) avec mesures d'observation indépendantes, sans attendre d'effet sur l'hyperactivité.",
+    "source": "Yegencik, B., Bell, B. T., & Deniz, E. (2025). School-based randomized controlled trials for ADHD and accompanying impairments: A systematic review and meta-analysis. *Frontiers in Psychology*. https://doi.org/10.3389/fpsyg.2025.1611145"
   }
 ]
