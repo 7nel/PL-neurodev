@@ -215,5 +215,17 @@
     "limites": "Rapport d'experts, non une méta-analyse : les recommandations reposent sur consensus et revue narrative. Le terme « autisme profond » reste débattu (risque de stigmatisation, critères non consensuels, absent du DSM-5-TR). Lecture limitée à ma connaissance du texte ; je n'ai pas pu rouvrir la source en ligne lors de cette exécution.",
     "pratique": "Au CO, documenter précisément le niveau de soutien, les compétences langagières et la DI associée plutôt que de se fier à l'étiquette « TSA », pour calibrer les adaptations selon l'élève.",
     "source": "Lord, C., Charman, T., Havdahl, A., Carbone, P., Anagnostou, E., Boyd, B., et al. (2022). The Lancet Commission on the future of care and clinical research in autism. *The Lancet, 399*(10321), 271–334. https://doi.org/10.1016/S0140-6736(21)01541-5"
+  },
+  {
+    "date": "2026-10-18",
+    "themes": [
+      "di-tsaf",
+      "tdl-tdc"
+    ],
+    "titre": "TSAF à l'adolescence : profil langagier (réception, langage pragmatique) vs expression",
+    "resume": "Rappel : étude transversale (12–17 ans, env. 31 jeunes exposés prénatalement à l'alcool vs 29 contrôles ; effectifs à vérifier) : langage réceptif et langage général rapporté par les parents plus faibles dans le groupe exposé, communication sociale plus faible, langage expressif non significativement différent.",
+    "limites": "Petit échantillon, devis transversal, groupes de taille modeste, puissance limitée pour détecter des différences d'expression ; hétérogénéité du TSAF (avec ou sans traits faciaux). Je n'ai pas pu accéder à l'abstract ni au texte intégral (accès bloqué) : détails (N, scores) issus d'un résumé secondaire de moteur de recherche, à vérifier avant tout usage. Ce profil n'équivaut pas à un TDL : le diagnostic différentiel reste à établir.",
+    "pratique": "Ne pas déduire d'une bonne expression orale une bonne compréhension chez un élève avec TSAF : vérifier la compréhension des consignes complexes (reformulation, consignes en étapes) et orienter vers un bilan logopédique.",
+    "source": "Poth, K. R., Love, T., & Mattson, S. N. (2023). Profiles of language and communication abilities in adolescents with fetal alcohol spectrum disorders. Journal of the International Neuropsychological Society, 29(8), 724–733. https://doi.org/10.1017/S1355617722000789 (en ligne nov. 2022 ; référence non vérifiée sur la source primaire)"
   }
 ]
