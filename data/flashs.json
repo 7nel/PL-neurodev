@@ -227,5 +227,18 @@
     "limites": "Petit échantillon, devis transversal, groupes de taille modeste, puissance limitée pour détecter des différences d'expression ; hétérogénéité du TSAF (avec ou sans traits faciaux). Je n'ai pas pu accéder à l'abstract ni au texte intégral (accès bloqué) : détails (N, scores) issus d'un résumé secondaire de moteur de recherche, à vérifier avant tout usage. Ce profil n'équivaut pas à un TDL : le diagnostic différentiel reste à établir.",
     "pratique": "Ne pas déduire d'une bonne expression orale une bonne compréhension chez un élève avec TSAF : vérifier la compréhension des consignes complexes (reformulation, consignes en étapes) et orienter vers un bilan logopédique.",
     "source": "Poth, K. R., Love, T., & Mattson, S. N. (2023). Profiles of language and communication abilities in adolescents with fetal alcohol spectrum disorders. Journal of the International Neuropsychological Society, 29(8), 724–733. https://doi.org/10.1017/S1355617722000789 (en ligne nov. 2022 ; référence non vérifiée sur la source primaire)"
+  },
+  {
+    "date": "2026-10-20",
+    "themes": [
+      "tdah",
+      "tsa",
+      "dys-tsle"
+    ],
+    "titre": "Trajectoires à 12 et 16 ans après un diagnostic précoce : TDA/H, TSA, dyscalculie, dyslexie",
+    "resume": "Rappel : cohorte longitudinale (Twins Early Development Study, Royaume-Uni), diagnostics parentaux à 7–9 ans : TDA/H (n = 54), TSA (n = 50), dyscalculie (n = 282), dyslexie (n = 695) vs 6 882 sans diagnostic. À 16 ans, la dyscalculie ne se maintient que par la sous-performance en maths ; la dyslexie persiste (inattention, hyperactivité, résultats, pairs).",
+    "limites": "Étude observationnelle ; diagnostics rapportés par les parents (non vérifiés cliniquement), petits groupes TDA/H et TSA, cohorte de jumeaux non nécessairement généralisable. Seul le résumé (abstract, tronqué) et sa synthèse ont été consultés, pas le texte intégral ; comorbidités entre groupes non détaillées ici.",
+    "pratique": "Prudemment : réévaluer régulièrement les besoins d'un élève plutôt que figer le profil posé en primaire (attention, pairs et résultats scolaires peuvent évoluer différemment selon le trouble).",
+    "source": "Cai, et al. (2025). Neurodevelopmental and psychosocial outcomes in adolescence of children with early diagnoses of ADHD, autism, dyscalculia and dyslexia. *Research on Child and Adolescent Psychopathology, 53*(12), 2099–2113. https://doi.org/10.1007/s10802-025-01377-z"
   }
 ]
