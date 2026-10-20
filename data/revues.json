@@ -713,5 +713,221 @@
         "texte": "TSAF et attachement : pour la deuxième semaine consécutive, aucune étude empirique nouvelle n'a été repérée dans la fenêtre. Seules une revue mécanistique sur les voies épigénétiques de l'exposition prénatale à l'alcool (*Neuroscience & Biobehavioral Reviews*, vol. 189, octobre 2026, non lue) et un document de discussion sur le repérage du TSAF en protection de l'enfance ont été trouvés. La recherche reste prioritaire, mais elle exige un accès aux bases bibliographiques."
       }
     ]
+  },
+  {
+    "date_debut": "2026-10-13",
+    "date_fin": "2026-10-19",
+    "titre": "Semaine du 13 au 19 octobre 2026",
+    "essentiel": [
+      "TDA/H et mortalité : une méta-analyse publiée dans *JAMA Network Open* le 19 octobre (Corrigan et al., 2026 ; 19 études observationnelles, près de 16 millions de participant·es) associe le TDA/H à une mortalité toutes causes plus élevée (HR poolé 1,71 ; IC 95 % 1,31–2,24), surtout par suicide (+90 % environ) et par blessures intentionnelles ou accidentelles (+55 % environ). L'association entre traitement médicamenteux et mortalité plus basse (−25 % environ) repose sur seulement trois études et ne permet aucune conclusion causale.",
+      "Autisme et inégalités : une cohorte canadienne de plus de 2,3 millions de dyades mère-enfant (*JAMA Network Open*, 8 octobre 2026) rapporte des diagnostics de TSA plus fréquents chez les enfants de quartiers défavorisés et de mères immigrées, avec des écarts qui se creusent dans le temps. Les auteur·es évoquent des facteurs périnataux (diabète maternel, complications obstétricales, prématurité) ; un biais de repérage n'est pas exclu. Les tailles d'effet ajustées n'ont pas pu être vérifiées.",
+      "La semaine ne contient aucune étude d'intervention scolaire à l'adolescence dans le périmètre suivi. En Suisse, la loi fédérale sur l'inclusion attend toujours l'examen du Conseil des États, la 2e session des personnes handicapées se tient le 21 octobre au Palais fédéral, et la date de la 2e lecture de la Loi sur l'école valaisanne reste non confirmée."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Mortalité des personnes avec TDA/H : revue systématique et méta-analyse",
+        "texte": "**Corrigan et al., *JAMA Network Open*, 19 octobre 2026** (UCL et Université de Liverpool).\n\n**Question :** les personnes avec un diagnostic de TDA/H ont-elles une mortalité plus élevée, toutes causes confondues et par cause ? Le traitement médicamenteux est-il associé à une mortalité différente ?\n\n**Design :** revue systématique et méta-analyse à effets aléatoires de hazard ratios issus d'études observationnelles.\n\n**N/population :** 19 études, 15 920 970 participant·es (36,1 % de femmes), trois continents. La répartition par âge (enfants, adolescent·es, adultes) n'a pas été vérifiée.\n\n**Résultats :** mortalité toutes causes HR = 1,71 (IC 95 % 1,31–2,24). Selon les communiqués, la mortalité est environ 90 % plus élevée par **suicide**, 55 % plus élevée par **blessures** intentionnelles ou non et 27 % plus élevée par **causes naturelles** (les IC par cause n'ont pas été obtenus). L'usage d'un traitement du TDA/H est associé à une mortalité toutes causes environ 25 % plus faible, estimation fondée sur **trois études seulement**.\n\n**Niveau de preuve :** modéré pour l'existence d'une surmortalité associée ; faible pour l'effet protecteur du traitement.\n\n**Limites :** études primaires toutes observationnelles ; hétérogénéité importante selon les auteur·es ; confusion résiduelle probable (comorbidités, usage de substances, précarité). L'association avec le traitement est exposée au biais d'indication et à l'effet « utilisateur sain » (les personnes traitées sont aussi celles qui restent en lien avec les soins). Une méta-analyse antérieure plus restreinte (quatre études) ne trouvait pas de surmortalité par causes naturelles : la divergence n'est pas expliquée dans les sources consultées. Les chiffres par cause proviennent de communiqués et diffèrent légèrement selon les médias (blessures : 50 % ou 55 % ; causes naturelles : 27 % ou 30 %).\n\n**Ce que ça change :** confirme que le TDA/H est aussi un enjeu de sécurité (suicide, accidents), pas seulement d'apprentissage. Ne permet pas d'affirmer que le traitement « sauve des vies » ; la donnée peut être citée aux familles comme une association encourageante mais incertaine.\n\nCorrigan, L., Heywood, L., Stewart, G., O'Nions, E., Shelford, H., Stott, J., & John, A. (2026). Mortality among people with attention-deficit/hyperactivity disorder: A systematic review and meta-analysis. *JAMA Network Open*. https://doi.org/10.1001/jamanetworkopen.2026.39448 (ordre exact et initiales des auteur·es, volume et numéro d'article non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "transversal"
+        ],
+        "titre": "Disparités socio-économiques et migratoires dans le diagnostic de TSA : cohorte canadienne",
+        "texte": "***JAMA Network Open*, 8 octobre 2026** (communiqué JAMA du 9 octobre).\n\n**Question :** l'incidence des diagnostics de TSA diffère-t-elle selon la défavorisation du quartier et le statut migratoire de la mère, et des facteurs de risque périnataux contribuent-ils à ces écarts ?\n\n**Design :** cohorte populationnelle rétrospective (données administratives), enfants né·es entre 2002 et 2020 selon la presse ; les courbes d'incidence cumulée portent sur les cohortes 2002–2012 suivies de 1 à 8 ans.\n\n**N/population :** plus de 2,3 millions de dyades mère-enfant au Canada (province non confirmée ; probablement l'Ontario).\n\n**Résultats (presse) :** taux de TSA les plus élevés chez les enfants des quartiers les plus défavorisés et à plus bas revenu, et chez les enfants de mères immigrées. Ces écarts **augmentent** au fil des cohortes. Diabète maternel, morbidité maternelle sévère et prématurité sont plus fréquents dans ces groupes et pourraient contribuer aux différences.\n\n**Niveau de preuve :** modéré pour la description des disparités (très grand effectif, données populationnelles) ; faible pour l'explication causale par les facteurs périnataux.\n\n**Limites :** données administratives : un diagnostic enregistré n'équivaut pas à une évaluation standardisée. Biais de repérage possible dans les deux sens : sur-identification si les difficultés de langage des enfants bilingues sont lues comme des signes de TSA ; dans d'autres contextes, sous-diagnostic des familles migrantes. Auteur·es, tailles d'effet ajustées et analyses de médiation non vérifiés.\n\n**Ce que ça change :** rappelle que le statut migratoire et la précarité modifient la probabilité d'un diagnostic de TSA. Pour les élèves allophones, cela renforce l'exigence d'une évaluation qui distingue communication sociale et acquisition de la langue seconde.\n\nAuteur·es non identifié·es. (2026). Disparities in autism spectrum disorder and perinatal risk factors. *JAMA Network Open*. https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2854973 (auteur·es, DOI et chiffres non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "TDA/H et troubles cognitifs tardifs : cohorte All of Us",
+        "texte": "***JAMA Psychiatry*, 7 octobre 2026** (Université de Pittsburgh). Étude incluse parce qu'elle a été très relayée dans la presse ; elle est peu pertinente pour le CO.\n\n**Question :** un diagnostic de TDA/H, ou un risque génétique de TDA/H, est-il associé à un trouble cognitif ou à une démence chez les adultes de 50 ans et plus ?\n\n**Design :** cohorte (dossiers médicaux électroniques et données génomiques du programme NIH *All of Us*), suivi moyen 10,26 ans ; scores polygéniques.\n\n**N/population :** 187 341 adultes ≥ 50 ans, dont 3 026 avec un diagnostic de TDA/H.\n\n**Résultats :** trouble cognitif chez 6,7 % des personnes avec TDA/H contre 3,4 % ; HR ajusté = 4,60 (IC 95 % 3,99–5,29). Quintile de score polygénique le plus élevé vs le plus bas : HR = 1,35 (IC 95 % 1,25–1,46).\n\n**Niveau de preuve :** faible à modéré (observationnel).\n\n**Limites :** confusion résiduelle, causalité inverse possible (les symptômes attentionnels du prodrome démentiel peuvent conduire à un diagnostic tardif de TDA/H), biais de sélection d'une cohorte de volontaires. Un HR de 4,6 alors que l'écart brut est de 6,7 % contre 3,4 % appelle la lecture du texte intégral. On ne sait pas si le traitement du TDA/H modifie ce risque.\n\n**Ce que ça change :** rien pour l'école. À ne pas transmettre aux familles sous la forme « le TDA/H mène à la démence ».\n\nAuteur·es non vérifié·es. (2026). Attention-deficit/hyperactivity disorder and late-life cognitive impairment. *JAMA Psychiatry*. https://doi.org/10.1001/jamapsychiatry.2026.3165 (auteur·es et pagination non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Profils sensoriels et connectivité cérébrale chez les jeunes autistes (réseau POND)",
+        "texte": "***Biological Psychiatry: Cognitive Neuroscience and Neuroimaging*, 2026** (relayée par PsyPost le 19 octobre ; l'article semble avoir été mis en ligne plus tôt dans l'année, date exacte non confirmée).\n\n**Question :** les profils sensoriels des enfants et adolescent·es autistes (hypo- et hyperréactivité, recherche sensorielle) correspondent-ils à des patrons de connectivité fonctionnelle au repos ?\n\n**Design :** IRMf de repos, mise en relation de la connectivité avec les scores de profil sensoriel ; données du réseau canadien POND.\n\n**N/population :** 146 enfants et adolescent·es autistes (âges non vérifiés).\n\n**Résultats (presse et page de la revue) :** des connexions spécifiques entre régions corticales et sous-corticales prédisent le profil sensoriel. Les auteur·es proposent que les phénotypes sensoriels résultent d'une interaction entre traitement sensoriel local et modulation descendante par les systèmes exécutifs et attentionnels.\n\n**Niveau de preuve :** faible (corrélationnel, transversal, pas de réplication indépendante connue).\n\n**Limites :** N modeste pour une analyse prédictive de connectivité (risque de surajustement) ; précision de prédiction et validation externe non vérifiées. Les profils sensoriels sont généralement rapportés par les parents. Pas de groupe non autiste mentionné dans les extraits consultés.\n\n**Ce que ça change :** rien directement. L'hypothèse d'une modulation attentionnelle et exécutive est cohérente avec l'observation clinique : la réactivité sensorielle d'un·e élève varie avec la fatigue, l'anxiété et la charge cognitive.\n\nAuteur·es non vérifié·es. (2026). Decoding the neural basis of sensory phenotypes in autism. *Biological Psychiatry: Cognitive Neuroscience and Neuroimaging*. https://www.biologicalpsychiatrycnni.org/article/S2451-9022(26)00002-9/fulltext (auteur·es, volume, pages et DOI non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Médicaments du TDA/H et mortalité : protection ou biais d'indication ?",
+        "texte": "La méta-analyse de Corrigan et al. (2026) a été relayée par certains médias (« les médicaments du TDA/H pourraient réduire le risque de mort précoce ») plus fortement que ce que permettent les données (trois études observationnelles). Des études intra-individuelles suédoises antérieures vont dans le même sens pour les accidents et les comportements suicidaires, mais le biais d'indication et l'effet « utilisateur sain » ne sont pas exclus. Les opposant·es aux traitements, de leur côté, citent la variabilité des résultats. **Position prudente :** association compatible avec un effet protecteur, sans preuve causale ; elle ne justifie ni une pression à traiter ni un discours de déni."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Intégrité des données : expression of concern sur un article très cité (modèle murin, microbiote et autisme)",
+        "texte": "Selon *The Transmitter/Spectrum* (16 octobre 2026), *Nature* a publié une *expression of concern* sur un article de 2017 cité plus de 680 fois. Cet article portait sur le lien entre bactéries intestinales maternelles et comportements « de type autistique » chez la souris. Des valeurs identiques récurrentes apparaissent dans 10 figures et les données brutes ont été perdues. L'auteur senior (J. Huh, Harvard) maintient que les conclusions sont corroborées par d'autres travaux ; une spécialiste de l'intégrité scientifique (M. Yang, Columbia) estime que l'impact ne peut être évalué sans les données brutes. **Enjeu :** ce champ (immunité maternelle, microbiote) alimente régulièrement des promesses d'interventions (probiotiques, régimes) non validées chez l'humain. Référence de l'article de 2017 non vérifiée ici."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "di-tsaf"
+        ],
+        "titre": "Gènes de l'autisme : le nombre « plus que triplé » et la portée clinique",
+        "texte": "*The Transmitter* (8 octobre 2026) rend compte de trois **prépublications** (bioRxiv, août–septembre) selon lesquelles le nombre de gènes associés à l'autisme avec une forte confiance aurait plus que triplé. Ces gènes convergeraient sur trois processus biologiques ; environ 25 % des gènes fortement associés resteraient à découvrir, et l'inclusion de personnes autistes avec DI accélérerait les découvertes. **Désaccord :** utilité pour la recherche reconnue, mais selon l'article lui-même, ces résultats ne sont pas encore utilisables pour un test génétique individuel. Les chiffres de base n'ont pas été vérifiés et les travaux ne sont pas encore évalués par les pairs."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "hpi"
+        ],
+        "titre": "Sous-réalisation des élèves HPI : en finir avec l'écart QI–résultats ?",
+        "texte": "Un article de *Gifted Child Quarterly* (en ligne le 20 mai 2026 ; publication marquante plus ancienne, non couverte jusqu'ici) propose de redéfinir la sous-réalisation (*underachievement*) des élèves à haut potentiel. Les auteur·es la conçoivent non plus comme un écart chiffré entre capacité (tests) et rendement (notes), mais comme le produit d'une interaction personne × tâche × situation, avec une typologie servant de base à des interventions ciblées. **Débat :** l'approche par écart reste la plus utilisée en recherche parce qu'elle est opérationnalisable ; la nouvelle approche est plus clinique mais moins standardisée. Elle ne traite pas explicitement, dans les extraits consultés, de la double exceptionnalité, où une baisse de rendement peut refléter un TND non identifié plutôt qu'une sous-réalisation. Auteur·es non confirmé·es (attribution à D. Y. Dai et O. A. Desmet par un moteur de recherche, non vérifiée) ; DOI : https://doi.org/10.1177/00169862261448147"
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**Accès aux sources :** cette semaine, aucune page d'éditeur ni base bibliographique (PubMed, Crossref) n'a pu être consultée directement depuis l'environnement de veille. Toutes les données proviennent d'extraits de moteur de recherche, de résumés et de communiqués. Les intervalles de confiance par cause (mortalité TDA/H), les tailles d'effet ajustées (TSA au Canada) et plusieurs listes d'auteur·es manquent ou restent non vérifiés."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**Surmortalité par causes naturelles dans le TDA/H :** la nouvelle méta-analyse (+27 % environ) contredit une méta-analyse antérieure plus petite qui ne trouvait pas d'augmentation. Sans le texte intégral, impossible de savoir si l'écart tient aux études incluses, à l'ajustement des covariables ou à l'âge des populations (une prépublication de 2026 porte justement sur l'effet de l'ajustement des covariables sur ces estimations)."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "transversal"
+        ],
+        "texte": "**Disparités de TSA selon le statut migratoire :** les données canadiennes ne permettent pas, à ce stade, de distinguer une différence réelle d'occurrence (facteurs périnataux) d'une différence de repérage ou de diagnostic. On ne sait pas non plus si les enfants plurilingues ont été évalué·es avec des outils adaptés. La transposition à la Suisse, où le système de soins et les populations migrantes diffèrent, n'est pas établie."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**TDA/H et démence :** l'association forte (HR 4,6) contraste avec l'effet génétique modeste (HR 1,35). Un TDA/H diagnostiqué après 50 ans peut correspondre à un prodrome cognitif mal classé ; la proportion de diagnostics tardifs dans l'échantillon n'est pas connue."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**Semaine pauvre :** aucune étude d'intervention scolaire auprès d'adolescent·es (TSA, TDA/H, dys, TDL, DI, trauma) n'a été identifiée sur la période. Aucune publication datée de la semaine n'a été trouvée pour la dyscalculie, le TDC, les TSAF ou l'attachement. Ce constat reflète les limites de la recherche par moteur et ne garantit pas l'absence de publications."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "TDA/H : la sécurité fait partie de l'accompagnement",
+        "texte": "La surmortalité par suicide et par blessures justifie d'intégrer la prévention dans l'accompagnement des élèves avec TDA/H : prise de risque, conduite de deux-roues, consommations, idées suicidaires. Concrètement : en groupe socio-émotionnel, travailler l'anticipation des conséquences et la gestion de l'impulsivité en situation réelle (trajets, sorties) ; ne pas banaliser des propos suicidaires chez un·e élève impulsif·ve, même s'ils sont « dits sur le coup » ; transmettre les signaux au réseau (médecin scolaire, psychologue, CDTEA/OEI selon l'organisation locale). La question du traitement relève du médical ; à l'école, rester factuel·le si les familles posent la question."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa",
+          "tdl-tdc",
+          "transversal"
+        ],
+        "titre": "Élèves allophones ou issu·es de la migration : prudence dans les hypothèses de TSA",
+        "texte": "Les disparités observées au Canada rappellent qu'un diagnostic de TSA dépend aussi du contexte social et linguistique. Pour un·e élève allophone qui interagit peu : documenter séparément la communication **non verbale** et sociale (attention conjointe, réciprocité, intérêts, rigidités), les compétences dans la langue première (via la famille ou un·e interprète) et le temps d'exposition au français. Un retrait social pendant la période silencieuse de l'acquisition d'une L2, ou des réactions à un parcours migratoire difficile, ne constituent pas des signes de TSA. À l'inverse, un TSA réel peut être masqué par l'explication « c'est la langue »."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Profils sensoriels : observer les variations",
+        "texte": "Sans conséquence directe de l'étude POND, une pratique cohérente consiste à noter **quand** la réactivité sensorielle d'un·e élève autiste augmente (fin de journée, évaluations, conflits, transitions) plutôt que de considérer son profil sensoriel comme fixe. Les aménagements (casque, place, pauses) ont plus de chances d'être utiles s'ils sont liés à ces moments."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "hpi"
+        ],
+        "titre": "Élèves HPI en baisse de rendement : analyser la situation, pas seulement l'écart",
+        "texte": "Pour un·e élève à haut potentiel en décrochage, il est utile de décrire la tâche (sens, niveau de défi, autonomie) et la situation (relations, climat de classe, vécu scolaire) en plus de l'écart entre capacités et notes. Il faut aussi vérifier systématiquement un TND associé (dyslexie, TDA/H, TSA) avant de parler de « sous-réalisation » ou de manque de motivation."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais — comportements difficiles : mesures de la rentrée 2026",
+        "texte": "Élément annoncé à la rentrée (17 août 2026) et non couvert jusqu'ici. Le canton a recensé environ 1 400 situations de comportements difficiles durant l'année scolaire précédente (12 % de comportements physiques inadaptés, 4 % de harcèlement ; les sources divergent sur le périmètre : école primaire selon Rhône FM, scolarité obligatoire selon le canton). Mesures : 23,5 EPT d'enseignant·es « ressources pour le vivre-ensemble » (climat scolaire, prévention, soutien aux élèves et aux enseignant·es) ; un classeur numérique pour le corps enseignant (grille d'observation, protocoles d'intervention graduée, sanctions, collaboration), d'abord dans le Valais romand ; un projet pilote dans le Haut-Valais ; des « classes ressources » régionales envisagées. **À noter :** les sources consultées ne disent pas si les protocoles distinguent les comportements liés à un TND ou à un trauma des autres. Sources : communiqué de l'État du Valais (vs.ch) ; *Le Temps* ; Rhône FM (août 2026)."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi fédérale sur l'inclusion et session des personnes handicapées",
+        "texte": "Après l'adoption par le Conseil national (septembre 2026, 108 voix contre 80), le contre-projet indirect à l'Initiative pour l'inclusion (loi sur l'inclusion et révision partielle de la LAI) attend l'examen de la commission du Conseil des États ; aucune date n'a été trouvée. Inclusion Handicap juge le texte insuffisamment contraignant (pas de délai pour le libre choix du lieu de vie). La **2e session des personnes handicapées** a lieu le **21 octobre 2026** au Palais fédéral : 44 personnes en situation de handicap, élues par vote public, siègent dans la salle du Conseil national (organisation : Pro Infirmis ; selon le CSPS, environ 200 candidatures). L'école reste de compétence cantonale."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais — Loi sur l'école valaisanne : 2e lecture toujours sans date confirmée",
+        "texte": "Adoptée en 1re lecture en mai 2026 (103 voix contre 25, 1 abstention ; cantonalisation des directions, introduction de la notion de harcèlement scolaire), la loi doit passer en 2e lecture « cet automne » selon le canton, de même que la loi sur l'enseignement privé. Aucun ordre du jour de session confirmant la date n'a été trouvé. Les vacances d'automne valaisannes courent du 15 au 25 octobre (reprise le 26)."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "France — vers « l'accessibilité universelle »",
+        "texte": "Selon le SNES-FSU (article du 8 octobre 2026), le président de la République a appelé, lors de la Conférence nationale du handicap, à passer de la compensation individuelle (AESH, notifications MDPH) à l'**accessibilité universelle** de l'école, et un rapport de l'inspection générale est annoncé. Côté ministère : environ 1 500 pôles d'appui à la scolarité (PAS) déployés à la rentrée 2026 (56 % du territoire) et 69 nouveaux dispositifs TND (unités d'enseignement autisme, dispositifs d'autorégulation). Les syndicats craignent une réduction de l'accompagnement humain individuel. La date de la CNH est incohérente selon les sources ; les annonces n'ont pas été vérifiées sur un document officiel."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Texte intégral de Corrigan et al. (2026) : hazard ratios et IC par cause, analyses selon l'âge (enfants et adolescent·es vs adultes), détail des trois études sur la médication."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Session des personnes handicapées du 21 octobre : revendications adoptées concernant l'école et la formation, et suites données par le Parlement (en 2023, certaines demandes avaient été reprises)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Calendrier de la commission du Conseil des États (CSEC-E) pour la loi sur l'inclusion, et ordre du jour du Grand Conseil valaisan pour la 2e lecture de la Loi sur l'école valaisanne."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "di-tsaf"
+        ],
+        "texte": "Publication évaluée par les pairs des trois prépublications sur les gènes de l'autisme, et retombées de l'*expression of concern* de *Nature* (rétractation, correction ou dépôt de nouvelles données)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Mise en œuvre valaisanne du classeur « comportements difficiles » et des enseignant·es ressources : critères d'orientation vers les futures « classes ressources » et place du diagnostic différentiel (TND, trauma) dans les protocoles."
+      }
+    ]
   }
 ]
