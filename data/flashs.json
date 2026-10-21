@@ -240,5 +240,16 @@
     "limites": "Étude observationnelle ; diagnostics rapportés par les parents (non vérifiés cliniquement), petits groupes TDA/H et TSA, cohorte de jumeaux non nécessairement généralisable. Seul le résumé (abstract, tronqué) et sa synthèse ont été consultés, pas le texte intégral ; comorbidités entre groupes non détaillées ici.",
     "pratique": "Prudemment : réévaluer régulièrement les besoins d'un élève plutôt que figer le profil posé en primaire (attention, pairs et résultats scolaires peuvent évoluer différemment selon le trouble).",
     "source": "Cai, et al. (2025). Neurodevelopmental and psychosocial outcomes in adolescence of children with early diagnoses of ADHD, autism, dyscalculia and dyslexia. *Research on Child and Adolescent Psychopathology, 53*(12), 2099–2113. https://doi.org/10.1007/s10802-025-01377-z"
+  },
+  {
+    "date": "2026-10-21",
+    "themes": [
+      "tdl-tdc"
+    ],
+    "titre": "TDL et victimisation par les pairs à l'adolescence : étude de jumeaux",
+    "resume": "Rappel : cohorte TEDS (Royaume-Uni, ~3 400 paires de jumeaux), langage évalué à 11 ans, victimisation auto-rapportée à 11, 14 et 16 ans. Les jeunes avec TDL rapportent davantage de victimisation à chaque âge, mais l'association devient non significative dans les modèles intra-paires.",
+    "limites": "Étude observationnelle de cohorte ; victimisation auto-rapportée ; seuil TDL à -1,25 É-T (définition statistique, pas un diagnostic clinique). Le résultat intra-paire suggère une confusion par facteurs génétiques/environnementaux partagés, pas l'absence de risque. Information vérifiée via résumé et notice secondaires, texte intégral non lu.",
+    "pratique": "Au CO, ne pas supposer un lien causal langage→harcèlement : repérer les élèves avec difficultés langagières/pragmatiques dans le suivi du climat scolaire sans attribuer la victimisation au seul trouble.",
+    "source": "Oncioiu, S. I., et al. (2024). Concurrent and longitudinal associations of developmental language disorder with peer victimization in adolescence: Evidence from a co-twin study. *Journal of Child Psychology and Psychiatry, 65*, 1283–1298. https://doi.org/10.1111/jcpp.13969"
   }
 ]
