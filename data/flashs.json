@@ -251,5 +251,17 @@
     "limites": "Étude observationnelle de cohorte ; victimisation auto-rapportée ; seuil TDL à -1,25 É-T (définition statistique, pas un diagnostic clinique). Le résultat intra-paire suggère une confusion par facteurs génétiques/environnementaux partagés, pas l'absence de risque. Information vérifiée via résumé et notice secondaires, texte intégral non lu.",
     "pratique": "Au CO, ne pas supposer un lien causal langage→harcèlement : repérer les élèves avec difficultés langagières/pragmatiques dans le suivi du climat scolaire sans attribuer la victimisation au seul trouble.",
     "source": "Oncioiu, S. I., et al. (2024). Concurrent and longitudinal associations of developmental language disorder with peer victimization in adolescence: Evidence from a co-twin study. *Journal of Child Psychology and Psychiatry, 65*, 1283–1298. https://doi.org/10.1111/jcpp.13969"
+  },
+  {
+    "date": "2026-10-22",
+    "themes": [
+      "tsa",
+      "transversal"
+    ],
+    "titre": "Prévalence mondiale de l'autisme : médiane 1 %, forte hétérogénéité",
+    "resume": "Rappel : revue systématique (71 études, 99 estimations publiées depuis 2012) : prévalence médiane de l'autisme de 100/10 000, de 1,09 à 436/10 000 ; rapport garçons/filles médian 4,2 ; DI associée dans 33 % des cas (médiane).",
+    "limites": "Revue descriptive, sans appréciation de la qualité des études ; l'hétérogénéité reflète surtout méthodes, accès au diagnostic et sensibilisation, pas seulement l'incidence réelle. Seul l'abstract a été lu ; aucune publication récente solide trouvée dans les 72 h.",
+    "pratique": "Prudence avec les chiffres de prévalence en réunion : un rapport 4:1 peut sous-estimer les filles et adolescentes autistes, d'où l'intérêt de rester attentive aux profils camouflés au CO.",
+    "source": "Zeidan, J., Fombonne, E., Scorah, J., Ibrahim, A., Durkin, M. S., Saxena, S., Yusuf, A., Shih, A., & Elsabbagh, M. (2022). Global prevalence of autism: A systematic review update. *Autism Research, 15*(5), 778–790. https://doi.org/10.1002/aur.2696"
   }
 ]
