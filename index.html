@@ -136,6 +136,9 @@
   .fiche h4{font:500 1.35rem/1.15 var(--voix);letter-spacing:-.01em;margin-bottom:var(--s2)}
   .crit{margin:var(--s3) 0 0;padding-left:var(--s3);border-left:var(--trait-l) solid var(--fg);font-size:1.1rem;line-height:1.5}
   .crit strong{display:block}
+  /* accès direct aux limites (téléphone seulement : sur grand écran elles sont à côté) */
+  .voir-limites{display:none;align-items:center;min-height:44px;margin-top:var(--s2);color:var(--accent);font-weight:700}
+  #today .lim p.flash-limites:focus{outline:none}
 
   /* légende des niveaux, à un geste de la fiche */
   .legend{margin-top:var(--s3)}
@@ -234,6 +237,8 @@
   @media (max-width:860px){
     #today .art{grid-template-columns:1fr;grid-template-areas:"tete" "fiche" "corps" "lim"}
     .fiche{position:static;margin-bottom:var(--s4)}
+    .voir-limites{display:inline-flex}
+    html{scroll-padding-top:var(--s3)}
     #today .tete .meta-row{margin-bottom:var(--s3)}
     #today .lim{margin-top:var(--s2);border-top:1px solid var(--line-strong)}
     .filt{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
@@ -516,11 +521,12 @@
         '<div class="tete"><h3>' + escapeHtml(latest.titre || "") + '</h3>' +
           '<div class="meta-row">' + themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div></div>' +
         '<div class="fiche" role="group" aria-labelledby="fiche-titre"><h4 id="fiche-titre">Niveau de preuve</h4>' + preuveBadge(level, { large: true, always: true }) +
-          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + marked.parseInline(latest.limite_critique) + '</p>' : '') + '</div>' +
+          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + marked.parseInline(latest.limite_critique) + '</p>' : '') +
+          (latest.limites ? '<a class="voir-limites" href="#flash-limites">Voir les limites méthodologiques <span aria-hidden="true">↓</span></a>' : '') + '</div>' +
         '<div class="corps">' + marked.parse(latest.resume || "") +
           (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
           '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p></div>' +
-        '<div class="lim">' + (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
+        '<div class="lim">' + (latest.limites ? '<p class="flash-limites" id="flash-limites" tabindex="-1"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
           (latest.source ? '<p class="flash-source">' + sourceHtml(latest.source) + '</p>' : '') + '</div>' +
       '</div>';
     content.querySelector(".fiche").appendChild(legend);
