@@ -361,6 +361,53 @@
     });
   }
 
+
+  // ---------- assainissement : les textes des données sont du Markdown, jamais du HTML ----------
+  // 1) marked n'interprète plus le HTML brut ni les images (le HTML est affiché comme texte) ;
+  // 2) tout ce que marked produit passe par une liste blanche de balises et d'attributs avant d'entrer dans le DOM.
+  var ALLOW_TAGS = {A:1,P:1,BR:1,STRONG:1,EM:1,DEL:1,CODE:1,PRE:1,BLOCKQUOTE:1,UL:1,OL:1,LI:1,H1:1,H2:1,H3:1,H4:1,H5:1,H6:1,HR:1,TABLE:1,THEAD:1,TBODY:1,TR:1,TH:1,TD:1,SUP:1,SUB:1};
+  var DROP_TAGS = {SCRIPT:1,STYLE:1,IFRAME:1,FRAME:1,FRAMESET:1,OBJECT:1,EMBED:1,SVG:1,MATH:1,TEMPLATE:1,NOSCRIPT:1,FORM:1,INPUT:1,BUTTON:1,SELECT:1,TEXTAREA:1,LINK:1,META:1,BASE:1,TITLE:1,HEAD:1,AUDIO:1,VIDEO:1,SOURCE:1,CANVAS:1,APPLET:1,IMG:1,PICTURE:1};
+  var ALLOW_ATTR = {A:["href","title"], OL:["start"], TH:["align"], TD:["align"]};
+
+  // lien admis : http, https, mailto, ancre ou chemin relatif. Tout autre schéma (javascript:, data:, vbscript:…) est refusé,
+  // espaces et caractères de contrôle retirés d'abord (« java\tscript: »).
+  function safeUrl(u){
+    var v = String(u || "").replace(/[\x00-\x20\x7f-\x9f]/g, "").replace(/\s/g, "");
+    var m = /^([a-z][a-z0-9+.\-]*):/i.exec(v);
+    return m ? /^(https?|mailto)$/i.test(m[1]) : true;
+  }
+
+  function sanitizeHtml(html){
+    // document inerte : aucun script ne s'exécute, aucune image ne se charge pendant l'analyse
+    var doc = new DOMParser().parseFromString("<!doctype html><body>" + html, "text/html");
+    (function walk(parent){
+      Array.prototype.slice.call(parent.childNodes).forEach(function(n){
+        if(n.nodeType === 3) return;
+        if(n.nodeType !== 1){ parent.removeChild(n); return; }
+        var tag = n.tagName;
+        if(DROP_TAGS[tag]){ parent.removeChild(n); return; }
+        walk(n);
+        var keep = ALLOW_TAGS[tag] && !(tag === "A" && !safeUrl(n.getAttribute("href")));
+        if(!keep){ while(n.firstChild) parent.insertBefore(n.firstChild, n); parent.removeChild(n); return; }
+        Array.prototype.slice.call(n.attributes).forEach(function(a){
+          if((ALLOW_ATTR[tag] || []).indexOf(a.name.toLowerCase()) === -1) n.removeAttribute(a.name);
+        });
+      });
+    })(doc.body);
+    return doc.body.innerHTML;
+  }
+  var markedReady = false;
+  function setupMarked(){
+    if(markedReady) return;
+    marked.use({ renderer: {
+      html: function(h){ return escapeHtml(typeof h === "string" ? h : ((h && h.text) || "")); },
+      image: function(href, title, text){ return escapeHtml(typeof href === "object" && href ? (href.text || "") : (text || "")); }
+    }});
+    markedReady = true;
+  }
+  function mdBlock(s){ setupMarked(); return sanitizeHtml(marked.parse(s || "")); }
+  function mdInline(s){ setupMarked(); return sanitizeHtml(marked.parseInline(s || "")); }
+
   function norm(s){
     return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
@@ -484,7 +531,7 @@
       if(at > 0 && /[\/\[(]/.test(all.charAt(at - 1))) return doi;
       return "[" + doi + "](https://doi.org/" + doi + ")";
     });
-    return marked.parseInline(linked);
+    return mdInline(linked);
   }
 
   function renderToday(){
@@ -521,12 +568,12 @@
         '<div class="tete"><h3>' + escapeHtml(latest.titre || "") + '</h3>' +
           '<div class="meta-row">' + themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div></div>' +
         '<div class="fiche" role="group" aria-labelledby="fiche-titre"><h4 id="fiche-titre">Niveau de preuve</h4>' + preuveBadge(level, { large: true, always: true }) +
-          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + marked.parseInline(latest.limite_critique) + '</p>' : '') +
+          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + mdInline(latest.limite_critique) + '</p>' : '') +
           (latest.limites ? '<a class="voir-limites" href="#flash-limites">Voir les limites méthodologiques <span aria-hidden="true">↓</span></a>' : '') + '</div>' +
-        '<div class="corps">' + marked.parse(latest.resume || "") +
-          (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
+        '<div class="corps">' + mdBlock(latest.resume || "") +
+          (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + mdInline(latest.pratique) + '</div></details>' : '') +
           '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p></div>' +
-        '<div class="lim">' + (latest.limites ? '<p class="flash-limites" id="flash-limites" tabindex="-1"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
+        '<div class="lim">' + (latest.limites ? '<p class="flash-limites" id="flash-limites" tabindex="-1"><strong>Limites.</strong> ' + mdInline(latest.limites) + '</p>' : '') +
           (latest.source ? '<p class="flash-source">' + sourceHtml(latest.source) + '</p>' : '') + '</div>' +
       '</div>';
     content.querySelector(".fiche").appendChild(legend);
@@ -630,7 +677,7 @@
         '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
         '<div class="item-tags meta-row"><span class="type-tag">' + escapeHtml(TYPE_LABELS[it.type] || "") + '</span>' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
       '</summary>' +
-      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + marked.parse(it.texte || "") + '</div>' +
+      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + mdBlock(it.texte || "") + '</div>' +
     '</details>';
   }
 
