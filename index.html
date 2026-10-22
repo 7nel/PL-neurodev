@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PL-neurodev’</title>
 <meta name="description" content="Veille scientifique internationale sur les troubles neurodéveloppementaux — TSA, TDA/H, DYS, TDL/TDC, HPI, DI/TSAF, attachement & trauma.">
@@ -17,10 +18,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
 <script id="marked-js" defer src="vendor/marked.min.js"></script>
 <style>
-  /* layout: flash of the day always first and unfiltered; themes only organize what's already past.
-     each theme (TSA / TDA-H / DYS-TSLE / TDL-TDC / HPI / DI-TSAF / Attachement / Transversal) gets its own
-     consistent color, used on tags, chevrons and filter chips so a recurring category reads at a glance.
-     type scale: 18px body, 16px meta and controls, headings 18-26px (charte PL). */
+  /* PL-neurodev’ — « Le trait » (charte v2.2 : tokens inchangés ; ajouts : --trait, formes, rythme).
+     Niveau de preuve et limites repérables d’emblée ; thèmes : couleur sur un pastille, jamais seule (le nom est écrit).
+     Tailles en rem : suivent le réglage de texte du navigateur et le zoom. */
   @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/atkinson-400.woff2) format("woff2")}
   @font-face{font-family:"Atkinson Hyperlegible";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/atkinson-700.woff2) format("woff2")}
   @font-face{font-family:"Atkinson Hyperlegible";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/atkinson-400-i.woff2) format("woff2")}
@@ -28,189 +28,236 @@
   :root{
     --bg:#F4F0E8; --fg:#253433; --muted:#52635F;
     --accent:#2F6F63; --accent-2:#9A531F;
-    --border:#DCD6C8; --line-ctl:#7a8077; --card:#fffdf9; --chip-bg:#E9E4D9;
+    --border:#DCD6C8; --line-strong:#c4bdad; --line-ctl:#7a8077; --card:#fffdf9; --chip-bg:#E9E4D9;
     --c-tsa:#2D6A9F; --c-tdah:#9A531F; --c-dys-tsle:#6B4C9A; --c-tdl-tdc:#44691F; --c-transversal:#6F5C3A;
     --c-hpi:#7F6212; --c-di-tsaf:#A0366B; --c-attachement:#4A5B8C;
     --accent-soft:color-mix(in srgb,var(--accent) 16%,var(--card));
+    --trait:3px; --trait-l:6px; --r-fld:8px;
+    --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:40px; --s6:64px; --s7:104px;
+    --voix:"Lexend","Atkinson Hyperlegible",system-ui,sans-serif;
+    --gut:clamp(20px,4vw,48px);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#1e2220; --fg:#F0EDE6; --muted:#B3B6AB; --accent:#6FBFAE; --accent-2:#E0975A;
-      --border:#3B423D; --line-ctl:#778179; --card:#282D2A; --chip-bg:#2D332F; color-scheme:dark;
+      --border:#3B423D; --line-strong:#505a53; --line-ctl:#778179; --card:#282D2A; --chip-bg:#2D332F; color-scheme:dark;
       --c-tsa:#7FB2E0; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#A4C86B; --c-transversal:#C7AE87;
       --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
     }
   }
   :root[data-theme="dark"]{
     --bg:#1e2220; --fg:#F0EDE6; --muted:#B3B6AB; --accent:#6FBFAE; --accent-2:#E0975A;
-    --border:#3B423D; --line-ctl:#778179; --card:#282D2A; --chip-bg:#2D332F; color-scheme:dark;
+    --border:#3B423D; --line-strong:#505a53; --line-ctl:#778179; --card:#282D2A; --chip-bg:#2D332F; color-scheme:dark;
     --c-tsa:#7FB2E0; --c-tdah:#E0975A; --c-dys-tsle:#B49CDE; --c-tdl-tdc:#A4C86B; --c-transversal:#C7AE87;
     --c-hpi:#D9B85A; --c-di-tsaf:#E58FB8; --c-attachement:#8B9BD9;
   }
 
   @media (prefers-reduced-motion: reduce){
-    .item .item-title::before,.bucket-count::after,.pl-mark{transition:none}
+    .item .item-title::before,.bucket-count::after,.pl-mark,.filt > summary .sel::after{transition:none}
     .pl-logo:hover .pl-mark{transform:none}
   }
 
   *{box-sizing:border-box}
+  html{font-size:112.5%}
   html,body{background:var(--bg)}
   body{
     color:var(--fg);
     font-family:"Atkinson Hyperlegible",system-ui,sans-serif;
-    font-size:18px; line-height:1.6; margin:0;
-    padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px)); padding-block:0;
+    font-size:1rem; line-height:1.6; margin:0;
+    padding-inline:max(var(--gut),env(safe-area-inset-left,0px)) max(var(--gut),env(safe-area-inset-right,0px)); padding-block:0;
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:680px;margin:0 auto}
+  .wrap{max-width:1240px;margin:0 auto}
   p{text-wrap:pretty}
   ::selection{background:color-mix(in srgb,var(--accent) 28%,transparent)}
   html{scrollbar-color:var(--line-ctl) var(--bg)}
   input,button{accent-color:var(--accent);caret-color:var(--accent)}
-  h1,h2,h3,h4{font-family:"Lexend","Atkinson Hyperlegible",system-ui,sans-serif;font-weight:600;text-wrap:balance;margin:0}
+  h1,h2,h3,h4{font-family:var(--voix);font-weight:500;letter-spacing:-.015em;text-wrap:balance;margin:0}
   a{color:var(--accent)}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
   .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-  header.top{position:relative;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:6px;min-height:calc(58px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;gap:12px}
-  header.top{gap:8px 14px}
+  header.top{position:relative;padding-top:calc(24px + env(safe-area-inset-top,0px));padding-bottom:var(--s3);min-height:calc(72px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;gap:8px 14px;border-bottom:var(--trait) solid var(--fg)}
   .pl-id{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;min-width:0}
-  .pl-name{display:inline-flex;align-items:center;gap:8px;font-size:1.1rem;line-height:1.2;font-weight:700}
-  .pl-logo{position:relative;display:inline-flex;flex:none;border-radius:50%;line-height:0}
+  .pl-name{display:inline-flex;align-items:center;gap:8px;font:700 1.1rem/1.2 "Atkinson Hyperlegible",system-ui,sans-serif;letter-spacing:0}
+  .pl-logo{position:relative;display:inline-flex;flex:none;align-items:center;justify-content:center;min-width:44px;min-height:44px;border-radius:50%;line-height:0}
   .pl-logo::after{content:"";position:absolute;inset:-8px}
   .pl-logo:hover .pl-mark{transform:scale(1.08)}
   .pl-mark{transition:transform .15s ease}
-  .pl-title{color:inherit;text-decoration:none}
-  .pl-title:hover{text-decoration:underline;text-underline-offset:4px}
-  .pl-logo:focus-visible,.pl-title:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-  .pl-mark{width:1.45em;height:1.45em;flex:none}
+  .pl-title{color:inherit;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+  .pl-title:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:var(--trait)}
+  .pl-mark{width:1.9em;height:1.9em;flex:none}
   .pl-mark circle{fill:var(--accent)}
   .pl-mark g{stroke:var(--bg)}
 
-  main{padding-block:6px 60px;display:flex;flex-direction:column;gap:30px}
-  section > h2{font-size:20px;margin-bottom:2px}
-  section > .section-sub{color:var(--muted);margin-bottom:12px}
+  main{padding-block:var(--s4) var(--s6);display:flex;flex-direction:column;gap:var(--s6)}
+  section > h2{font-size:2rem;line-height:1.05;margin-bottom:var(--s2)}
+  @media (min-width:700px){section > h2{font-size:2.6rem}}
+  @media (min-width:1100px){section > h2{font-size:3.2rem}}
+  section > .section-sub{color:var(--muted);margin-bottom:var(--s3)}
+  #browse,#essentiel-section{border-top:var(--trait) solid var(--fg);padding-top:var(--s3)}
 
-  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px}
+  .card{padding:0;border:0;background:none}
 
-  /* evidence level: the product's differentiator, shown as a glyph (full / half / empty / dashed = not assessed)
-     plus its label, never color alone. large = the badge of the day's flash; small = archive cards. */
-  .preuve{display:inline-flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:var(--fg);border:1px solid var(--border);background:var(--chip-bg);border-radius:6px;padding:1px 9px 1px 7px;margin:0 5px 4px 0}
-  .preuve-ico{flex:none;color:var(--accent)}
-  .preuve--lg{gap:8px;font-weight:700;padding:6px 14px 6px 10px;border:1.5px solid var(--accent);background:var(--accent-soft);border-radius:999px;margin-bottom:0}
-  .preuve--lg .preuve-ico{width:18px;height:18px}
-  .preuve--none,.preuve--lg.preuve--none{border:1px dashed var(--line-ctl);background:transparent;color:var(--muted);font-weight:500}
+  /* niveau de preuve : ce qui distingue le produit. Pictogramme (plein / demi / vide / pointillé = non évalué) ET libellé, jamais la couleur seule. */
+  .preuve{display:inline-flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:var(--muted);margin:0 var(--s3) 4px 0}
+  .preuve-ico{flex:none;color:var(--muted)}
+  .preuve--lg{gap:var(--s3);font-size:1.35rem;line-height:1.2;color:var(--fg);margin:0}
+  .preuve--lg .preuve-ico{width:56px;height:56px;color:var(--fg)}
+  .preuve--none,.preuve--lg.preuve--none{color:var(--muted)}
   .preuve--none .preuve-ico{color:var(--muted)}
-  .theme-tag{
-    display:inline-block;font-size:16px;font-weight:500;
-    border:1px solid currentColor;border-radius:6px;padding:1px 8px;margin:0 5px 4px 0;
-  }
-  .meta-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px}
+  .theme-tag{display:inline-flex;align-items:center;gap:8px;font-size:1rem;font-weight:700;color:var(--fg);margin:0 var(--s3) 4px 0}
+  .theme-tag::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--tc,var(--muted))}
+  .meta-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0}
 
-  /* today: the first thing on the page, never hidden by a theme filter */
-  #today .flash-date{color:var(--muted);margin:0 0 4px 4px;font-variant-numeric:tabular-nums}
-  #today h3{font-size:26px;line-height:1.25;margin:0 0 12px}
-  #today .meta-row{margin-bottom:12px;align-items:center}
-  #today .flash-limites{margin:10px 0 0;color:var(--fg)}
-  #today .flash-pratique{margin-top:10px}
-  #today .flash-pratique > summary{cursor:pointer;font-weight:600;color:var(--accent);padding-block:6px;min-height:44px;display:flex;align-items:center}
-  #today .flash-pratique > div{padding-bottom:4px}
-  #today .flash-more{margin:4px 0 0}
+  /* aujourd’hui : titre, niveau de preuve, résumé, limites. Même ordre dans le code, à l’écran et au lecteur d’écran. */
+  #today > h2{font:700 1rem/1.3 "Atkinson Hyperlegible",system-ui,sans-serif;letter-spacing:0;color:var(--fg);margin-bottom:2px;padding-top:var(--s2)}
+  #today > .section-sub{margin-bottom:var(--s3)}
+  #today .art{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-areas:"tete fiche" "corps fiche" "lim fiche";gap:0 clamp(24px,5vw,80px);align-items:start}
+  #today .tete{grid-area:tete}.fiche{grid-area:fiche}#today .corps{grid-area:corps}#today .lim{grid-area:lim}
+  #today h3{font-size:1.7rem;line-height:1.08;margin:0 0 var(--s3);overflow-wrap:anywhere}
+  #today .corps,#today .lim,.fiche{overflow-wrap:anywhere}
+  @media (min-width:700px){#today h3{font-size:2.45rem}}
+  @media (min-width:1100px){#today h3{font-size:3rem}}
+  #today .tete .meta-row{margin-bottom:var(--s4)}
+  #today .flash-date{color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums;white-space:nowrap}
+  #today .corps p{max-width:62ch;font-size:1.125rem;line-height:1.65;margin:0 0 var(--s3)}
+  #today .lim{padding-top:var(--s3)}
+  #today .flash-limites{margin:0;max-width:62ch;font-size:1.1rem;line-height:1.55;color:var(--fg)}
+  #today .flash-pratique{margin-top:var(--s3);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  #today .flash-pratique > summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:56px;display:flex;align-items:center}
+  #today .flash-pratique[open]{padding-bottom:var(--s3)}
+  #today .flash-pratique > div{max-width:62ch}
+  #today .flash-more{margin:var(--s2) 0 0}
   #today .flash-more a{display:inline-flex;align-items:center;min-height:44px}
-  #today a:focus-visible,#today summary:focus-visible,.legend > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  #today .flash-source{color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
-  #today-empty{color:var(--muted);font-style:italic}
+  #today .flash-source{color:var(--muted);margin:var(--s3) 0 0;overflow-wrap:anywhere;max-width:62ch;font-size:1rem}
+  #today-empty{color:var(--muted)}
+  /* fiche de preuve : sous un gros trait, la limite qui change l’interprétation dite tout de suite */
+  .fiche{border-top:var(--trait-l) solid var(--fg);padding-top:var(--s3);align-self:start;position:sticky;top:var(--s3)}
+  .fiche h4{font:500 1.35rem/1.15 var(--voix);letter-spacing:-.01em;margin-bottom:var(--s2)}
+  .crit{margin:var(--s3) 0 0;padding-left:var(--s3);border-left:var(--trait-l) solid var(--fg);font-size:1.1rem;line-height:1.5}
+  .crit strong{display:block}
+  /* accès direct aux limites (téléphone seulement : sur grand écran elles sont à côté) */
+  .voir-limites{display:none;align-items:center;min-height:44px;margin-top:var(--s2);color:var(--accent);font-weight:700}
+  #today .lim p.flash-limites:focus{outline:none}
 
-  /* legend of the evidence levels, one tap under the day's card */
-  .legend{margin-top:6px}
-  .legend > summary{cursor:pointer;font-weight:600;color:var(--accent);min-height:44px;display:flex;align-items:center}
-  .legend-list{display:flex;flex-direction:column;gap:12px;padding:4px 0 8px}
-  .legend-row p{margin:2px 0 0;color:var(--muted)}
+  /* légende des niveaux, à un geste de la fiche */
+  .legend{margin-top:var(--s3)}
+  .legend > summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:44px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+  .legend-list{display:flex;flex-direction:column;padding:var(--s2) 0}
+  .legend-row{padding-block:var(--s2);border-top:1px solid var(--line-strong)}
+  .legend-row p{margin:2px 0 0;color:var(--muted);font-size:1rem}
 
-  /* essentiel of the latest weekly review: also unfiltered, a standing summary */
-  .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
-  .essentiel-list li{position:relative;padding-left:18px}
-  .essentiel-list li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  /* l’essentiel de la dernière revue : toujours visible, jamais filtré */
+  .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--s3);max-width:64ch}
+  .essentiel-list li{position:relative;padding-left:28px;font-size:1.125rem}
+  .essentiel-list li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:12px;border-radius:50%;border:var(--trait) solid var(--fg)}
 
-  /* archive: everything past, searchable, then filtered by theme */
-  .search{display:block;width:100%;min-height:44px;font:inherit;padding:0 14px;border:1px solid var(--line-ctl);border-radius:10px;background:var(--card);color:var(--fg)}
+  /* archive */
+  .search{display:block;width:100%;max-width:560px;min-height:48px;font:inherit;padding:0 14px;border:1px solid var(--line-ctl);border-radius:var(--r-fld);background:var(--card);color:var(--fg)}
   .search::placeholder{color:var(--muted)}
-  .search:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .view-switch{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:12px}
-  .view-switch > span{color:var(--muted)}
-  .seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line-ctl);border-radius:999px}
-  .seg button{font:inherit;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
-  .seg button[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:600}
-  .seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  /* one scrollable row: 9 wrapping chips used to take 4-5 lines of a phone screen while sticky.
-     the last chip is cut by the edge on purpose: it shows the row scrolls. */
-  #browse .chips{
-    display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;
-    scrollbar-width:none;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);
-    padding:8px 16px 8px 0;margin-top:8px;z-index:5;border-bottom:1px solid var(--border);
-  }
-  #browse .chips::-webkit-scrollbar{display:none}
+  .view-switch{display:flex;align-items:center;flex-wrap:wrap;gap:6px var(--s3);margin-top:var(--s3);color:var(--muted)}
+  .seg{display:inline-flex;border:2px solid var(--fg);border-radius:999px;padding:3px}
+  .seg button{font:700 1rem var(--ui,inherit);font-family:"Atkinson Hyperlegible",system-ui,sans-serif;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:var(--fg);cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+
+  /* thèmes : une rangée de repères sur grand écran ; sur téléphone, un volet qui se replie et dit ce qui est choisi */
+  .filt{margin-top:var(--s3)}
+  .filt > summary{display:none}
+  #browse .chips{display:flex;flex-wrap:wrap;gap:4px var(--s3)}
   .chip{
-    --chip-color: var(--accent);
-    font:inherit;font-size:16px;padding:0 14px;min-height:44px;border-radius:999px;
-    border:1px solid var(--chip-color);background:var(--chip-bg);color:var(--chip-color);cursor:pointer;white-space:nowrap;
-    flex:none;scroll-snap-align:start;
+    --chip-color: var(--fg);
+    display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0;border:0;border-bottom:var(--trait) solid transparent;border-radius:0;
+    background:transparent;color:var(--fg);font:700 1rem "Atkinson Hyperlegible",system-ui,sans-serif;cursor:pointer;white-space:nowrap;
   }
-  .chip:focus-visible,#theme-toggle:focus-visible,.item > summary:focus-visible,.bucket > summary:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .chip[aria-pressed="true"]{background:var(--chip-color);border-color:var(--chip-color);color:var(--bg)}
-  .result-count{margin:10px 0 0;color:var(--muted)}
+  .chip[data-theme-filter]:not([data-theme-filter="tous"])::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--chip-color)}
+  .chip[aria-pressed="true"]{border-bottom-color:var(--fg)}
+  /* filtres actifs : dits en clair, chacun avec son geste pour le retirer */
+  .actif{margin-top:var(--s3);display:flex;flex-direction:column;gap:var(--s2);padding-block:var(--s2);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .actif[hidden]{display:none}
+  .actif-row{display:flex;align-items:center;gap:var(--s2) var(--s3);flex-wrap:wrap}
+  .actif-row .btn{min-height:44px}
+  .result-count{margin:var(--s3) 0 0;color:var(--muted)}
 
-  /* groups: one per weekly review (or per type); only the latest week is open, the others folded with their count.
-     all open automatically while searching or filtering */
-  .bucket{margin-top:14px;border-top:1px solid var(--border)}
+  /* groupes : un par revue hebdomadaire (ou par type) ; seule la dernière semaine est ouverte */
+  .bucket{margin-top:var(--s4);border-top:var(--trait) solid var(--fg)}
   .bucket[hidden]{display:none}
-  .bucket > summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:6px}
+  .bucket > summary{cursor:pointer;list-style:none;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:6px}
   .bucket > summary::-webkit-details-marker{display:none}
-  .bucket > summary h3{font-size:18px;color:var(--accent)}
-  .type-tag{display:inline-block;font-size:16px;color:var(--muted);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;margin:0 5px 4px 0}
+  .bucket > summary h3{font:700 1.25rem/1.2 "Atkinson Hyperlegible",system-ui,sans-serif;letter-spacing:0;color:var(--fg)}
+  .type-tag{font-weight:700;margin-right:var(--s3);color:var(--muted)}
   .bucket-count{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-  .bucket-count::after{content:"";display:inline-block;width:7px;height:7px;margin-left:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
+  .bucket-count::after{content:"";display:inline-block;width:8px;height:8px;margin-left:12px;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
   .bucket[open] .bucket-count::after{transform:translateY(1px) rotate(-135deg)}
-  .theme-bucket-list{display:flex;flex-direction:column;gap:8px;padding-bottom:6px}
+  .theme-bucket-list{display:flex;flex-direction:column}
 
-  .item{border:1px solid var(--border);border-radius:9px;background:var(--card);overflow:hidden}
+  /* éléments d’archive : la ligne de production (<details>), mise en page en index : date en marge, titre en Lexend */
+  .item{border-top:1px solid var(--line-strong)}
   .item[hidden]{display:none}
-  .item > summary{cursor:pointer;list-style:none;padding:12px 15px;display:flex;flex-direction:column;gap:4px}
+  .item > summary{cursor:pointer;list-style:none;padding-block:var(--s4);display:block}
   .item > summary::-webkit-details-marker{display:none}
-  .item .item-head{display:flex;justify-content:space-between;gap:2px 10px;align-items:baseline;flex-wrap:wrap}
-  .item .item-period{color:var(--muted);white-space:nowrap}
-  .item .item-title{font-size:18px;display:flex;align-items:baseline;gap:9px;line-height:1.35;overflow-wrap:anywhere}
-  .item .item-title::before{content:"";flex:none;width:7px;height:7px;border-right:2px solid var(--item-color, var(--muted));border-bottom:2px solid var(--item-color, var(--muted));transform:translateY(-2px) rotate(-45deg);transition:transform .15s}
-  .item[open] .item-title::before{transform:translateY(-4px) rotate(45deg)}
-  .item .item-teaser{color:var(--muted);margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
-  .item .item-tags{margin-top:6px}
-  .item .item-body{padding:0 15px 14px;border-top:1px solid var(--border);margin-top:2px;overflow-wrap:anywhere}
-  .item .item-body > .meta-row{padding-top:12px}
-  .item .item-body p{margin:8px 0 0}
+  .item .item-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:var(--s4);align-items:start}
+  .item .item-period{grid-column:1;grid-row:1;font-family:var(--voix);font-variant-numeric:tabular-nums;color:var(--muted);padding-top:6px}
+  .item .item-title{grid-column:2;grid-row:1;font:500 1.25rem/1.2 var(--voix);letter-spacing:-.01em;display:flex;align-items:baseline;gap:12px;overflow-wrap:anywhere}
+  @media (min-width:700px){.item .item-title{font-size:1.45rem}}
+  @media (min-width:1100px){.item .item-title{font-size:1.65rem}}
+  .item .item-title::before{content:"";flex:none;order:2;margin-left:auto;width:8px;height:8px;border-right:3px solid var(--muted);border-bottom:3px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform .15s}
+  .item[open] .item-title::before{transform:translateY(0) rotate(-135deg)}
+  .item > summary:hover .item-title{text-decoration:underline;text-decoration-thickness:var(--trait);text-underline-offset:5px}
+  .item .item-teaser{margin:var(--s2) 0 0 calc(150px + var(--s4));color:var(--muted);max-width:64ch;overflow-wrap:anywhere}
+  .item .item-tags{margin:var(--s2) 0 0 calc(150px + var(--s4))}
+  .item .item-body{padding:0 0 var(--s4) calc(150px + var(--s4));max-width:calc(64ch + 150px + var(--s4));overflow-wrap:anywhere}
+  .item .item-body > .meta-row{padding-top:0}
+  .item .item-body p{margin:var(--s2) 0 0}
   .item .item-body strong{color:var(--fg)}
   .item .item-body em{color:var(--muted)}
+  .item .item-body .crit{margin-top:var(--s2)}
 
-  #empty-filter{display:none;color:var(--muted);padding-top:12px}
-  #empty-filter p{margin:0 0 8px;font-style:italic}
-  .btn{font:inherit;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--accent);background:var(--chip-bg);color:var(--accent);cursor:pointer;font-weight:600}
+  #empty-filter{display:none;color:var(--muted);padding-top:var(--s3)}
+  #empty-filter p{margin:0 0 8px}
+  .btn{font:700 1rem "Atkinson Hyperlegible",system-ui,sans-serif;min-height:48px;padding:10px 22px;border-radius:999px;border:var(--trait) solid var(--fg);background:transparent;color:var(--fg);cursor:pointer}
+  .btn:hover{background:var(--chip-bg)}
 
-  footer{
-    padding-block:20px calc(24px + env(safe-area-inset-bottom,0px));
-    border-top:1px solid var(--border);color:var(--muted);text-align:center;
-  }
-  footer p{margin:0 0 6px}
-  #loading{color:var(--muted);font-style:italic;padding-block:20px}
-  #load-error,#load-notice{display:none;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--fg)}
+  footer{padding-block:var(--s5) calc(var(--s5) + env(safe-area-inset-bottom,0px));border-top:var(--trait) solid var(--fg);color:var(--muted);text-align:left;max-width:64ch}
+  footer p{margin:0 0 var(--s2)}
+  #loading{color:var(--muted);padding-block:var(--s4)}
+  #load-error,#load-notice{display:none;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;border-left:var(--trait-l) solid var(--fg);padding:var(--s2) var(--s3);color:var(--fg)}
   #load-error p,#load-notice p{margin:0;flex:1 1 15rem}
-  #no-js{display:none;background:var(--chip-bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--muted)}
+  #no-js{display:none;border-left:var(--trait-l) solid var(--fg);padding:var(--s2) var(--s3);color:var(--muted)}
 
   #theme-toggle{
-    flex:none;width:44px;height:44px;border-radius:999px;
-    border:1px solid var(--line-ctl);background:var(--chip-bg);color:var(--accent);
+    flex:none;width:48px;height:48px;border-radius:999px;
+    border:var(--trait) solid var(--fg);background:transparent;color:var(--fg);
     display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
   }
-  #theme-toggle svg{width:17px;height:17px}
+  #theme-toggle svg{width:20px;height:20px}
   #theme-toggle .icon-moon{display:none}
   :root[data-theme="dark"] #theme-toggle .icon-sun{display:none}
   :root[data-theme="dark"] #theme-toggle .icon-moon{display:block}
+
+  @media (max-width:860px){
+    #today .art{grid-template-columns:1fr;grid-template-areas:"tete" "fiche" "corps" "lim"}
+    .fiche{position:static;margin-bottom:var(--s4)}
+    .voir-limites{display:inline-flex}
+    html{scroll-padding-top:var(--s3)}
+    #today .tete .meta-row{margin-bottom:var(--s3)}
+    #today .lim{margin-top:var(--s2);border-top:1px solid var(--line-strong)}
+    .filt{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+    .filt > summary{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);min-height:56px;font-weight:700;cursor:pointer;list-style:none}
+    .filt > summary::-webkit-details-marker{display:none}
+    .filt > summary .sel{color:var(--muted);font-weight:400;display:inline-flex;align-items:center;gap:12px;text-align:right}
+    .filt > summary .sel::after{content:"";flex:none;width:10px;height:10px;border-right:3px solid var(--fg);border-bottom:3px solid var(--fg);transform:rotate(45deg);margin-bottom:4px;transition:transform .15s}
+    .filt[open] > summary .sel::after{transform:rotate(-135deg);margin-bottom:-2px}
+    #browse .chips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 var(--s3);padding-bottom:var(--s2)}
+    .chip{white-space:normal;text-align:left;min-height:44px;padding-block:6px;line-height:1.25}
+  }
+  @media (max-width:640px){
+    .item .item-head{grid-template-columns:1fr;gap:var(--s2)}
+    .item .item-period{grid-column:1;grid-row:1;padding-top:0}
+    .item .item-title{grid-column:1;grid-row:2}
+    .item .item-teaser,.item .item-tags{margin-left:0}
+    .item .item-body{padding-left:0}
+  }
 </style>
 </head>
 <body>
@@ -248,7 +295,7 @@
       <label class="sr-only" for="search">Rechercher dans l’archive</label>
       <input class="search" id="search" type="search" placeholder="Rechercher (ex. mémoire de travail)" autocomplete="off" enterkeyhint="search">
       <div class="view-switch" role="group" aria-label="Classement de l’archive"><span>Classer par</span><div class="seg"><button type="button" data-view="semaine" aria-pressed="true">Semaine</button><button type="button" data-view="type" aria-pressed="false">Type</button></div></div>
-      <div class="chips" id="theme-chips" role="group" aria-label="Filtrer par thème">
+      <details class="filt" id="filt" open><summary><span>Thèmes</span><span class="sel" id="filt-sel">Tous</span></summary><div class="chips" id="theme-chips" role="group" aria-label="Filtrer par thème">
         <button class="chip" data-theme-filter="tous" aria-pressed="true">Tous</button>
         <button class="chip" data-theme-filter="tsa" aria-pressed="false" style="--chip-color:var(--c-tsa)">TSA</button>
         <button class="chip" data-theme-filter="tdah" aria-pressed="false" style="--chip-color:var(--c-tdah)">TDA/H</button>
@@ -258,7 +305,8 @@
         <button class="chip" data-theme-filter="di-tsaf" aria-pressed="false" style="--chip-color:var(--c-di-tsaf)">DI / TSAF</button>
         <button class="chip" data-theme-filter="attachement" aria-pressed="false" style="--chip-color:var(--c-attachement)">Attachement & trauma</button>
         <button class="chip" data-theme-filter="transversal" aria-pressed="false" style="--chip-color:var(--c-transversal)">Transversal & Suisse</button>
-      </div>
+      </div></details>
+      <div class="actif" id="actif" role="status" aria-live="polite" hidden></div>
       <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
       <div id="buckets"></div>
       <div id="empty-filter">
@@ -314,6 +362,53 @@
     });
   }
 
+
+  // ---------- assainissement : les textes des données sont du Markdown, jamais du HTML ----------
+  // 1) marked n'interprète plus le HTML brut ni les images (le HTML est affiché comme texte) ;
+  // 2) tout ce que marked produit passe par une liste blanche de balises et d'attributs avant d'entrer dans le DOM.
+  var ALLOW_TAGS = {A:1,P:1,BR:1,STRONG:1,EM:1,DEL:1,CODE:1,PRE:1,BLOCKQUOTE:1,UL:1,OL:1,LI:1,H1:1,H2:1,H3:1,H4:1,H5:1,H6:1,HR:1,TABLE:1,THEAD:1,TBODY:1,TR:1,TH:1,TD:1,SUP:1,SUB:1};
+  var DROP_TAGS = {SCRIPT:1,STYLE:1,IFRAME:1,FRAME:1,FRAMESET:1,OBJECT:1,EMBED:1,SVG:1,MATH:1,TEMPLATE:1,NOSCRIPT:1,FORM:1,INPUT:1,BUTTON:1,SELECT:1,TEXTAREA:1,LINK:1,META:1,BASE:1,TITLE:1,HEAD:1,AUDIO:1,VIDEO:1,SOURCE:1,CANVAS:1,APPLET:1,IMG:1,PICTURE:1};
+  var ALLOW_ATTR = {A:["href","title"], OL:["start"], TH:["align"], TD:["align"]};
+
+  // lien admis : http, https, mailto, ancre ou chemin relatif. Tout autre schéma (javascript:, data:, vbscript:…) est refusé,
+  // espaces et caractères de contrôle retirés d'abord (« java\tscript: »).
+  function safeUrl(u){
+    var v = String(u || "").replace(/[\x00-\x20\x7f-\x9f]/g, "").replace(/\s/g, "");
+    var m = /^([a-z][a-z0-9+.\-]*):/i.exec(v);
+    return m ? /^(https?|mailto)$/i.test(m[1]) : true;
+  }
+
+  function sanitizeHtml(html){
+    // document inerte : aucun script ne s'exécute, aucune image ne se charge pendant l'analyse
+    var doc = new DOMParser().parseFromString("<!doctype html><body>" + html, "text/html");
+    (function walk(parent){
+      Array.prototype.slice.call(parent.childNodes).forEach(function(n){
+        if(n.nodeType === 3) return;
+        if(n.nodeType !== 1){ parent.removeChild(n); return; }
+        var tag = n.tagName;
+        if(DROP_TAGS[tag]){ parent.removeChild(n); return; }
+        walk(n);
+        var keep = ALLOW_TAGS[tag] && !(tag === "A" && !safeUrl(n.getAttribute("href")));
+        if(!keep){ while(n.firstChild) parent.insertBefore(n.firstChild, n); parent.removeChild(n); return; }
+        Array.prototype.slice.call(n.attributes).forEach(function(a){
+          if((ALLOW_ATTR[tag] || []).indexOf(a.name.toLowerCase()) === -1) n.removeAttribute(a.name);
+        });
+      });
+    })(doc.body);
+    return doc.body.innerHTML;
+  }
+  var markedReady = false;
+  function setupMarked(){
+    if(markedReady) return;
+    marked.use({ renderer: {
+      html: function(h){ return escapeHtml(typeof h === "string" ? h : ((h && h.text) || "")); },
+      image: function(href, title, text){ return escapeHtml(typeof href === "object" && href ? (href.text || "") : (text || "")); }
+    }});
+    markedReady = true;
+  }
+  function mdBlock(s){ setupMarked(); return sanitizeHtml(marked.parse(s || "")); }
+  function mdInline(s){ setupMarked(); return sanitizeHtml(marked.parseInline(s || "")); }
+
   function norm(s){
     return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
@@ -346,7 +441,7 @@
     if(!themes || !themes.length) return "";
     return themes.map(function(t){
       var color = THEME_COLOR_VAR[t] || "var(--muted)";
-      return '<span class="theme-tag" style="color:' + color + '">' + escapeHtml(THEME_LABELS[t] || t) + '</span>';
+      return '<span class="theme-tag" style="--tc:' + color + '">' + escapeHtml(THEME_LABELS[t] || t) + '</span>';
     }).join("");
   }
 
@@ -424,6 +519,7 @@
   /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
   function flashText(f){
     var t = f.resume || "";
+    if(f.limite_critique) t = "**Limite à retenir\u202f:** " + f.limite_critique + "\n\n" + t;
     if(f.limites) t += "\n\n**Limites\u202f:** " + f.limites;
     if(f.pratique) t += "\n\n**Pour ta pratique au CO\u202f:** " + f.pratique;
     return t;
@@ -436,7 +532,7 @@
       if(at > 0 && /[\/\[(]/.test(all.charAt(at - 1))) return doi;
       return "[" + doi + "](https://doi.org/" + doi + ")";
     });
-    return marked.parseInline(linked);
+    return mdInline(linked);
   }
 
   function renderToday(){
@@ -464,17 +560,24 @@
       sub.hidden = true;
     }
 
+    // la légende des niveaux vit dans la fiche de preuve ; on la remet à sa place avant de réécrire la carte (rechargement possible)
+    var legend = document.getElementById("legend");
+    section.appendChild(legend);
+    var level = latest.preuve || derivePreuve(latest.limites);
     content.innerHTML =
-      '<div class="card">' +
-        '<h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-        '<div class="meta-row">' + preuveBadge(latest.preuve || derivePreuve(latest.limites), { large: true, always: true }) +
-          themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div>' +
-        '<div>' + marked.parse(latest.resume || "") + '</div>' +
-        (latest.limites ? '<p class="flash-limites"><strong>Limites.</strong> ' + marked.parseInline(latest.limites) + '</p>' : '') +
-        (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + marked.parseInline(latest.pratique) + '</div></details>' : '') +
-        '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p>' +
-        (latest.source ? '<div class="flash-source">' + sourceHtml(latest.source) + '</div>' : '') +
+      '<div class="card art">' +
+        '<div class="tete"><h3>' + escapeHtml(latest.titre || "") + '</h3>' +
+          '<div class="meta-row">' + themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div></div>' +
+        '<div class="fiche" role="group" aria-labelledby="fiche-titre"><h4 id="fiche-titre">Niveau de preuve</h4>' + preuveBadge(level, { large: true, always: true }) +
+          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + mdInline(latest.limite_critique) + '</p>' : '') +
+          (latest.limites ? '<a class="voir-limites" href="#flash-limites">Voir les limites méthodologiques <span aria-hidden="true">↓</span></a>' : '') + '</div>' +
+        '<div class="corps">' + mdBlock(latest.resume || "") +
+          (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + mdInline(latest.pratique) + '</div></details>' : '') +
+          '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p></div>' +
+        '<div class="lim">' + (latest.limites ? '<p class="flash-limites" id="flash-limites" tabindex="-1"><strong>Limites.</strong> ' + mdInline(latest.limites) + '</p>' : '') +
+          (latest.source ? '<p class="flash-source">' + sourceHtml(latest.source) + '</p>' : '') + '</div>' +
       '</div>';
+    content.querySelector(".fiche").appendChild(legend);
   }
 
   function renderEssentiel(){
@@ -575,7 +678,7 @@
         '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
         '<div class="item-tags meta-row"><span class="type-tag">' + escapeHtml(TYPE_LABELS[it.type] || "") + '</span>' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
       '</summary>' +
-      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + marked.parse(it.texte || "") + '</div>' +
+      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + mdBlock(it.texte || "") + '</div>' +
     '</details>';
   }
 
@@ -655,6 +758,19 @@
       ? (total === 0 ? "Aucun résultat" : total + (total > 1 ? " résultats" : " résultat"))
       : total + " éléments dans l’archive";
     document.getElementById("empty-filter").style.display = total ? "none" : "block";
+    renderActifs();
+  }
+
+  // filtres actifs : le thème et la recherche, dits en clair, chacun avec un bouton pour le retirer ; le volet « Thèmes » dit aussi le choix
+  function renderActifs(){
+    var box = document.getElementById("actif"), rows = "";
+    var themeName = state.activeFilter === "tous" ? "" : (THEME_LABELS[state.activeFilter] || state.activeFilter);
+    var q = state.query.trim();
+    if(themeName) rows += '<div class="actif-row"><span>Thème\u202f: <b>' + escapeHtml(themeName) + '</b></span><button type="button" class="btn" data-retirer="theme" aria-label="Retirer le filtre thème ' + escapeHtml(themeName) + '">Retirer le thème</button></div>';
+    if(q) rows += '<div class="actif-row"><span>Recherche\u202f: <b>«\u202f' + escapeHtml(q) + '\u202f»</b></span><button type="button" class="btn" data-retirer="recherche" aria-label="Effacer la recherche">Effacer la recherche</button></div>';
+    box.innerHTML = rows;
+    box.hidden = !rows;
+    document.getElementById("filt-sel").textContent = themeName || "Tous";
   }
 
   function bindControls(){
@@ -680,6 +796,26 @@
       applyFilter();
     });
     document.getElementById("reset-filters").addEventListener("click", resetFilters);
+    document.getElementById("actif").addEventListener("click", function(e){
+      var b = e.target.closest && e.target.closest("[data-retirer]");
+      if(!b) return;
+      if(b.getAttribute("data-retirer") === "theme"){
+        state.activeFilter = "tous";
+        document.querySelectorAll("#theme-chips .chip").forEach(function(c){
+          c.setAttribute("aria-pressed", c.getAttribute("data-theme-filter") === "tous" ? "true" : "false");
+        });
+      }else{
+        state.query = "";
+        document.getElementById("search").value = "";
+      }
+      applyFilter();
+      document.getElementById("search").focus();
+    });
+    // « Thèmes » : toujours déployé sur grand écran, repliable sur téléphone
+    var filt = document.getElementById("filt"), wide = window.matchMedia("(min-width: 861px)");
+    function syncFilt(){ if(wide.matches) filt.open = true; }
+    syncFilt();
+    if(wide.addEventListener) wide.addEventListener("change", syncFilt); else if(wide.addListener) wide.addListener(syncFilt);
     document.querySelectorAll("[data-retry]").forEach(function(btn){
       btn.addEventListener("click", function(){
         // a text reader that never arrived cannot be retried in place
