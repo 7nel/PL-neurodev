@@ -263,5 +263,17 @@
     "limites": "Revue descriptive, sans appréciation de la qualité des études ; l'hétérogénéité reflète surtout méthodes, accès au diagnostic et sensibilisation, pas seulement l'incidence réelle. Seul l'abstract a été lu ; aucune publication récente solide trouvée dans les 72 h.",
     "pratique": "Prudence avec les chiffres de prévalence en réunion : un rapport 4:1 peut sous-estimer les filles et adolescentes autistes, d'où l'intérêt de rester attentive aux profils camouflés au CO.",
     "source": "Zeidan, J., Fombonne, E., Scorah, J., Ibrahim, A., Durkin, M. S., Saxena, S., Yusuf, A., Shih, A., & Elsabbagh, M. (2022). Global prevalence of autism: A systematic review update. *Autism Research, 15*(5), 778–790. https://doi.org/10.1002/aur.2696"
+  },
+  {
+    "date": "2026-10-23",
+    "themes": [
+      "tdah",
+      "transversal"
+    ],
+    "titre": "Habiletés sociales en milieu scolaire et TDA/H : effet global négligeable (méta-analyse)",
+    "resume": "Revue systématique et méta-analyse : 17 études (devis à cas unique, intra- et inter-groupes) incluses, 10 dans l'estimation poolée. Effets individuels de nuls à importants, mais effet global **négligeable (ES = 0,09)** ; ni l'approche, ni l'intensité, ni l'implication parentale, ni le cadre ne modèrent les résultats.",
+    "limites": "Peu d'études scolaires, mesures hétérogènes, interventions disparates, fidélité d'implémentation peu documentée ; le nombre d'études retenues diffère selon les sources (9 vs 10), et le type d'indice d'effet n'est pas précisé dans ce que j'ai pu lire. Seul le résumé (abstract) a été consulté, via des extraits secondaires : le texte intégral n'était pas accessible.",
+    "pratique": "Pour un groupe de compétences socio-émotionnelles, ne pas présumer qu'un programme d'habiletés sociales générique suffit chez les élèves TDA/H : cibler des comportements précis, mesurer les effets (observation, auto-évaluation) et soutenir le transfert en classe.",
+    "source": "Bussanich, G., Harrison, J. R., Peltier, C., Patel, A., Mehta, P., & Patel, K. (2026). School-based social skills interventions for youth with ADHD: A systematic review and meta-analysis. *Journal of Attention Disorders, 30*(4), 427–448. https://doi.org/10.1177/10870547251364578"
   }
 ]
