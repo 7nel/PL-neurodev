@@ -275,5 +275,17 @@
     "limites": "Peu d'études scolaires, mesures hétérogènes, interventions disparates, fidélité d'implémentation peu documentée ; le nombre d'études retenues diffère selon les sources (9 vs 10), et le type d'indice d'effet n'est pas précisé dans ce que j'ai pu lire. Seul le résumé (abstract) a été consulté, via des extraits secondaires : le texte intégral n'était pas accessible.",
     "pratique": "Pour un groupe de compétences socio-émotionnelles, ne pas présumer qu'un programme d'habiletés sociales générique suffit chez les élèves TDA/H : cibler des comportements précis, mesurer les effets (observation, auto-évaluation) et soutenir le transfert en classe.",
     "source": "Bussanich, G., Harrison, J. R., Peltier, C., Patel, A., Mehta, P., & Patel, K. (2026). School-based social skills interventions for youth with ADHD: A systematic review and meta-analysis. *Journal of Attention Disorders, 30*(4), 427–448. https://doi.org/10.1177/10870547251364578"
+  },
+  {
+    "date": "2026-10-24",
+    "themes": [
+      "hpi",
+      "transversal"
+    ],
+    "titre": "Double exceptionnalité : identification et effet de masque (revue systématique)",
+    "resume": "Revue systématique des méthodes d'identification des élèves doublement exceptionnels (HPI + TND). L'identification est surtout faite par l'école, le HPI établi principalement par tests d'intelligence ; seulement 15 % des études portent sur des interventions et 7 % expliquent comment leur procédure tient compte de l'effet de masque.",
+    "limites": "Revue de littérature : la qualité dépend d'études primaires hétérogènes, souvent descriptives. Je n'ai eu accès qu'à des descriptions secondaires du résumé (ni N d'études, ni bases, ni texte intégral vérifiés) ; initiales des auteurs et volume non confirmés. Pas de consensus sur les critères de 2e.",
+    "pratique": "Face à un élève au profil contrasté (bonnes capacités, difficultés persistantes), ne pas conclure sur la seule base de résultats scolaires moyens : demander un bilan psychométrique qui examine explicitement la compensation mutuelle HPI/trouble.",
+    "source": "Maki, Dougé, Rubenstein, Ridgley, & DeShon (2026). Seeing both sides: A systematic review of identification methods for twice-exceptional learners. *Gifted Child Quarterly*. https://doi.org/10.1177/01623532261459140"
   }
 ]
