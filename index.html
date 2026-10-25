@@ -594,7 +594,7 @@
     section.hidden = false;
     sub.textContent = "Semaine du " + fmtDate(latest.date_debut) + " au " + fmtDate(latest.date_fin);
     content.innerHTML = latest.essentiel.map(function(pt){
-      return '<li>' + escapeHtml(pt) + '</li>';
+      return '<li>' + mdInline(pt) + '</li>'; // même rendu assaini que le reste du site : *italique* n’apparaît plus avec ses astérisques
     }).join("");
   }
 
