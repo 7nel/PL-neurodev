@@ -287,5 +287,18 @@
     "limites": "Revue de littérature : la qualité dépend d'études primaires hétérogènes, souvent descriptives. Je n'ai eu accès qu'à des descriptions secondaires du résumé (ni N d'études, ni bases, ni texte intégral vérifiés) ; initiales des auteurs et volume non confirmés. Pas de consensus sur les critères de 2e.",
     "pratique": "Face à un élève au profil contrasté (bonnes capacités, difficultés persistantes), ne pas conclure sur la seule base de résultats scolaires moyens : demander un bilan psychométrique qui examine explicitement la compensation mutuelle HPI/trouble.",
     "source": "Maki, Dougé, Rubenstein, Ridgley, & DeShon (2026). Seeing both sides: A systematic review of identification methods for twice-exceptional learners. *Gifted Child Quarterly*. https://doi.org/10.1177/01623532261459140"
+  },
+  {
+    "date": "2026-10-25",
+    "themes": [
+      "tsa",
+      "tdah",
+      "transversal"
+    ],
+    "titre": "Absentéisme involontaire chez adolescents TDA/H, TSA ou Tourette (Norvège)",
+    "resume": "Étude de Kielland et Liu (2026) auprès de 274 adolescents de 13–17 ans avec TDA/H, TSA ou syndrome de Gilles de la Tourette (données jeunes + parents) : taux d'absentéisme involontaire similaires entre diagnostics ; facteurs scolaires associés (amis, enseignants bienveillants, sentiment de maîtrise scolaire), pas le statut socio-économique des parents.",
+    "limites": "Étude observationnelle, probablement transversale : pas de causalité ; échantillon norvégien, recrutement et mesure de l'absentéisme non vérifiés ; transférabilité au CO valaisan incertaine. Les auteurs jugent les conseils standards sur l'absentéisme potentiellement inadaptés aux jeunes neurodivergents (point non tranché). Seuls le résumé et des notices secondaires ont été consultés (texte intégral inaccessible).",
+    "pratique": "Dans le suivi d'un élève en évitement scolaire, explorer d'abord les leviers scolaires (lien avec un adulte, pairs, sentiment de réussite) avant de chercher des causes familiales, en concertation avec le réseau.",
+    "source": "Kielland, A., & Liu, J. (2026). School absenteeism and fear of school among Norwegian neurodivergent adolescents 13–17 years of age. *Scandinavian Journal of Educational Research*, 1–16. https://doi.org/10.1080/00313831.2026.2685705 (DOI et détails issus d'une recherche secondaire, non vérifiés sur la source primaire)"
   }
 ]
