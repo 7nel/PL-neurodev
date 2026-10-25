@@ -8,7 +8,7 @@ Site statique, pas de connexion requise : https://7nel.github.io/PL-neurodev/
 
 - `index.html` — la page (design, logique de filtrage, rendu markdown), lit les données via `fetch()`
 - `data/flashs.json` — flashs quotidiens (tableau, un objet par jour : `date`, `themes`, `titre`, `resume` (1–2 phrases : ce qui est dit), `limites` (niveau de preuve et limites, optionnel), `pratique` (pour la pratique au CO, optionnel), `preuve` (optionnel : `solide`, `nuance` ou `floue`), `source`)
-- `data/revues.json` — revues hebdomadaires (tableau, un objet par semaine : `date_debut`, `date_fin`, `titre`, `essentiel` (3 points), `items` (tableau `{section, themes, titre?, preuve?, texte}`))
+- `data/revues.json` — revues hebdomadaires (tableau, un objet par semaine : `date_debut`, `date_fin`, `titre`, `essentiel` (3 points ; markdown en ligne accepté, par exemple `*Pediatrics*` pour l’italique ou `**…**` pour le gras), `items` (tableau `{section, themes, titre?, preuve?, texte}`))
 - `sw.js` — copie hors ligne : la page, les polices et les dernières données restent lisibles sans réseau (réseau d'abord pour la page et les JSON)
 - `icon-*.png`, `manifest.json` — icône et métadonnées pour l'écran d'accueil
 
@@ -34,4 +34,8 @@ Pour chaque flash et chaque item de revue, renseigner `preuve` avec l'une de ces
 - `solide` : essai contrôlé randomisé ou méta-analyse de qualité, effectif suffisant, résultat répliqué ;
 - `nuance` : preuve modérée, ou solide mais limitée (échantillon, un seul pays, observationnel) ;
 - `floue` : preuve faible (étude préliminaire, narrative, petit effectif, communiqué de presse, texte intégral non lu).
-Si le niveau ne peut pas être évalué, omettre le champ plutôt que d'en deviner un.
+Si le niveau ne peut pas être évalué, omettre le champ plutôt que d'en deviner un. Un flash sans `preuve` s'affiche « Preuve non évaluée » : c'est le comportement voulu. Ne jamais remplir un niveau par défaut, et ne pas modifier les flashs déjà publiés pour y ajouter un niveau.
+
+## Licence
+
+Contenus originaux (textes de la veille rédigés par Pauline, mise en page, code propre à ce site) : © 2026 Pauline Lentes, [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.fr). Cette licence ne couvre pas les publications scientifiques citées, les contenus tiers ni les dépendances : `marked` (MIT, `vendor/marked-LICENSE.md`) et les polices (Atkinson Hyperlegible, Lexend) gardent leurs propres conditions. Voir `CLAUDE.md` pour l'état du projet et ses limites.
