@@ -311,5 +311,16 @@
     "limites": "Revue systématique de 2021, donc non récente. Les études incluses sont hétérogènes et probablement surtout transversales (non vérifié). Le rôle des comorbidités (TDA/H, par ex.) reste flou : elles pourraient contribuer aux difficultés de mémoire de travail verbale. Seuls des éléments du résumé ont été consultés, pas le texte intégral. Aucune publication récente solide n'a été trouvée dans les 72 h.",
     "pratique": "Chez un élève avec TDC, ne pas attribuer les difficultés de planification ou d'organisation à un manque de motivation, et explorer aussi la mémoire de travail et l'inhibition, par exemple par des consignes en étapes courtes et des supports visuels d'organisation.",
     "source": "Lachambre, C., Proteau-Lemieux, M., Lepage, J.-F., Bussières, E.-L., & Lippé, S. (2021). Attentional and executive functions in children and adolescents with developmental coordination disorder and the influence of comorbid disorders: A systematic review of the literature. *PLoS ONE, 16*(6), e0252043. https://doi.org/10.1371/journal.pone.0252043"
+  },
+  {
+    "date": "2026-10-27",
+    "themes": [
+      "tdl-tdc"
+    ],
+    "titre": "Rappel : consensus CATALISE-2 sur la terminologie du trouble développemental du langage (TDL)",
+    "resume": "Rappel : faute de publication récente vérifiable aujourd'hui, retour sur un travail de référence. Consensus Delphi multidisciplinaire (plusieurs dizaines d'expert·es, pays anglophones) qui recommande « trouble développemental du langage » (DLD) à la place de « trouble spécifique du langage », sans critère de discordance avec le QI non verbal, et distingue ces troubles de ceux associés à une condition biomédicale (p. ex. TSA, lésion cérébrale).",
+    "limites": "Consensus d'expert·es, pas une étude empirique : niveau de preuve faible à modéré, panel essentiellement anglophone, critères opérationnels encore débattus. Seuils d'évaluation et statut des élèves plurilingues peu précisés ; la source ne permet pas de trancher entre trouble et acquisition d'une langue seconde. Les sources en ligne étaient inaccessibles lors de cette veille : les détails (effectif du panel, formulations) sont rappelés de mémoire et sont à vérifier dans l'article.",
+    "pratique": "Prudence avec les élèves allophones : une difficulté langagière n'est évocatrice de TDL que si elle est aussi présente dans la langue première ; demander un bilan logopédique avant toute conclusion.",
+    "source": "Bishop, D. V. M., Snowling, M. J., Thompson, P. A., Greenhalgh, T., & the CATALISE-2 consortium. (2017). Phase 2 of CATALISE: A multinational and multidisciplinary Delphi consensus study of problems with language development: Terminology. *Journal of Child Psychology and Psychiatry, 58*(10), 1068–1080. https://doi.org/10.1111/jcpp.12721"
   }
 ]
