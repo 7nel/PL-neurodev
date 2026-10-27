@@ -929,5 +929,216 @@
         "texte": "Mise en œuvre valaisanne du classeur « comportements difficiles » et des enseignant·es ressources : critères d'orientation vers les futures « classes ressources » et place du diagnostic différentiel (TND, trauma) dans les protocoles."
       }
     ]
+  },
+  {
+    "date_debut": "2026-10-20",
+    "date_fin": "2026-10-26",
+    "titre": "Semaine du 20 au 26 octobre 2026",
+    "essentiel": [
+      "Médicaments du TDA/H et automutilation : une série de cas auto-contrôlée multinationale publiée dans *BMJ Mental Health* (Chan et al., 2026 ; plus de 460 000 personnes, cinq systèmes de santé) situe le pic de risque d'automutilation dans les 90 jours qui précèdent l'instauration du traitement, puis un risque plus bas mais encore supérieur à la référence sous traitement. Les auteur·es concluent que le médicament n'est pas le principal moteur de l'automutilation ; les rapports de taux d'incidence n'ont pas pu être vérifiés.",
+      "Angleterre : la revue indépendante présidée par Peter Fonagy (rapport publié le 9 octobre, version complète datée du 21 octobre selon GOV.UK) ne conclut pas à un surdiagnostic de TSA ou de TDA/H « à grande échelle » et recommande de passer d'un système où le diagnostic conditionne l'aide à un modèle « fondé sur les besoins, plus le diagnostic ». Les recommandations propres à l'école n'ont pas pu être consultées.",
+      "En Suisse, la 2e session des personnes handicapées (21 octobre, Palais fédéral) a adopté 16 pétitions, dont « Ensemble à l'école », qui demande une compétence fédérale limitée en matière d'école inclusive sur le modèle tessinois ; la loi fédérale sur l'inclusion attend toujours le Conseil des États. La semaine ne contient aucune étude d'intervention scolaire à l'adolescence datée de la période."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Médicaments du TDA/H et automutilation : série de cas auto-contrôlée dans cinq systèmes de santé",
+        "texte": "**Chan et al., *BMJ Mental Health*, octobre 2026** (communiqué de l'Université d'Aston du 22 octobre ; collaboration avec UCL, l'Université de Hong Kong, l'Université d'Auckland, des universités coréennes, taïwanaises, australiennes, américaines et canadiennes).\n\n**Question :** l'instauration d'un traitement médicamenteux du TDA/H est-elle associée à une hausse du risque d'automutilation ?\n\n**Design :** série de cas auto-contrôlée (*self-controlled case series*) : chaque personne sert de son propre témoin, ce qui neutralise les facteurs stables (génétique, milieu, sévérité de base). Trois fenêtres comparées aux périodes non exposées : 90 jours avant le début du traitement, 90 premiers jours de traitement, traitement poursuivi.\n\n**N/population :** plus de 460 000 personnes avec prescription de médicaments du TDA/H, dans les bases de Hong Kong, de Nouvelle-Zélande, de Corée du Sud, de Taïwan et du Royaume-Uni. La part d'enfants et d'adolescent·es n'a pas été vérifiée (Psychiatry Advisor évoque « adultes et jeunes »).\n\n**Résultats :** le risque d'automutilation est le plus élevé dans les **90 jours précédant** l'instauration du traitement, dans les cinq systèmes. Il est plus bas une fois le traitement commencé, tout en restant au-dessus du niveau des périodes non exposées. Les rapports de taux d'incidence (IRR) et leurs IC n'ont pas été obtenus. Pour comparaison, une étude hongkongaise antérieure sur le méthylphénidate rapportait un IRR de 6,55 (IC 95 % 3,37–12,72) pour les tentatives de suicide dans les 90 jours précédant le traitement.\n\n**Niveau de preuve :** modéré (grand effectif, design intra-individuel, réplication dans cinq pays) ; il ne s'agit pas d'un essai randomisé.\n\n**Limites :** le design ne neutralise pas les facteurs qui varient dans le temps : la période pré-traitement correspond souvent à une crise (scolaire, familiale, psychique) qui motive à la fois la consultation et l'automutilation. Seule l'automutilation ayant donné lieu à un contact médical est enregistrée. Les personnes non traitées sont exclues : l'étude ne compare pas traité·es et non traité·es. Les chiffres par tranche d'âge n'ont pas été vérifiés.\n\n**Ce que ça change :** l'étude ne soutient pas l'idée que les médicaments du TDA/H déclenchent l'automutilation. Elle désigne la période qui précède l'évaluation et le traitement comme une fenêtre de vigilance : un·e élève en attente d'évaluation ou en pleine crise mérite un repérage actif du risque.\n\nChan, A., et al. (2026). ADHD medication use and risk of self-harm: A multinational self-controlled case series study. *BMJ Mental Health*. https://doi.org/10.1136/bmjment-2026-302819 (liste des auteur·es, volume et numéro d'article non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "titre": "Traits autistiques et traits TDA/H : des trajectoires sociales différentes vers les difficultés psychiques (cohorte scolaire japonaise)",
+        "texte": "***Psychological Medicine*, 2026** (relayée par PsyPost le 8 octobre ; date de mise en ligne exacte non confirmée). Étude des deux à trois dernières semaines, retenue faute de publication scolaire datée de la semaine.\n\n**Question :** comment les traits autistiques et les traits TDA/H d'élèves scolarisé·es en classe ordinaire s'articulent-ils, dans le temps, avec les difficultés avec les pairs, les difficultés scolaires, les relations familiales et la santé mentale ?\n\n**Design :** cohorte longitudinale en milieu scolaire, plusieurs années scolaires, modèles d'équations structurelles à décalage croisé (*cross-lagged*) sur onze cohortes de degrés selon un résumé secondaire.\n\n**N/population :** 9 619 élèves japonais·es selon PsyPost (« près de 10 000 » selon un autre résumé) ; tranche d'âge précise non vérifiée.\n\n**Résultats (presse) :** les traits autistiques prédisent surtout des **difficultés ultérieures avec les pairs** ; les traits TDA/H, des **difficultés scolaires et comportementales**. Les difficultés sociales du quotidien et les difficultés psychiques semblent liées dans les deux sens, ce que les auteur·es décrivent comme de possibles cercles auto-entretenus.\n\n**Niveau de preuve :** faible à modéré (observationnel, très grand échantillon, mesures répétées).\n\n**Limites :** traits mesurés par questionnaires, pas de diagnostics ; informateurs (parents, enseignant·es, élèves) non vérifiés ; les modèles à décalage croisé ne suppriment pas la confusion par des facteurs stables non mesurés ; contexte scolaire japonais. Auteur·es, tailles d'effet et âges non vérifiés.\n\n**Ce que ça change :** soutient l'idée que, pour un même niveau de traits, les difficultés psychiques passent par des voies différentes (pairs pour les traits autistiques, réussite et comportement pour les traits TDA/H), ce qui oriente le choix des cibles d'intervention en classe et en groupe socio-émotionnel.\n\nAuteur·es non vérifié·es. (2026). Longitudinal associations among autism and ADHD traits, social maladjustment, and mental health in school-aged children. *Psychological Medicine*. https://www.psypost.org/autism-and-adhd-traits-appear-to-follow-different-social-paths-to-mental-health-problems/ (DOI, auteur·es et pagination non vérifiés ; lien vers le compte rendu de presse ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "dys-tsle"
+        ],
+        "titre": "Enseigner la lecture de mots à l'adolescence : méta-analyse",
+        "texte": "**Yi, Aitken, Sharp, Nusrat et Sandbank, *Educational Psychology Review*, 2026** (volume 38, article 29 ; mise en ligne en 2026, date exacte non vérifiée). Publication non datée de la semaine, retenue parce qu'elle concerne directement les élèves du secondaire.\n\n**Question :** les interventions centrées sur la lecture de mots (décodage, reconnaissance des mots) sont-elles efficaces chez les adolescent·es qui lisent avec difficulté, et quels facteurs modèrent leurs effets ?\n\n**Design :** méta-analyse d'études d'intervention avec analyses de modérateurs.\n\n**N/population :** élèves du secondaire (*middle* et *high school*) en difficulté de lecture. Les sources consultées divergent : 34 études, 2 718 participant·es, 37 interventions et 200 effets selon un résumé ; 29 études selon le communiqué du MGH Institute of Health Professions.\n\n**Résultats :** effet significatif sur l'ensemble des types de mesures, g = 0,30 (p = 0,009) selon le résumé ; le communiqué parle d'un effet « important ». Ces deux formulations ne concordent pas ; la décomposition par type de mesure (décodage, fluence, compréhension) n'a pas été vérifiée.\n\n**Niveau de preuve :** modéré (synthèse quantitative), sous réserve de la qualité des études primaires.\n\n**Limites :** nombres d'études et ampleur de l'effet discordants entre sources ; hétérogénéité, proportion d'essais randomisés et biais de publication non vérifiés ; études majoritairement anglophones (orthographe opaque), transfert au français à confirmer ; on ignore si les élèves avaient un diagnostic de dyslexie ou étaient « faibles lecteurs ».\n\n**Ce que ça change :** argument contre l'idée qu'il est « trop tard » pour travailler le décodage au CO : un enseignement explicite de la lecture de mots reste justifié chez les élèves qui décodent encore lentement, en plus des adaptations (lecture audio, temps supplémentaire).\n\nYi, J. J., Aitken, A. A., Sharp, E., Nusrat, A., & Sandbank, M. (2026). What works for teaching word reading to adolescents? A meta-analytic investigation. *Educational Psychology Review, 38*(1), Article 29. https://doi.org/10.1007/s10648-026-10124-9 ((résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Réponses cérébrales aux sons inattendus et symptômes de TDA/H : de la petite enfance à l'enfance moyenne (EEG)",
+        "texte": "**Pranjić, Likitlersuang et Arnett, *Developmental Cognitive Neuroscience*, 2026** (relayée par PsyPost le 20 octobre). Incluse pour information ; portée nulle pour le CO à ce stade.\n\n**Question :** la réponse cérébrale aux sons inattendus (paradigme de déviance auditive, écoute passive) diffère-t-elle selon le niveau de symptômes de TDA/H, et cette différence évolue-t-elle avec l'âge ?\n\n**Design :** EEG en écoute passive (séquences de sons pendant une vidéo muette), comparaison de groupes à deux âges.\n\n**N/population :** groupe de la petite enfance (environ 2 ans et demi à 5 ans) : 115 enfants, 64 avec symptômes de TDA/H élevés et 51 au développement typique ; effectif du groupe d'enfance moyenne non vérifié.\n\n**Résultats (presse) :** réponse **accrue** aux sons inattendus chez les jeunes enfants avec symptômes élevés, réponse **atténuée** en enfance moyenne.\n\n**Niveau de preuve :** faible (petits groupes, comparaison transversale entre âges selon les informations disponibles).\n\n**Limites :** on ne sait pas si les mêmes enfants ont été suivis ; « symptômes élevés » ne veut pas dire diagnostic ; pas de lien démontré avec le fonctionnement en classe. Ne constitue pas un biomarqueur diagnostique.\n\n**Ce que ça change :** rien pour la pratique. Rappelle seulement que la sensibilité aux distracteurs sonores peut changer avec l'âge chez les enfants avec TDA/H.\n\nPranjić, M., Likitlersuang, J., & Arnett, A. B. (2026). Atypical auditory cortical processing in ADHD during early and middle childhood. *Developmental Cognitive Neuroscience*, Article 101780. (DOI et volume non vérifiés ; (résumé et communiqués consultés via extraits de moteur de recherche ; texte intégral non lu))"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Surdiagnostic du TSA et du TDA/H : la revue Fonagy contre le discours politique",
+        "texte": "En Angleterre, la revue indépendante commandée par le gouvernement (présidence : Peter Fonagy ; vice-présidence : Gillian Baird et Simon Wessely) écrit qu'elle « ne peut pas conclure à un surdiagnostic à grande échelle », tout en estimant que le risque pourrait augmenter si les tendances actuelles se poursuivent. Elle ne constate pas de baisse de la sévérité chez les personnes évaluées, rappelle le sous-repérage historique des filles et souligne que des prestataires privés réalisent la majorité des évaluations TDA/H financées par le NHS sans contrôle de qualité homogène (recommandation : régulation par la CQC, interdiction de la publicité pour les évaluations financées par le NHS).\n\nCe constat rejoint l'éditorial de 32 expert·es du *British Journal of Psychiatry* (Cortese et al., mars 2026 ; https://doi.org/10.1192/bjp.2026.10546), qui parle plutôt de rattrapage d'un sous-diagnostic, et s'oppose au discours politique selon lequel « tout le monde a un TDA/H ». Le point de convergence le plus solide : le problème porte moins sur le nombre de diagnostics que sur leur **qualité** (risque d'erreur diagnostique dans un marché peu régulé) et sur l'accès à l'aide.\n\nDivergence de dates : GOV.UK date la version simplifiée du 9 octobre et le rapport final complet du 21 octobre. Le rapport (environ 600 pages) n'a pas été lu.\n\nFonagy, P., Baird, G., & Wessely, S. (2026). *Independent review into prevalence and support for mental health conditions, ADHD and autism: Final report*. Department of Health and Social Care. https://www.gov.uk/government/collections/independent-review-into-mental-health-conditions-adhd-and-autism (auteur·es institutionnel·les et intitulé exact non vérifiés)"
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Automutilation sous traitement : « risque diminué » ou « risque encore élevé » ?",
+        "texte": "Les comptes rendus de l'étude de Chan et al. (2026) divergent : Psychiatry Advisor titre sur une **diminution** du risque d'automutilation associée aux médicaments du TDA/H ; le communiqué d'Aston précise que le risque, plus bas après l'instauration, reste **supérieur** aux périodes non exposées. Les deux sont compatibles si l'on compare des fenêtres différentes (après vs juste avant le traitement, ou sous traitement vs hors exposition). Une étude suédoise de 2025 au même design rapportait des IRR de 0,77 à 0,85 pendant les périodes traitées. Sans les IRR de l'étude, il faut s'en tenir à la formulation prudente : le traitement n'apparaît pas comme le principal moteur du risque."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tdah",
+          "attachement"
+        ],
+        "titre": "Gènes des parents et TDA/H de l'enfant : peu d'effet d'« éducation génétique »",
+        "texte": "Une étude familiale publiée dans *Behavior Genetics* (relayée par PsyPost le 15 octobre) ne trouve pas d'effet d'« éducation génétique » (*genetic nurture* : effet indirect des gènes des parents par l'environnement qu'ils créent) sur les traits TDA/H à 5 et 8 ans ; les traits seraient surtout liés aux gènes transmis à l'enfant. Le résultat converge avec la cohorte norvégienne MoBa (19 506 trios ; *Molecular Psychiatry*, 2022, auteur·es non vérifié·es), qui ne relevait qu'une exception (score polygénique de névrosisme maternel). Il nuance la méta-analyse sur la parentalité et le TDA/H présentée dans la revue du 6–12 octobre : les différences de parentalité observées seraient moins une cause qu'une réponse ou un facteur partagé. Les auteur·es eux-mêmes signalent une puissance statistique limitée pour des effets faibles ; référence complète non vérifiée."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**Accès aux sources :** comme la semaine précédente, aucune page d'éditeur ni base bibliographique n'a pu être ouverte directement depuis l'environnement de veille. Les données proviennent d'extraits de moteurs de recherche, de communiqués et de comptes rendus de presse. Les chiffres non confirmés sont signalés dans chaque élément."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "**Daridorexant (Idorsia) et autisme :** le 26 octobre, Idorsia (entreprise suisse) a annoncé un programme de développement du daridorexant, antagoniste des récepteurs de l'orexine, dans l'autisme. L'annonce s'appuie sur un essai de phase 2 dans l'insomnie pédiatrique (165 jeunes de 10 à 17 ans, dont 79 % de 12–17 ans, randomisé·es entre trois doses et placebo pendant deux semaines ; gain de temps de sommeil total dose-dépendant au jour 1, p = 0,0185), présenté à Sleep Europe 2026 (20–23 octobre). Il s'agit d'un communiqué d'entreprise, sans publication évaluée par les pairs ; aucun résultat propre au sous-groupe autiste n'a été trouvé. Le médicament n'est autorisé chez l'enfant dans aucun pays."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "dys-tsle"
+        ],
+        "texte": "**Effet des interventions de lecture à l'adolescence :** g = 0,30 (effet modeste) selon un résumé, effet « important » selon le communiqué, et nombre d'études différent (34 ou 29). Avant de citer un chiffre, attendre la lecture de l'article de Yi et al. (2026)."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "**Cohorte japonaise (traits autistiques et TDA/H) :** les relations décrites portent sur des traits mesurés par questionnaires dans une population générale ; leur transposition à des élèves diagnostiqué·es, ou à des élèves en rupture scolaire comme ceux de la classe ressource, n'est pas établie."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**Semaine pauvre :** à part l'étude de *BMJ Mental Health*, aucune publication évaluée par les pairs datée du 20 au 26 octobre n'a été identifiée dans le périmètre (rien de daté de la semaine sur la DI, le TSAF, le HPI, le TDL, le TDC ou le trauma complexe). Les études 2 à 4 datent des semaines précédentes."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah"
+        ],
+        "titre": "Élèves en attente d'évaluation TDA/H : période de vigilance",
+        "texte": "Le risque d'automutilation est le plus élevé **avant** le début du traitement, souvent pendant la période de crise et d'attente d'évaluation. Pour un·e élève signalé·e pour un possible TDA/H, l'attente d'un rendez-vous ne justifie pas d'attendre pour agir : repérer les signes d'automutilation et d'idées suicidaires, en parler avec l'infirmier·ère ou le psychologue scolaire, transmettre aux familles les ressources d'urgence. Inférence pratique, non testée par l'étude."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "titre": "Cibler la voie de difficulté propre à chaque profil",
+        "texte": "Les données japonaises suggèrent de travailler les **relations avec les pairs** (médiation, rôles structurés en groupe, prévention du harcèlement) pour les élèves aux traits autistiques marqués, et le **sentiment de réussite scolaire et l'organisation** pour les élèves aux traits TDA/H. Dans un groupe de compétences socio-émotionnelles, cela invite à ne pas appliquer le même programme à tou·tes. La relation étant probablement bidirectionnelle, améliorer le climat relationnel pourrait aussi alléger la détresse psychique, sans preuve causale à ce stade."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "dys-tsle"
+        ],
+        "titre": "Lecture au CO : le décodage reste un objectif",
+        "texte": "Chez un·e élève qui décode encore lentement ou de façon erronée en 9e–11e, des séances courtes et régulières d'enseignement explicite de la lecture de mots (correspondances graphèmes-phonèmes complexes, morphologie, lecture répétée) restent justifiées en parallèle des adaptations. Pour un·e élève allophone, vérifier d'abord si les erreurs relèvent de l'apprentissage du français (vocabulaire, système orthographique nouveau) ou d'une difficulté de décodage présente aussi dans la langue première, si une évaluation dans cette langue est possible."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Aide selon les besoins, sans attendre le diagnostic",
+        "texte": "La revue Fonagy plaide pour une aide disponible avant, pendant et après l'évaluation. Au CO, cela correspond à documenter les besoins observés (situations, fréquence, retentissement) et à mettre en place des aménagements dès qu'ils sont justifiés, sans faire dépendre le soutien d'une étiquette. Le cadre valaisan des mesures d'enseignement spécialisé et ses exigences de procédure restent à vérifier au cas par cas."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "2e session des personnes handicapées (21 octobre 2026)",
+        "texte": "Au Palais fédéral, 44 personnes en situation de handicap élues pour l'occasion (session organisée par Pro Infirmis dans le cadre de Forum22) ont adopté 16 pétitions et soutenu à l'unanimité l'Initiative pour l'inclusion ; les pétitions ont été remises à la conseillère fédérale Elisabeth Baume-Schneider. Parmi elles, la pétition « Ensemble à l'école » (commission éducation, formation et travail ; auteur : Cyril Mizrahi) demande à la Confédération et aux cantons de s'inspirer du modèle d'école inclusive du **Tessin**, et propose d'inscrire dans la Constitution une compétence fédérale limitée à l'adoption de principes, l'école restant aujourd'hui de compétence cantonale. Elle est adressée à l'Assemblée fédérale et à la CDIP. Le texte final après amendements n'a pas été vérifié. Sources : Pro Infirmis (PDF de la pétition), RFJ (21 octobre 2026), presseportal.ch."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi fédérale sur l'inclusion : toujours en attente du Conseil des États",
+        "texte": "Le contre-projet indirect à l'Initiative pour l'inclusion, adopté et renforcé par le Conseil national en septembre 2026, n'a pas encore été examiné par le Conseil des États ; aucune date de commission n'a été trouvée. Le Conseil fédéral recommande toujours le rejet de l'initiative au profit du contre-projet."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais — Loi sur l'école valaisanne : date de 2e lecture non confirmée",
+        "texte": "Aucune annonce trouvée sur l'inscription de la 2e lecture de la Loi sur l'école valaisanne (adoptée en 1re lecture en mai 2026) à l'ordre du jour d'une session d'automne du Grand Conseil. Pour rappel, une étude commandée par le Département de l'économie et de la formation (août 2026) jugeait le modèle intégratif valaisan efficace, tout en demandant un financement suffisant du soutien, un usage plus souple des ressources et un renforcement des compétences du personnel."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "France — proposition de loi n° 3325 sur les droits fondamentaux des personnes handicapées",
+        "texte": "Déposée à l'Assemblée nationale le 13 octobre 2026 (Sébastien Peytavie, Christine Le Nabour), renvoyée à la commission des affaires sociales. Selon l'exposé des motifs, elle reprend six propositions de la mission d'évaluation de la loi de 2005 (définition du handicap alignée sur la CDPH, droit à l'autodétermination, accessibilité du logement neuf, sanctions pour les bâtiments publics inaccessibles…). La scolarisation ne figure pas parmi ces six mesures selon les extraits consultés ; texte intégral non lu."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Texte intégral de Chan et al. (2026) : IRR par fenêtre, résultats séparés pour les moins de 18 ans, différences entre pays et entre molécules."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "texte": "Recommandations de la revue Fonagy concernant l'école (soutien sans diagnostic, rôle des établissements) et réponse du gouvernement britannique ; débat analogue possible en Suisse romande sur l'accès aux mesures sans diagnostic."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Suites parlementaires des 16 pétitions de la session des personnes handicapées, en particulier « Ensemble à l'école » ; calendrier de la commission du Conseil des États pour la loi sur l'inclusion ; ordre du jour du Grand Conseil valaisan pour la 2e lecture de la Loi sur l'école valaisanne."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "Programme du daridorexant dans l'autisme (détails annoncés par Idorsia pour le 1er semestre 2027) et publication évaluée par les pairs de l'essai de phase 2 dans l'insomnie pédiatrique, avec les résultats du sous-groupe TND."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "dys-tsle"
+        ],
+        "texte": "Lecture complète de la méta-analyse de Yi et al. (2026) : effets par type de mesure, rôle de la durée et du format (individuel ou petit groupe), et existence d'études en langue romane."
+      }
+    ]
   }
 ]
