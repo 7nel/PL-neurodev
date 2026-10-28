@@ -322,5 +322,17 @@
     "limites": "Consensus d'expert·es, pas une étude empirique : niveau de preuve faible à modéré, panel essentiellement anglophone, critères opérationnels encore débattus. Seuils d'évaluation et statut des élèves plurilingues peu précisés ; la source ne permet pas de trancher entre trouble et acquisition d'une langue seconde. Les sources en ligne étaient inaccessibles lors de cette veille : les détails (effectif du panel, formulations) sont rappelés de mémoire et sont à vérifier dans l'article.",
     "pratique": "Prudence avec les élèves allophones : une difficulté langagière n'est évocatrice de TDL que si elle est aussi présente dans la langue première ; demander un bilan logopédique avant toute conclusion.",
     "source": "Bishop, D. V. M., Snowling, M. J., Thompson, P. A., Greenhalgh, T., & the CATALISE-2 consortium. (2017). Phase 2 of CATALISE: A multinational and multidisciplinary Delphi consensus study of problems with language development: Terminology. *Journal of Child Psychology and Psychiatry, 58*(10), 1068–1080. https://doi.org/10.1111/jcpp.12721"
+  },
+  {
+    "date": "2026-10-28",
+    "themes": [
+      "attachement",
+      "transversal"
+    ],
+    "titre": "Trauma : interventions non cliniciennes en milieu scolaire (revue systématique)",
+    "resume": "Rappel : revue systématique (25 études retenues sur 4 097, 2013–2023) des interventions traumato-informées menées par des non-cliniciens auprès d'élèves de 4–18 ans ayant vécu des expériences adverses. Les approches (TCC, pleine conscience, art-thérapie) sont très hétérogènes ; les TCC sont suggérées comme piste prioritaire.",
+    "limites": "Preuve faible : synthèse narrative, plusieurs études jugées à risque de biais (échantillons de convenience), pas de conclusion d'efficacité ferme ; peu de données spécifiques à l'adolescence. Aucune publication récente solide trouvée ces 72 h ; résumé uniquement (texte intégral non consulté, liste d'auteur·es à vérifier).",
+    "pratique": "Avant de proposer un dispositif « traumato-informé » en groupe, le présenter comme une pratique prometteuse mais peu validée et en suivre les effets avec des indicateurs simples.",
+    "source": "Avery, F., et al. (2024). A systematic review of non-clinician trauma-based interventions for school-age youth. *PLoS ONE, 19*(9), e0293248. https://doi.org/10.1371/journal.pone.0293248"
   }
 ]
