@@ -334,5 +334,16 @@
     "limites": "Preuve faible : synthèse narrative, plusieurs études jugées à risque de biais (échantillons de convenience), pas de conclusion d'efficacité ferme ; peu de données spécifiques à l'adolescence. Aucune publication récente solide trouvée ces 72 h ; résumé uniquement (texte intégral non consulté, liste d'auteur·es à vérifier).",
     "pratique": "Avant de proposer un dispositif « traumato-informé » en groupe, le présenter comme une pratique prometteuse mais peu validée et en suivre les effets avec des indicateurs simples.",
     "source": "Avery, F., et al. (2024). A systematic review of non-clinician trauma-based interventions for school-age youth. *PLoS ONE, 19*(9), e0293248. https://doi.org/10.1371/journal.pone.0293248"
+  },
+  {
+    "date": "2026-10-29",
+    "themes": [
+      "dys-tsle"
+    ],
+    "titre": "Lecture au secondaire : méta-analyse des interventions pour lecteurs en difficulté (4e–12e)",
+    "resume": "Rappel : méta-analyse de 82 tailles d'effet d'interventions de lecture auprès d'élèves en difficulté, de la 4e à la 12e année (études 1980–2011). Effet moyen de 0,49, et de seulement 0,21 sur les mesures standardisées, soit nettement moins que dans la version de 2007 (0,95 et 0,42).",
+    "limites": "Méta-analyse d'études hétérogènes ; population en difficulté de lecture, non limitée à la dyslexie diagnostiquée. Les auteurs attribuent la baisse à des mesures standardisées plus fréquentes, des devis plus rigoureux et un enseignement ordinaire de meilleure qualité, sans pouvoir les départager. Seuls le résumé et des synthèses secondaires ont été consultés ; la date (2013 en ligne, 2015 en version papier) reste à confirmer. Aucune publication récente et solide n'a été repérée ces 72 h.",
+    "pratique": "Prudence avec les promesses d'effets importants : privilégier des interventions de lecture ciblées et mesurer les progrès sur des épreuves standardisées plutôt que sur des tâches proches de l'entraînement.",
+    "source": "Scammacca, N. K., Roberts, G. J., Vaughn, S., & Stuebing, K. K. (2015). A meta-analysis of interventions for struggling readers in grades 4–12: 1980–2011. *Journal of Learning Disabilities, 48*(4), 369–390. https://doi.org/10.1177/0022219413504995"
   }
 ]
