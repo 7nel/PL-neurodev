@@ -345,5 +345,17 @@
     "limites": "Méta-analyse d'études hétérogènes ; population en difficulté de lecture, non limitée à la dyslexie diagnostiquée. Les auteurs attribuent la baisse à des mesures standardisées plus fréquentes, des devis plus rigoureux et un enseignement ordinaire de meilleure qualité, sans pouvoir les départager. Seuls le résumé et des synthèses secondaires ont été consultés ; la date (2013 en ligne, 2015 en version papier) reste à confirmer. Aucune publication récente et solide n'a été repérée ces 72 h.",
     "pratique": "Prudence avec les promesses d'effets importants : privilégier des interventions de lecture ciblées et mesurer les progrès sur des épreuves standardisées plutôt que sur des tâches proches de l'entraînement.",
     "source": "Scammacca, N. K., Roberts, G. J., Vaughn, S., & Stuebing, K. K. (2015). A meta-analysis of interventions for struggling readers in grades 4–12: 1980–2011. *Journal of Learning Disabilities, 48*(4), 369–390. https://doi.org/10.1177/0022219413504995"
+  },
+  {
+    "date": "2026-10-30",
+    "themes": [
+      "di-tsaf",
+      "tdah"
+    ],
+    "titre": "TSAF vs autres troubles neurodéveloppementaux : profil neurocognitif et socio-émotionnel",
+    "resume": "Rappel : étude transversale comparant 76 enfants de 6 à 15 ans (46 TSAF, 30 autres troubles neurodéveloppementaux) sur une batterie neuropsychologique et des questionnaires parentaux. Le groupe TSAF montre des déficits cognitifs généralisés et des atteintes en attention, mémoire et fonctions exécutives, avec plus d'anxiété, de problèmes sociaux et de pensée, d'inattention et d'agressivité rapportés.",
+    "limites": "Petit échantillon, devis transversal, groupe de comparaison hétérogène, évaluation socio-émotionnelle par les parents ; la plupart des scores restent hors zone clinique. Seuls des fragments de l'abstract ont été consultés (texte intégral non accessible) : chiffres et nuances non vérifiés. Zone floue : le TSAF est souvent d'abord diagnostiqué TDA/H.",
+    "pratique": "Chez un élève diagnostiqué TDA/H qui répond mal aux aides habituelles, penser à interroger l'anamnèse prénatale avec la famille et le service d'évaluation, sans poser d'hypothèse diagnostique soi-même.",
+    "source": "Fernandes-Magalhaes, R., et al. (2025). Differentiating fetal alcohol spectrum disorder from other neurodevelopmental disorders: Neurocognitive and socio-emotional evidence. *Frontiers in Neuroscience*. https://doi.org/10.3389/fnins.2025.1716494"
   }
 ]
