@@ -8,8 +8,7 @@ Veille scientifique personnelle de Pauline sur les troubles neurodéveloppementa
 
 Une seule page `index.html` (styles et script intégrés) qui charge les JSON par `fetch()`.
 
-- **Flash du jour** : carte d'aperçu (résumé, niveau de preuve, limites, pratique au CO, source), avec accès direct aux limites sur écran étroit.
-- **L'essentiel de la semaine** : 3 points de la dernière revue, toujours visibles, rendus en markdown assaini.
+- **Fil** (depuis le 2026-11-02) : cartes plein écran, une par flash, du plus récent au plus ancien ; l’essentiel de chaque revue hebdomadaire s’intercale à sa date ; carte de fin avec la légende des niveaux et l’accès à l’archive. Chaque carte : titre, thème, date, niveau de preuve, limite à retenir, résumé, **limites toujours visibles** ; pratique au CO et source dans un volet « Plus ». Aimantation carte à carte sur écran tactile (`scroll-snap-type: y mandatory`, `scroll-snap-stop: always`) ; **pas d’aimant à la souris** (`pointer: fine`), car une molette à crans restait ramenée sur la même carte. Une carte plus haute que l’écran se lit en continu avant la suivante. Clavier : Page suivante / précédente passent d’une carte à l’autre (pattern ARIA `feed`). Le fil occupe la hauteur de l’écran moins l’en-tête (`--hdr`, mesuré en JS).
 - **Archive** : classée par semaine (une revue = un groupe) ou par type ; recherche plein texte sans accents ; filtre par thème ; texte intégral déployable.
 - **Niveau de preuve** (`solide`, `nuance`, `floue`) en badge pictogramme + libellé, légende dépliable ; « Preuve non évaluée » quand le champ manque.
 - Bouton clair / sombre, copie hors ligne (`sw.js`), installation sur l'écran d'accueil (`manifest.json`).
@@ -33,7 +32,6 @@ Filets de 3 px (6 px pour les accents), rayons de 8 px (`--r-fld`) sur les champ
 | Teintes de thème `--c-tsa`, `--c-tdah`, `--c-dys-tsle`, `--c-tdl-tdc`, `--c-hpi`, `--c-di-tsaf`, `--c-attachement`, `--c-transversal` (clair et sombre) | Teintes propres, hors du socle | Repérer le thème d'un coup d'œil. Jamais seules : le nom du thème est toujours écrit. |
 | Noms de variables hérités : `--fg`, `--muted`, `--border`, `--card`, `--chip-bg`, `--accent-2` | Pas de migration vers `--ink`, `--ink-2`, `--line`, `--surface`… | Charte : aucune migration sans demande. `--accent-2` est défini mais non utilisé. |
 | Niveau de preuve en trois états, pictogramme plein / demi / vide | Exception pédagogique | Le niveau de preuve et ses limites doivent rester visibles, jamais cachés. |
-| Accès direct aux limites (« Voir les limites méthodologiques ») | Lien réservé aux écrans de moins de 861 px | Sur grand écran, les limites sont déjà visibles à côté. |
 
 Les valeurs de neutres, de sauge, de contour (`--line-ctl`) et de sombre suivent la charte v2.2.
 
@@ -51,6 +49,7 @@ Les valeurs de neutres, de sauge, de contour (`--line-ctl`) et de sombre suivent
 
 ## Limites connues
 
+- Fil : contrôlé dans Chromium sans interface (390 × 844 tactile, 1280 × 800). Non vérifiés : le comportement de l’aimantation sur Safari iOS (cartes plus hautes que l’écran, enchaînement du défilement du fil vers l’archive), et le geste réel au doigt.
 - Contrôles faits dans Chrome (émulation d'écrans). Non vérifiés : Safari et iOS, Firefox, installation sur l'écran d'accueil, appareils physiques, lecteurs d'écran.
 - Les flashs existants n'ont pas de champ `preuve` : « Preuve non évaluée » s'affiche. Il appartient à la veille de le renseigner à l'avenir.
 - Contenu produit automatiquement : à lire avec l'esprit critique qu'appelle toute synthèse rapide.

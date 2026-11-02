@@ -55,6 +55,7 @@
   @media (prefers-reduced-motion: reduce){
     .item .item-title::before,.bucket-count::after,.pl-mark,.filt > summary .sel::after{transition:none}
     .pl-logo:hover .pl-mark{transform:none}
+    .hint svg{animation:none}
   }
 
   *{box-sizing:border-box}
@@ -90,12 +91,12 @@
   .pl-mark circle{fill:var(--accent)}
   .pl-mark g{stroke:var(--bg)}
 
-  main{padding-block:var(--s4) var(--s6);display:flex;flex-direction:column;gap:var(--s6)}
+  main{padding-block:0 var(--s6);display:flex;flex-direction:column;gap:var(--s6)}
   section > h2{font-size:2rem;line-height:1.05;margin-bottom:var(--s2)}
   @media (min-width:700px){section > h2{font-size:2.6rem}}
   @media (min-width:1100px){section > h2{font-size:3.2rem}}
   section > .section-sub{color:var(--muted);margin-bottom:var(--s3)}
-  #browse,#essentiel-section{border-top:var(--trait) solid var(--fg);padding-top:var(--s3)}
+  #browse{border-top:var(--trait) solid var(--fg);padding-top:var(--s3)}
 
   .card{padding:0;border:0;background:none}
 
@@ -110,36 +111,44 @@
   .theme-tag::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--tc,var(--muted))}
   .meta-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0}
 
-  /* aujourd’hui : titre, niveau de preuve, résumé, limites. Même ordre dans le code, à l’écran et au lecteur d’écran. */
-  #today > h2{font:700 1rem/1.3 "Atkinson Hyperlegible",system-ui,sans-serif;letter-spacing:0;color:var(--fg);margin-bottom:2px;padding-top:var(--s2)}
-  #today > .section-sub{margin-bottom:var(--s3)}
-  #today .art{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-areas:"tete fiche" "corps fiche" "lim fiche";gap:0 clamp(24px,5vw,80px);align-items:start}
-  #today .tete{grid-area:tete}.fiche{grid-area:fiche}#today .corps{grid-area:corps}#today .lim{grid-area:lim}
-  #today h3{font-size:1.7rem;line-height:1.08;margin:0 0 var(--s3);overflow-wrap:anywhere}
-  #today .corps,#today .lim,.fiche{overflow-wrap:anywhere}
-  @media (min-width:700px){#today h3{font-size:2.45rem}}
-  @media (min-width:1100px){#today h3{font-size:3rem}}
-  #today .tete .meta-row{margin-bottom:var(--s4)}
-  #today .flash-date{color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums;white-space:nowrap}
-  #today .corps p{max-width:62ch;font-size:1.125rem;line-height:1.65;margin:0 0 var(--s3)}
-  #today .lim{padding-top:var(--s3)}
-  #today .flash-limites{margin:0;max-width:62ch;font-size:1.1rem;line-height:1.55;color:var(--fg)}
-  #today .flash-pratique{margin-top:var(--s3);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
-  #today .flash-pratique > summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:56px;display:flex;align-items:center}
-  #today .flash-pratique[open]{padding-bottom:var(--s3)}
-  #today .flash-pratique > div{max-width:62ch}
-  #today .flash-more{margin:var(--s2) 0 0}
-  #today .flash-more a{display:inline-flex;align-items:center;min-height:44px}
-  #today .flash-source{color:var(--muted);margin:var(--s3) 0 0;overflow-wrap:anywhere;max-width:62ch;font-size:1rem}
-  #today-empty{color:var(--muted)}
-  /* fiche de preuve : sous un gros trait, la limite qui change l’interprétation dite tout de suite */
-  .fiche{border-top:var(--trait-l) solid var(--fg);padding-top:var(--s3);align-self:start;position:sticky;top:var(--s3)}
-  .fiche h4{font:500 1.35rem/1.15 var(--voix);letter-spacing:-.01em;margin-bottom:var(--s2)}
+  /* carte d’un flash : tenir dans un écran de téléphone. Titre, repères, niveau de preuve, résumé, limites ;
+     pratique et source à un geste. Même ordre dans le code, à l’écran et au lecteur d’écran. */
+  .fc{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);overflow-wrap:anywhere}
+  .fc h3{font-size:1.45rem;line-height:1.12;margin:0}
+  .fc .meta-row{margin-top:var(--s2)}
+  .fc .flash-date{color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .fc-preuve{display:flex;align-items:center;flex-wrap:wrap;gap:var(--s1) var(--s3);border-top:var(--trait) solid var(--fg);padding-top:var(--s2)}
+  .fc-preuve h4{font:700 1rem/1.3 "Atkinson Hyperlegible",system-ui,sans-serif;letter-spacing:0;color:var(--muted)}
+  .fc-preuve .preuve{margin:0}
+  .fc-preuve .crit{flex-basis:100%}
+  .fc-resume p{margin:0 0 var(--s2);max-width:62ch;font-size:1.1rem;line-height:1.55}
+  .fc-resume p:last-child{margin-bottom:0}
+  .fc-lim{margin:0;max-width:62ch;padding-left:var(--s3);border-left:var(--trait) solid var(--line-strong);line-height:1.5}
+  .fc-plus{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .fc-plus > summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:48px;display:flex;align-items:center}
+  .fc-plus[open]{padding-bottom:var(--s3)}
+  .fc-plus h5{font:700 1rem/1.3 "Atkinson Hyperlegible",system-ui,sans-serif;margin:var(--s2) 0 2px}
+  .fc-plus p{margin:0;max-width:62ch}
+  .fc-plus .flash-source{color:var(--muted)}
+  .fc-plus .flash-more a{display:inline-flex;align-items:center;min-height:44px;margin-top:var(--s2)}
+  /* grand écran : le niveau de preuve et les limites en colonne à droite, sous un gros trait */
+  @media (min-width:861px){
+    .fc{grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-rows:auto auto auto 1fr;grid-template-areas:"tete preuve" "tete lim" "resume lim" "plus lim";gap:var(--s4) clamp(24px,5vw,80px);align-items:start}
+    .fc-tete{grid-area:tete}.fc-resume{grid-area:resume}.fc-plus{grid-area:plus}.fc-lim{grid-area:lim}
+    .fc-preuve{grid-area:preuve}
+    .fc h3{font-size:2.45rem;line-height:1.08}
+    .fc-preuve{border-top:var(--trait-l) solid var(--fg);padding-top:var(--s3);flex-direction:column;align-items:flex-start}
+    .fc-preuve h4{font:500 1.35rem/1.15 var(--voix);letter-spacing:-.01em;color:var(--fg)}
+    .fc-preuve .preuve{gap:var(--s3);font-size:1.25rem;color:var(--fg)}
+    .fc-preuve .preuve-ico{width:44px;height:44px;color:var(--fg)}
+    .fc-preuve .preuve--none,.fc-preuve .preuve--none .preuve-ico{color:var(--muted)}
+    .fc-resume p{font-size:1.2rem}
+  }
+  @media (min-width:1100px){.fc h3{font-size:3rem}}
+  .slide-empty{color:var(--muted)}
   .crit{margin:var(--s3) 0 0;padding-left:var(--s3);border-left:var(--trait-l) solid var(--fg);font-size:1.1rem;line-height:1.5}
+  .fc .crit{margin:0}
   .crit strong{display:block}
-  /* accès direct aux limites (téléphone seulement : sur grand écran elles sont à côté) */
-  .voir-limites{display:none;align-items:center;min-height:44px;margin-top:var(--s2);color:var(--accent);font-weight:700}
-  #today .lim p.flash-limites:focus{outline:none}
 
   /* légende des niveaux, à un geste de la fiche */
   .legend{margin-top:var(--s3)}
@@ -149,7 +158,7 @@
   .legend-row p{margin:2px 0 0;color:var(--muted);font-size:1rem}
 
   /* l’essentiel de la dernière revue : toujours visible, jamais filtré */
-  .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--s3);max-width:64ch}
+  .slide-ess .essentiel-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--s3);max-width:64ch}
   .essentiel-list li{position:relative;padding-left:28px;font-size:1.125rem}
   .essentiel-list li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:12px;border-radius:50%;border:var(--trait) solid var(--fg)}
 
@@ -213,6 +222,50 @@
   .item .item-body em{color:var(--muted)}
   .item .item-body .crit{margin-top:var(--s2)}
 
+
+  /* le fil : une carte plein écran par flash (ou par essentiel hebdomadaire), aimantée ; on glisse vers le haut pour la suivante.
+     Une carte plus haute que l’écran se lit en continu avant l’aimant suivant : rien n’est coupé. */
+  #fil-section{margin-inline:calc(-1 * max(var(--gut),env(safe-area-inset-left,0px)))}
+  #fil{
+    height:calc(100vh - var(--hdr,96px)); height:calc(100svh - var(--hdr,96px));
+    overflow-y:auto; scroll-snap-type:y mandatory; overscroll-behavior-y:auto;
+    scrollbar-width:none; -webkit-overflow-scrolling:touch;
+  }
+  #fil::-webkit-scrollbar{display:none}
+  /* souris et pavé : défilement libre, sans aimant (une molette à crans resterait sinon ramenée sur la même carte) ; Page suivante passe à la carte suivante */
+  @media (pointer:fine){#fil{scroll-snap-type:none}.slide{scroll-snap-stop:normal}}
+  #fil:focus{outline:none}
+  .slide{
+    min-height:100%; scroll-snap-align:start; scroll-snap-stop:always;
+    display:flex; flex-direction:column;
+    padding:var(--s4) max(var(--gut),env(safe-area-inset-right,0px)) var(--s4) max(var(--gut),env(safe-area-inset-left,0px));
+    border-bottom:var(--trait) solid var(--fg);
+  }
+  .slide:last-child{border-bottom:0}
+  .slide:focus-visible{outline:3px solid var(--accent);outline-offset:-6px;border-radius:0}
+  .kicker{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s2) var(--s3);flex-wrap:wrap;margin:0 0 var(--s3);font-weight:700;color:var(--fg)}
+  .kicker .pos{color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .kicker .kicker-note{display:block;width:100%;color:var(--muted);font-weight:400}
+  /* indice de geste : seulement sur la première carte */
+  .hint{margin-top:auto;padding-top:var(--s4);display:flex;align-items:center;justify-content:center;gap:var(--s2);color:var(--muted)}
+  .hint svg{width:22px;height:22px;animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  /* essentiel de la semaine : même trait, une voix plus grande */
+  .slide-ess h3{font-size:1.7rem;line-height:1.08;margin:0 0 var(--s4);max-width:22ch}
+  @media (min-width:700px){.slide-ess h3{font-size:2.45rem}}
+  .slide-ess .essentiel-list{border-top:var(--trait-l) solid var(--fg);padding-top:var(--s4)}
+  .slide-ess .essentiel-list li{font-size:1.2rem;line-height:1.55}
+  /* fin du fil */
+  .slide-end{justify-content:center}
+  .slide-end h3{font-size:1.7rem;line-height:1.1;margin:0 0 var(--s3)}
+  .slide-end p{color:var(--muted);max-width:44ch;margin:0 0 var(--s4)}
+  .slide-end .btns{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s3)}
+  /* en-tête : accès à l’archive */
+  .hdr-actions{display:flex;align-items:center;gap:var(--s2)}
+  .hdr-link{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;border:var(--trait) solid var(--fg);color:var(--fg);font-weight:700;text-decoration:none}
+  .hdr-link:hover{background:var(--chip-bg)}
+  .back-fil{display:inline-flex;align-items:center;min-height:44px;margin-bottom:var(--s2);font-weight:700}
+
   #empty-filter{display:none;color:var(--muted);padding-top:var(--s3)}
   #empty-filter p{margin:0 0 8px}
   .btn{font:700 1rem "Atkinson Hyperlegible",system-ui,sans-serif;min-height:48px;padding:10px 22px;border-radius:999px;border:var(--trait) solid var(--fg);background:transparent;color:var(--fg);cursor:pointer}
@@ -236,12 +289,7 @@
   :root[data-theme="dark"] #theme-toggle .icon-moon{display:block}
 
   @media (max-width:860px){
-    #today .art{grid-template-columns:1fr;grid-template-areas:"tete" "fiche" "corps" "lim"}
-    .fiche{position:static;margin-bottom:var(--s4)}
-    .voir-limites{display:inline-flex}
-    html{scroll-padding-top:var(--s3)}
-    #today .tete .meta-row{margin-bottom:var(--s3)}
-    #today .lim{margin-top:var(--s2);border-top:1px solid var(--line-strong)}
+    .hdr-link{padding:0 14px}
     .filt{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
     .filt > summary{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);min-height:56px;font-weight:700;cursor:pointer;list-style:none}
     .filt > summary::-webkit-details-marker{display:none}
@@ -262,12 +310,13 @@
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
+  <header class="top" id="top">
     <div class="pl-id"><a class="pl-logo" href="https://7nel.github.io/PL/" aria-label="Retour à PL, tous les outils" title="Retour à PL"><svg class="pl-mark" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="76"/><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M56,114 C55,100 58,86 56,70 C55,58 57,50 56,48 C64,46 78,45 80,58 C82,70 70,76 56,76"/><path d="M100,48 C99,64 101,86 100,100 C99,108 101,112 100,112 L128,111"/></g></svg></a><h1 class="pl-name"><a class="pl-title" href="./">PL-neurodev’</a></h1></div>
+    <div class="hdr-actions"><a class="hdr-link" href="#browse" data-goto-archive>Archive</a>
     <button id="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
-    </button>
+    </button></div>
   </header>
 
   <main>
@@ -276,20 +325,13 @@
     <div id="load-notice" role="status"><p id="load-notice-text"></p><button class="btn" type="button" data-retry>Réessayer</button></div>
     <noscript><p id="no-js" style="display:block">Cette page a besoin de JavaScript pour afficher la veille.</p></noscript>
 
-    <section id="today" hidden>
-      <h2 id="today-title">Aujourd’hui</h2>
-      <div class="section-sub" id="today-sub" hidden></div>
-      <div id="today-content"></div>
-      <details class="legend" id="legend"><summary>Que signifient les niveaux de preuve ?</summary><div class="legend-list" id="legend-content"></div></details>
-    </section>
-
-    <section id="essentiel-section" hidden>
-      <h2>L’essentiel de la semaine</h2>
-      <div class="section-sub" id="essentiel-sub"></div>
-      <div class="card"><ul class="essentiel-list" id="essentiel-content"></ul></div>
+    <section id="fil-section" hidden aria-labelledby="fil-titre">
+      <h2 id="fil-titre" class="sr-only">Fil de la veille</h2>
+      <div id="fil" role="feed" aria-labelledby="fil-titre"></div>
     </section>
 
     <section id="browse" hidden>
+      <a class="back-fil" href="#top" data-goto-fil>↑ Revenir au fil</a>
       <h2>Archive</h2>
       <div class="section-sub">Flashs et revues déjà parus. Cherche un mot, ou filtre par thème.</div>
       <label class="sr-only" for="search">Rechercher dans l’archive</label>
@@ -471,10 +513,11 @@
       (known ? PREUVE_LABELS[level] : "Preuve non évaluée") + '</span>';
   }
 
-  function renderLegend(){
-    document.getElementById("legend-content").innerHTML = PREUVE_LEGEND.map(function(row){
-      return '<div class="legend-row">' + preuveBadge(row[0], { always: true }) + '<p>' + escapeHtml(row[1]) + '</p></div>';
-    }).join("");
+  function legendHtml(){
+    return '<details class="legend"><summary>Que signifient les niveaux de preuve ?</summary><div class="legend-list">' +
+      PREUVE_LEGEND.map(function(row){
+        return '<div class="legend-row">' + preuveBadge(row[0], { always: true }) + '<p>' + escapeHtml(row[1]) + '</p></div>';
+      }).join("") + '</div></details>';
   }
 
   // plain-text teaser: strips markdown emphasis markers, collapses whitespace, cuts to length
@@ -536,66 +579,72 @@
     return mdInline(linked);
   }
 
-  function renderToday(){
-    var section = document.getElementById("today");
-    var content = document.getElementById("today-content");
-    var title = document.getElementById("today-title");
-    var sub = document.getElementById("today-sub");
-    section.hidden = false;
-    renderLegend();
+  var HINT = '<p class="hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>Glisse vers le haut</p>';
 
-    if(!state.flashs.length){
-      content.innerHTML = '<p id="today-empty">Aucun flash pour le moment. Le premier arrivera au prochain passage de la veille quotidienne.</p>';
-      return;
+  // carte d’un flash : titre, repères, niveau de preuve, résumé, limites (toujours visibles) ; pratique et source à un geste.
+  function flashSlide(f, i, n, first){
+    var id = "c" + i, level = f.preuve || derivePreuve(f.limites);
+    var kicker = 'Flash';
+    if(first){
+      kicker = (f.date || "") < todayISO()
+        ? 'Dernier flash<span class="kicker-note">Pas de nouveau flash aujourd’hui.</span>'
+        : 'Aujourd’hui';
     }
-    var sorted = state.flashs.slice().sort(function(a,b){ return (b.date||"").localeCompare(a.date||""); });
-    var latest = sorted[0];
-
-    // never call yesterday's flash "today"
-    if((latest.date || "") < todayISO()){
-      title.textContent = "Dernier flash";
-      sub.textContent = "Pas de nouveau flash aujourd’hui : le dernier date du " + fmtDate(latest.date) + ".";
-      sub.hidden = false;
-    }else{
-      title.textContent = "Aujourd’hui";
-      sub.hidden = true;
-    }
-
-    // la légende des niveaux vit dans la fiche de preuve ; on la remet à sa place avant de réécrire la carte (rechargement possible)
-    var legend = document.getElementById("legend");
-    section.appendChild(legend);
-    var level = latest.preuve || derivePreuve(latest.limites);
-    content.innerHTML =
-      '<div class="card art">' +
-        '<div class="tete"><h3>' + escapeHtml(latest.titre || "") + '</h3>' +
-          '<div class="meta-row">' + themeTags(latest.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(latest.date)) + '</span></div></div>' +
-        '<div class="fiche" role="group" aria-labelledby="fiche-titre"><h4 id="fiche-titre">Niveau de preuve</h4>' + preuveBadge(level, { large: true, always: true }) +
-          (latest.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + mdInline(latest.limite_critique) + '</p>' : '') +
-          (latest.limites ? '<a class="voir-limites" href="#flash-limites">Voir les limites méthodologiques <span aria-hidden="true">↓</span></a>' : '') + '</div>' +
-        '<div class="corps">' + mdBlock(latest.resume || "") +
-          (latest.pratique ? '<details class="flash-pratique"><summary>Pour ta pratique au CO</summary><div>' + mdInline(latest.pratique) + '</div></details>' : '') +
-          '<p class="flash-more"><a href="#flash-' + escapeHtml(latest.date) + '" data-open-flash="' + escapeHtml(latest.date) + '">Retrouver dans l’archive ↓</a></p></div>' +
-        '<div class="lim">' + (latest.limites ? '<p class="flash-limites" id="flash-limites" tabindex="-1"><strong>Limites.</strong> ' + mdInline(latest.limites) + '</p>' : '') +
-          (latest.source ? '<p class="flash-source">' + sourceHtml(latest.source) + '</p>' : '') + '</div>' +
-      '</div>';
-    content.querySelector(".fiche").appendChild(legend);
+    var plus = (f.pratique ? '<h5>Pour ta pratique au CO</h5><p>' + mdInline(f.pratique) + '</p>' : '') +
+      (f.source ? '<h5>Source</h5><p class="flash-source">' + sourceHtml(f.source) + '</p>' : '') +
+      (f.date ? '<p class="flash-more"><a href="#flash-' + escapeHtml(f.date) + '" data-open-flash="' + escapeHtml(f.date) + '">Retrouver dans l’archive ↓</a></p>' : '');
+    var plusLabel = f.pratique ? 'Pratique au CO et source' : 'Source';
+    return '<article class="slide slide-flash" tabindex="0" aria-posinset="' + (i+1) + '" aria-setsize="' + n + '" aria-labelledby="' + id + '-t">' +
+      '<p class="kicker"><span>' + kicker + '</span><span class="pos">' + (i+1) + ' / ' + n + '</span></p>' +
+      '<div class="fc">' +
+        '<div class="fc-tete"><h3 id="' + id + '-t">' + escapeHtml(f.titre || "") + '</h3>' +
+          '<div class="meta-row">' + themeTags(f.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(f.date)) + '</span></div></div>' +
+        '<div class="fc-preuve" role="group" aria-labelledby="' + id + '-f"><h4 id="' + id + '-f">Niveau de preuve</h4>' + preuveBadge(level, { always: true }) +
+            (f.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + mdInline(f.limite_critique) + '</p>' : '') + '</div>' +
+        '<div class="fc-resume">' + mdBlock(f.resume || "") + '</div>' +
+        (f.limites ? '<p class="fc-lim"><strong>Limites.</strong> ' + mdInline(f.limites) + '</p>' : '') +
+        (plus ? '<details class="fc-plus"><summary>' + plusLabel + '</summary>' + plus + '</details>' : '') +
+      '</div>' + (first ? HINT : '') +
+    '</article>';
   }
 
-  function renderEssentiel(){
-    var sorted = state.revues.slice().sort(function(a,b){ return (b.date_fin||"").localeCompare(a.date_fin||""); });
-    var section = document.getElementById("essentiel-section");
-    var sub = document.getElementById("essentiel-sub");
-    var content = document.getElementById("essentiel-content");
-    if(!sorted.length || !sorted[0].essentiel || !sorted[0].essentiel.length){
-      section.hidden = true;
-      return;
-    }
-    var latest = sorted[0];
+  function essentielSlide(r, i, n, first){
+    var id = "c" + i;
+    return '<article class="slide slide-ess" tabindex="0" aria-posinset="' + (i+1) + '" aria-setsize="' + n + '" aria-labelledby="' + id + '-t">' +
+      '<p class="kicker"><span>L’essentiel de la semaine</span><span class="pos">' + (i+1) + ' / ' + n + '</span></p>' +
+      '<h3 id="' + id + '-t">Semaine du ' + escapeHtml(fmtDate(r.date_debut)) + ' au ' + escapeHtml(fmtDate(r.date_fin)) + '</h3>' +
+      '<ul class="essentiel-list">' + r.essentiel.map(function(pt){ return '<li>' + mdInline(pt) + '</li>'; }).join("") + '</ul>' +
+      (first ? HINT : '') +
+    '</article>';
+  }
+
+  // fil : flashs du plus récent au plus ancien ; l’essentiel d’une revue se place juste après les flashs parus depuis
+  function renderFil(flashsOk){
+    var section = document.getElementById("fil-section");
+    var fil = document.getElementById("fil");
+    var slides = [];
+    if(flashsOk) state.flashs.forEach(function(f){ slides.push({ key: (f.date || "") + "~1", kind: "flash", d: f }); });
+    state.revues.forEach(function(r){
+      if(r.essentiel && r.essentiel.length) slides.push({ key: (r.date_fin || "") + "~0", kind: "ess", d: r });
+    });
+    slides.sort(function(a,b){ return b.key.localeCompare(a.key); });
     section.hidden = false;
-    sub.textContent = "Semaine du " + fmtDate(latest.date_debut) + " au " + fmtDate(latest.date_fin);
-    content.innerHTML = latest.essentiel.map(function(pt){
-      return '<li>' + mdInline(pt) + '</li>'; // même rendu assaini que le reste du site : *italique* n’apparaît plus avec ses astérisques
+    var n = slides.length + 1;
+    var html = slides.map(function(sl, i){
+      return sl.kind === "flash" ? flashSlide(sl.d, i, n, i === 0) : essentielSlide(sl.d, i, n, i === 0);
     }).join("");
+    if(!slides.length){
+      html = '<article class="slide slide-end" tabindex="0" aria-posinset="1" aria-setsize="1"><p class="slide-empty">Aucun flash pour le moment. Le premier arrivera au prochain passage de la veille quotidienne.</p></article>';
+    }else{
+      html += '<article class="slide slide-end" tabindex="0" aria-posinset="' + n + '" aria-setsize="' + n + '" aria-labelledby="fin-t">' +
+        '<p class="kicker"><span>Fin du fil</span><span class="pos">' + n + ' / ' + n + '</span></p>' +
+        '<h3 id="fin-t">Tu as tout parcouru.</h3>' +
+        '<p>Pour retrouver un élément par thème ou par mot, ou lire le texte intégral des revues : l’archive.</p>' +
+        legendHtml() +
+        '<div class="btns" style="margin-top:var(--s4)"><a class="btn hdr-link" href="#browse" data-goto-archive>Ouvrir l’archive ↓</a><button class="btn" type="button" data-goto-fil>↑ Revenir au début</button></div>' +
+      '</article>';
+    }
+    fil.innerHTML = html;
   }
 
   function periodLabel(revue){
@@ -728,8 +777,7 @@
     var bucket = el.closest("details.bucket");
     if(bucket) bucket.open = true;
     el.open = true;
-    var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    el.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
+    el.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "center" });
   });
 
   function applyFilter(){
@@ -825,11 +873,50 @@
     });
   }
 
+
+  // hauteur de l’en-tête : le fil occupe exactement le reste de l’écran
+  function syncHeader(){
+    var h = document.querySelector("header.top").offsetHeight;
+    document.documentElement.style.setProperty("--hdr", h + "px");
+  }
+
+  function calm(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+
+  // aller à l’archive / revenir au début du fil
+  document.addEventListener("click", function(e){
+    var t = e.target.closest && e.target.closest("[data-goto-archive],[data-goto-fil]");
+    if(!t) return;
+    e.preventDefault();
+    var how = calm() ? "auto" : "smooth";
+    if(t.hasAttribute("data-goto-archive")){
+      var b = document.getElementById("browse");
+      b.scrollIntoView({ behavior: how, block: "start" });
+      document.getElementById("search").focus({ preventScroll: true });
+    }else if(t.hasAttribute("data-goto-fil")){
+      window.scrollTo({ top: 0, behavior: how });
+      var fil = document.getElementById("fil");
+      fil.scrollTo({ top: 0, behavior: how });
+      var firstCard = fil.querySelector(".slide");
+      if(firstCard) firstCard.focus({ preventScroll: true });
+    }
+  });
+
+  // clavier, dans le fil : Page suivante / précédente passent d’une carte à l’autre (pattern ARIA « feed »)
+  document.addEventListener("keydown", function(e){
+    var card = e.target.closest && e.target.closest("#fil .slide");
+    if(!card || e.target !== card) return;
+    var next = null;
+    if(e.key === "PageDown") next = card.nextElementSibling;
+    else if(e.key === "PageUp") next = card.previousElementSibling;
+    else return;
+    e.preventDefault();
+    if(next){ next.scrollIntoView({ behavior: calm() ? "auto" : "smooth", block: "start" }); next.focus({ preventScroll: true }); }
+  });
+
   function boot(data){
     state.flashs = data.flashs || [];
     state.revues = data.revues || [];
-    if(data.flashsOk) renderToday(); else document.getElementById("today").hidden = true;
-    renderEssentiel();
+    renderFil(data.flashsOk);
     renderBrowse();
   }
 
@@ -882,6 +969,10 @@
 
   function start(){
     initThemeToggle();
+    syncHeader();
+    window.addEventListener("resize", syncHeader);
+    if(window.ResizeObserver) new ResizeObserver(syncHeader).observe(document.querySelector("header.top"));
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncHeader);
     bindControls();
     load();
     // offline copy: the last flashs and reviews stay readable without network

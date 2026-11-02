@@ -6,7 +6,7 @@ Site statique, pas de connexion requise : https://7nel.github.io/PL-neurodev/
 
 ## Structure
 
-- `index.html` — la page (design, logique de filtrage, rendu markdown), lit les données via `fetch()`
+- `index.html` — la page (fil de cartes plein écran, archive filtrable, rendu markdown), lit les données via `fetch()`
 - `data/flashs.json` — flashs quotidiens (tableau, un objet par jour : `date`, `themes`, `titre`, `resume` (1–2 phrases : ce qui est dit), `limites` (niveau de preuve et limites, optionnel), `pratique` (pour la pratique au CO, optionnel), `preuve` (optionnel : `solide`, `nuance` ou `floue`), `source`)
 - `data/revues.json` — revues hebdomadaires (tableau, un objet par semaine : `date_debut`, `date_fin`, `titre`, `essentiel` (3 points ; markdown en ligne accepté, par exemple `*Pediatrics*` pour l’italique ou `**…**` pour le gras), `items` (tableau `{section, themes, titre?, preuve?, texte}`))
 - `sw.js` — copie hors ligne : la page, les polices et les dernières données restent lisibles sans réseau (réseau d'abord pour la page et les JSON)
@@ -22,7 +22,7 @@ Pas besoin de toucher `index.html` pour ajouter du contenu : il suffit d'ajouter
 
 ## Niveau de preuve
 
-Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Sans niveau, la carte du flash du jour affiche « Preuve non évaluée » ; dans l'archive, ce message figure en tête du texte déployé. Une légende des niveaux est dépliable sous la carte du jour.
+Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Sans niveau, la carte du flash dans le fil affiche « Preuve non évaluée » ; dans l'archive, ce message figure en tête du texte déployé. Une légende des niveaux est dépliable sur la dernière carte du fil.
 
 ## Archive
 
