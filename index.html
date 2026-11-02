@@ -111,7 +111,7 @@
   .theme-tag::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;background:var(--tc,var(--muted))}
   .meta-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0}
 
-  /* carte d’un flash : tenir dans un écran de téléphone. Titre, repères, niveau de preuve, résumé, limites ;
+  /* carte d’un flash : tenir dans un écran de téléphone. Titre, repères, résumé (ce qui a été trouvé), puis niveau de preuve et limites ;
      pratique et source à un geste. Même ordre dans le code, à l’écran et au lecteur d’écran. */
   .fc{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);overflow-wrap:anywhere}
   .fc h3{font-size:1.45rem;line-height:1.12;margin:0}
@@ -131,9 +131,9 @@
   .fc-plus p{margin:0;max-width:62ch}
   .fc-plus .flash-source{color:var(--muted)}
   .fc-plus .flash-more a{display:inline-flex;align-items:center;min-height:44px;margin-top:var(--s2)}
-  /* grand écran : le niveau de preuve et les limites en colonne à droite, sous un gros trait */
+  /* grand écran : le résumé à gauche d’abord, le niveau de preuve et les limites en colonne à droite, sous un gros trait */
   @media (min-width:861px){
-    .fc{grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-rows:auto auto auto 1fr;grid-template-areas:"tete preuve" "tete lim" "resume lim" "plus lim";gap:var(--s4) clamp(24px,5vw,80px);align-items:start}
+    .fc{grid-template-columns:minmax(0,7fr) minmax(0,4fr);grid-template-rows:auto auto auto 1fr;grid-template-areas:"tete tete" "resume preuve" "resume lim" "plus lim";gap:var(--s4) clamp(24px,5vw,80px);align-items:start}
     .fc-tete{grid-area:tete}.fc-resume{grid-area:resume}.fc-plus{grid-area:plus}.fc-lim{grid-area:lim}
     .fc-preuve{grid-area:preuve}
     .fc h3{font-size:2.45rem;line-height:1.08}
@@ -563,7 +563,7 @@
   /* a flash is resume + optional limites + optional pratique (older flashes have resume only) */
   function flashText(f){
     var t = f.resume || "";
-    if(f.limite_critique) t = "**Limite à retenir\u202f:** " + f.limite_critique + "\n\n" + t;
+    if(f.limite_critique) t += "\n\n**Limite à retenir\u202f:** " + f.limite_critique;
     if(f.limites) t += "\n\n**Limites\u202f:** " + f.limites;
     if(f.pratique) t += "\n\n**Pour ta pratique au CO\u202f:** " + f.pratique;
     return t;
@@ -581,7 +581,7 @@
 
   var HINT = '<p class="hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>Glisse vers le haut</p>';
 
-  // carte d’un flash : titre, repères, niveau de preuve, résumé, limites (toujours visibles) ; pratique et source à un geste.
+  // carte d’un flash : titre, repères, résumé d’abord, puis niveau de preuve et limites (toujours visibles) ; pratique et source à un geste.
   function flashSlide(f, i, n, first){
     var id = "c" + i, level = f.preuve || derivePreuve(f.limites);
     var kicker = 'Flash';
@@ -599,9 +599,9 @@
       '<div class="fc">' +
         '<div class="fc-tete"><h3 id="' + id + '-t">' + escapeHtml(f.titre || "") + '</h3>' +
           '<div class="meta-row">' + themeTags(f.themes) + '<span class="flash-date">' + escapeHtml(fmtDate(f.date)) + '</span></div></div>' +
+        '<div class="fc-resume">' + mdBlock(f.resume || "") + '</div>' +
         '<div class="fc-preuve" role="group" aria-labelledby="' + id + '-f"><h4 id="' + id + '-f">Niveau de preuve</h4>' + preuveBadge(level, { always: true }) +
             (f.limite_critique ? '<p class="crit"><strong>Limite à retenir</strong>' + mdInline(f.limite_critique) + '</p>' : '') + '</div>' +
-        '<div class="fc-resume">' + mdBlock(f.resume || "") + '</div>' +
         (f.limites ? '<p class="fc-lim"><strong>Limites.</strong> ' + mdInline(f.limites) + '</p>' : '') +
         (plus ? '<details class="fc-plus"><summary>' + plusLabel + '</summary>' + plus + '</details>' : '') +
       '</div>' + (first ? HINT : '') +
@@ -728,7 +728,7 @@
         '<div class="item-teaser">' + escapeHtml(teaser(it.texte, 140)) + '</div>' +
         '<div class="item-tags meta-row"><span class="type-tag">' + escapeHtml(TYPE_LABELS[it.type] || "") + '</span>' + preuveBadge(it.preuve) + themeTags(it.themes) + '</div>' +
       '</summary>' +
-      '<div class="item-body">' + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + mdBlock(it.texte || "") + '</div>' +
+      '<div class="item-body">' + mdBlock(it.texte || "") + (it.preuve ? '' : '<div class="meta-row">' + preuveBadge(null, { always: true }) + '</div>') + '</div>' +
     '</details>';
   }
 

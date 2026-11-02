@@ -3,7 +3,7 @@
 Ce document est volontairement **séparé du `README.md`**, que lit la veille automatique pour connaître le format des données. Le champ décrit ici est **rédigé à la main**. La veille automatique ne doit ni le produire ni le modifier.
 
 ## Rôle
-Mettre en tête de fiche la seule limite méthodologique qui change l’interprétation d’un flash (par exemple « rapport d’experts, non une méta-analyse »). Il complète `limites`, il ne le remplace pas.
+Mettre en évidence, juste après le résultat, la seule limite méthodologique qui change l’interprétation d’un flash (par exemple « rapport d’experts, non une méta-analyse »). Il complète `limites`, il ne le remplace pas.
 
 ## Format
 Dans `data/flashs.json`, un flash peut porter un champ de plus :
@@ -24,8 +24,8 @@ Dans `data/flashs.json`, un flash peut porter un champ de plus :
 - Aucun flash existant n’est à modifier ; aucun autre champ ne change.
 
 ## Affichage (`index.html`)
-- Flash du jour : bloc « Limite à retenir », juste sous le niveau de preuve (même colonne sur téléphone, colonne de droite sur grand écran).
-- Archive : repris en tête du texte déployé du flash (« **Limite à retenir :** … »), et donc trouvé par la recherche.
+- Flash du jour : bloc « Limite à retenir », juste sous le niveau de preuve, après le résumé (même colonne sur téléphone, colonne de droite sur grand écran).
+- Archive : repris après le résumé dans le texte déployé du flash (« **Limite à retenir :** … »), et donc trouvé par la recherche.
 - Aucune déduction : le site **n’utilise jamais** la première phrase de `limites` à sa place.
 
 ## Compatibilité

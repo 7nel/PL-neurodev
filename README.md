@@ -22,7 +22,7 @@ Pas besoin de toucher `index.html` pour ajouter du contenu : il suffit d'ajouter
 
 ## Niveau de preuve
 
-Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Sans niveau, la carte du flash dans le fil affiche « Preuve non évaluée » ; dans l'archive, ce message figure en tête du texte déployé. Une légende des niveaux est dépliable sur la dernière carte du fil.
+Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `nuance`, `floue`), affiché en badge (pictogramme plein / demi / vide + libellé). Sans ce champ, le site lit le premier mot de la ligne « Niveau de preuve » du texte d'un item de revue : « élevé » donne `solide`, « modéré » donne `nuance`, « faible » donne `floue`. C'est une lecture automatique du premier mot, à vérifier. Sans niveau, la carte du flash dans le fil affiche « Preuve non évaluée » ; dans l'archive, ce message figure à la fin du texte déployé. Une légende des niveaux est dépliable sur la dernière carte du fil.
 
 ## Archive
 
