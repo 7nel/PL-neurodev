@@ -26,7 +26,7 @@ Chaque flash et chaque item de revue peut porter un champ `preuve` (`solide`, `n
 
 ## Archive
 
-L'archive est classée par semaine : chaque revue hebdomadaire forme un groupe, avec les flashs de la même période (les flashs plus récents que la dernière revue sont regroupés sous « Depuis la dernière revue »). La semaine la plus récente est ouverte, les autres repliées. Un second classement, « Type », regroupe par Zone floue, Pratique au CO, Étude, etc. Chaque carte porte son type, son thème et son badge de preuve. La recherche plein texte (accents ignorés) et le filtre par thème ouvrent les groupes qui correspondent.
+L'archive est classée par semaine : chaque revue hebdomadaire forme un groupe, avec les flashs de la même période (les flashs plus récents que la dernière revue sont regroupés sous « Depuis la dernière revue »). La semaine la plus récente est ouverte, les autres repliées. Dans chaque semaine, ce qui a été trouvé passe avant les réserves : études, flashs, pratique au CO, contexte suisse, puis divergences, zones floues et points à surveiller. Un second classement, « Type », regroupe dans le même ordre. Chaque carte porte son type, son thème et son badge de preuve. La recherche plein texte (accents ignorés) et le filtre par thème ouvrent les groupes qui correspondent.
 
 ## Consigne pour la veille automatique
 

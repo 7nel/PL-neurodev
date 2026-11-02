@@ -380,8 +380,8 @@
     "attachement": "var(--c-attachement)", "transversal": "var(--c-transversal)"
   };
 
-  // display order: what Pauline looks for most (cautions, practice) comes first
-  var SECTION_ORDER = ["zone_floue","implication_co","etude","flash","divergence","contexte_suisse","a_surveiller"];
+  // display order: findings first (studies, practice, Swiss context), then debates and cautions (since 2026-11-02, at Pauline's request)
+  var SECTION_ORDER = ["etude","flash","implication_co","contexte_suisse","divergence","zone_floue","a_surveiller"];
   var TYPE_LABELS = {
     "flash": "Flash", "etude": "Étude", "divergence": "Divergence", "zone_floue": "Zone floue",
     "implication_co": "Pratique au CO", "contexte_suisse": "Contexte suisse", "a_surveiller": "À surveiller"
@@ -690,7 +690,7 @@
 
   function byDateDesc(a, b){ return (b.sortKey||"").localeCompare(a.sortKey||""); }
 
-  // by week: newest week first, cautions and practice first inside it. by type: the sections in display order, newest first.
+  // by week: newest week first, findings first inside it. by type: the sections in display order, newest first.
   function buildGroups(all){
     var groups = [];
     if(state.view === "type"){
