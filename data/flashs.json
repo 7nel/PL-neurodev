@@ -379,5 +379,16 @@
     "limites": "Transversal, petit échantillon, mesures auto-rapportées, pas d'inférence causale ni de trajectoire ; résultats à répliquer. Zone floue : les synthèses consultées divergent sur le rôle du perfectionnisme adaptatif. Je n'ai pas pu lire le résumé original ni le texte intégral (accès aux bases bloqué) : informations tirées de notices secondaires, à vérifier avant toute citation.",
     "pratique": "Éviter d'inférer une détresse du seul perfectionnisme d'un élève HPI : observer les effets fonctionnels (évitement, procrastination, peur de l'erreur) avant d'adapter la guidance.",
     "source": "Sánchez-Moncayo, M. R., Menacho, I., Ramiro, P., & Navarro, J. I. (2025). Perfectionism and psychological well-being in adolescents with high intellectual abilities. *Frontiers in Psychology, 16*, Article 1617755. https://doi.org/10.3389/fpsyg.2025.1617755"
+  },
+  {
+    "date": "2026-11-02",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "Transition vers le secondaire : STRIPES+, intervention par les pairs pour élèves TDA/H (essai randomisé)",
+    "resume": "Rappel : essai randomisé (N = 72, élèves de 9e année américaine avec TDA/H symptomatique et en difficulté fonctionnelle) comparant STRIPES+ (orientation scolaire d'une semaine animée par des pairs + six séances de guidance parentale) aux services scolaires habituels. Aucun effet immédiat sur les critères principaux (scolaires, symptômes TDA/H) n'est rapporté.",
+    "limites": "Essai de développement, petit échantillon, contexte scolaire américain, comparateur « services habituels » ; effets à plus long terme et engagement non vérifiés ici. Seul un extrait du résumé (design, N, résultat principal) a pu être consulté, pas le texte intégral ni les résultats secondaires.",
+    "pratique": "Lors du passage primaire-secondaire ou 8e-9e, un accueil préparatoire par des pairs ne suffit probablement pas à lui seul : à combiner avec un soutien organisationnel suivi et une coordination avec la famille, en l'évaluant sur des indicateurs précis.",
+    "source": "Sibley, M. H., Van Dreel, S., Coxe, S. J., Ortiz, M., Aaronson, B., Matlack, A., Rainwater, T., Kircher, B. E., Langberg, J., Lyon, A., Yi, A., & Yeguez, C. E. (2026). Randomized controlled trial of a peer-delivered high school preparatory intervention for ADHD. *Journal of Attention Disorders*. https://doi.org/10.1177/10870547261440604"
   }
 ]
