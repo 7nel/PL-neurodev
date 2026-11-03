@@ -390,5 +390,18 @@
     "limites": "Essai de développement, petit échantillon, contexte scolaire américain, comparateur « services habituels » ; effets à plus long terme et engagement non vérifiés ici. Seul un extrait du résumé (design, N, résultat principal) a pu être consulté, pas le texte intégral ni les résultats secondaires.",
     "pratique": "Lors du passage primaire-secondaire ou 8e-9e, un accueil préparatoire par des pairs ne suffit probablement pas à lui seul : à combiner avec un soutien organisationnel suivi et une coordination avec la famille, en l'évaluant sur des indicateurs précis.",
     "source": "Sibley, M. H., Van Dreel, S., Coxe, S. J., Ortiz, M., Aaronson, B., Matlack, A., Rainwater, T., Kircher, B. E., Langberg, J., Lyon, A., Yi, A., & Yeguez, C. E. (2026). Randomized controlled trial of a peer-delivered high school preparatory intervention for ADHD. *Journal of Attention Disorders*. https://doi.org/10.1177/10870547261440604"
+  },
+  {
+    "date": "2026-11-03",
+    "themes": [
+      "dys-tsle",
+      "tdl-tdc"
+    ],
+    "titre": "Dyslexie avec ou sans TDL : facteurs de risque cognitifs partagés",
+    "resume": "Rappel : selon Snowling, Hayiou-Thomas et Hulme (2026), la dyslexie, trouble de l'écrit, et le TDL, trouble du langage oral, **partagent des facteurs de risque cognitifs** et peuvent coexister ; les auteurs en tirent des implications pour l'évaluation et l'intervention. Article de l'*Annals of Dyslexia* (accès libre) ; type d'étude, N et chiffres non vérifiés (résumé uniquement).",
+    "limites": "Limite principale : seul un extrait du résumé a pu être consulté, ni le texte intégral, ni l'échantillon, ni les effets ; les conclusions détaillées sont donc inconnues. Aucune recherche récente solide n'a été trouvée sur 24–72 h ; ce rappel remplace un flash sur une nouveauté. Distinction à garder : trouble du langage oral vs difficultés liées à une langue seconde chez les élèves allophones.",
+    "pratique": "Chez un élève en difficulté de lecture, vérifier aussi le langage oral (compréhension, vocabulaire, syntaxe) avant de conclure à une dyslexie isolée, et en parler au logopédiste.",
+    "preuve": "floue",
+    "source": "Snowling, M. J., Hayiou-Thomas, M. E., & Hulme, C. (2026). Dyslexia with and without developmental language disorder: Profile analysis. *Annals of Dyslexia*. https://doi.org/10.1007/s11881-025-00358-7"
   }
 ]
