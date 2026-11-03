@@ -1140,5 +1140,136 @@
         "texte": "Lecture complète de la méta-analyse de Yi et al. (2026) : effets par type de mesure, rôle de la durée et du format (individuel ou petit groupe), et existence d'études en langue romane."
       }
     ]
+  },
+  {
+    "date_debut": "2026-10-27",
+    "date_fin": "2026-11-02",
+    "titre": "Semaine du 27 octobre au 2 novembre 2026",
+    "essentiel": [
+      "**Pays de Galles : l'écart scolaire des jeunes suivis en pédopsychiatrie se creuse.** Le taux d'échec au seuil minimal du GCSE baisse dans la population (6,9 % → 3,7 %), mais pas au même rythme chez les jeunes passés par les services de pédopsychiatrie. Au CO, le suivi psychique ne remplace pas un objectif scolaire explicite ; il s'agit de données administratives galloises, sans intervention testée.",
+      "**Crise suicidaire aux urgences : jeunes autistes surreprésentés, plus jeunes et déjà suivis.** Dans un hôpital pédiatrique britannique, **35,8 %** des 338 jeunes de 8 à 16 ans venus pour crise suicidaire étaient autistes, dont 62 % de filles, et 74 % étaient déjà connu·es des services de pédopsychiatrie. Une demande d'aide antérieure ne protège donc pas ; l'étude porte sur un seul site et des dossiers rétrospectifs.",
+      "**Fumées d'incendie pendant la grossesse : risque d'autisme accru de 30 % par palier.** Une cohorte de 893 212 paires mère-enfant (Medicaid, États-Unis) associe chaque hausse de 0,75 µg/m³ de particules fines d'incendie à un risque d'autisme plus élevé, sans lien avec le TDA/H. C'est une association observationnelle, qui n'explique pas la hausse des diagnostics et ne change rien à la pratique en classe."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "transversal"
+        ],
+        "preuve": "floue",
+        "titre": "Jeunes suivis en pédopsychiatrie : l'écart de réussite scolaire s'est creusé en dix ans",
+        "texte": "**À retenir :** chez les jeunes Gallois suivis en pédopsychiatrie, le risque de ne pas atteindre le seuil scolaire minimal s'est **aggravé d'une cohorte à l'autre**, alors qu'il baissait dans la population générale.\n\n**Résultats :**\n- Population générale : la part de jeunes sous le seuil GCSE de niveau 1 passe de **6,9 %** (nés en 1992–1997) à **3,7 %** (nés en 1998–2003).\n- L'association entre suivi pédopsychiatrique et échec au niveau 1 devient plus forte dans la cohorte récente : rapport de cotes d'interaction **1,30** pour les jeunes suivis en ambulatoire, **1,80** pour les jeunes hospitalisé·es.\n- Les auteur·es concluent à un écart croissant malgré l'amélioration générale.\n\n**Ce que ça change :** un suivi psychique, même hospitalier, ne garantit pas la continuité scolaire ; l'objectif d'une certification minimale doit être posé explicitement dans le projet de l'élève. L'étude ne dit pas quelle mesure scolaire réduit l'écart.\n\n**L'étude :** les jeunes en contact avec les services de pédopsychiatrie (CAMHS) réussissent-ils moins bien à l'école, et cet écart évolue-t-il ? Cohorte longitudinale sur données administratives liées (banque SAIL) : personnes nées au Pays de Galles entre 1992 et 2003, suivies jusqu'en 2019, comparaison de deux cohortes de naissance.\n\n**Niveau de preuve :** modéré pour le design (cohorte nationale, données liées, grand effectif) ; badge « floue » parce que seuls des extraits du résumé ont été lus.\n\n**Limites :**\n- Résumé seulement (extraits via moteur de recherche) : effectifs, ajustements et intervalles de confiance non vérifiés.\n- Observationnel : l'écart peut refléter un changement du public adressé en pédopsychiatrie (seuils d'accès plus sévères) plutôt qu'une dégradation de l'aide scolaire.\n- Un seul pays, système scolaire et examens différents de la Suisse ; données arrêtées en 2019 (avant la pandémie).\n- Diagnostics non détaillés dans les extraits lus : part des TND inconnue.\n\nO'Hare, K., Wertz, J., Marryat, L., Kelleher, I., et al. (2026). Widening educational inequalities for young people attending child and adolescent mental health services: A longitudinal cohort study. *Journal of Child Psychology and Psychiatry*. Publication en ligne le 28 octobre 2026. Résumé : https://ifp.nyu.edu/2026/journal-article-abstracts/jcpp-70260-2/ (liste complète des auteur·es et DOI non vérifiés ; texte intégral non lu)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "preuve": "floue",
+        "titre": "Crise suicidaire aux urgences : plus d'un jeune sur trois est autiste, dès 8 ans",
+        "texte": "**À retenir :** dans un service d'urgences pédiatriques britannique, **35,8 %** des jeunes venus pour crise suicidaire étaient autistes, et ils consultaient plus jeunes que leurs pairs.\n\n**Résultats :**\n- Parmi les jeunes autistes, **62 %** étaient des filles.\n- Âge minimal de présentation : 8 ans chez les jeunes autistes, 10 ans chez les autres ; différence d'âge significative selon les auteur·es.\n- Déjà connu·es des services de pédopsychiatrie : **74 %** contre 49 %. Retours répétés aux urgences pour crise suicidaire : 31 % contre 18 %.\n\n**Ce que ça change :** une demande d'aide déjà faite ou un suivi en cours ne signifient pas que le risque est maîtrisé. Chez un·e élève autiste, surtout une fille, des propos suicidaires appellent la même réponse que chez tout élève, sans minimiser à cause de l'âge ou d'une expression atypique.\n\n**L'étude :** les jeunes autistes sont-ils surreprésentés parmi les passages aux urgences pour crise suicidaire, et avec quel parcours ? Revue rétrospective de dossiers médicaux : 338 jeunes de 8 à 16 ans, 472 passages, un hôpital pédiatrique britannique, 2019–2021 (équipe de Liverpool John Moores University, Anna Freud, Edge Hill, UCL et Alder Hey).\n\n**Niveau de preuve :** faible (un seul site, données rétrospectives de routine) ; badge « floue ».\n\n**Limites :**\n- Un seul hôpital : les proportions ne sont pas une prévalence générale.\n- Diagnostic d'autisme relevé dans les dossiers, sans évaluation standardisée ; des jeunes non diagnostiqué·es ont pu être classé·es non autistes.\n- Pas de données sur la scolarité ni sur ce qui a précédé la crise.\n- Seuls le résumé et des comptes rendus de presse ont été lus.\n\n[Auteur·es non vérifié·es]. (2026). Over-represented and under-served: Autistic children and young people seeking help for suicidal crisis in a UK emergency department. *Journal of Autism and Developmental Disorders*. https://doi.org/10.1007/s10803-026-07424-y (auteur·es, volume et date de publication en ligne non vérifiés ; texte intégral non lu)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "preuve": "floue",
+        "titre": "Fumées d'incendie pendant la grossesse : associées à l'autisme, pas au TDA/H",
+        "texte": "**À retenir :** chaque hausse de 0,75 µg/m³ des particules fines d'incendie pendant la grossesse est associée à un **risque d'autisme supérieur de 30 %**, sans lien significatif avec le TDA/H.\n\n**Résultats :**\n- Effectif : **893 212** paires mère-enfant, enfants nés entre 2007 et 2014 et couverts par Medicaid (États-Unis).\n- Association la plus nette pour une exposition **après la 15e semaine** de grossesse.\n- Aucune association significative avec un diagnostic de TDA/H.\n\n**Ce que ça change :** rien pour la pratique au CO. L'étude peut nourrir des questions de familles ; la réponse juste est « association observée, cause non démontrée ».\n\n**L'étude :** l'exposition prénatale aux PM2.5 issues des feux de forêt est-elle associée à un diagnostic ultérieur de TSA ou de TDA/H ? Cohorte rétrospective ; exposition modélisée chaque semaine selon le code postal de résidence de la mère ; diagnostics tirés des données Medicaid (Rutgers, Harvard T.H. Chan et autres institutions).\n\n**Niveau de preuve :** modéré pour le design (très grand effectif, exposition fine dans le temps) ; badge « floue » parce que seuls des comptes rendus secondaires ont été lus.\n\n**Limites :**\n- Observationnel : la causalité n'est pas établie ; facteurs de confusion résiduels possibles (lieu de vie, revenu, accès au diagnostic).\n- Rapport de risque exact et intervalle de confiance non trouvés ; le « 30 % » est un risque relatif par palier, pas un risque absolu.\n- Population Medicaid (revenus modestes) : généralisation incertaine, a fortiori à la Suisse.\n- Exposition estimée à l'adresse, pas mesurée individuellement.\n\nPapatheodorou, S., et al. (2026). Prenatal exposure to wildfire PM2.5 and risk of ASD and ADHD in children enrolled in Medicaid. *JAMA Pediatrics*. https://doi.org/10.1001/jamapediatrics.2026.5045 (liste des auteur·es et titre exact non vérifiés ; communiqués et presse consultés via extraits de moteur de recherche ; texte intégral non lu)"
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**Pour un·e élève suivi·e en pédopsychiatrie, inscrire un objectif scolaire explicite dans le projet (certification visée, branches prioritaires), et le revoir avec le réseau de soins.** L'étude galloise (O'Hare et al., 2026) montre que ces jeunes décrochent davantage que leurs pairs, et que l'écart s'est creusé. Concrètement : un interlocuteur scolaire désigné pendant et après une hospitalisation, un plan de retour progressif, des contenus essentiels identifiés plutôt qu'un rattrapage intégral. Réserve : l'étude ne teste aucune mesure ; ces pistes sont des extrapolations, et le contexte valaisan (CDTEA, mesures d'enseignement spécialisé) n'a pas été étudié."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**Traiter tout propos suicidaire d'un·e élève autiste comme un signal à transmettre le jour même, même si l'élève est déjà suivi·e.** Dans l'étude britannique, 74 % des jeunes autistes en crise étaient déjà connu·es des services et 31 % revenaient aux urgences. À prévoir avec l'infirmerie ou le psychologue scolaire : une personne de référence, un moyen de dire « ça ne va pas » adapté à l'élève (écrit, échelle visuelle), un lieu de retrait calme. Réserve : ce sont des données d'urgences sur un seul site ; l'effet de ces mesures scolaires n'a pas été évalué ici."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "tsa"
+        ],
+        "titre": "Pétition pour une mise à jour du rapport fédéral de 2018 sur l'autisme",
+        "texte": "La session 2026 des personnes handicapées demande au Conseil fédéral d'évaluer et de mettre à jour son rapport de 2018 sur les troubles du spectre de l'autisme. Selon le texte de la pétition 4.2, on ignore quelles recommandations de 2018 ont été appliquées et avec quels effets, alors que les connaissances ont progressé (autisme à l'âge adulte, chez les femmes, besoins sensoriels). Elle demande aussi des mesures pour un accès équitable aux soins des personnes autistes et des personnes avec d'autres handicaps invisibles. Source primaire : document de pétition publié par Pro Infirmis (https://www.proinfirmis.ch/fileadmin/bilder/4_Ueber_uns/kampagnen/2026/Petitionen_Behindertensession_2026/session-2026-petition-4.2-rapport-autisme-fr.pdf) ; son adoption parmi les 16 pétitions du 21 octobre et une éventuelle réponse du Conseil fédéral n'ont pas été vérifiées."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi sur l'inclusion et loi sur l'école valaisanne : aucune échéance nouvelle trouvée",
+        "texte": "Aucun communiqué de la commission du Conseil des États (CSEC-E) sur l'Initiative pour l'inclusion et son contre-projet (26.029) n'a été trouvé pour octobre 2026. Côté valaisan, l'inscription de la 2e lecture de la Loi sur l'école valaisanne à l'ordre du jour d'une session du Grand Conseil n'a pas pu être confirmée. Statut : absence de résultat dans les recherches, à ne pas lire comme une absence de décision ; sites du Parlement et du Grand Conseil non consultés directement."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Hausse des diagnostics d'autisme : causes environnementales ou critères élargis ?",
+        "texte": "L'étude sur les fumées d'incendie relance la question de causes environnementales nouvelles, alors que d'autres travaux récents attribuent la hausse des diagnostics surtout à l'élargissement des critères.\n\n- **Piste environnementale** (Papatheodorou et al., 2026) : association entre exposition prénatale aux PM2.5 d'incendie et autisme, +30 % par palier de 0,75 µg/m³ ; les auteur·es soulignent eux-mêmes que l'étude ne prouve pas la causalité.\n- **Piste diagnostique** (LaBianca, Schork et al., *JAMA Psychiatry*, juin 2026 ; registres danois iPSYCH, 17 071 diagnostics de TSA, 20 111 de TDA/H) : le score polygénique moyen des personnes diagnostiquées baisse d'environ **0,07 écart-type par décennie** pour le TSA et 0,06 pour le TDA/H, ce que les auteur·es lisent comme un élargissement des diagnostics (chiffres tirés de comptes rendus ; texte intégral non lu).\n- **Revue Fonagy** (Angleterre, octobre 2026) : forte hausse des orientations et des diagnostics, prévalence en population globalement stable.\n\nPoint clé : les deux pistes ne s'excluent pas, mais un facteur environnemental à effet relatif modéré ne peut pas expliquer à lui seul l'ampleur de la hausse des diagnostics."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« Les fumées d'incendie provoquent l'autisme. »** L'étude montre une association dans une population Medicaid ; ni la causalité ni le risque absolu ne sont établis, et le résultat n'a pas encore été répliqué."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "**« Les jeunes suivis en pédopsychiatrie décrochent davantage parce que l'école les soutient moins bien qu'avant. »** L'étude galloise mesure un écart croissant, pas sa cause : un public adressé plus sévère (seuils d'accès relevés) produirait le même résultat."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« Plus d'un tiers des jeunes en crise suicidaire sont autistes. »** Le chiffre de 35,8 % vient d'un seul service d'urgences britannique ; il dépend du recrutement local et de l'enregistrement des diagnostics, et ne vaut pas pour l'ensemble des jeunes."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**« Le TDA/H culmine entre 10 et 14 ans. »** Ce résultat, repris d'une étude sur 34 pays d'Asie (*World Journal of Pediatrics*, publiée en ligne le 9 octobre 2026, communiqué du 20 octobre), porte sur des années vécues avec incapacité modélisées par la Global Burden of Disease, pas sur des trajectoires d'élèves ; auteur·es et chiffres n'ont pas été vérifiés."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Texte intégral d'O'Hare et al. (2026) : rôle de l'absentéisme et des exclusions dans l'écart, résultats par diagnostic (TND en particulier), et données postérieures à 2019."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "attachement",
+          "tsa",
+          "tdah"
+        ],
+        "texte": "Deux articles du *Journal of Child Psychology and Psychiatry* publiés fin octobre, à lire : la revue systématique de Hartanto et al. sur le moment des expériences adverses de l'enfance et le développement cérébral (Annual Research Review, 27 octobre), et l'étude de Hendry et al. sur fonctions exécutives et fonctionnement adaptatif à 3 ans dans un échantillon enrichi en traits autistiques et TDA/H (26 octobre)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Suites des pétitions de la session des personnes handicapées (« Ensemble à l'école », mise à jour du rapport autisme) ; calendrier de la CSEC-E pour la loi sur l'inclusion ; 2e lecture de la Loi sur l'école valaisanne."
+      }
+    ]
   }
 ]
