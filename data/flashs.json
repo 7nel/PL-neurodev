@@ -439,5 +439,17 @@
     "pratique": "Pour ta pratique au CO : garder le TSAF dans les hypothèses face à un élève avec troubles attentionnels, exécutifs ou d'adaptation sans diagnostic clair, surtout si l'histoire prénatale ou de placement est évoquée, sans l'inférer sans évaluation spécialisée.",
     "preuve": "nuance",
     "source": "Lange, S., Probst, C., Gmel, G., Rehm, J., Burd, L., & Popova, S. (2017). Global prevalence of fetal alcohol spectrum disorder among children and youth: A systematic review and meta-analysis. *JAMA Pediatrics, 171*(10), 948–956. https://doi.org/10.1001/jamapediatrics.2017.1919"
+  },
+  {
+    "date": "2026-11-07",
+    "themes": [
+      "dys-tsle"
+    ],
+    "titre": "Police OpenDyslexic : aucun gain de lecture",
+    "resume": "Rappel : **la police OpenDyslexic n'améliore ni la vitesse ni l'exactitude de lecture** par rapport à Arial et Times New Roman. Étude à cas unique à traitements alternés, environ 12 élèves de 9 à 12 ans avec dyslexie (États-Unis, anglais).",
+    "limites": "Très petit effectif, une seule langue (anglais), élèves du primaire : transfert aux adolescents non démontré. Les auteures appellent à des réplications. Rappel faute de publication solide dans les dernières 72 h ; je n'ai lu que le résumé et des descriptions secondaires, pas le texte intégral.",
+    "pratique": "Ne pas investir dans une police dite « dyslexie » comme aménagement principal ; privilégier une police sans empattement lisible, un interligne et une taille généreux, et des interventions de lecture structurées.",
+    "preuve": "floue",
+    "source": "Wery, J. J., & Diliberto, J. A. (2017). The effect of a specialized dyslexia font, OpenDyslexic, on reading rate and accuracy. *Annals of Dyslexia, 67*(2), 114–127. https://doi.org/10.1007/s11881-016-0127-1"
   }
 ]
