@@ -463,5 +463,17 @@
     "pratique": "Pour le CO : cibler des objectifs individualisés (autonomie, compétences sociales, transition) et en mesurer l'atteinte, plutôt que de s'attendre à un gain scolaire global rapide.",
     "preuve": "nuance",
     "source": "Hume, K., et al. (2021). Efficacy of a school-based comprehensive intervention program for adolescents with autism. Exceptional Children, 88(2). https://doi.org/10.1177/00144029211062589"
+  },
+  {
+    "date": "2026-11-09",
+    "themes": [
+      "dys-tsle"
+    ],
+    "titre": "Dyscalculie à l'adolescence : un essai combine adaptation prismatique et entraînement cognitif",
+    "resume": "Un essai randomisé rapporte que l'association d'une **adaptation prismatique puis d'un entraînement cognitif** améliore la précision et la vitesse en calcul ainsi que des fonctions exécutives chez des adolescents dyscalculiques. Essai contrôlé avec liste d'attente, **N = 70**, 13–17 ans, diagnostic récent (Frontiers in Psychology, 2026).",
+    "limites": "Principale limite : seuls des extraits de la notice ont été lus, ni le résumé complet ni le texte intégral ; les tailles d'effet et valeurs p n'ont pas pu être vérifiées. Comparateur en liste d'attente (pas de contrôle actif), mécanisme de l'adaptation prismatique débattu, une correction de l'article a été publiée, et le même groupe a obtenu des gains limités en lecture chez des adolescents dyslexiques.",
+    "pratique": "Pour ta pratique au CO : ne pas s'appuyer sur cette technique, non transposable en classe, et privilégier des aménagements et un entraînement ciblé du calcul en attendant des réplications.",
+    "preuve": "floue",
+    "source": "Zotti, L., et al. (2026). Boosting executive functions and math abilities in adolescents with dyscalculia: The combined effect of prismatic adaptation and cognitive training. Frontiers in Psychology. https://doi.org/10.3389/fpsyg.2025.1669090"
   }
 ]
