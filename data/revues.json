@@ -1271,5 +1271,162 @@
         "texte": "Suites des pétitions de la session des personnes handicapées (« Ensemble à l'école », mise à jour du rapport autisme) ; calendrier de la CSEC-E pour la loi sur l'inclusion ; 2e lecture de la Loi sur l'école valaisanne."
       }
     ]
+  },
+  {
+    "date_debut": "2026-11-03",
+    "date_fin": "2026-11-09",
+    "titre": "Semaine du 3 au 9 novembre 2026",
+    "essentiel": [
+      "**Adolescent·es autistes : estime de soi plus basse, écart modéré (g = −0,47).** Une méta-analyse de 15 études relie aussi une estime de soi basse à plus de symptômes dépressifs. L'écart varie selon l'outil et la plupart des études sont transversales : on ne sait pas ce qui cause quoi.",
+      "**Valais : la Loi sur l'école valaisanne passe l'entrée en matière en 2e lecture (113 voix contre 11).** Le texte qui doit remplacer la loi de 1962 sera voté vendredi 13 novembre. Seules des dépêches de presse ont été lues ; le contenu des articles sur l'enseignement spécialisé n'a pas été vérifié.",
+      "**Japon : les nouveaux diagnostics d'autisme et de TDA/H augmentent chez les enfants de 2010 à 2023.** Les auteur·es avancent qu'un diagnostic exigé pour obtenir de l'aide gonfle les chiffres, sans l'avoir testé. Ce sont des données d'assurance maladie : elles comptent des diagnostics posés, pas une prévalence réelle."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "preuve": "floue",
+        "titre": "Adolescent·es autistes : estime de soi plus basse, liée à la dépression",
+        "texte": "**À retenir :** les adolescent·es autistes rapportent une estime de soi **plus basse que leurs pairs non autistes (g = −0,47, effet modéré)**.\n\n**Résultats :**\n- 15 études avec groupe de comparaison non autiste.\n- Écart plus marqué avec le *Self-Perception Profile* de Harter (g = −0,55) qu'avec l'échelle de Rosenberg (g = −0,33).\n- Chez les adolescent·es autistes, une estime de soi basse est associée à plus de symptômes dépressifs : **r = −0,59** (5 études seulement).\n- Certaines études incluses ne trouvent aucune différence, voire une estime de soi plus élevée dans le groupe autiste.\n\n**Ce que ça change :** l'estime de soi est une cible plausible pour prévenir les difficultés psychiques des élèves autistes. Une mesure par domaines (scolaire, social, apparence) en dit plus qu'un score global. La revue ne teste aucune intervention.\n\n**L'étude :** les adolescent·es autistes ont-ils une estime de soi différente de celle de leurs pairs, et est-elle liée à leur santé mentale ? Revue systématique avec méta-analyses, équipe du King's College London.\n\n**Niveau de preuve :** modéré pour le design (méta-analyse, effet cohérent en moyenne) ; badge « floue » parce que seuls le résumé et des extraits ont été lus.\n\n**Limites :**\n- Études surtout transversales : impossible de dire si l'estime de soi basse précède la dépression ou l'inverse.\n- Échantillons majoritairement masculins : les filles autistes sont peu représentées.\n- Méta-analyse dépression sur 5 études seulement ; hétérogénéité entre études non vérifiée.\n- Texte intégral non lu (résumé PubMed et page de l'éditeur).\n\nClayton, P., Lindsay-Webb, K., Happé, F., & Hollocks, M. J. (2026). Autism and self-esteem: A systematic review quantifying differences between autistic and non-autistic adolescents and investigating associations with mental health difficulties. *Autism*. Publication en ligne le 20 août 2026, numéro de novembre 2026. https://doi.org/10.1177/13623613261433170 (volume et pages non vérifiés)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "preuve": "floue",
+        "titre": "Japon : les nouveaux diagnostics d'autisme et de TDA/H augmentent depuis 2010",
+        "texte": "**À retenir :** dans la quasi-totalité de la population japonaise, les **nouveaux diagnostics d'autisme et de TDA/H augmentent chez les enfants** entre 2010 et 2023, l'autisme restant plus fréquent que le TDA/H.\n\n**Résultats :**\n- **1 621 682** nouveaux diagnostics de TSA et **1 483 470** de TDA/H sur la période.\n- Chez l'adulte, le TDA/H dépasse l'autisme dès 2013 chez les femmes et 2014 chez les hommes ; second pic de diagnostics de TDA/H chez les femmes de 20 à 24 ans.\n- Chez les personnes avec les deux diagnostics, 46,3 % les ont reçus en même temps ; sinon, l'autisme est plus souvent posé en premier.\n\n**Ce que ça change :** les auteur·es avancent que l'exigence d'un diagnostic formel pour accéder à un soutien contribue aux taux élevés. Si c'est le cas, l'aide scolaire fondée sur les besoins observés, sans attendre l'étiquette, limiterait cette pression. Cette hypothèse n'a pas été testée.\n\n**L'étude :** comment évoluent les nouveaux diagnostics de TSA et de TDA/H au Japon ? Étude descriptive sur la base nationale des remboursements d'assurance maladie (environ 99 % de la population), années fiscales 2010 à 2023 ; équipe de l'Université Shinshu.\n\n**Niveau de preuve :** modéré pour la description (base quasi exhaustive) ; badge « floue » parce que seuls le résumé et un communiqué ont été lus.\n\n**Limites :**\n- Diagnostics codés pour le remboursement, sans validation clinique : ils mesurent la pratique diagnostique, pas la fréquence réelle des troubles.\n- L'explication par l'accès au soutien est une interprétation des auteur·es, non testée.\n- Système de santé et d'école japonais : transposition à la Suisse incertaine.\n- Texte intégral non lu ; taux par âge non vérifiés.\n\nSasayama, D., et al. (2026). Incidence of autism spectrum disorder and attention-deficit/hyperactivity disorder in Japan. *JAMA Network Open, 9*(10). Publication en ligne le 20 octobre 2026. https://doi.org/10.1001/jamanetworkopen.2026.39578 (liste complète des auteur·es et numéro d'article non vérifiés)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "preuve": "floue",
+        "titre": "TDA/H : moins d'un médecin sur quatre coordonne la prise en charge avec l'école",
+        "texte": "**À retenir :** sur 1 047 médecins et soignant·es de premier recours aux États-Unis, **23,7 % seulement coordonnent** les interventions TDA/H avec l'école.\n\n**Résultats :**\n- **20,5 %** n'ont aucune communication avec l'école ; 55,8 % utilisent les informations scolaires sans coordination directe.\n- Les praticien·nes formé·es au TDA/H après leurs études coordonnent plus souvent ; ceux et celles de 50 ans et plus, moins souvent.\n- Les pédiatres sont les moins nombreux à n'avoir aucun contact avec l'école.\n\n**Ce que ça change :** côté école, il ne faut pas supposer que le ou la médecin lit les observations de classe. Une transmission écrite, brève et structurée, avec l'accord des parents, augmente les chances qu'elles soient utilisées. Ce lien n'a pas été testé par l'étude.\n\n**L'étude :** qui, parmi les soignant·es de premier recours, coordonne la prise en charge du TDA/H avec l'école ? Enquête transversale (module TDA/H de l'enquête DocStyles, automne 2023), 1 047 répondant·es ; équipe des CDC et de l'Université Lehigh.\n\n**Niveau de preuve :** faible pour la question pratique (enquête déclarative, sans mesure d'effet sur les élèves) ; badge « floue ».\n\n**Limites :**\n- La qualité et la fréquence des échanges avec l'école ne sont pas mesurées.\n- Déclarations des soignant·es, panel en ligne américain : représentativité incertaine.\n- Système de santé américain : rôles différents du pédiatre et du pédopsychiatre en Suisse.\n- Lu seulement par des comptes rendus (CHADD, EMJ) ; date de mise en ligne et seuil d'ancienneté non vérifiés.\n\nClaussen, A. H., Katz, [initiale non vérifiée], Newsome, K., & DuPaul, G. J. (2026). Providers of ADHD care for children: Factors associated with coordination of ADHD services with schools. *Journal of Attention Disorders, 30*(7), 930–944. (initiales en partie non vérifiées ; DOI non trouvé ; texte intégral non lu)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "preuve": "floue",
+        "titre": "Pesticides organophosphorés pendant la grossesse : pas de lien avec les traits autistiques",
+        "texte": "**À retenir :** dans 3 339 paires mère-enfant, **l'exposition prénatale aux pesticides organophosphorés n'est pas associée** aux traits autistiques mesurés vers 6 ans.\n\n**Résultats :**\n- Métabolites détectés dans l'urine de **99 %** des mères pendant la grossesse.\n- Après ajustement, des niveaux plus élevés ne sont pas liés à des scores plus élevés à la *Social Responsiveness Scale* (questionnaire parental).\n- Les auteur·es précisent que cela ne prouve pas l'innocuité de ces pesticides à des expositions plus fortes ou chez des groupes plus vulnérables.\n\n**Ce que ça change :** rien pour la classe. Le résultat rappelle qu'une association environnementale isolée (comme celle des fumées d'incendie, revue du 2 novembre) doit être confrontée à d'autres études avant d'être retenue.\n\n**L'étude :** l'exposition prénatale aux organophosphorés est-elle liée aux traits autistiques de l'enfant ? Cohorte multicentrique (20 sites du programme ECHO, États-Unis), métabolites urinaires mesurés pendant la grossesse, SRS remplie par les parents à 6,4 ans en moyenne.\n\n**Niveau de preuve :** modéré pour le design (grande cohorte, mesure biologique de l'exposition) ; badge « floue » parce que seuls le résumé et des communiqués ont été lus.\n\n**Limites :**\n- Traits autistiques rapportés par les parents, pas de diagnostic clinique.\n- Expositions relativement faibles : pas de conclusion pour des expositions agricoles fortes.\n- Résultats par sexe et selon l'alimentation maternelle non consultés.\n- Publication en ligne en août 2026, numéro de novembre : hors de la semaine au sens strict.\n\nCavalier, [initiale non vérifiée], Herbstman, J. B., Trasande, L., Ghassabian, A., & ECHO Cohort Consortium. (2026). Prenatal organophosphate exposure and autism-related traits in children. *JAMA Pediatrics*. Publication en ligne le 24 août 2026. https://doi.org/10.1001/jamapediatrics.2026.3785 (initiales en partie non vérifiées ; texte intégral non lu)"
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**Pour un·e élève autiste, repérer l'estime de soi domaine par domaine (scolaire, relations, apparence) et signaler une baisse marquée au psychologue scolaire.** La méta-analyse de Clayton et al. (2026) trouve un écart plus grand avec un outil par domaines qu'avec un score global, et un lien fort avec la dépression. Concrètement : un court entretien ou une échelle visuelle par domaine en début de semestre, puis des réussites ciblées dans le domaine le plus bas. Réserve : aucune intervention n'a été évaluée dans cette revue, et le sens du lien estime de soi–dépression reste inconnu."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**Envoyer au médecin traitant, avec l'accord des parents, une synthèse d'une page des observations de classe (moments difficiles, aménagements essayés, effets constatés).** Selon Claussen et al. (2026), moins d'un quart des soignant·es de premier recours coordonnent avec l'école, et la majorité se contente des informations reçues. Une information courte et datée est plus facile à utiliser. Réserve : extrapolation d'une enquête américaine ; l'effet d'une telle transmission sur l'élève n'a pas été testé."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "texte": "**Mettre en place les aménagements sur la base des besoins observés, sans attendre un diagnostic.** Les données japonaises (Sasayama et al., 2026) suggèrent qu'un soutien conditionné au diagnostic pousse à diagnostiquer davantage ; la revue Fonagy (revue du 26 octobre) défend aussi une aide disponible avant l'évaluation. Réserve : les deux sources formulent une hypothèse, non une démonstration, et le cadre valaisan des mesures d'aide (ordinaires ou renforcées) fixe ses propres conditions d'accès."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi sur l'école valaisanne : entrée en matière acceptée en 2e lecture, vote final vendredi",
+        "texte": "Le Grand Conseil valaisan a accepté le 9 novembre 2026 l'entrée en matière sur la Loi sur l'école valaisanne en seconde lecture, par **113 voix contre 11**. Seule l'UDC du Haut-Valais s'y est opposée. L'examen de détail se poursuit mardi et vendredi, avec le vote final attendu vendredi (13 novembre selon le calendrier ; date non confirmée explicitement par les sources). Le texte, adopté en 1re lecture le 6 mai (103 voix contre 25, 1 abstention), remplace la loi de 1962 ; il inclut la notion de harcèlement scolaire et prévoit la cantonalisation des directions de l'école obligatoire. La loi sur l'enseignement privé et celle sur le secondaire II général sont traitées pendant la même session. Statut : sources secondaires (dépêche reprise par Rhône FM, RTN, RFJ, LFM, bluewin) ; texte de loi et articles sur l'enseignement spécialisé non consultés."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi fédérale sur l'inclusion : toujours aucune date au Conseil des États",
+        "texte": "Aucun communiqué de la commission du Conseil des États (CSEC-E) sur l'Initiative pour l'inclusion et son contre-projet indirect n'a été trouvé pour début novembre. Le dossier reste en attente après l'adoption par le Conseil national en septembre. Statut : absence de résultat dans les recherches, à ne pas lire comme une absence de décision ; site du Parlement non consulté directement."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Hausse des diagnostics : besoin réel, critères élargis ou diagnostic « porte d'accès » ?",
+        "texte": "La hausse des diagnostics de TSA et de TDA/H reçoit trois explications qui ne s'excluent pas, et les données de la semaine n'arbitrent pas entre elles.\n\n- **Diagnostic comme porte d'accès au soutien** (Sasayama et al., 2026, Japon) : hypothèse des auteur·es, non testée.\n- **Élargissement des critères** (LaBianca, Schork et al., *JAMA Psychiatry*, 2026, registres danois ; revue du 2 novembre) : la contribution génétique moyenne aux diagnostics diminue au fil des années, ce qui va dans le sens de diagnostics posés chez des personnes moins typiques.\n- **Facteurs environnementaux** : association avec les fumées d'incendie (revue du 2 novembre), mais aucune association avec les organophosphorés (Cavalier et al., 2026) ; ces facteurs n'expliquent pas l'ampleur de la hausse.\n\nPoint clé : pour l'école, la question pratique n'est pas l'étiquette mais l'accès à l'aide ; un système qui conditionne l'aide au diagnostic risque de produire à la fois des retards et des diagnostics « par défaut »."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« Les adolescent·es autistes ont une mauvaise estime d'eux-mêmes. »** L'écart moyen est modéré et varie selon l'outil ; certaines études ne trouvent aucune différence, ou une estime de soi plus élevée chez les jeunes autistes."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "**« Le Japon montre une épidémie d'autisme et de TDA/H. »** Les données comptent des diagnostics remboursés, pas des cas validés ; une hausse des diagnostics peut refléter l'accès aux soins et aux aides autant que la fréquence des troubles."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« Les pesticides organophosphorés sont sans risque pour le neurodéveloppement. »** L'étude ECHO ne trouve pas de lien avec les traits autistiques à des expositions faibles ; elle ne conclut ni pour les expositions fortes, ni pour d'autres issues (cognition, attention)."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "dys-tsle"
+        ],
+        "texte": "**« Les prismes améliorent le calcul chez les adolescent·es dyscalculiques. »** L'essai de Zotti et al. (2026, flash du 9 novembre) compare à une liste d'attente, sans groupe contrôle actif : l'effet propre de l'adaptation prismatique, distinct de l'entraînement cognitif et de l'attention reçue, n'est pas isolé, et le résultat n'est pas répliqué."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Vote final de la Loi sur l'école valaisanne en 2e lecture (vendredi 13 novembre) et dispositions retenues sur l'enseignement spécialisé et les mesures d'aide ; suites au Conseil des États pour la loi fédérale sur l'inclusion."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "Résumé et résultats de l'essai pilote randomisé de Blacher, Eisenhower et Ledoux Galligan (*Journal of Autism and Developmental Disorders*, en ligne le 5 octobre 2026) sur un programme de formation des enseignant·es pour améliorer la relation avec les élèves autistes ; à rapprocher de Cook et Boddy (flash du 5 novembre)."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "hpi",
+          "tsa",
+          "dys-tsle"
+        ],
+        "texte": "Étude d'Almulla et Khasawneh (*Journal of Autism and Developmental Disorders*, 5 novembre 2026) sur les profils de « masquage numérique » et le concept de soi scolaire chez des élèves HPI autistes et des élèves en difficulté d'apprentissage : seul le titre a été trouvé, contenu non vérifié."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Manuscrit sur le TDA/H sévère aux États-Unis (enquête NSCH 2016–2024, N = 326 999) : prévalence en hausse et taux de traitement en baisse, surtout dans les familles à faible revenu ; revue et auteur·es non vérifiés."
+      }
+    ]
   }
 ]
