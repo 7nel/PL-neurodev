@@ -475,5 +475,16 @@
     "pratique": "Pour ta pratique au CO : ne pas s'appuyer sur cette technique, non transposable en classe, et privilégier des aménagements et un entraînement ciblé du calcul en attendant des réplications.",
     "preuve": "floue",
     "source": "Zotti, L., et al. (2026). Boosting executive functions and math abilities in adolescents with dyscalculia: The combined effect of prismatic adaptation and cognitive training. Frontiers in Psychology. https://doi.org/10.3389/fpsyg.2025.1669090"
+  },
+  {
+    "date": "2026-11-10",
+    "themes": [
+      "attachement"
+    ],
+    "titre": "Attachement et stress post-traumatique : un lien petit mais significatif chez l'enfant et l'adolescent",
+    "resume": "Rappel : l'attachement sécure va avec **moins de symptômes de stress post-traumatique, l'insécure avec plus**, mais le lien global est **petit** (méta-analyse). Elle regroupe 30 études, N = 10 431 enfants et adolescents exposés à des événements traumatiques variés (maltraitance, guerre, etc.).",
+    "limites": "Les études sont corrélationnelles : aucun sens causal ne peut être établi. Le lien est petit ; l'exposition à la maltraitance ne modère pas le lien avec l'attachement sécure, mais renforce celui avec l'attachement insécure. Résumé et métadonnées seuls consultés, texte intégral non lu ; aucune publication récente solide trouvée sur 24–72 h.",
+    "pratique": "Une relation stable avec un adulte référent peut être un point d'appui pour un élève ayant vécu un trauma, sans en faire une règle : le lien est faible et l'effet d'une intervention scolaire n'est pas démontré ici.",
+    "source": "Cushing, T., Robertson, S., Mannes, J., Marshall, N., Carey, M. J., Duschinsky, R., & Meiser-Stedman, R. (2024). The relationship between attachment and posttraumatic stress in children and adolescents: A meta-analytic review. *Development and Psychopathology, 36*(3), 1055–1069. https://doi.org/10.1017/S0954579423000299"
   }
 ]
