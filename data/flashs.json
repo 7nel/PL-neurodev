@@ -499,5 +499,17 @@
     "pratique": "Pour ta pratique au CO : face à un élève HPI en difficulté, ne pas conclure à un simple « ennui » et vérifier par une évaluation croisée la présence d'un TND, en adaptant l'aide aux deux versants plutôt qu'à un seul.",
     "preuve": "floue",
     "source": "Rizzo, A., Pinnelli, S., & Minnaert, A. (2025). Twice-exceptional students: A systematic review to outline the distinctive characteristics through a multidimensional lens. *Frontiers in Education*. https://doi.org/10.3389/feduc.2025.1696805"
+  },
+  {
+    "date": "2026-11-12",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "TDA/H à l'école : les interventions scolaires aident l'attention, peu l'hyperactivité",
+    "resume": "Rappel : les essais randomisés menés à l'école montrent des effets **petits à modérés sur l'inattention (d = −0,33) et les résultats scolaires (d = 0,37)**, mais peu sur l'hyperactivité-impulsivité. Méta-analyse de 22 essais (N = 1 962), élèves de 4 à 18 ans avec TDA/H.",
+    "limites": "Population de 4 à 18 ans, non spécifique à l'adolescence ; forte hétérogénéité et biais possible des évaluateurs (parents, enseignants) non aveuglés. Seul l'abstract a été consulté, via un résumé secondaire : le texte intégral n'a pas pu être ouvert, donc les effets par type d'intervention ne sont pas vérifiés.",
+    "pratique": "Cibler en priorité l'attention et l'organisation du travail scolaire plutôt qu'attendre un effet sur l'hyperactivité, et suivre les progrès avec des mesures concrètes de classe.",
+    "preuve": "floue",
+    "source": "Yegencik, B., Bell, B. T., & Deniz, E. (2025). School-based randomized controlled trials for ADHD and accompanying impairments: A systematic review and meta-analysis. *Frontiers in Psychology, 16*, Article 1611145. https://doi.org/10.3389/fpsyg.2025.1611145"
   }
 ]
