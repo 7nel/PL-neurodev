@@ -523,5 +523,16 @@
     "pratique": "Pour un groupe de compétences socio-émotionnelles au CO, viser des objectifs sociaux concrets et mesurables, avec pratique en contexte, plutôt que compter sur un gain d'empathie ou de reconnaissance des émotions.",
     "preuve": "nuance",
     "source": "Reichow, B., Steiner, A. M., & Volkmar, F. (2012). Social skills groups for people aged 6 to 21 with autism spectrum disorders (ASD). *Cochrane Database of Systematic Reviews*, (7), CD008511. https://doi.org/10.1002/14651858.CD008511.pub2"
+  },
+  {
+    "date": "2026-11-14",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "TDA/H : à court terme, le méthylphénidate est le traitement de première intention chez l'enfant et l'adolescent",
+    "resume": "Rappel : **la méta-analyse en réseau de 133 essais randomisés conclut que le méthylphénidate offre le meilleur équilibre efficacité/tolérance chez l'enfant et l'adolescent** (amphétamines chez l'adulte), à court terme. Tous les médicaments testés battent le placebo sur les symptômes centraux chez l'enfant ; données de 10 068 enfants et adolescents (environ 12 semaines).",
+    "limites": "Effets mesurés à court terme seulement (environ 12 semaines) : l'efficacité et les effets indésirables à long terme restent peu documentés ; les études les plus récentes datent d'avril 2017. Les amphétamines ont plus d'abandons que le placebo (OR 2,3 chez l'enfant). Abstract et notices secondaires consultés, texte intégral non lu ; l'effet sur les apprentissages scolaires n'est pas l'objet de l'étude.",
+    "pratique": "Utile pour comprendre un traitement médicamenteux d'un élève TDA/H et observer en classe (attention, fatigue, appétit, sommeil) pour documenter l'effet à transmettre à l'équipe médicale, sans jamais se prononcer sur le choix du traitement.",
+    "source": "Cortese, S., et al. (2018). Comparative efficacy and tolerability of medications for attention-deficit hyperactivity disorder in children, adolescents, and adults: A systematic review and network meta-analysis. *The Lancet Psychiatry, 5*(9), 727–738. https://doi.org/10.1016/S2215-0366(18)30269-4"
   }
 ]
