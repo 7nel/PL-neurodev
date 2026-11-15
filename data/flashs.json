@@ -534,5 +534,18 @@
     "limites": "Effets mesurés à court terme seulement (environ 12 semaines) : l'efficacité et les effets indésirables à long terme restent peu documentés ; les études les plus récentes datent d'avril 2017. Les amphétamines ont plus d'abandons que le placebo (OR 2,3 chez l'enfant). Abstract et notices secondaires consultés, texte intégral non lu ; l'effet sur les apprentissages scolaires n'est pas l'objet de l'étude.",
     "pratique": "Utile pour comprendre un traitement médicamenteux d'un élève TDA/H et observer en classe (attention, fatigue, appétit, sommeil) pour documenter l'effet à transmettre à l'équipe médicale, sans jamais se prononcer sur le choix du traitement.",
     "source": "Cortese, S., et al. (2018). Comparative efficacy and tolerability of medications for attention-deficit hyperactivity disorder in children, adolescents, and adults: A systematic review and network meta-analysis. *The Lancet Psychiatry, 5*(9), 727–738. https://doi.org/10.1016/S2215-0366(18)30269-4"
+  },
+  {
+    "date": "2026-11-15",
+    "themes": [
+      "tdl-tdc",
+      "transversal"
+    ],
+    "titre": "Élèves bilingues : un faible score en langue de scolarisation n'est pas un trouble du langage",
+    "resume": "Rappel : chez les enfants bilingues, **l'exposition et l'usage de chaque langue expliquent une large part des différences individuelles**, et le chevauchement avec un trouble développemental du langage (TDL) est difficile à démêler. Revue de Paradis (2023) sur les bilingues d'héritage ; aucune publication récente et solide repérée ces 72 h.",
+    "limites": "Seuls le titre et des extraits de recherche ont été lus : ni l'abstract ni le texte intégral, donc aucun chiffre rapporté. Revue sur des bilingues d'héritage, pas sur des adolescents allophones récemment arrivés ; transposition au contexte valaisan non établie.",
+    "pratique": "Avant d'évoquer un TDL chez un élève allophone, documenter son histoire d'exposition et ses performances dans sa langue première, et demander un bilan logopédique tenant compte du bilinguisme.",
+    "preuve": "floue",
+    "source": "Paradis, J. (2023). Sources of individual differences in the dual language development of heritage bilinguals. *Journal of Child Language*. https://doi.org/10.1017/S0305000922000708"
   }
 ]
