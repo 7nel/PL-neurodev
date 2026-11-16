@@ -547,5 +547,16 @@
     "pratique": "Avant d'évoquer un TDL chez un élève allophone, documenter son histoire d'exposition et ses performances dans sa langue première, et demander un bilan logopédique tenant compte du bilinguisme.",
     "preuve": "floue",
     "source": "Paradis, J. (2023). Sources of individual differences in the dual language development of heritage bilinguals. *Journal of Child Language*. https://doi.org/10.1017/S0305000922000708"
+  },
+  {
+    "date": "2026-11-16",
+    "themes": [
+      "tsa"
+    ],
+    "titre": "TCC et anxiété dans le TSA : effet net sur l'évaluation clinicienne, plus faible selon l'enfant",
+    "resume": "Rappel : la TCC réduit l'anxiété des enfants et jeunes autistes, avec un **effet large selon les cliniciens (g = 0,88)**, plus faible selon les parents (g = 0,40) et l'enfant (g = 0,25). Méta-analyse de 19 essais randomisés, 833 participant·es (d'après un résumé secondaire de la recherche web).",
+    "limites": "Limite principale : l'effet dépend de qui évalue (cliniciens, parents, enfant), et les cliniciens ne sont pas aveugles à l'intervention dans la plupart des essais ; biais de publication et de report signalés. Ni l'abstract ni le texte intégral n'ont pu être lus (accès bloqué) : chiffres issus d'un résumé de recherche web, à vérifier ; auteurs complets non vérifiés.",
+    "pratique": "Au CO, les effets de la TCC se jugent surtout sur le ressenti de l'élève : croiser plusieurs sources (élève, parents, enseignant·es) avant de conclure à un progrès, et rappeler que la TCC relève du suivi clinique, pas de l'école.",
+    "source": "Sharma, S. R., et al. (2021). Cognitive behavioural therapy for anxiety in children and young people on the autism spectrum: A systematic review and meta-analysis. *BMC Psychology*. https://doi.org/10.1186/s40359-021-00658-8"
   }
 ]
