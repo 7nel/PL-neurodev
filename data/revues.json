@@ -1428,5 +1428,148 @@
         "texte": "Manuscrit sur le TDA/H sévère aux États-Unis (enquête NSCH 2016–2024, N = 326 999) : prévalence en hausse et taux de traitement en baisse, surtout dans les familles à faible revenu ; revue et auteur·es non vérifiés."
       }
     ]
+  },
+  {
+    "date_debut": "2026-11-10",
+    "date_fin": "2026-11-16",
+    "titre": "Semaine du 10 au 16 novembre 2026",
+    "essentiel": [
+      "**TDA/H : temps supplémentaire, pauses, bureau debout et lieu calme n'améliorent ni comportement ni résultats.** Dans un essai randomisé auprès de 255 enfants, l'intervention comportementale (−37 % d'infractions aux règles) et le méthylphénidate (−61 %) ont, eux, un effet net. Les enfants avaient environ 5 à 12 ans et travaillaient dans un camp d'été : rien n'a été testé au CO ni pour les examens.",
+      "**Valais : la Loi sur l'école valaisanne est adoptée en 2e lecture (103 voix contre 18, 6 abstentions).** Elle remplace la loi de 1962, cantonalise les directions de l'école obligatoire et ajoute la « sensibilisation au respect de la différence ». Seules des dépêches de presse ont été lues : les articles sur l'enseignement spécialisé n'ont pas été vérifiés.",
+      "**TDA/H, anxiété et autisme : les frontières diagnostiques se brouillent dans deux grandes études.** Trois profils cérébraux traversent les diagnostics de TDA/H et d'anxiété, et 58 % des adultes nouvellement diagnostiqués autistes au Royaume-Uni avaient déjà un diagnostic d'anxiété (29 % en 2010). Aucune des deux études ne dit s'il s'agit d'une meilleure reconnaissance ou d'un surdiagnostic."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "tdah"
+        ],
+        "preuve": "floue",
+        "titre": "TDA/H : les aménagements courants n'aident pas, l'approche comportementale et le traitement oui",
+        "texte": "**À retenir :** quatre aménagements courants (temps supplémentaire, pauses fréquentes, bureau debout, place à l'écart des distractions) **n'améliorent ni le comportement ni les résultats** d'enfants avec un TDA/H.\n\n**Résultats :**\n- Aucun des quatre aménagements, seul ou combiné aux autres traitements, n'améliore significativement le respect des règles ou les scores aux petits tests.\n- Certains baissent le rendement : questions traitées par minute **−11 % avec le temps supplémentaire**, −4 % à l'écart des distractions, −3 % avec le bureau adapté.\n- L'intervention comportementale réduit les infractions aux règles de **37 %** ; le méthylphénidate (0,3 mg/kg) de **61 %**, avec 22 % de travail correct en plus par rapport au placebo.\n\n**Ce que ça change :** un aménagement ne remplace pas une intervention qui modifie le comportement (consignes, renforcement, suivi quotidien). Le temps supplémentaire ne devrait pas être la réponse par défaut au TDA/H seul. L'étude ne dit rien des élèves avec un TSLE ou une anxiété associée, pour qui le temps supplémentaire peut avoir une autre fonction.\n\n**L'étude :** les aménagements, l'intervention comportementale et le traitement stimulant ont-ils un effet, seuls ou combinés ? Essai randomisé croisé : chaque enfant passe par toutes les conditions, attribuées au hasard jour après jour. 255 enfants avec un TDA/H, de l'école enfantine à la 6e année américaine, inscrits au *Summer Treatment Program* de la Florida International University (2022–2025) ; 235 ont terminé.\n\n**Niveau de preuve :** modéré pour le design (essai randomisé, chaque enfant étant son propre contrôle, effectif important) ; badge « floue » parce que seuls des communiqués et des comptes rendus ont été lus.\n\n**Limites :**\n- Classes d'été très structurées, tâches courtes : transposition à une classe ordinaire, au CO et aux examens non testée.\n- Enfants de primaire seulement ; pas de données sur les adolescent·es.\n- Effectif discordant selon les sources (255 inscrits et 235 ayant terminé dans le communiqué, 280 dans un résumé repris par la presse) ; à vérifier.\n- Texte intégral non lu ; liste des auteur·es et DOI relevés dans la presse, non vérifiés sur la page de l'éditeur.\n\nFabiano, G. A., et al. (2026). Attention-deficit/hyperactivity disorder accommodations, behavior therapy, and stimulant medication: A randomized clinical trial. *JAMA Pediatrics*. Publication en ligne le 13 novembre 2026. https://doi.org/10.1001/jamapediatrics.2026.5973 (co-auteur·es, volume et DOI non vérifiés ; essai enregistré NCT05469386)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tdah",
+          "transversal"
+        ],
+        "preuve": "floue",
+        "titre": "TDA/H et anxiété : trois profils cérébraux qui ne suivent pas les diagnostics",
+        "texte": "**À retenir :** chez **3 508 enfants** avec un TDA/H, un trouble anxieux ou les deux, l'IRM fonctionnelle fait apparaître **trois profils cérébraux présents dans les trois groupes diagnostiques**.\n\n**Résultats :**\n- Deux dimensions cerveau-comportement : un dysfonctionnement cognitif et comportemental, et un dysfonctionnement émotion-attention, portés par des réseaux cérébraux différents.\n- Trois profils : « externalisé-désinhibé », « internalisé-détresse » et mixte. Le premier est plus fréquent dans le TDA/H, mais chaque profil se retrouve dans chaque diagnostic.\n- Les profils sont déjà visibles dans les IRM de 693 enfants sans diagnostic à l'entrée dans l'étude, diagnostiqués plus tard.\n- Résultats retrouvés dans un second échantillon de 224 enfants (*Healthy Brain Network*).\n\n**Ce que ça change :** rien pour la classe à court terme. L'étude soutient l'idée que TDA/H et anxiété se recoupent : chez un·e élève agité·e ou inattentif·ve, l'anxiété mérite d'être cherchée, et inversement. Les auteur·es précisent que ces profils ne remplacent pas le diagnostic clinique.\n\n**L'étude :** existe-t-il des sous-groupes cérébraux communs au TDA/H et à l'anxiété ? Apprentissage profond sur l'IRM fonctionnelle de la cohorte américaine ABCD (enfants de 9 à 10 ans à l'entrée), avec 1 947 enfants contrôles ; équipe de Stanford.\n\n**Niveau de preuve :** faible pour la pratique (étude de découverte, sans test de traitement) ; badge « floue » aussi parce que seuls des communiqués et la prépublication ont été consultés.\n\n**Limites :**\n- Aucune utilité clinique démontrée : on ne sait pas si les profils prédisent la réponse à un traitement ou à une aide scolaire.\n- Méthode d'apprentissage automatique complexe, réplication externe sur un seul petit échantillon.\n- Date de publication incertaine (16 octobre selon EurekAlert, communiqué de Stanford diffusé en novembre) : hors de la semaine au sens strict.\n- Texte intégral non lu ; référence de la revue et DOI non trouvés.\n\nJiao, Y., Tong, X., Fonzo, G., Gotlib, I., Pohl, K., Satterthwaite, T., Jiang, J., & Zhang, Y. (2026). *Deep learning of brain-behavior dimensions identifies transdiagnostic biotypes in youth with ADHD and anxiety disorders* [titre et auteur·es de la prépublication ; version publiée dans *Nature Mental Health*, détails non vérifiés]. Prépublication : https://doi.org/10.1101/2025.10.13.682243"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa",
+          "di-tsaf"
+        ],
+        "preuve": "floue",
+        "titre": "Adultes diagnostiqués autistes : deux fois plus d'anxiété préalable qu'en 2010, moins de déficience intellectuelle",
+        "texte": "**À retenir :** au Royaume-Uni, **58,3 %** des adultes nouvellement diagnostiqués autistes en 2023 avaient déjà un diagnostic d'anxiété, contre **28,7 %** en 2010.\n\n**Résultats :**\n- Dans les deux pays, baisse régulière de la part des adultes autistes ayant un antécédent d'épilepsie, de psychose ou de déficience intellectuelle (épilepsie : 10 % en 2010, 4 % en 2023 au Royaume-Uni).\n- Hausse de la part ayant un antécédent de TDA/H, d'anxiété, de dépression et d'autres troubles psychiques.\n- L'anxiété augmente aussi chez les adultes non autistes appariés (8,2 % à 21,9 %) : une partie de la hausse suit une tendance générale.\n\n**Ce que ça change :** le profil des personnes diagnostiquées autistes a changé : moins de déficience intellectuelle, plus de troubles anxieux et de TDA/H associés. Pour l'école, cela rappelle de chercher l'autisme derrière une anxiété ou un TDA/H, sans conclure à l'autisme sur ces seuls signes. L'étude porte sur des adultes.\n\n**L'étude :** comment évoluent les antécédents médicaux des adultes diagnostiqués autistes depuis 2010 ? Deux études de population sur dossiers : 24,5 millions d'adultes au Royaume-Uni (141 119 autistes, soins primaires, jusqu'en 2023) et 9,1 millions en Suède (100 817 autistes, surtout soins spécialisés, jusqu'en 2021) ; universités de Cardiff et de Bristol.\n\n**Niveau de preuve :** modéré pour la description (très grands registres, deux pays) ; badge « floue » parce que seuls le communiqué et des comptes rendus ont été lus.\n\n**Limites :**\n- Les données ne permettent pas de dire s'il s'agit d'une meilleure reconnaissance de formes discrètes d'autisme ou de présentations psychiatriques prises à tort pour de l'autisme ; les auteur·es évoquent les deux.\n- Diagnostics enregistrés, sans validation clinique ; sources différentes selon le pays.\n- Adultes uniquement : transposition aux adolescent·es non étudiée.\n- Publié le 3 novembre, hors de la semaine au sens strict ; texte intégral non lu.\n\nSadik, A., et al. (2026). Changes in the profile of adults diagnosed as autistic since 2010: Population-based studies in the UK and Sweden. *BMJ Mental Health*. Publication en ligne le 3 novembre 2026. https://doi.org/10.1136/bmjment-2026-302983 (liste complète des auteur·es, volume et numéro d'article non vérifiés)"
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**Pour un·e élève avec un TDA/H, ne pas s'en tenir au temps supplémentaire ou aux pauses : y associer une intervention comportementale simple (consigne courte, objectif explicite, retour immédiat, fiche de suivi quotidienne partagée avec l'élève).** L'essai de Fabiano et al. (2026) trouve un effet de l'intervention comportementale (−37 % d'infractions aux règles) et aucun effet des quatre aménagements testés. Un petit essai randomisé au secondaire (Harrison et al., 2022, *Journal of Attention Disorders*, 15 élèves de 11–13 ans) allait déjà dans ce sens : rappels et autogestion faisaient mieux que pauses et objets sensoriels. Réserve : extrapolation d'enfants de primaire en camp d'été et d'un essai pilote ; ne pas retirer un aménagement prévu dans un plan sans concertation avec l'élève, les parents et le réseau."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah",
+          "dys-tsle",
+          "transversal"
+        ],
+        "texte": "**Vérifier l'effet d'un aménagement chez l'élève lui-même, sur deux à trois semaines : comparer, avec et sans l'aménagement, la quantité de travail fait et le nombre de rappels nécessaires.** Les essais de groupe donnent un effet moyen ; ils ne disent pas si un aménagement aide un·e élève précis·e. Harrison et al. (2022) montrent aussi que les élèves préfèrent souvent les aménagements les moins efficaces. Réserve : démarche cohérente avec les essais à cas unique, non testée telle quelle au CO valaisan ; pour un TSLE, le temps supplémentaire compense une lenteur de lecture et n'est pas concerné par l'essai de Fabiano."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tdah",
+          "tsa",
+          "transversal"
+        ],
+        "texte": "**Dans le groupe socio-émotionnel, inclure le repérage de l'anxiété pour tous les élèves, y compris ceux et celles qui ont un diagnostic de TDA/H ou d'autisme.** Les profils cérébraux de Stanford traversent les diagnostics de TDA/H et d'anxiété, et l'anxiété préalable est de plus en plus fréquente chez les personnes diagnostiquées autistes (Sadik et al., 2026). Une agitation ou un évitement peuvent relever de l'anxiété autant que du trouble connu. Réserve : aucune de ces études ne teste une démarche scolaire ; le repérage oriente vers le psychologue scolaire, il ne pose pas de diagnostic."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Valais : la Loi sur l'école valaisanne est adoptée",
+        "texte": "Le Grand Conseil valaisan a adopté la Loi sur l'école valaisanne en seconde lecture par **103 voix contre 18 et 6 abstentions**, lors du vote final de la session de novembre (vendredi 13 novembre selon le calendrier annoncé ; date exacte non confirmée par les sources lues). Seule l'UDC s'y est opposée. La loi remplace celle de 1962, cantonalise les directions de l'école obligatoire (environ 10 millions de francs de dépenses supplémentaires pour l'État, charge allégée pour les communes ; le personnel administratif n'est finalement pas concerné), confirme la neutralité de l'école, refuse l'horaire continu obligatoire et ajoute la notion de « sensibilisation au respect de la différence » dans plusieurs articles. La loi sur l'enseignement secondaire II général et la loi sur l'enseignement privé ont été adoptées à l'unanimité pendant la même session. Statut : sources secondaires (résumés de dépêches reprises par *La Liberté* et *24 heures*) ; texte adopté, dispositions sur l'enseignement spécialisé et date d'entrée en vigueur non consultés."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Loi fédérale sur l'inclusion : vote final attendu en 2027",
+        "texte": "Selon Inclusion Handicap, le contre-projet indirect à l'Initiative pour l'inclusion passera, après le Conseil national, devant la commission de la sécurité sociale et de la santé publique du Conseil des États (CSSS-E), et non devant la commission de la science, de l'éducation et de la culture (CSEC-E). Le vote final est attendu « probablement entre mars et octobre 2027 ». Les revues précédentes cherchaient des nouvelles du côté de la CSEC-E : l'absence de résultat s'explique sans doute par là. Statut : document d'une association faîtière (FAQ, 2026, date exacte non vérifiée) ; calendrier de la CSSS-E non consulté sur le site du Parlement."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "tdah",
+          "transversal"
+        ],
+        "titre": "Aménagements TDA/H : à abandonner ou à mieux cibler ?",
+        "texte": "L'essai de Fabiano et al. (2026) relance la question de la place des aménagements dans l'aide aux élèves avec un TDA/H.\n\n- **Position des auteur·es et de la presse** : les écoles devraient moins insister sur ces aménagements et davantage sur les interventions comportementales et, selon les cas, le traitement. Plusieurs titres de presse généralisent à « les aménagements ne marchent pas ».\n- **Position prudente** : l'essai mesure le comportement et le rendement sur des tâches courtes en camp d'été. Il ne mesure ni l'accès équitable à une évaluation, ni la fatigue, ni l'anxiété d'examen, ni les élèves avec un trouble associé (TSLE, anxiété).\n- **Convergence partielle** : des travaux antérieurs, plus petits (Harrison et al., 2022), trouvaient déjà que les aménagements les plus répandus faisaient moins bien que les stratégies d'enseignement actives.\n\nPoint clé : distinguer l'aménagement d'accès (compenser un obstacle lors d'une évaluation) de l'intervention qui change le comportement en classe ; l'essai ne remet en cause que l'idée qu'un aménagement suffit à aider un élève avec un TDA/H."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "**« Les aménagements scolaires ne servent à rien pour les élèves TDA/H. »** L'essai a testé quatre aménagements, chez des enfants de primaire, en camp d'été et sur des tâches courtes : il ne conclut ni pour les adolescent·es, ni pour les examens, ni pour les élèves avec un TSLE ou une anxiété associée."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tdah",
+          "transversal"
+        ],
+        "texte": "**« L'IRM révèle trois types de TDA/H. »** Les trois profils de Stanford mêlent TDA/H et anxiété et ne correspondent pas aux diagnostics ; l'IRM n'est pas un outil de diagnostic du TDA/H et aucune utilité pour le traitement n'a été montrée."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« On diagnostique aujourd'hui autiste des personnes qui sont seulement anxieuses. »** Sadik et al. (2026) constatent un changement de profil des adultes diagnostiqués, mais leurs données ne permettent pas de distinguer une meilleure reconnaissance de l'autisme d'erreurs de diagnostic."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tdah"
+        ],
+        "texte": "Texte intégral de l'essai de Fabiano et al. (*JAMA Pediatrics*, 13 novembre 2026) : effectif exact (255 ou 280), résultats selon l'âge et selon les troubles associés, réactions d'expert·es et éventuelles lettres à la rédaction."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Loi sur l'école valaisanne : publication du texte adopté, délai référendaire, date d'entrée en vigueur et ordonnances d'application sur l'enseignement spécialisé ; contre-projet sur l'inclusion à la CSSS-E du Conseil des États."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "Essai pilote randomisé d'un programme social après l'école mené par du personnel non spécialisé pour des enfants autistes (*Journal of Autism and Developmental Disorders*, en ligne le 10 novembre 2026, essai NCT05542602, équipe de Canisius) : gains rapportés en fonctionnement social face à une liste d'attente, auteur·es et chiffres non vérifiés."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa",
+          "tdah",
+          "transversal"
+        ],
+        "texte": "Étude de cohorte ABCD (*JAMA Psychiatry*, annoncée le 11 novembre 2026) sur les désaccords entre jeunes et parents à propos des diagnostics psychiatriques au fil du développement : seul le titre a été repéré, contenu non vérifié."
+      }
+    ]
   }
 ]
