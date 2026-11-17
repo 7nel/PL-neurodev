@@ -558,5 +558,17 @@
     "limites": "Limite principale : l'effet dépend de qui évalue (cliniciens, parents, enfant), et les cliniciens ne sont pas aveugles à l'intervention dans la plupart des essais ; biais de publication et de report signalés. Ni l'abstract ni le texte intégral n'ont pu être lus (accès bloqué) : chiffres issus d'un résumé de recherche web, à vérifier ; auteurs complets non vérifiés.",
     "pratique": "Au CO, les effets de la TCC se jugent surtout sur le ressenti de l'élève : croiser plusieurs sources (élève, parents, enseignant·es) avant de conclure à un progrès, et rappeler que la TCC relève du suivi clinique, pas de l'école.",
     "source": "Sharma, S. R., et al. (2021). Cognitive behavioural therapy for anxiety in children and young people on the autism spectrum: A systematic review and meta-analysis. *BMC Psychology*. https://doi.org/10.1186/s40359-021-00658-8"
+  },
+  {
+    "date": "2026-11-17",
+    "themes": [
+      "dys-tsle"
+    ],
+    "titre": "Dyslexie : seul l'enseignement phonique a un effet confirmé sur la lecture",
+    "resume": "Rappel : dans cette méta-analyse, **seul l'enseignement phonique (phonics) a un effet statistiquement confirmé, petit, sur la lecture et l'orthographe** des enfants et adolescents avec trouble de la lecture. Méta-analyse de 22 essais randomisés (49 comparaisons) ; les autres approches n'atteignent pas la significativité.",
+    "limites": "Les trois quarts des essais portent sur le phonics, d'où un déséquilibre : « non confirmé » ne veut pas dire « inefficace ». Chaque approche est comparée à l'absence de traitement, pas aux autres ; effets petits ; données de 2014. Source primaire non consultée directement (accès bloqué) : résumé lu via sources secondaires, chiffres exacts à vérifier dans l'article.",
+    "pratique": "Au CO, privilégier un travail explicite des correspondances graphèmes-phonèmes dans la durée (plus de 12 semaines semble plus efficace) plutôt que des outils sans preuve, sans attendre de gain spectaculaire.",
+    "preuve": "nuance",
+    "source": "Galuschka, K., Ise, E., Krick, K., & Schulte-Körne, G. (2014). Effectiveness of treatment approaches for children and adolescents with reading disabilities: A meta-analysis of randomized controlled trials. *PLoS ONE, 9*(2), e89900. https://doi.org/10.1371/journal.pone.0089900"
   }
 ]
