@@ -570,5 +570,17 @@
     "pratique": "Au CO, privilégier un travail explicite des correspondances graphèmes-phonèmes dans la durée (plus de 12 semaines semble plus efficace) plutôt que des outils sans preuve, sans attendre de gain spectaculaire.",
     "preuve": "nuance",
     "source": "Galuschka, K., Ise, E., Krick, K., & Schulte-Körne, G. (2014). Effectiveness of treatment approaches for children and adolescents with reading disabilities: A meta-analysis of randomized controlled trials. *PLoS ONE, 9*(2), e89900. https://doi.org/10.1371/journal.pone.0089900"
+  },
+  {
+    "date": "2026-11-18",
+    "themes": [
+      "attachement"
+    ],
+    "titre": "Trauma : les thérapies psychologiques réduisent le PTSD à court terme seulement",
+    "resume": "Rappel : **les thérapies psychologiques réduisent le risque et les symptômes de PTSD chez l'enfant et l'adolescent exposés à un trauma, mais seulement jusqu'à environ un mois après la fin du traitement**. Revue Cochrane de 51 essais randomisés, **6 201 participant·es** (abus sexuels, traumas physiques, catastrophes naturelles).",
+    "limites": "Limite principale : pas de données solides à plus long terme ni de comparaison directe entre thérapies (TCC, EMDR, famille, narratif, psychoéducation, soutien) ; aucune comparaison avec un traitement médicamenteux. Revue de 2016, pas une publication des dernières 72 h (aucune étude solide récente trouvée) ; seule la page de synthèse a été consultée (abstract), pas le texte intégral ; la qualité des preuves n'est jugée modérée que pour un critère.",
+    "pratique": "Au CO, ces résultats ne justifient pas d'intervention thérapeutique par l'école : ils plaident pour repérer l'élève exposé à un trauma et l'orienter vers un suivi clinique, sans attendre l'effet durable d'une intervention brève.",
+    "preuve": "nuance",
+    "source": "Gillies, D., Maiocchi, L., Bhandari, A. P., Taylor, F., Gray, C., & O'Brien, L. (2016). Psychological therapies for children and adolescents exposed to trauma. *Cochrane Database of Systematic Reviews*, (10), CD012371. https://doi.org/10.1002/14651858.CD012371"
   }
 ]
