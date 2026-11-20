@@ -582,5 +582,17 @@
     "pratique": "Au CO, ces résultats ne justifient pas d'intervention thérapeutique par l'école : ils plaident pour repérer l'élève exposé à un trauma et l'orienter vers un suivi clinique, sans attendre l'effet durable d'une intervention brève.",
     "preuve": "nuance",
     "source": "Gillies, D., Maiocchi, L., Bhandari, A. P., Taylor, F., Gray, C., & O'Brien, L. (2016). Psychological therapies for children and adolescents exposed to trauma. *Cochrane Database of Systematic Reviews*, (10), CD012371. https://doi.org/10.1002/14651858.CD012371"
+  },
+  {
+    "date": "2026-11-20",
+    "themes": [
+      "di-tsaf"
+    ],
+    "titre": "TSAF : la choline donnée en petite enfance associée à un meilleur QI non verbal cinq ans après",
+    "resume": "**Une supplémentation en choline de 9 mois en petite enfance est associée à un meilleur QI non verbal et à une meilleure mémoire de travail environ 5 ans après l'arrêt** chez des enfants avec TSAF. Suivi poolé de trois essais randomisés : 58 enfants (28 choline, 30 placebo), âge moyen 9,1 ans.",
+    "limites": "Petit effectif, suivi de trois essais poolés, tailles d'effet non vérifiées : je n'ai pas lu l'abstract de l'article, seulement un résumé de presse qui le rapporte (liste d'auteur·es incomplète). Résultats exploratoires, non répliqués en essai indépendant ; aucun effet démontré en contexte scolaire.",
+    "pratique": "Hors de portée de l'école (intervention médicale, âge préscolaire) : à retenir surtout que les difficultés cognitives d'élèves avec TSAF ne sont pas figées, sans changer les aménagements au CO.",
+    "preuve": "floue",
+    "source": "Wozniak, J. R., et al. (2026). Long-term follow-up of early choline supplementation in children with fetal alcohol spectrum disorders. *Alcohol: Clinical and Experimental Research, 50*(10), e70394. https://doi.org/10.1111/acer.70394 (titre et auteur·es à vérifier ; résumé de presse : https://www.contemporarypediatrics.com/view/early-choline-in-fasd-tied-to-iq-memory-gains-5-years-later)"
   }
 ]
