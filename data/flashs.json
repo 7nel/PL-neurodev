@@ -594,5 +594,17 @@
     "pratique": "Hors de portée de l'école (intervention médicale, âge préscolaire) : à retenir surtout que les difficultés cognitives d'élèves avec TSAF ne sont pas figées, sans changer les aménagements au CO.",
     "preuve": "floue",
     "source": "Wozniak, J. R., et al. (2026). Long-term follow-up of early choline supplementation in children with fetal alcohol spectrum disorders. *Alcohol: Clinical and Experimental Research, 50*(10), e70394. https://doi.org/10.1111/acer.70394 (titre et auteur·es à vérifier ; résumé de presse : https://www.contemporarypediatrics.com/view/early-choline-in-fasd-tied-to-iq-memory-gains-5-years-later)"
+  },
+  {
+    "date": "2026-11-21",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "Méthylphénidate : la mise à jour Cochrane 2025 juge la certitude très faible",
+    "resume": "Rappel : dans la mise à jour Cochrane de décembre 2025, **la certitude des preuves est « très faible » pour tous les critères**, y compris les effets indésirables non graves (RR 1,23 ; 35 essais, 5 342 participants). Revue systématique d'essais randomisés contre placebo ou absence d'intervention, enfants et adolescents ≤ 18 ans avec TDA/H.",
+    "limites": "Limite principale : certitude très faible (risque de biais, hétérogénéité, essais courts), donc l'ampleur des effets reste incertaine ; la revue ne tranche ni l'efficacité à long terme ni le rapport bénéfice-risque individuel. Divergence avec les méta-analyses réseau (Cortese 2018), qui concluent à une efficacité à court terme. Seuls le résumé et des extraits ont été lus, pas le texte intégral ; l'effet exact sur les symptômes notés par les enseignants en 2025 n'a pas pu être vérifié (version 2023 : SMD −0,74).",
+    "pratique": "Pour ta pratique au CO : les observations des enseignants restent utiles au suivi du traitement, mais à présenter comme des indices à transmettre à l'équipe médicale, non comme une preuve d'effet.",
+    "preuve": "floue",
+    "source": "Storebø, O. J., et al. (2025). Methylphenidate for children and adolescents with attention deficit hyperactivity disorder (ADHD). *Cochrane Database of Systematic Reviews*, CD009885.pub4. https://doi.org/10.1002/14651858.CD009885.pub4"
   }
 ]
