@@ -606,5 +606,17 @@
     "pratique": "Pour ta pratique au CO : les observations des enseignants restent utiles au suivi du traitement, mais à présenter comme des indices à transmettre à l'équipe médicale, non comme une preuve d'effet.",
     "preuve": "floue",
     "source": "Storebø, O. J., et al. (2025). Methylphenidate for children and adolescents with attention deficit hyperactivity disorder (ADHD). *Cochrane Database of Systematic Reviews*, CD009885.pub4. https://doi.org/10.1002/14651858.CD009885.pub4"
+  },
+  {
+    "date": "2026-11-22",
+    "themes": [
+      "tsa"
+    ],
+    "titre": "Autisme : prévalence de 1 enfant sur 31 à 8 ans aux États-Unis (données 2022)",
+    "resume": "Rappel : la surveillance ADDM des CDC estime la prévalence du TSA à **32,2 pour 1 000 enfants de 8 ans (1 sur 31)** en 2022, contre 1 sur 36 en 2020. Surveillance par dossiers, 16 sites américains ; 3,4 garçons pour 1 fille ; 39,6 % des cas avec déficience intellectuelle (8 613 dossiers abstraits).",
+    "limites": "Estimation américaine fondée sur des dossiers de santé et d'éducation, non transposable telle quelle à la Suisse ; elle mesure les cas identifiés, pas l'incidence réelle (accès au diagnostic, critères, sensibilisation). Large variation entre sites (9,7 à 53,1 pour 1 000). Seul le résumé et les chiffres de synthèse ont été consultés, pas le texte intégral ; aucune publication récente plus solide trouvée sur 24–72 h.",
+    "pratique": "Prévoir que les profils autistes, dont une part importante avec déficience intellectuelle associée, sont fréquents dans les classes, sans en déduire un taux valable pour le Valais.",
+    "preuve": "nuance",
+    "source": "Shaw, K. A., Williams, S., Patrick, M. E., Valencia-Prado, M., Durkin, M. S., Howerton, E. M., et al. (2025). Prevalence and early identification of autism spectrum disorder among children aged 4 and 8 years — Autism and Developmental Disabilities Monitoring Network, 16 sites, United States, 2022. *MMWR Surveillance Summaries, 74*(2), 1–22. https://doi.org/10.15585/mmwr.ss7402a1"
   }
 ]
