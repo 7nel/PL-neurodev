@@ -1571,5 +1571,133 @@
         "texte": "Étude de cohorte ABCD (*JAMA Psychiatry*, annoncée le 11 novembre 2026) sur les désaccords entre jeunes et parents à propos des diagnostics psychiatriques au fil du développement : seul le titre a été repéré, contenu non vérifié."
       }
     ]
+  },
+  {
+    "date_debut": "2026-11-17",
+    "date_fin": "2026-11-23",
+    "titre": "Semaine du 17 au 23 novembre 2026",
+    "essentiel": [
+      "**Adolescent·e et parent signalent rarement le même trouble psychique : 65 à 98 % des diagnostics viennent d'un seul des deux.** Les jeunes rapportent plus souvent la dépression, les idées suicidaires et l'automutilation : il faut les interroger directement. L'étude est américaine (11 868 jeunes de 9 à 17 ans) et seuls des comptes rendus ont été lus.",
+      "**Dyslexie résistante à l'intervention : même sévérité en lecture, cinq profils cognitifs différents.** Une même étiquette de dyslexie persistante recouvre des difficultés de récupération lexicale, de phonologie, de traitement visuo-spatial ou de vitesse de traitement. Aucune intervention adaptée à chaque profil n'a été testée, et l'échantillon (147 enfants d'écoles spécialisées) est modeste.",
+      "**Autisme : à l'IRM, les moyennes de groupe se ressemblent, mais les personnes autistes diffèrent bien plus entre elles.** L'idée d'un « cerveau autiste » type est fragilisée, ce qui plaide pour des aides individualisées. L'étude porte sur 48 adultes autistes regardant des films : aucune conséquence scolaire n'a été étudiée."
+    ],
+    "items": [
+      {
+        "section": "etude",
+        "themes": [
+          "transversal"
+        ],
+        "preuve": "floue",
+        "titre": "Troubles psychiques à l'adolescence : jeune et parent ne signalent presque jamais la même chose",
+        "texte": "**À retenir :** quand un trouble psychique est repéré, il n'est signalé que par le jeune ou que par son parent dans **65 à 98 % des cas**, selon le trouble et l'âge.\n\n**Résultats :**\n- Les jeunes rapportent plus souvent **la dépression, les idées suicidaires et l'automutilation**.\n- Les parents rapportent plus souvent les troubles des conduites, les troubles alimentaires et certains troubles anxieux.\n- Le désaccord est le plus fort chez les plus jeunes et diminue en fin d'adolescence.\n\n**Ce que ça change :** se fier au seul récit des parents fait manquer une partie des difficultés internalisées, en particulier le risque suicidaire. L'inverse est vrai pour les troubles du comportement : aucune des deux sources ne suffit seule. L'étude ne dit rien du point de vue des enseignant·es.\n\n**L'étude :** jeunes et parents s'accordent-ils sur les diagnostics psychiatriques ? Analyse de la cohorte américaine ABCD : **11 868 jeunes** suivis de 9 à 17 ans. Jeunes et parents ont répondu séparément aux mêmes questions diagnostiques, et des diagnostics DSM-5 ont été dérivés de chaque récit.\n\n**Niveau de preuve :** modéré pour la description (très grande cohorte, suivi sur huit ans) ; badge « floue » parce que seuls le communiqué et des comptes rendus ont été lus.\n\n**Limites :**\n- Diagnostics dérivés de réponses à un entretien structuré, sans évaluation clinique complète : on ne sait pas lequel des deux récits est le plus juste.\n- Population américaine ; transposition à la Suisse non étudiée.\n- Les chiffres propres au TDA/H et à l'autisme n'ont pas été trouvés.\n- Publié le 11 novembre, hors de la semaine au sens strict ; texte intégral non lu, liste complète des auteur·es non vérifiée.\n\nEl-Shafie, D., Kliamovich, D., Aupperle, R., et al. (2026). Youth-caregiver discordance in psychiatric diagnosis and clinical problems in the ABCD study. *JAMA Psychiatry*. Publication en ligne le 11 novembre 2026. https://doi.org/10.1001/jamapsychiatry.2026.3768 (auteure correspondante : L. D. Aguinaldo ; volume et pages non vérifiés)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "dys-tsle"
+        ],
+        "preuve": "floue",
+        "titre": "Dyslexie persistante : une même sévérité, cinq profils cognitifs distincts",
+        "texte": "**À retenir :** chez **147 enfants** dont la dyslexie résiste à l'intervention, l'analyse de 24 mesures cognitives fait apparaître **cinq profils distincts**, avec des difficultés de lecture de sévérité comparable.\n\n**Résultats :**\n- Cinq regroupements : récupération lexicale ; conscience phonologique et boucle phonologique ; traitement visuo-spatial ; vitesse de traitement orale et fonctions exécutives ; vitesse de traitement écrite et fonctions exécutives.\n- Le décodage de mots isolés et la compréhension écrite sont aussi atteints d'un profil à l'autre.\n\n**Ce que ça change :** « dyslexie persistante » ne dit pas quelles capacités sont en cause. Un bilan qui décrit le profil cognitif peut aider à choisir les compensations (outils, rythme, présentation). L'étude ne montre pas qu'une intervention ciblée par profil marche mieux : l'enseignement phonique reste la base établie.\n\n**L'étude :** existe-t-il des sous-groupes cognitifs dans la dyslexie qui ne répond pas à l'intervention ? Regroupement hiérarchique de 24 mesures cognitives chez 147 enfants de 7 à 14 ans recrutés dans des écoles spécialisées.\n\n**Niveau de preuve :** faible pour la pratique (étude exploratoire, sans test d'intervention) ; seul le résumé a été lu.\n\n**Limites :**\n- Aucun lien démontré entre profil et réponse à une intervention.\n- Méthode exploratoire : la prépublication décrivait quatre regroupements et deux profils, la version publiée cinq regroupements. La stabilité des profils reste à répliquer.\n- Échantillon modeste, recruté en écoles spécialisées ; pays et langue de scolarisation non vérifiés.\n- Seul le résumé a été lu.\n\nPinheiro-Chagas, P., et al. (2026). Data-driven cognitive clusters in persistent developmental dyslexia. *Cortex*, *204*. https://doi.org/10.1016/j.cortex.2026.08.006 (co-auteur·es et pages non vérifiés)"
+      },
+      {
+        "section": "etude",
+        "themes": [
+          "tsa"
+        ],
+        "preuve": "floue",
+        "titre": "Autisme : moyennes cérébrales proches, bien plus de différences d'une personne à l'autre",
+        "texte": "**À retenir :** devant des films, l'activité cérébrale des adultes autistes ressemble en moyenne à celle des adultes non autistes, mais elle **varie beaucoup plus d'une personne autiste à l'autre**, surtout dans les **réseaux du traitement social**.\n\n**Résultats :**\n- Les modèles prédisent l'activité des systèmes auditif, visuel et social de façon semblable dans les deux groupes quand on compare les moyennes.\n- La variabilité entre individus est plus forte chez les personnes autistes dans presque tous les systèmes étudiés, le plus nettement dans le système social.\n\n**Ce que ça change :** comparer un « groupe autiste » à un groupe contrôle masque des différences individuelles importantes. L'étude va dans le sens d'aides et d'aménagements construits pour chaque élève plutôt que pour « les élèves autistes ». Elle ne dit rien du comportement ni des apprentissages.\n\n**L'étude :** les réponses cérébrales à des scènes audiovisuelles sociales diffèrent-elles entre personnes autistes et non autistes, en moyenne et d'un individu à l'autre ? IRM fonctionnelle et modèles d'encodage chez **48 adultes autistes (13 femmes) et 90 adultes non autistes (25 femmes)** qui ont regardé six extraits de films de 5 à 20 minutes ; Université de l'Iowa. Résultats présentés au congrès de la Society for Neuroscience le 15 novembre.\n\n**Niveau de preuve :** faible pour la pratique (recherche fondamentale, petit effectif, sans lien avec le comportement) ; seuls le communiqué et des extraits du manuscrit ont été lus.\n\n**Limites :**\n- Adultes seulement, sans mesure du comportement : le lien entre cette variabilité et les difficultés quotidiennes n'est pas encore étudié, comme les auteur·es le précisent.\n- Échantillon petit, peu de femmes.\n- Version anticipée publiée le 21 octobre : hors de la semaine au sens strict.\n- Auteur·es incertain·es : le communiqué cite D. Kliemann et J. Traer, une autre source nomme un premier auteur différent.\n\nKliemann, D., Traer, J., et al. (2026). Heterogeneous encoding patterns of dynamic audiovisual social stimuli in autism spectrum disorder. *The Journal of Neuroscience*. Publication anticipée le 21 octobre 2026. https://doi.org/10.1523/JNEUROSCI.0055-26.2026 (ordre des auteur·es non vérifié)"
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "transversal",
+          "attachement"
+        ],
+        "texte": "**Quand une détresse psychique est suspectée, interroger l'élève seul·e, en plus des parents, et consigner les deux récits sans chercher à les faire coïncider.** L'étude ABCD montre que les jeunes signalent plus souvent dépression, idées suicidaires et automutilation que leurs parents. Pour un·e élève en rupture ou au parcours traumatique, le récit parental peut être absent ou partiel. Réserve : l'étude compare des diagnostics, pas des pratiques scolaires ; l'utilité d'un entretien scolaire n'a pas été testée, et le risque suicidaire relève du protocole de l'établissement et des services spécialisés."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "dys-tsle"
+        ],
+        "texte": "**Pour un·e élève dont la dyslexie résiste malgré des années d'appui, demander que le bilan logopédique ou neuropsychologique décrive le profil cognitif, pas seulement la sévérité.** Les compensations peuvent alors viser la difficulté dominante : vitesse de traitement, récupération lexicale, phonologie ou traitement visuo-spatial. Réserve : hypothèse non testée. L'étude de *Cortex* décrit des profils, elle ne montre pas qu'un appui choisi selon le profil fait mieux."
+      },
+      {
+        "section": "implication_co",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**Construire les aménagements pour un·e élève autiste à partir de ses réponses observées, pas d'une liste générique « TSA ».** Les données d'imagerie de la semaine montrent une forte variabilité entre personnes autistes, qui rejoint ce que montre la clinique. Réserve : extrapolation d'une étude d'IRM chez l'adulte, sans mesure du comportement."
+      },
+      {
+        "section": "contexte_suisse",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Genève : l'initiative pour des classes inclusives attend le Grand Conseil, sans date de vote",
+        "texte": "L'initiative cantonale « Tous ensemble à l'école ! » a abouti, mais aucune date de votation n'a été trouvée.\n\nLe Conseil d'État a constaté l'aboutissement (5 126 signatures) par un arrêté du 17 juin 2026 ; son rapport sur la validité et la prise en considération était attendu au plus tard le 19 octobre 2026. Le texte prévoit des classes ordinaires à effectif réduit accueillant jusqu'à quatre élèves relevant de la pédagogie spécialisée, avec un·e enseignant·e spécialisé·e à plein temps, sur le modèle tessinois.\n\nStatut : sources primaires (Feuille d'avis officielle, Grand Conseil) repérées par recherche web, non lues en entier ; décision du Conseil d'État d'octobre non trouvée. Aucune nouvelle avancée n'a été trouvée cette semaine en Valais (la Loi sur l'école valaisanne a été adoptée la semaine précédente) ni pour la loi fédérale sur l'inclusion."
+      },
+      {
+        "section": "divergence",
+        "themes": [
+          "transversal"
+        ],
+        "titre": "Jeune ou parent : quel récit fait foi ?",
+        "texte": "La discordance massive entre jeunes et parents pose la question de la source à privilégier dans l'évaluation.\n\n- **Donner plus de poids au récit du jeune** : les troubles internalisés (dépression, idées suicidaires) sont peu visibles pour l'entourage, et les auteur·es insistent sur l'importance d'interroger directement l'adolescent·e.\n- **Garder le récit parental** : les parents repèrent mieux les troubles des conduites et alimentaires, que les jeunes minimisent.\n- **Croiser les sources, y compris l'école** : position classique de l'évaluation multi-informateurs ; les enseignant·es n'étaient pas interrogé·es dans cette étude.\n\nPoint clé : un désaccord n'indique pas qui se trompe. Il signale souvent que le problème se manifeste différemment selon le contexte, ou qu'il est caché à l'un des deux."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "**« Le CBD améliore le fonctionnement des enfants autistes. »** Un article du *Journal of Autism and Developmental Disorders* paru le 18 novembre s'intitule « Limited efficacy of cannabidiol on adaptive functioning in boys with profound autism » ; seul le titre a été vu, et un essai croisé de 2025 (garçons de 7 à 14 ans) relevait déjà un fort effet placebo."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "attachement",
+          "transversal"
+        ],
+        "texte": "**« Le sentiment d'appartenance à l'école protège les adolescent·es traumatisé·es. »** Un article de fin 2026 porte ce titre, mais son contenu n'a pas pu être lu ; les études antérieures divergent (effet protecteur de l'attachement à l'école au Royaume-Uni, effet limité au lien parental dans une étude américaine sur 1 712 élèves)."
+      },
+      {
+        "section": "zone_floue",
+        "themes": [
+          "tsa",
+          "tdah"
+        ],
+        "texte": "**« L'imagerie va bientôt permettre de diagnostiquer l'autisme ou le TDA/H par sous-types. »** Les études récentes trouvent surtout une forte variabilité individuelle et des profils qui traversent les diagnostics : aucune n'a montré d'utilité pour le diagnostic ou le choix d'une aide."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "France : la proposition de loi visant à renforcer le parcours inclusif des enfants à besoins éducatifs particuliers est au Sénat depuis le 12 mai 2026 (nouvelle lecture) ; aucun vote n'a été trouvé."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Genève : rapport du Conseil d'État et débat au Grand Conseil sur l'initiative « Tous ensemble à l'école ! », qui pourrait déboucher sur une votation et servir de référence pour les autres cantons romands."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "tsa"
+        ],
+        "texte": "Texte intégral de l'article sur le cannabidiol dans l'autisme profond (*JADD*, 18 novembre), pour savoir s'il s'agit d'un essai contrôlé et sur quels critères porte l'absence d'effet."
+      },
+      {
+        "section": "a_surveiller",
+        "themes": [
+          "transversal"
+        ],
+        "texte": "Résultats propres au TDA/H et à l'autisme dans l'étude ABCD sur la discordance jeune-parent, à chercher dans le texte intégral."
+      }
+    ]
   }
 ]
