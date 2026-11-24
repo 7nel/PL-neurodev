@@ -630,5 +630,17 @@
     "pratique": "Pour un élève HPI du CO, l'accélération ou un regroupement ponctuel par discipline est une piste à documenter avec l'élève, la famille et l'équipe, plutôt qu'à exclure par crainte d'un impact social, sans l'appliquer mécaniquement aux profils HPI+TND.",
     "preuve": "floue",
     "source": "Steenbergen-Hu, S., Makel, M. C., & Olszewski-Kubilius, P. (2016). What one hundred years of research says about the effects of ability grouping and acceleration on K–12 students' academic achievement: Findings of two second-order meta-analyses. *Review of Educational Research, 86*(4), 849–899. https://doi.org/10.3102/0034654316675417"
+  },
+  {
+    "date": "2026-11-24",
+    "themes": [
+      "tdah"
+    ],
+    "titre": "TDA/H : les aménagements de classe courants n'améliorent pas les résultats, le méthylphénidate oui",
+    "resume": "Quatre aménagements courants (temps supplémentaire, pauses fréquentes, travail debout, espace peu distrayant) **n'ont produit aucun gain significatif** de comportement ni de résultats scolaires, seuls ou associés ; le traitement stimulant a réduit les violations de règles de **61 %** (placebo) et les interventions comportementales de plus d'un tiers. Essai randomisé en programme d'été (publié le 13 novembre 2026), enfants du primaire (maternelle–6e).",
+    "limites": "Limite principale : programme d'été structuré, pas des classes ordinaires ; les auteurs demandent une réplication. Population d'enfants de 5–12 ans environ, pas d'adolescents. Je n'ai pas pu lire l'article ni son abstract (hôtes bloqués) : chiffres issus de comptes rendus de presse, effectif non vérifié (sources divergentes), DOI repris d'un résultat de recherche et non confirmé. Ces résultats ne disent pas que les aménagements sont inutiles pour chaque élève.",
+    "pratique": "Pour ta pratique au CO, ne pas présumer l'efficacité d'un aménagement générique : le choisir avec l'élève, en mesurer l'effet sur des comportements ou productions précis, et le retirer s'il ne change rien, sans extrapoler ces données d'enfants à l'adolescence.",
+    "preuve": "floue",
+    "source": "Fabiano, G. A., et al. (2026). Classroom accommodations, behavioral intervention, and medication for children with ADHD: A randomized clinical trial. *JAMA Pediatrics*. https://doi.org/10.1001/jamapediatrics.2026.5973 (titre exact et liste d'auteur·es non vérifiés ; DOI à confirmer)"
   }
 ]
