@@ -642,5 +642,17 @@
     "pratique": "Pour ta pratique au CO, ne pas présumer l'efficacité d'un aménagement générique : le choisir avec l'élève, en mesurer l'effet sur des comportements ou productions précis, et le retirer s'il ne change rien, sans extrapoler ces données d'enfants à l'adolescence.",
     "preuve": "floue",
     "source": "Fabiano, G. A., et al. (2026). Classroom accommodations, behavioral intervention, and medication for children with ADHD: A randomized clinical trial. *JAMA Pediatrics*. https://doi.org/10.1001/jamapediatrics.2026.5973 (titre exact et liste d'auteur·es non vérifiés ; DOI à confirmer)"
+  },
+  {
+    "date": "2026-11-25",
+    "themes": [
+      "tsa"
+    ],
+    "titre": "TSA : les filles montrent un peu plus d'anxiété que les garçons, sans écart net pour la dépression",
+    "resume": "Rappel : dans une méta-analyse, les filles autistes rapportent **un peu plus de symptômes d'anxiété que les garçons (g = 0,14 ; IC 95 % [0,04 ; 0,25])**, sans différence nette pour la dépression ni pour l'ensemble des problèmes internalisés. Revue systématique et méta-analyse de 56 études, N = 13 410, âge médian 10 ans.",
+    "limites": "Écart faible et hétérogénéité élevée pour toutes les comparaisons ; âge médian de 10 ans, donc peu représentatif de l'adolescence (l'écart serait plus marqué chez les filles plus âgées et à QI plus élevé, selon l'abstract). Aucune nouvelle publication solide trouvée dans les 72 h, d'où ce rappel ; seuls l'abstract et ses chiffres ont été consultés (texte intégral non lu), et la liste complète des auteurs n'a pas été vérifiée.",
+    "pratique": "Pour ta pratique au CO : ne pas écarter une anxiété chez une élève autiste parce qu'elle « ne dérange pas », et dépister l'anxiété chez tous les élèves TSA, filles comme garçons, sans généraliser cet écart modeste à une élève précise.",
+    "preuve": "floue",
+    "source": "Suominen, K., et al. (2026). Sex/gender differences in internalizing problems of autistic children and young people: A systematic review and meta-analysis. *Journal of the American Academy of Child & Adolescent Psychiatry, 65*(8), 995–1016. https://doi.org/10.1016/j.jaac.2025.10.010"
   }
 ]
